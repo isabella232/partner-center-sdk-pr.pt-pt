@@ -4,12 +4,12 @@ description: Crie um mercado online para vender ofertas de soluções de nuvem (
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d64deff9b002b861c9f48d076feb5841af727e3d
-ms.sourcegitcommit: 57620e249e218edc4af7c83c2ce8a3008a4adf4e
+ms.openlocfilehash: 83ae0c789f95485ec3eb272434e57421a8f93fb6
+ms.sourcegitcommit: 970031473b2e8cd3d08c6c097949c057a51df3ef
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "97769206"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505327"
 ---
 # <a name="csp-customer-storefront-builder-quick-start-guide"></a>Guia de Início Rápido da Loja Web para Clientes CSP
 
@@ -25,10 +25,10 @@ O CSP Customer Storefront Builder ajuda os parceiros a criar facilmente um merca
 
 Este website é totalmente propriedade, suportado e mantido por parceiros, e a Microsoft não recolhe quaisquer dados ou telemetria do site. O CSP Customer Storefront Builder cria um website para o parceiro que está em total conformidade com a Norma de [Segurança de Dados da Indústria de Cartões de Pagamento](https://www.pcisecuritystandards.org/) (PCI DSS).
 
-O código CSP Customer Storefront Builder está sujeito à licença disponível no [Partner Center SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
+O código CSP Customer Storefront Builder está sujeito à licença disponível no [Partner Center SDK EULA](/legal/partner-center/eula-partner-center-sdk).
 
 >[!NOTE]
->Você é responsável pela gestão, manutenção e quaisquer problemas que possam resultar da criação do site. Leia e compreenda os termos no [Centro Parceiro SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
+>Você é responsável pela gestão, manutenção e quaisquer problemas que possam resultar da criação do site. Leia e compreenda os termos no [Centro Parceiro SDK EULA](/legal/partner-center/eula-partner-center-sdk).
 
 Para obter informações adicionais, consulte também os seguintes artigos: [loja web de cliente CSP](csp-customer-web-storefront.md) e [aplicação de teste de consola.](console-test-app.md)
 
@@ -52,7 +52,7 @@ O CSP Customer Storefront Builder pretende ser uma forma rápida de criar um web
 
 - A configuração de pagamento payU funcionará apenas na Índia atualmente. A disponibilidade e suporte payU são controlados exclusivamente pelo PayU e podem ser descontinuados a qualquer momento pelo PayU.
 
-- Leia e compreenda os termos no [Centro Parceiro SDK EULA](https://partnercenter.microsoft.com/partner/EULA_Partner_Center_SDK).
+- Leia e compreenda os termos no [Centro Parceiro SDK EULA](/legal/partner-center/eula-partner-center-sdk).
 
 ## <a name="using-the-csp-customer-storefront-builder"></a>Utilizando o Construtor de Loja de Clientes CSP
 
@@ -66,7 +66,7 @@ O processo de criação de um website de fachada é:
 
 3. [Transact na montra](#transact)
 
-### <a name="deploy"></a>Implementação
+### <a name="deploy"></a>Implementar
 
 Opções de implementação:
 
