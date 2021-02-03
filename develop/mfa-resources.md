@@ -1,0 +1,62 @@
+---
+title: Recursos de requisitos de segurança de parceiros
+description: Compreenda detalhes de autenticação de vários fatores (MFA) para satisfazer os Requisitos de Segurança dos Parceiros.
+ms.service: partner-dashboard
+ms.subservice: partnercenter-sdk
+ms.date: 05/29/2020
+ms.openlocfilehash: 5eb77c3c10e95c9dc835cfe05e014b9256531b51
+ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "97768852"
+---
+# <a name="partner-security-requirements-resources"></a>Recursos de requisitos de segurança dos parceiros
+
+**Aplica-se a:**
+
+- Partner Center
+
+Este artigo ajuda-o a compreender detalhes de adoção de autenticação de vários fatores (MFA), para ajudar a sua organização a cumprir o estatuto de requisito de segurança do parceiro. 
+
+## <a name="portal-request-without-mfa"></a>Pedido de portal sem MFA
+
+Indicar um utilizador que acede ao portal Partner Center sem autenticação MFA.
+
+| Propriedade                            | Tipo            | Descrição                           |
+|-------------------------------------|-----------------|---------------------------------------|
+| ObjectId                            | string          | ID de objeto de utilizador                        |
+| TenantId                            | string          | ID do inquilino do CSP                         |
+| Upn                                 | string          | Nome principal do utilizador                   |
+| LastNonMfaCompliantLoginDateTime    | datetime        | Login de utilizadores de última hora sem MFA |
+
+
+## <a name="api-request-summarized-by-application"></a>Pedido de API resumido por Aplicação
+
+Um resumo do pedido de API feito pela APP + Credencial do Utilizador, agregado por data de pedido e Id de aplicação.
+
+| Propriedade                            | Tipo            | Descrição               |
+|-------------------------------------|-----------------|---------------------------|
+| LoginDate                           | datetime        | Data de pedido da API          |
+| MfaCompliantRequestCount            | long            | Contagem de pedidos com MFA    |
+| TotalRequestCount                   | long            | Contagem total de pedidos       |
+| ApplicationID                       | string          | O ID da aplicação        |
+| ApplicationName                     | string          | O nome da candidatura      |
+
+
+## <a name="api-request-details"></a>Detalhes do pedido da API
+
+Pedido de API feito pela APP + Credencial do Utilizador. 
+
+| Propriedade                            | Tipo            | Descrição                              |
+|-------------------------------------|-----------------|------------------------------------------|
+| RequestId                           | string          | MS-RequestId                             |
+| CorrelationId                       | string          | MS-CorrelationId                         |
+| OperationName                       | string          | O caminho da API com método de pedido         |
+| Hora do Pedido                     | DateTime        | O tempo de pedido da API                     |
+| IpAddress                           | string          | Endereço IP de origem                        |
+| ObjectId                            | string          | ID do objeto do utilizador                           |
+| TenantId                            | string          | ID do inquilino do CSP                            |
+| Upn                                 | string          | Nome principal do utilizador                      |
+| ApplicationID                       | string          | A sua candidatura                         |
+| MfaCompliant                        | bool            | Indicar o pedido com ou sem MFA |
