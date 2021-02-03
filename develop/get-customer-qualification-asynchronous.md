@@ -1,25 +1,25 @@
 ---
 title: Obtenha as qualificações de um cliente
 description: Saiba como usar a validação assíncrono para obter a qualificação de um cliente através da API do Partner Center. Os parceiros podem usá-lo para validar clientes da Educação.
-ms.date: 12/07/2020
+ms.date: 01/21/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: JoeyBytes
 ms.author: jobiesel
-ms.openlocfilehash: 9f9b9aaddde0d66caf9c7ef32e8fba6d5e3aba36
-ms.sourcegitcommit: 0c98496e972aebe10eba23822aa229125bfc035d
+ms.openlocfilehash: 130ee276461e3390ac78ac7abd8baeefe6a70d7c
+ms.sourcegitcommit: 97f93caa57df6c64fe19868e6b2a0f7937226b51
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "97770191"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98636388"
 ---
-# <a name="get-a-customers-qualifications-via-asynchronous-validation"></a>Obtenha as qualificações de um cliente através de validação assíncronea
+# <a name="get-a-customers-qualification-asynchronously"></a>Obtenha a qualificação de um cliente assíncronea
 
 **Aplica-se a**
 
 - Partner Center
 
-Saiba como obter as qualificações de um cliente assíncroneamente através das APIs do Partner Center. Para aprender a fazer isto de forma sincronizada, consulte [obter a qualificação de um cliente através de validação sincronizada.](get-customer-qualification-synchronous.md)
+Como obter as qualificações de um cliente assíncroneamente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -41,7 +41,7 @@ Esta tabela lista o parâmetro de consulta necessário para obter toda a qualifi
 
 | Nome               | Tipo   | Necessário | Descrição                                           |
 |--------------------|--------|----------|-------------------------------------------------------|
-| **cliente-inquilino-id** | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| **cliente-inquilino-id** | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -71,13 +71,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 ### <a name="response-examples"></a>Exemplos de resposta
 
-Esta secção mostra as respostas que pode receber quando a de um cliente `vettingStatus` é:
-
-- Aprovado
-- Em Revisão
-- Negado
-
-**Exemplo aprovado:**
+#### <a name="approved"></a>Aprovado
 
 ```http
 HTTP/1.1 200 OK
@@ -85,16 +79,18 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-[
-    {
-        "qualification": "Education",
-        "vettingStatus": "Approved",
-    }
-]
+{
+    "qualifications": [
+        {
+            "qualification": "Education",
+            "vettingStatus": "Approved",
+        }
+    ]
+}
 
 ```
 
-No exemplo **de Revisão:**
+#### <a name="in-review"></a>Em Revisão
 
 ```http
 HTTP/1.1 200 OK
@@ -102,17 +98,19 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-[
-    {
-        "qualification": "Education",
-        "vettingStatus": "InReview",
-        "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
-    }
-]
+{
+    "qualifications": [
+        {
+            "qualification": "Education",
+            "vettingStatus": "InReview",
+            "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+        }
+    ]
+}
 
 ```
 
-**Exemplo negado:**
+#### <a name="denied"></a>Negado
 
 ```http
 HTTP/1.1 200 OK
@@ -120,14 +118,16 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-[
-    {
-        "qualification": "Education",
-        "vettingStatus": "Denied",
-        "vettingReason": "Not an Education Customer", // example Vetting Reason
-        "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
-    }
-]
+{
+    "qualifications": [
+        {
+            "qualification": "Education",
+            "vettingStatus": "Denied",
+            "vettingReason": "Not an Education Customer", // example Vetting Reason
+            "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+        }
+    ]
+}
 
 ```
 
