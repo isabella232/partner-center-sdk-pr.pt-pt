@@ -1,0 +1,55 @@
+---
+title: Recursos de conversão
+description: Saiba como utilizar os recursos de conversão de API do Partner Center para ajudá-lo a converter uma subscrição experimental para uma subscrição paga.
+ms.date: 05/23/2019
+ms.service: partner-dashboard
+ms.subservice: partnercenter-sdk
+ms.openlocfilehash: d3ade5a5af76e7c637962b6bfe076ac806f337bf
+ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "97770069"
+---
+# <a name="conversion-resources-to-convert-trial-subscriptions-to-paid"></a><span data-ttu-id="cf1c8-103">Recursos de conversão para converter assinaturas de ensaio para pagos</span><span class="sxs-lookup"><span data-stu-id="cf1c8-103">Conversion resources to convert trial subscriptions to paid</span></span>
+
+<span data-ttu-id="cf1c8-104">**Aplica-se a:**</span><span class="sxs-lookup"><span data-stu-id="cf1c8-104">**Applies to:**</span></span>
+
+- <span data-ttu-id="cf1c8-105">Partner Center</span><span class="sxs-lookup"><span data-stu-id="cf1c8-105">Partner Center</span></span>
+- <span data-ttu-id="cf1c8-106">Centro de Parceiros operado pela 21Vianet</span><span class="sxs-lookup"><span data-stu-id="cf1c8-106">Partner Center operated by 21Vianet</span></span>
+- <span data-ttu-id="cf1c8-107">Centro de Parceiros para Microsoft Cloud Germany</span><span class="sxs-lookup"><span data-stu-id="cf1c8-107">Partner Center for Microsoft Cloud Germany</span></span>
+- <span data-ttu-id="cf1c8-108">Centro de Parceiros do Microsoft Cloud for US Government</span><span class="sxs-lookup"><span data-stu-id="cf1c8-108">Partner Center for Microsoft Cloud for US Government</span></span>
+
+<span data-ttu-id="cf1c8-109">Os recursos de conversão suportam a conversão de uma subscrição experimental para uma subscrição paga.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-109">Conversion resources support the conversion of a trial subscription to a paid subscription.</span></span>
+
+## <a name="conversion"></a><span data-ttu-id="cf1c8-110">Conversão</span><span class="sxs-lookup"><span data-stu-id="cf1c8-110">Conversion</span></span>
+
+<span data-ttu-id="cf1c8-111">Contém informações usadas para converter uma subscrição experimental para uma subscrição paga.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-111">Contains information used to convert a trial subscription to a paid subscription.</span></span>
+
+| <span data-ttu-id="cf1c8-112">Propriedade</span><span class="sxs-lookup"><span data-stu-id="cf1c8-112">Property</span></span> | <span data-ttu-id="cf1c8-113">Tipo</span><span class="sxs-lookup"><span data-stu-id="cf1c8-113">Type</span></span> | <span data-ttu-id="cf1c8-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="cf1c8-114">Description</span></span> |
+| -------- | ---- | ----------- |
+| <span data-ttu-id="cf1c8-115">offerId</span><span class="sxs-lookup"><span data-stu-id="cf1c8-115">offerId</span></span> | <span data-ttu-id="cf1c8-116">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-116">string</span></span> | <span data-ttu-id="cf1c8-117">O identificador de oferta da oferta original, a oferta experimental.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-117">The offer identifier of the original, trial offer.</span></span> |
+| <span data-ttu-id="cf1c8-118">targetOfferId</span><span class="sxs-lookup"><span data-stu-id="cf1c8-118">targetOfferId</span></span> | <span data-ttu-id="cf1c8-119">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-119">string</span></span> | <span data-ttu-id="cf1c8-120">O identificador de oferta para a oferta alvo.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-120">The offer identifier for the target offer.</span></span> |
+| <span data-ttu-id="cf1c8-121">orderId</span><span class="sxs-lookup"><span data-stu-id="cf1c8-121">orderId</span></span> | <span data-ttu-id="cf1c8-122">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-122">string</span></span> | <span data-ttu-id="cf1c8-123">O identificador da ordem.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-123">The order identifier.</span></span> |
+| <span data-ttu-id="cf1c8-124">quantidade</span><span class="sxs-lookup"><span data-stu-id="cf1c8-124">quantity</span></span> | <span data-ttu-id="cf1c8-125">int</span><span class="sxs-lookup"><span data-stu-id="cf1c8-125">int</span></span> | <span data-ttu-id="cf1c8-126">O número de licenças.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-126">The number of licenses.</span></span> <span data-ttu-id="cf1c8-127">O padrão é o número de licenças na subscrição de ensaio.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-127">The default is the number of licenses in the trial subscription.</span></span> |
+| <span data-ttu-id="cf1c8-128">billingCycle</span><span class="sxs-lookup"><span data-stu-id="cf1c8-128">billingCycle</span></span> | <span data-ttu-id="cf1c8-129">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-129">string</span></span> | <span data-ttu-id="cf1c8-130">Indica a frequência com que o parceiro é cobrado para a subscrição.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-130">Indicates how often the partner is charged for the subscription.</span></span> <span data-ttu-id="cf1c8-131">Valores possíveis: **Mensalmente** (o parceiro é faturado mensalmente), **Anual** (o parceiro é faturado anualmente) ou **Nenhum** (Parceiro não é cobrado.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-131">Possible values: **Monthly** (partner is billed monthly), **Annual** (partner is billed annually), or **None** (Partner isn't billed.</span></span> <span data-ttu-id="cf1c8-132">Usado para assinaturas de teste).</span><span class="sxs-lookup"><span data-stu-id="cf1c8-132">Used for trial subscriptions).</span></span> |
+
+## <a name="conversionerror"></a><span data-ttu-id="cf1c8-133">ConversorEror</span><span class="sxs-lookup"><span data-stu-id="cf1c8-133">ConversionError</span></span>
+
+<span data-ttu-id="cf1c8-134">Representa um erro ocorrido durante a conversão.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-134">Represents an error that occurred during conversion.</span></span>
+
+| <span data-ttu-id="cf1c8-135">Propriedade</span><span class="sxs-lookup"><span data-stu-id="cf1c8-135">Property</span></span> | <span data-ttu-id="cf1c8-136">Tipo</span><span class="sxs-lookup"><span data-stu-id="cf1c8-136">Type</span></span> | <span data-ttu-id="cf1c8-137">Descrição</span><span class="sxs-lookup"><span data-stu-id="cf1c8-137">Description</span></span> |
+| -------- | ---- | ----------- |
+| <span data-ttu-id="cf1c8-138">code</span><span class="sxs-lookup"><span data-stu-id="cf1c8-138">code</span></span> | <span data-ttu-id="cf1c8-139">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-139">string</span></span> | <span data-ttu-id="cf1c8-140">O código de erro associado ao problema.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-140">The error code associated with the issue.</span></span> <span data-ttu-id="cf1c8-141">Valores possíveis: **Outros** (erro geral), **ConversõesNotFound** (não é possível encontrar conversões para a subscrição experimental para converter).</span><span class="sxs-lookup"><span data-stu-id="cf1c8-141">Possible values: **Other** (general error), **ConversionsNotFound** (can't find any conversions for the trial subscription to convert to).</span></span>
+| <span data-ttu-id="cf1c8-142">descrição</span><span class="sxs-lookup"><span data-stu-id="cf1c8-142">description</span></span> | <span data-ttu-id="cf1c8-143">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-143">string</span></span> | <span data-ttu-id="cf1c8-144">O texto amigável que descreve a questão.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-144">The friendly text describing the issue.</span></span> |
+
+## <a name="conversionresult"></a><span data-ttu-id="cf1c8-145">ConversãoResult</span><span class="sxs-lookup"><span data-stu-id="cf1c8-145">ConversionResult</span></span>
+
+<span data-ttu-id="cf1c8-146">Representa o resultado da realização de uma conversão de subscrição.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-146">Represents the result of performing a subscription conversion.</span></span>
+
+| <span data-ttu-id="cf1c8-147">Propriedade</span><span class="sxs-lookup"><span data-stu-id="cf1c8-147">Property</span></span>       | <span data-ttu-id="cf1c8-148">Tipo</span><span class="sxs-lookup"><span data-stu-id="cf1c8-148">Type</span></span>                                | <span data-ttu-id="cf1c8-149">Descrição</span><span class="sxs-lookup"><span data-stu-id="cf1c8-149">Description</span></span>                                                            |
+|----------------|-------------------------------------|------------------------------------------------------------------------|
+| <span data-ttu-id="cf1c8-150">subscriptionId</span><span class="sxs-lookup"><span data-stu-id="cf1c8-150">subscriptionId</span></span> | <span data-ttu-id="cf1c8-151">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-151">string</span></span>                              | <span data-ttu-id="cf1c8-152">O identificador de assinatura.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-152">The subscription identifier.</span></span>                                           |
+| <span data-ttu-id="cf1c8-153">offerId</span><span class="sxs-lookup"><span data-stu-id="cf1c8-153">offerId</span></span>        | <span data-ttu-id="cf1c8-154">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-154">string</span></span>                              | <span data-ttu-id="cf1c8-155">O identificador de oferta original.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-155">The original offer identifier.</span></span>                                         |
+| <span data-ttu-id="cf1c8-156">targetOfferId</span><span class="sxs-lookup"><span data-stu-id="cf1c8-156">targetOfferId</span></span>  | <span data-ttu-id="cf1c8-157">string</span><span class="sxs-lookup"><span data-stu-id="cf1c8-157">string</span></span>                              | <span data-ttu-id="cf1c8-158">O identificador de oferta para a oferta alvo.</span><span class="sxs-lookup"><span data-stu-id="cf1c8-158">The offer identifier for the target offer.</span></span>                             |
+| <span data-ttu-id="cf1c8-159">erro</span><span class="sxs-lookup"><span data-stu-id="cf1c8-159">error</span></span>          | [<span data-ttu-id="cf1c8-160">ConversorEror</span><span class="sxs-lookup"><span data-stu-id="cf1c8-160">ConversionError</span></span>](#conversionerror) | <span data-ttu-id="cf1c8-161">O erro encontrado durante a tentativa de conversão, se aplicável..</span><span class="sxs-lookup"><span data-stu-id="cf1c8-161">The error encountered while attempting the conversion, if applicable..</span></span> |

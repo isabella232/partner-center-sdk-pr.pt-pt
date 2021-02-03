@@ -1,0 +1,43 @@
+---
+title: Recursos de relacionamento
+description: Descreve recursos relacionados com relacionamentos.
+ms.date: 12/15/2017
+ms.service: partner-dashboard
+ms.subservice: partnercenter-sdk
+ms.openlocfilehash: c5701414bd704b375dc23859b920609d5a975d9f
+ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "97768876"
+---
+# <a name="relationships-resources"></a><span data-ttu-id="f222a-103">Recursos de relacionamento</span><span class="sxs-lookup"><span data-stu-id="f222a-103">Relationships resources</span></span>
+
+<span data-ttu-id="f222a-104">**Aplica-se a**</span><span class="sxs-lookup"><span data-stu-id="f222a-104">**Applies To**</span></span>
+
+- <span data-ttu-id="f222a-105">Partner Center</span><span class="sxs-lookup"><span data-stu-id="f222a-105">Partner Center</span></span>
+
+<span data-ttu-id="f222a-106">Descreve recursos relacionados com relacionamentos.</span><span class="sxs-lookup"><span data-stu-id="f222a-106">Describes resources related to relationships.</span></span>
+
+## <a name="partnerrelationship"></a><span data-ttu-id="f222a-107">ParceriaRelação</span><span class="sxs-lookup"><span data-stu-id="f222a-107">PartnerRelationship</span></span>
+
+<span data-ttu-id="f222a-108">Representa uma relação entre dois parceiros.</span><span class="sxs-lookup"><span data-stu-id="f222a-108">Represents a relationship between two partners.</span></span>
+
+| <span data-ttu-id="f222a-109">Propriedade</span><span class="sxs-lookup"><span data-stu-id="f222a-109">Property</span></span>         | <span data-ttu-id="f222a-110">Tipo</span><span class="sxs-lookup"><span data-stu-id="f222a-110">Type</span></span>                                                           | <span data-ttu-id="f222a-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="f222a-111">Description</span></span>                                                                                                                                    |
+|------------------|----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span data-ttu-id="f222a-112">ID</span><span class="sxs-lookup"><span data-stu-id="f222a-112">id</span></span>               | <span data-ttu-id="f222a-113">string</span><span class="sxs-lookup"><span data-stu-id="f222a-113">string</span></span>                                                         | <span data-ttu-id="f222a-114">O identificador do parceiro.</span><span class="sxs-lookup"><span data-stu-id="f222a-114">The partner identifier.</span></span> <span data-ttu-id="f222a-115">O identificador do parceiro especifica o id do inquilino do parceiro que está no lado destinatário (a partir) da relação.</span><span class="sxs-lookup"><span data-stu-id="f222a-115">The partner identifier specifies the tenant id of the partner who is in the recipient (from) side of the relationship.</span></span> |
+| <span data-ttu-id="f222a-116">localização</span><span class="sxs-lookup"><span data-stu-id="f222a-116">location</span></span>         | <span data-ttu-id="f222a-117">string</span><span class="sxs-lookup"><span data-stu-id="f222a-117">string</span></span>                                                         | <span data-ttu-id="f222a-118">A localização do parceiro.</span><span class="sxs-lookup"><span data-stu-id="f222a-118">The location of the partner.</span></span>                                                                                                                   |
+| <span data-ttu-id="f222a-119">mpnId</span><span class="sxs-lookup"><span data-stu-id="f222a-119">mpnId</span></span>            | <span data-ttu-id="f222a-120">string</span><span class="sxs-lookup"><span data-stu-id="f222a-120">string</span></span>                                                         | <span data-ttu-id="f222a-121">O identificador da Microsoft Partner Network (MPN) do parceiro.</span><span class="sxs-lookup"><span data-stu-id="f222a-121">The Microsoft Partner Network (MPN) identifier of the partner.</span></span>                                                                                 |
+| <span data-ttu-id="f222a-122">name</span><span class="sxs-lookup"><span data-stu-id="f222a-122">name</span></span>             | <span data-ttu-id="f222a-123">string</span><span class="sxs-lookup"><span data-stu-id="f222a-123">string</span></span>                                                         | <span data-ttu-id="f222a-124">O nome do parceiro.</span><span class="sxs-lookup"><span data-stu-id="f222a-124">The name of the partner.</span></span>                                                                                                                       |
+| <span data-ttu-id="f222a-125">relaçãoType</span><span class="sxs-lookup"><span data-stu-id="f222a-125">relationshipType</span></span> | <span data-ttu-id="f222a-126">string</span><span class="sxs-lookup"><span data-stu-id="f222a-126">string</span></span>                                                         | <span data-ttu-id="f222a-127">O tipo de relacionamento.</span><span class="sxs-lookup"><span data-stu-id="f222a-127">The type of relationship.</span></span>                                                                                                                      |
+| <span data-ttu-id="f222a-128">state</span><span class="sxs-lookup"><span data-stu-id="f222a-128">state</span></span>            | <span data-ttu-id="f222a-129">string</span><span class="sxs-lookup"><span data-stu-id="f222a-129">string</span></span>                                                         | <span data-ttu-id="f222a-130">O estado da relação (por `active` exemplo).</span><span class="sxs-lookup"><span data-stu-id="f222a-130">The state of the relationship (for example `active`).</span></span>                                                                                                 |
+| <span data-ttu-id="f222a-131">atributos</span><span class="sxs-lookup"><span data-stu-id="f222a-131">attributes</span></span>       | [<span data-ttu-id="f222a-132">RecursosTributos</span><span class="sxs-lookup"><span data-stu-id="f222a-132">ResourceAttributes</span></span>](utility-resources.md#resourceattributes) | <span data-ttu-id="f222a-133">Os atributos dos metadados.</span><span class="sxs-lookup"><span data-stu-id="f222a-133">The metadata attributes.</span></span>                                                                                                                       |
+
+## <a name="relationshiprequest"></a><span data-ttu-id="f222a-134">RelacionamentoRequest</span><span class="sxs-lookup"><span data-stu-id="f222a-134">RelationshipRequest</span></span>
+
+<span data-ttu-id="f222a-135">Fornece o URL através do qual um cliente pode estabelecer uma relação com um parceiro.</span><span class="sxs-lookup"><span data-stu-id="f222a-135">Provides the URL by which a customer can establish a relationship with a partner.</span></span>
+
+| <span data-ttu-id="f222a-136">Propriedade</span><span class="sxs-lookup"><span data-stu-id="f222a-136">Property</span></span>   | <span data-ttu-id="f222a-137">Tipo</span><span class="sxs-lookup"><span data-stu-id="f222a-137">Type</span></span>                                                           | <span data-ttu-id="f222a-138">Descrição</span><span class="sxs-lookup"><span data-stu-id="f222a-138">Description</span></span>                   |
+|------------|----------------------------------------------------------------|-------------------------------|
+| <span data-ttu-id="f222a-139">url</span><span class="sxs-lookup"><span data-stu-id="f222a-139">url</span></span>        | <span data-ttu-id="f222a-140">string</span><span class="sxs-lookup"><span data-stu-id="f222a-140">string</span></span>                                                         | <span data-ttu-id="f222a-141">A URL de pedido de relacionamento.</span><span class="sxs-lookup"><span data-stu-id="f222a-141">The relationship request URL.</span></span> |
+| <span data-ttu-id="f222a-142">atributos</span><span class="sxs-lookup"><span data-stu-id="f222a-142">attributes</span></span> | [<span data-ttu-id="f222a-143">RecursosTributos</span><span class="sxs-lookup"><span data-stu-id="f222a-143">ResourceAttributes</span></span>](utility-resources.md#resourceattributes) | <span data-ttu-id="f222a-144">Os atributos dos metadados.</span><span class="sxs-lookup"><span data-stu-id="f222a-144">The metadata attributes.</span></span>      |
