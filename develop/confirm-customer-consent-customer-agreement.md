@@ -1,15 +1,15 @@
 ---
 title: Confirmar aceitação do cliente do Contrato de Cliente Microsoft
 description: Saiba como confirmar a aceitação do Cliente do Microsoft Customer Agreement utilizando APIs do Partner Center.
-ms.date: 02/04/2020
+ms.date: 02/08/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 239ca43c70fb8aa7f0d06e564e6c0726b235ffbe
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: 62a6cebd5d6d093377dd5940dcff6204b7095c70
+ms.sourcegitcommit: ebb36208d6e2dea705f62b7d60d471f10c55132e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770075"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006061"
 ---
 # <a name="confirm-customer-acceptance-of-the-microsoft-customer-agreement-using-partner-center-apis"></a>Confirme a aceitação do cliente do Acordo de Cliente da Microsoft utilizando APIs do Partner Center
 
@@ -40,6 +40,20 @@ Este artigo descreve como confirmar ou re-confirmar a aceitação do cliente do 
   - Apelido
   - Endereço de e-mail
   - Número de telefone (opcional)
+- Se os valores seguintes mudarem para um cliente, o Partner Center permitirá a criação de outro acordo para esse cliente: Endereço de endereço de e-mail de nome de primeiro nome Número de telefone Caso os parceiros recebam o seguinte código de erro, devido à criação de um cliente duplicado
+
+
+```
+{
+"code": 600061,
+"message": "A partner confirmed agreement already exists for the customer.",
+"description": "A partner confirmed agreement already exists for the customer.",
+"errorName": "PartnerConfirmedAgreementAlreadyExists",
+"isRetryable": false,
+"parameters": {},
+"errorMessageExtended": "InternalErrorCode=600061"
+}
+ ```
 
 ## <a name="net"></a>.NET
 
@@ -112,7 +126,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 Esta tabela descreve as propriedades necessárias no corpo de pedido REST.
 
-| Nome      | Tipo   | Descrição                                                                                  |
+| Nome      | Tipo   | Description                                                                                  |
 |-----------|--------|----------------------------------------------------------------------------------------------|
 | Contrato | objeto | Detalhes fornecidos pelo parceiro para confirmar a aceitação do cliente do Acordo de Cliente da Microsoft. |
 
@@ -120,7 +134,7 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido REST.
 
 Esta tabela descreve os campos mínimos necessários para criar um recurso [ **do Acordo.**](agreement-resources.md)
 
-| Propriedade       | Tipo   | Descrição                              |
+| Propriedade       | Tipo   | Description                              |
 |----------------|--------|------------------------------------------|
 | principalContact | [Contacto](./utility-resources.md#contact) | Informações sobre o utilizador da organização do cliente que aceitou o Acordo de Cliente da Microsoft, incluindo:  **primeiro Nome,** **último Nome,** **e-mail** e **telefoneNumber** (opcional) |
 | dataA acordado     | cadeia no formato de hora de data UTC |A data em que o cliente aceitou o contrato. |
