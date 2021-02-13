@@ -4,12 +4,12 @@ description: Aprenda a usar a sua conta de caixa de areia de integração partne
 ms.date: 09/11/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 95e80000a199ae00a31bddc5ecae8c19ab77c64e
-ms.sourcegitcommit: 8a5c37376a29e29fe0002a980082d4acc6b91131
+ms.openlocfilehash: e5b8f6cc2eb239b7a8b8a8722b231f290e768004
+ms.sourcegitcommit: a8ebfa97db9e43c6b5ff05bb37ecead6b3565721
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "97769961"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100335800"
 ---
 # <a name="test-and-debug-with-your-partner-center-integration-sandbox-to-avoid-paying-unexpected-charges"></a>Teste e depure com a sua caixa de areia de integração partner Center para evitar pagar taxas inesperadas
 
@@ -27,10 +27,6 @@ Para testar o seu código, deverá utilizar a sua conta de caixa de areia de int
 Se executar testes automatizados de verificação de construção, realizar testes na produção ou realizar testes manuais na caixa de areia de integração, poderá atingir os limites máximos para a caixa de areia de integração. Estes limites são 75 clientes, 5 subscrições por cliente e 25 licenças por subscrição.
 
 - O limite de 25 licenças significa que não pode adquirir uma oferta na caixa de areia que tenha um requisito mínimo de licença que exceda 25 licenças. Esta limitação inclui testes.
-
-- O resumo de utilização não pode ser obtido em contas de sandbox, uma vez que essas contas são para fins de teste.
-
-- As APIs relacionadas com a faturação e a fatura não funcionarão na caixa de areia, uma vez que não são geradas faturas para a conta de teste.
 
 
 ### <a name="azure-plan"></a>Plano do Azure

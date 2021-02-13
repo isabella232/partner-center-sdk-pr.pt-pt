@@ -4,12 +4,12 @@ description: Pode obter uma recolha de dados de linha de fatura (item de linha d
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 085397f3dc36468e411cec71e0dc9ae2cc364673
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 50dac1bbc96776d395014dc7ee5a5990f0710484
+ms.sourcegitcommit: a8ebfa97db9e43c6b5ff05bb37ecead6b3565721
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769673"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100335817"
 ---
 # <a name="get-invoice-line-items"></a>Obter itens de linha da fatura
 
@@ -157,13 +157,13 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 
 | Nome                   | Tipo   | Necessário | Descrição                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
-| fatura id             | string | Sim      | Uma corda que identifica a fatura.                             |
-| prestador de faturação       | string | Sim      | O fornecedor de faturação: "Office", "Azure", "OneTime".               |
-| tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "BillingLineItems", "UsageLineItems". |
-| size                   | número | Não       | O número máximo de itens para devolver. Tamanho máximo padrão = 2000    |
-| offset                 | número | Não       | O índice baseado em zero do primeiro item da primeira linha a devolver.            |
+| fatura id             | string | Yes      | Uma corda que identifica a fatura.                             |
+| prestador de faturação       | string | Yes      | O fornecedor de faturação: "Office", "Azure", "OneTime". No legado, temos modelos de dados separados para as transações do Office & Azure. No entanto, no moderno, temos um único modelo de dados em todos os produtos filtrados através do valor "OneTime".            |
+| tipo de artigo de linha de fatura | string | Yes      | O tipo de detalhe de fatura: "BillingLineItems", "UsageLineItems". |
+| size                   | número | No       | O número máximo de itens para devolver. Tamanho máximo padrão = 2000    |
+| offset                 | número | No       | O índice baseado em zero do primeiro item da primeira linha a devolver.            |
 | procurarOperação          | cadeia (de carateres) | No       | Se **o fornecedor de faturação** for igual ao **OneTime,** desaperte a **procura De cooperação** igual a **Next** para obter a próxima página de itens da linha de fatura. |
-| hasPartnerEarnedCredit | bool | Não | O valor indicando se devolver os itens de linha com o parceiro ganhou crédito aplicado. Nota: este parâmetro só será aplicado quando o tipo de fornecedor de faturação for OneTime e o BillLineItemType for UsageLineItems. |
+| hasPartnerEarnedCredit | bool | No | O valor indicando se devolver os itens de linha com o parceiro ganhou crédito aplicado. Nota: este parâmetro só será aplicado quando o tipo de fornecedor de faturação for OneTime e o BillLineItemType for UsageLineItems. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
