@@ -4,12 +4,12 @@ description: Pode obter uma recolha de dados de linha de fatura (item de linha d
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 50dac1bbc96776d395014dc7ee5a5990f0710484
-ms.sourcegitcommit: a8ebfa97db9e43c6b5ff05bb37ecead6b3565721
+ms.openlocfilehash: e797f549e1344268c8167259a231122e7c669a2e
+ms.sourcegitcommit: 9f8ba784171ab4f980ed0c60ef6f2323849c4a98
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100335817"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100499903"
 ---
 # <a name="get-invoice-line-items"></a>Obter itens de linha da fatura
 
@@ -158,7 +158,7 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 | Nome                   | Tipo   | Necessário | Descrição                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
 | fatura id             | string | Yes      | Uma corda que identifica a fatura.                             |
-| prestador de faturação       | string | Yes      | O fornecedor de faturação: "Office", "Azure", "OneTime". No legado, temos modelos de dados separados para as transações do Office & Azure. No entanto, no moderno, temos um único modelo de dados em todos os produtos filtrados através do valor "OneTime".            |
+| prestador de faturação       | string | Yes      | O fornecedor de faturação: "Office", "Azure", "OneTime". No legado, temos modelos de dados separados para as transações do Office & Azure. No entanto, o moderno tem um único modelo de dados em todas as transações filtradas através do valor "OneTime".            |
 | tipo de artigo de linha de fatura | string | Yes      | O tipo de detalhe de fatura: "BillingLineItems", "UsageLineItems". |
 | size                   | número | No       | O número máximo de itens para devolver. Tamanho máximo padrão = 2000    |
 | offset                 | número | No       | O índice baseado em zero do primeiro item da primeira linha a devolver.            |

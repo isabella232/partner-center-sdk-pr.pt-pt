@@ -4,12 +4,12 @@ description: Aprenda a usar a sua conta de caixa de areia de integração partne
 ms.date: 09/11/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e5b8f6cc2eb239b7a8b8a8722b231f290e768004
-ms.sourcegitcommit: a8ebfa97db9e43c6b5ff05bb37ecead6b3565721
+ms.openlocfilehash: 3ff4a7ec3ad984b09c60d3d820423c614fb8020d
+ms.sourcegitcommit: 9f8ba784171ab4f980ed0c60ef6f2323849c4a98
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100335800"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100499886"
 ---
 # <a name="test-and-debug-with-your-partner-center-integration-sandbox-to-avoid-paying-unexpected-charges"></a>Teste e depure com a sua caixa de areia de integração partner Center para evitar pagar taxas inesperadas
 
@@ -26,7 +26,17 @@ Para testar o seu código, deverá utilizar a sua conta de caixa de areia de int
 
 Se executar testes automatizados de verificação de construção, realizar testes na produção ou realizar testes manuais na caixa de areia de integração, poderá atingir os limites máximos para a caixa de areia de integração. Estes limites são 75 clientes, 5 subscrições por cliente e 25 licenças por subscrição.
 
-- O limite de 25 licenças significa que não pode adquirir uma oferta na caixa de areia que tenha um requisito mínimo de licença que exceda 25 licenças. Esta limitação inclui testes.
+O limite de 25 licenças significa que não pode adquirir uma oferta na caixa de areia que tenha um requisito mínimo de licença que exceda 25 licenças. Esta limitação inclui testes.
+
+Existem vários ficheiros de fatura e reconciliação disponíveis nos ambientes da Sandbox mas, nem todos estão disponíveis em plataformas antigas ou modernas. Verifique a tabela abaixo para saber mais.
+
+| **Ficheiros**                    | **Disponível em Legado** | **Disponível em Moderno** |
+| ---------------------------- | ------------------------ | ------------------------ |
+| PDF da fatura                  | No                       | Yes                      |
+| Arquivo de Reconciliação de Faturas | No                       | Yes                      |
+| Arquivo de Estimativa de Fatura       | No                       | Yes                      |
+| Arquivo de utilização faturado diário     | No                       | Yes                      |
+| Arquivo diário de utilização não bico   | No                       | Yes                      |
 
 
 ### <a name="azure-plan"></a>Plano do Azure
