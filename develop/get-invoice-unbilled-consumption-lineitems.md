@@ -4,12 +4,12 @@ description: Você pode obter uma coleção de detalhes de item de linha de cons
 ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 594946db712c28983dd390207fb06c8d9f62f18b
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 8d3bbe7921029dc6c40c65fb8d82baaa944089b6
+ms.sourcegitcommit: 160296667833366fb3f4021d042094606e1032ec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769679"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102472687"
 ---
 # <a name="get-invoice-unbilled-commercial-consumption-line-items"></a>Obter faturas sem fatura de produtos de linha de consumo comercial
 
@@ -129,11 +129,11 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 
 | Nome                   | Tipo   | Necessário | Descrição                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
-| provedor               | string | Sim      | O fornecedor: "**OneTime**".                                                |
-| tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "**UsageLineItems**", "**UsageLineItems**".               |
-| currencyCode           | string | Sim      | O código cambial para os itens de linha não bico.                                  |
-| period                 | string | Sim      | O período de reconhecimento não bico (por exemplo: **atual,** **anterior).**<br/><br/>**Anterior** – se o ciclo de faturação for 01/01/2020 – 01/31/2020 então, muito provavelmente que a sua fatura seja gerada entre 02/06/2020 e 02/08/2020 tempo UTC. Se precisar de consultar os seus dados de utilização não faturados do ciclo de faturação (01/01/2020 – 01/31/2020) em qualquer momento entre 02/01/2020 e a data gerada pela fatura (que é entre 02/06/2020 e 02/08/2020 UTC), então o tempo gerado pela fatura (que é entre 02/06/2020 e 02/02/2020 UTC), então o tempo de fatura (que é entre 02/06/2020 e 02/02/020 UTC), então o tempo de 02/06/2020 e 02/02/020 UTC), então, então, entre 02/06/2020 e 02/02/020 UTC, então, então, o tempo de 02/06/2020 e 02/08/2020 UTC, então, então, o tempo de 02/06/2020 e 02/0 tem de escolher o Período como "Anterior".<br/><br/>**Corrente** – se o ciclo de faturação for 01/01/2020 – 01/31/2020 então, muito provavelmente que a sua fatura seja gerada entre 02/06/2020 e 02/08/2020 tempo UTC. Se precisar de consultar os dados de utilização não faturados do ciclo de faturação (01/01/2020 – 01/31/2020) em qualquer momento entre 01/01/2020 e 01/31/2020, que está dentro do seu ciclo de faturação, então tem de escolher o Período como "Corrente". |
-| size                   | número | Não       | O número máximo de itens para devolver. O tamanho padrão é 2000.                    |
+| provedor               | string | Yes      | O fornecedor: "**OneTime**".                                                |
+| tipo de artigo de linha de fatura | string | Yes      | O tipo de detalhe de fatura: "**UsageLineItems**", "**UsageLineItems**".               |
+| currencyCode           | string | Yes      | O código cambial para os itens de linha não bico.                                  |
+| period                 | string | Yes      | O período de reconhecimento não bico (por exemplo: **atual,** **anterior).** Suponha que precisa de consultar os seus dados de utilização não faturados do ciclo de faturação (01/01/2020 – 01/31/2020) em janeiro, escolha o período como **"Corrente",** caso contrário **"Anterior".** |
+| size                   | número | No       | O número máximo de itens para devolver. O tamanho padrão é 2000.                    |
 | procurarOperação          | cadeia (de carateres) | No       | Prepare `seekOperation=Next` para obter a próxima página de itens da linha de reconciliação.                |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
