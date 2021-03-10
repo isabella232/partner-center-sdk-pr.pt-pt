@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 5f428bf9104fec3e4855706e8786ad3941875f3d
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: d486eed96586eb2577577eac44fa9e866479e825
+ms.sourcegitcommit: 9bc35836b389fdf083b278128a2e9ec994919f1c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769254"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532843"
 ---
 # <a name="partner-center-supported-languages-and-locales"></a>Regiões e idiomas suportados pelo Centro de Parceiros
 
@@ -24,7 +24,7 @@ ms.locfileid: "97769254"
 
 Algumas APIs do Centro de Parceiros requerem um valor que indique um local, país ou região. Por exemplo, o [cabeçalho](headers.md) do Partner Center REST X-Locale requer um valor frequentemente no formato "language-country" ("en-US" indica "Inglês - Estados Unidos").
 
-No Partner Center gerido APIs, a classe [CountryValidationRules/dotnet/api/microsoft.store.partnercenter.models.offercategory.locale), [ServiceCategory.Locale/dotnet/api/microsoft.store.partnercenter.offercategory.locale), [ServiceRequest.CountryCode/dotnet/dotnet.partnercenter.offer.offercategory.locale), [ServiceRequest.CountryCode/dotnet.partnercenter.offer.offercategory.locale), [ServiceRequest.CountryCode/dotnet.partnercenter.offers.offercategory.locale), [ServiceRequest.CountryCode/dotnet.partnercenter.offer.offercategory.locale), [ServiceRequest.CountryCode/dotnet/dotnet/dotnet./api/microsoft.store.partnercenter.models.servicerequests.servicerequest.countrycode), ou [CustomerBillingProfile.Culture/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile.culture) requerem valores de cordas que indicam uma língua ou país/região (sob a forma de um código linguístico ISO2 ou código iso3 country/região), um código local, ou uma cultura (um ID de língua combinado com um código país/região).
+No Partner Center gerido APIs, a classe [CountryValidationRules/dotnet/api/microsoft.store.partnercenter.models.offercategory.locale), [ServiceCategory.Locale/dotnet/api/microsoft.store.partnercenter.offercategory.locale), [ServiceRequest.CountryCode/dotnet/dotnet.partnercenter.offer.offercategory.locale), [ServiceRequest.CountryCode/dotnet/dotnet/dotnet.partnercenter.offer.offercategory.locale), [ServiceRequest.CountryCode/dotnet/dotnet/dotnet.partnercenter.offers.offercategory.locale), [ServiceRequest.CountryCode/dotnet.partnercenter.offer.offercategory.locale), [ServiceRequest.CountryCode/dotnet/dotnet/dotnet./api/microsoft.store.partnercenter.models.servicerequests.servicerequest.countrycode), ou [CustomerBillingProfile.Culture/dotnet/api/microsoft.store.partnercenter.models.customers.customerbillingprofile.culture) requerem valores de cordas que indicam uma língua ou país/região (sob a forma de um código linguístico ISO2 ou código iso3 country/região), um código local, ou uma cultura (um ID de língua combinado com um código país/região).
 
 A tabela que se segue lista os códigos de país da Organização das Culturas e Padrões Internacionais (ISO) que são suportados nas APIs do Partner Center.
 
@@ -181,7 +181,7 @@ A tabela que se segue lista os códigos de país da Organização das Culturas e
 | Montenegro                               | ME                       | MNE                      | sr-Latn-ME / en-US                    |
 | Montserrate                               | MS                       | MSR                      | en-PT                                 |
 | Marrocos                                  | MA                       | MAR                      | ar-MA / en-US                         |
-| Moçambique                               | MZ                       | MOZ                      | pt-PT / en-US                         |
+| Moçambique                               | MZ                       | MOZ                      | pt-PT                                 |
 | Mianmar                                  | MM                       | MMR                      | en-PT                                 |
 | Namíbia                                  | ND                       | NAM                      | en-GB / en-US                         |
 | Nauru                                    | NR                       | NRU                      | en-PT                                 |
