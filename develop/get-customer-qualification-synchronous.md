@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 82812091be9c13d64ac183c37461e3b63b2ec294
-ms.sourcegitcommit: 0c98496e972aebe10eba23822aa229125bfc035d
+ms.openlocfilehash: e39ace3b598736abed6ab22021a8b93d473486a3
+ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "97770184"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104711896"
 ---
 # <a name="get-a-customers-qualification-via-synchronous-validation"></a>Obtenha a qualificação de um cliente através de validação sincronizada
 
@@ -52,7 +52,7 @@ Esta tabela lista o parâmetro de consulta necessário para obter toda a qualifi
 
 | Nome               | Tipo   | Necessário | Descrição                                           |
 |--------------------|--------|----------|-------------------------------------------------------|
-| **cliente-inquilino-id** | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| **cliente-inquilino-id** | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -95,4 +95,4 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Atualizar a qualificação de um cliente](update-a-customer-s-qualification.md)
+- [Atualizar a qualificação de um cliente](./update-customer-qualification-synchronous.md)

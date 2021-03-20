@@ -4,12 +4,12 @@ description: A caixa de areia do parceiro tem capacidade de suportar relações 
 ms.date: 11/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e01dd1a83ca459cbdf12b8e564b43a2d18f5595b
-ms.sourcegitcommit: f69ceae441bbb2ddba96e878a1ec8c1a499a4879
+ms.openlocfilehash: af46811b3615e1f904a9619de85b0aca7622490b
+ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98180736"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104711870"
 ---
 # <a name="partner-sandbox-capabilities-that-support-reseller-relationship"></a>Capacidades do sandbox do parceiro que suportam a relação de revendedor
 
@@ -95,7 +95,7 @@ Pedido corpo Nenhum
 
 ### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 
-Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](https://docs.microsoft.com/partner-center/develop/error-codes).
+Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](./error-codes.md).
 
 ## <a name="next-steps"></a>Passos seguintes
 
@@ -103,4 +103,4 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 - [Cancelar uma encomenda da Sandbox](cancel-an-order-from-the-integration-sandbox.md)
 
-- [Testar e depurar](test-and-debug.md) 
+- [Testar e depurar](test-and-debug.md)

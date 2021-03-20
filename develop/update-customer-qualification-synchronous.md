@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 7faab68d20c698f5b040a76f4776dbdf14180640
-ms.sourcegitcommit: 0c98496e972aebe10eba23822aa229125bfc035d
+ms.openlocfilehash: c202d95beab771241a9665243be5f08ab6f82fd5
+ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "97770207"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104711972"
 ---
 # <a name="update-a-customers-qualification-via-synchronous-validation"></a>Atualizar a qualificação de um cliente através de validação sincronizada
 
@@ -64,8 +64,8 @@ Utilize o seguinte parâmetro de consulta para atualizar a qualificação.
 
 | Nome                   | Tipo | Necessário | Descrição                                                                                                                                            |
 |------------------------|------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **cliente-inquilino-id** | GUID | Sim      | O valor é um design **de cliente-inquilino-inquilino** formatado guid que permite ao revendedor filtrar os resultados de um dado cliente que pertence ao revendedor. |
-| **validaçãoDesco**     | int  | Não       | Só era necessário para a Nuvem Comunitária do Governo.                                                                                                            |
+| **cliente-inquilino-id** | GUID | Yes      | O valor é um design **de cliente-inquilino-inquilino** formatado guid que permite ao revendedor filtrar os resultados de um dado cliente que pertence ao revendedor. |
+| **validaçãoDesco**     | int  | No       | Só era necessário para a Nuvem Comunitária do Governo.                                                                                                            |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -107,5 +107,5 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-- [Obter a qualificação de um cliente](get-a-customer-s-qualification.md)
+- [Obter a qualificação de um cliente](./get-customer-qualification-synchronous.md)
 - [Obter os códigos de validação de um parceiro](get-a-partner-s-validation-codes.md)

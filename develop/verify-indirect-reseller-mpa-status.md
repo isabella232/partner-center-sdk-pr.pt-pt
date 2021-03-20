@@ -4,12 +4,12 @@ description: Pode utilizar a API AgreementStatus para verificar se um revendedor
 ms.date: 07/24/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9501f245a6c98fa90e77de7bc0caed8ca51fa4f2
-ms.sourcegitcommit: 40baf4d825ce0ca6a254b5f368c308f025be7034
+ms.openlocfilehash: fa9480424eccc933bc9c28c3879a195fbd5f2bb1
+ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100537581"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104711908"
 ---
 # <a name="verify-an-indirect-resellers-microsoft-partner-agreement-signing-status"></a>Verifique o estado de assinatura do Acordo de Parceiro da Microsoft de um revendedor indireto
 
@@ -60,8 +60,8 @@ Deve fornecer um dos dois parâmetros de consulta seguintes para identificar o p
 
 | Nome | Tipo | Necessário | Descrição |
 | ---- | ---- | -------- | ----------- |
-| **MpnId** | int | Não | Um ID da Rede de Parceiros da Microsoft (PGA/PLA) que identifica o revendedor indireto. |
-| **TenantId** | GUID | Não | Um ID da Microsoft que identifica a conta CSP do revendedor indireto. |
+| **MpnId** | int | No | Um ID da Rede de Parceiros da Microsoft (PGA/PLA) que identifica o revendedor indireto. |
+| **TenantId** | GUID | No | Um ID da Microsoft que identifica a conta CSP do revendedor indireto. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -240,7 +240,7 @@ Connection: close
 
 #### <a name="csp-indirect-provider-region-and-csp-indirect-reseller-region-does-not-match"></a>Região de Fornecedor Indireto CSP e região de Revendedor Indireto CSP não correspondem
 
-A resposta de exemplo a seguir é devolvida quando a região do revendedor indireto MPN ID (PGA/PLA) não corresponde à região do Fornecedor Indireto. [Saiba mais](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq) sobre as Regiões da CSP.
+A resposta de exemplo a seguir é devolvida quando a região do revendedor indireto MPN ID (PGA/PLA) não corresponde à região do Fornecedor Indireto. [Saiba mais](/partner-center/mpa-indirect-provider-faq) sobre as Regiões da CSP.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -264,7 +264,7 @@ Connection: close
 
 #### <a name="csp-indirect-reseller-account-exists-in-partner-center-but-hasnt-signed-the-mpa"></a>CSP Conta de Revendedor Indireto existe no Partner Center mas não assinou a MPA
 
-A resposta de exemplo a seguir é devolvida quando a conta CSP Indirect Reseller no Partner Center não assinou a MPA. [Saiba mais](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
+A resposta de exemplo a seguir é devolvida quando a conta CSP Indirect Reseller no Partner Center não assinou a MPA. [Saiba mais](/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -288,7 +288,7 @@ Connection: close
 
 #### <a name="no-csp-indirect-reseller-account-is-associated-with-the-given-mpn-id"></a>Nenhuma conta CSP Reseller Indirect está associada com o ID MPN dado
 
-A resposta de exemplo a seguir é devolvida quando o Partner Center pode reconhecer o ID MPN (PGA/PLA) aprovado no pedido, mas não há nenhuma inscrição CSP associada ao ID MPN (PGA/PLA). [Saiba mais](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
+A resposta de exemplo a seguir é devolvida quando o Partner Center pode reconhecer o ID MPN (PGA/PLA) aprovado no pedido, mas não há nenhuma inscrição CSP associada ao ID MPN (PGA/PLA). [Saiba mais](/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -334,7 +334,7 @@ Connection: close
 
 #### <a name="no-mpa-found-with-the-given-tenant-id"></a>Nenhuma MPA encontrada com a iD do inquilino dado
 
-A resposta de exemplo a seguir é devolvida quando o Partner Center não consegue encontrar qualquer assinatura MPA com o ID do inquilino. [Saiba mais](https://docs.microsoft.com/partner-center/mpa-indirect-provider-faq)
+A resposta de exemplo a seguir é devolvida quando o Partner Center não consegue encontrar qualquer assinatura MPA com o ID do inquilino. [Saiba mais](/partner-center/mpa-indirect-provider-faq)
 
 ```http
 HTTP/1.1 400 Bad Request
