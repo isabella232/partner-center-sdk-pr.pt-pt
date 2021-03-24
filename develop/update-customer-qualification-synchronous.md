@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: c202d95beab771241a9665243be5f08ab6f82fd5
-ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
+ms.openlocfilehash: 0ffe6d1a236a8a07e1ff71163e7639ef1f3437e1
+ms.sourcegitcommit: bbdb5f7c9ddd42c2fc4eaadbb67d61aeeae805ca
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104711972"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105030594"
 ---
 # <a name="update-a-customers-qualification-via-synchronous-validation"></a>Atualizar a qualificação de um cliente através de validação sincronizada
 
@@ -41,7 +41,7 @@ var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer
 
 **Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
 
-Para atualizar a qualificação de um cliente para **o GovernmentCommunityCloud** num cliente existente sem qualificação.  O parceiro também é obrigado a incluir o Código de [**Validação**](utility-resources.md#validationcode)do cliente.
+Para atualizar a qualificação de um cliente para **o GovernmentCommunityCloud** num cliente existente sem habilitação, o parceiro é obrigado a incluir o Código de [**Validação**](utility-resources.md#validationcode)do cliente.
 
 ``` csharp
 // CustomerQualification is an enum

@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: JoeyBytes
 ms.author: jobiesel
-ms.openlocfilehash: 2c860d4a35104131197e06d4712f4ef41ba0008e
-ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
+ms.openlocfilehash: 09801792c059873b9f6b842e99286eda09d38b1a
+ms.sourcegitcommit: bbdb5f7c9ddd42c2fc4eaadbb67d61aeeae805ca
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104711919"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105030574"
 ---
 # <a name="get-a-customers-qualification-asynchronously"></a>Obtenha a qualificação de um cliente assíncronea
 
@@ -26,6 +26,18 @@ Como obter as qualificações de um cliente assíncroneamente.
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.
 
 - Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+
+## <a name="c"></a>C\#
+
+Para obter as qualificações de um cliente, ligue para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o identificador de clientes. Em seguida, use a propriedade [**Qualification**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) para recuperar uma interface [**ICustomerQualification.**](/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) Finalmente, ligue `GetQualifications()` ou `GetQualificationsAsync()` recupere as qualificações do cliente.
+
+``` csharp
+// IAggregatePartner partnerOperations;
+// string customerId;
+var customerQualifications = partnerOperations.Customers.ById(customerId).Qualification.GetQualifications();
+```
+
+**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Projeto**: Classe SdkSamples : GetCustomerQualifications.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -79,14 +91,12 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-{
-    "qualifications": [
-        {
-            "qualification": "Education",
-            "vettingStatus": "Approved",
-        }
-    ]
-}
+[
+    {
+        "qualification": "Education",
+        "vettingStatus": "Approved",
+    }
+]
 
 ```
 
@@ -98,15 +108,13 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-{
-    "qualifications": [
-        {
-            "qualification": "Education",
-            "vettingStatus": "InReview",
-            "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
-        }
-    ]
-}
+[
+    {
+        "qualification": "Education",
+        "vettingStatus": "InReview",
+        "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+    }
+]
 
 ```
 
@@ -118,16 +126,14 @@ Content-Length:
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
-{
-    "qualifications": [
-        {
-            "qualification": "Education",
-            "vettingStatus": "Denied",
-            "vettingReason": "Not an Education Customer", // example Vetting Reason
-            "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
-        }
-    ]
-}
+[
+    {
+        "qualification": "Education",
+        "vettingStatus": "Denied",
+        "vettingReason": "Not an Education Customer", // example Vetting Reason
+        "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+    }
+]
 
 ```
 

@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 3f1deb20a18bc6e7133cac91db528f2d1ad694e2
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 267e3aa63a94c5045977ad566eb5061df3b59882
+ms.sourcegitcommit: bbdb5f7c9ddd42c2fc4eaadbb67d61aeeae805ca
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768738"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105030569"
 ---
 # <a name="get-the-status-of-a-customers-direct-signing-direct-acceptance-of-microsoft-customer-agreement"></a>Obtenha o estado da assinatura direta de um cliente (aceitação direta) do Microsoft Customer Agreement
 
@@ -28,6 +28,24 @@ Este recurso não é *aplicável* a:
 - Centro de Parceiros do Microsoft Cloud for US Government
 
 Este artigo explica como pode recuperar o estado da aceitação direta de um cliente do Microsoft Customer Agreement.
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+- Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação apenas com credenciais app+User.
+
+- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+
+## <a name="c"></a>C\#
+
+Para recuperar o estado da aceitação direta de um cliente do Microsoft Customer Agreement, ligue para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o identificador do cliente. Em seguida, use a propriedade [**Agreements**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.agreements) para recuperar uma interface [**ICustomerAgreementCollection.**](/dotnet/api/microsoft.store.partnercenter.agreements.icustomeragreementcollection) Finalmente, ligue `GetDirectSignedCustomerAgreementStatus()` ou `GetDirectSignedCustomerAgreementStatusAsync()` recupere o estado.
+
+``` csharp
+// IAggregatePartner partnerOperations;
+// string customerId;
+var customerDirectSigningStatus = partnerOperations.Customers.ById(selectedCustomerId).Agreements.GetDirectSignedCustomerAgreementStatus();
+```
+
+**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Projeto**: Classe SdkSamples : GetDirectSignedCustomerAgreementStatus.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -47,7 +65,7 @@ Pode utilizar os seguintes parâmetros URI com o seu pedido:
 
 | Nome             | Tipo | Necessário | Descrição                                                                               |
 |------------------|------|----------|-------------------------------------------------------------------------------------------|
-| cliente-inquilino-id | GUID | Sim | O valor é um **CustomerTenantId** formatado pelo GUID que lhe permite especificar o ID do inquilino de um cliente. |
+| cliente-inquilino-id | GUID | Yes | O valor é um **CustomerTenantId** formatado pelo GUID que lhe permite especificar o ID do inquilino de um cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

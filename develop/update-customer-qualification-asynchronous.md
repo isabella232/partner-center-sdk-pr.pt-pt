@@ -1,25 +1,20 @@
 ---
 title: Atualizar as qualificações de um cliente
-description: Saiba como atualizar as qualificações de um cliente através de rastreio ou verificação assíncronos, incluindo o endereço associado ao perfil.
-ms.date: 12/07/2020
+description: Atualiza as qualificações de um cliente assíncroneamente, incluindo o endereço associado ao perfil.
+ms.date: 03/23/2021
 ms.service: partner-dashboard
-ms.subservice: partnercenter-sdk
 author: JoeyBytes
 ms.author: jobiesel
-ms.openlocfilehash: 703585eeaba93b6d7a510a3174a78a28f22e1510
-ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
+ms.openlocfilehash: 7606eeaac4df158ec0fad6ffd4e565bb250f448e
+ms.sourcegitcommit: bbdb5f7c9ddd42c2fc4eaadbb67d61aeeae805ca
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104711938"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105030611"
 ---
 # <a name="update-a-customers-qualifications-asynchronously"></a>Atualizar as qualificações de um cliente assíncroneamente
 
-**Aplica-se a**
-
-- Partner Center
-
-Saiba como atualizar as qualificações de um cliente de forma assíncronea através das APIs do Partner Center. Para aprender a fazer isto de forma sincronizada, consulte atualizar a [qualificação de um cliente através de validação sincronizada](update-customer-qualification-synchronous.md).
+Atualiza as qualificações de um cliente assíncroneamente.
 
 Um parceiro pode atualizar as qualificações de um cliente assíncroneamente para ser "Education" ou "GovernmentCommunityCloud". Outros valores, "Nenhum" e "Sem Fins Lucrativos", não podem ser definidos.
 
@@ -28,6 +23,27 @@ Um parceiro pode atualizar as qualificações de um cliente assíncroneamente pa
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação apenas com credenciais app+User.
 
 - Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+
+## <a name="c"></a>C\#
+
+Para criar a qualificação de um cliente para "Educação", primeiro criar um objeto que represente o tipo de qualificação. Em seguida, ligue para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o identificador de clientes. Em seguida, use a propriedade [**Qualification**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) para recuperar uma interface [**ICustomerQualification.**](/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) Finalmente, ligue `CreateQualifications()` ou com o objeto do tipo de `CreateQualificationsAsync()` qualificação como parâmetro de entrada.
+
+``` csharp
+var qualificationType = { Qualification = "education" };
+var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.CreateQualifications(qualificationType);
+```
+
+**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Projeto**: Classe SdkSamples : CreateCustomerQualification.cs
+
+Para atualizar a qualificação de um cliente para **o GovernmentCommunityCloud** num cliente existente sem habilitação, o parceiro também é obrigado a incluir o Código de [**Validação**](utility-resources.md#validationcode)do cliente. Primeiro, criar um objeto que represente o tipo de qualificação. Em seguida, ligue para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o identificador de clientes. Em seguida, use a propriedade [**Qualification**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) para recuperar uma interface [**ICustomerQualification.**](/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) Finalmente, ligue `CreateQualifications()` ou com o objeto tipo de `CreateQualificationsAsync()` qualificação e o código de validação como parâmetros de entrada.
+
+``` csharp
+// GCC validation is type ValidationCode
+var qualificationType = { Qualification = "GovernmentCommunityCloud" };
+var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.CreateQualifications(qualificationType, gccValidation);
+```
+
+**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Projeto**: Classe SdkSamples : CreateCustomerQualificationWithGCC.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -52,7 +68,11 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-O valor inteiro do número de [**clientesQualificação.**](/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification)
+Esta tabela descreve o objeto de qualificação no corpo de pedido.
+
+Propriedade | Tipo | Necessário | Descrição
+-------- | ---- | -------- | -----------
+Qualificação | string | Yes | O valor de cadeia da [**enum de Qualificação**](/dotnet/api/microsoft.store.partnercenter.models.customers.customerqualification) do Cliente.
 
 ### <a name="request-example"></a>Exemplo de pedido
 
@@ -62,6 +82,10 @@ Accept: application/json
 Content-Type: application/json
 MS-CorrelationId: 7d2456fd-2d79-46d0-9f8e-5d7ecd5f8745
 MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
+
+{
+    "Qualification": "Education"
+}
 
 ```
 
