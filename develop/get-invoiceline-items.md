@@ -4,12 +4,12 @@ description: Pode obter uma recolha de dados de linha de fatura (item de linha d
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e797f549e1344268c8167259a231122e7c669a2e
-ms.sourcegitcommit: 9f8ba784171ab4f980ed0c60ef6f2323849c4a98
+ms.openlocfilehash: ddc49e4d83518b809402a65f990f3e9c2658e64b
+ms.sourcegitcommit: 4ec053c56fd210b174fe657aa7b86faf4e2b5a7c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100499903"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105730234"
 ---
 # <a name="get-invoice-line-items"></a>Obter itens de linha da fatura
 
@@ -157,9 +157,9 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 
 | Nome                   | Tipo   | Necessário | Descrição                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
-| fatura id             | string | Yes      | Uma corda que identifica a fatura.                             |
-| prestador de faturação       | string | Yes      | O fornecedor de faturação: "Office", "Azure", "OneTime". No legado, temos modelos de dados separados para as transações do Office & Azure. No entanto, o moderno tem um único modelo de dados em todas as transações filtradas através do valor "OneTime".            |
-| tipo de artigo de linha de fatura | string | Yes      | O tipo de detalhe de fatura: "BillingLineItems", "UsageLineItems". |
+| fatura id             | string | Sim      | Uma corda que identifica a fatura.                             |
+| prestador de faturação       | string | Sim      | O fornecedor de faturação: "Office", "Azure", "OneTime". No legado, temos modelos de dados separados para as transações do Office & Azure. No entanto, o moderno tem um único modelo de dados em todas as transações filtradas através do valor "OneTime".            |
+| tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "BillingLineItems", "UsageLineItems". |
 | size                   | número | No       | O número máximo de itens para devolver. Tamanho máximo padrão = 2000    |
 | offset                 | número | No       | O índice baseado em zero do primeiro item da primeira linha a devolver.            |
 | procurarOperação          | cadeia (de carateres) | No       | Se **o fornecedor de faturação** for igual ao **OneTime,** desaperte a **procura De cooperação** igual a **Next** para obter a próxima página de itens da linha de fatura. |
@@ -633,6 +633,7 @@ Date: Thu, 07 Sep 2017 23:31:09 GMT
             "termAndBillingCycle": "1 Month Subscription",
             "alternateId": "1234278124b8",
             "priceAdjustmentDescription": "[\"100.0% Tier 1 Discount\"]",
+            "creditReasonCode": "Azure Consumption Credit",
             "pricingCurrency": "USD",
             "pcToBCExchangeRate": 1,
             "pcToBCExchangeRateDate": "2019-09-30T23:59:59Z",

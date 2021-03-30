@@ -4,12 +4,12 @@ description: Vários recursos relacionados com a fatura estão disponíveis atra
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: bd2caefe4ae18c81a31083d084f1e87da1288dd9
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 8977b3b649cd930bb517965572d0efe51d6985a0
+ms.sourcegitcommit: 4ec053c56fd210b174fe657aa7b86faf4e2b5a7c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768905"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105730217"
 ---
 # <a name="invoice-resources"></a>Recursos de fatura
 
@@ -230,6 +230,7 @@ Representa um item de linha de faturação para subscrições licenciadas.
 | TermAndBillingCycle | string | Obtém ou define o termo e ciclo de faturação associado a esta compra. |
 | AlternateId | string | Obtém ou define o ID alternativo (ID de cotação). |
 | PreçoDjustmentDescription | string | Obtém ou define a descrição do ajustamento de preço. |
+| Código CreditReason | string | Recebe ou define o código de razão de crédito. |
 | DescontoDesta | string |  **Precotado.** Obtém ou define os detalhes de desconto associados a esta compra. |
 | PricingCurrency | string | Recebe ou define o código da moeda de preços. |
 | PCToBCExchangeRate | decimal | Obtém ou define a moeda de fixação para a taxa de câmbio da moeda de faturação. |
@@ -297,6 +298,8 @@ Representa itens de linha de reconciliação não faturados para uso avaliado di
 | PCToBCExchangeRateDate | DateTime | Obtém ou define a moeda de preços para a data da taxa de câmbio da faturação. |
 | EffectiveUnitPrice | decimal | Obtém ou define o preço unitário eficaz. |
 | TaxaOfPartnerEarnedCredit | decimal | Obtém ou define a taxa de crédito do parceiro. |
-| hasPartnerEarnedCredit | bool | Gets ou sets é parceiro obtido crédito aplicado. |
+| HasPartnerEarnedCredit | bool | Gets ou sets é parceiro obtido crédito aplicado. |
+| TaxaOfCredit | decimal | Obtém ou define a taxa de crédito para o tipo de crédito dado. |
+| CréditoType | string | Recebe ou define o tipo de crédito. |
 | FaturaLineItemType | FaturaLineItemType | Devolve o tipo de artigo da linha de fatura. |
 | BillingProvider | BillingProvider | Devolve o fornecedor de faturação. |

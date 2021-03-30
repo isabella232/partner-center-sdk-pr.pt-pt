@@ -4,12 +4,12 @@ description: Você pode obter uma coleção de detalhes de item de linha de cons
 ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8d3bbe7921029dc6c40c65fb8d82baaa944089b6
-ms.sourcegitcommit: 160296667833366fb3f4021d042094606e1032ec
+ms.openlocfilehash: 0b0ce9d4c8d310243d8b799445e5a64975f2d05d
+ms.sourcegitcommit: 4ec053c56fd210b174fe657aa7b86faf4e2b5a7c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102472687"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105730251"
 ---
 # <a name="get-invoice-unbilled-commercial-consumption-line-items"></a>Obter faturas sem fatura de produtos de linha de consumo comercial
 
@@ -129,10 +129,10 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 
 | Nome                   | Tipo   | Necessário | Descrição                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
-| provedor               | string | Yes      | O fornecedor: "**OneTime**".                                                |
-| tipo de artigo de linha de fatura | string | Yes      | O tipo de detalhe de fatura: "**UsageLineItems**", "**UsageLineItems**".               |
-| currencyCode           | string | Yes      | O código cambial para os itens de linha não bico.                                  |
-| period                 | string | Yes      | O período de reconhecimento não bico (por exemplo: **atual,** **anterior).** Suponha que precisa de consultar os seus dados de utilização não faturados do ciclo de faturação (01/01/2020 – 01/31/2020) em janeiro, escolha o período como **"Corrente",** caso contrário **"Anterior".** |
+| provedor               | string | Sim      | O fornecedor: "**OneTime**".                                                |
+| tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "**UsageLineItems**", "**UsageLineItems**".               |
+| currencyCode           | string | Sim      | O código cambial para os itens de linha não bico.                                  |
+| period                 | string | Sim      | O período de reconhecimento não bico (por exemplo: **atual,** **anterior).** Suponha que precisa de consultar os seus dados de utilização não faturados do ciclo de faturação (01/01/2020 – 01/31/2020) em janeiro, escolha o período como **"Corrente",** caso contrário **"Anterior".** |
 | size                   | número | No       | O número máximo de itens para devolver. O tamanho padrão é 2000.                    |
 | procurarOperação          | cadeia (de carateres) | No       | Prepare `seekOperation=Next` para obter a próxima página de itens da linha de reconciliação.                |
 
@@ -243,6 +243,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0,
             "rateOfPartnerEarnedCredit": 0,
+            "rateOfCredit": 0,
+            "creditType": "Credit Not Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
@@ -300,7 +302,9 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0,
             "rateOfPartnerEarnedCredit": 0,
-            "invoiceLineItemType": "usage_line_items",
+            "rateOfCredit": 1,
+            "creditType": "Azure Credit Applied",
+            "invoiceLineItemTypce": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
@@ -418,7 +422,9 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRate": 1,
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0,
-            "rateOfPartnerEarnedCredit": 0,
+            "rateOfPartnerEarnedCredit": 0.15,
+            "rateOfCredit": 0.15,
+            "creditType": "Partner Earned Credit Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {

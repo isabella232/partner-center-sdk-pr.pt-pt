@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: a13b62903e44165ef9811ea7798fcea666d483dc
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 1e19792da6a7510bf02dd11b3e77f40a8365be2b
+ms.sourcegitcommit: 4ec053c56fd210b174fe657aa7b86faf4e2b5a7c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769692"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105730200"
 ---
 # <a name="get-invoice-billed-commercial-consumption-line-items"></a>Obter fatura faturada itens de linha de consumo comercial
 
@@ -134,7 +134,7 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 | tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "UsageLineItems". |
 | currencyCode           | string | Sim      | O código cambial para os itens da linha faturada.                    |
 | period                 | string | Sim      | O período para o reconhecimento cobrado. exemplo: corrente, anterior.        |
-| size                   | número | Não       | O número máximo de itens para devolver. O tamanho padrão é 2000       |
+| size                   | número | No       | O número máximo de itens para devolver. O tamanho padrão é 2000       |
 | procurarOperação          | cadeia (de carateres) | No       | Desaperte a procuraOperação=Próxima para obter a próxima página de itens de linha de reconhecimento. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
@@ -238,6 +238,7 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "billingCurrency": "USD",
             "pricingPreTaxTotal": 0.486031696515249,
             "pricingCurrency": "USD",
+            "creditType": "Credit Not Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
@@ -295,6 +296,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0.1999968000511991808131,
             "rateOfPartnerEarnedCredit": 0,
+            "rateOfCredit": 1,
+            "creditType": "Azure Credit Applied",
             "invoiceLineItemType": "usage_line_items",
             "billingProvider": "marketplace",
             "attributes": {
@@ -414,7 +417,8 @@ Date: Wed, 20 Feb 2019 19:59:27 GMT
             "pcToBCExchangeRateDate": "2019-08-01T00:00:00Z",
             "effectiveUnitPrice": 0.1835431430074643112595,
             "rateOfPartnerEarnedCredit": 0.15,
-
+            "rateOfCredit": 0.15,
+            "creditType": "Partner Earned Credit Applied",
             "attributes": {
                 "objectType": "DailyRatedUsageLineItem"
             }
