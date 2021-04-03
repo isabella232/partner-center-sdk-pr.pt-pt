@@ -1,17 +1,17 @@
 ---
 title: Criar um cliente para um revendedor indireto
 description: Saiba como um fornecedor indireto pode usar APIs do Partner Center para criar um cliente para um revendedor indireto.
-ms.date: 03/30/2021
+ms.date: 04/01/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 13cd1b051abb536d397dcd4000228f67fe3206b8
-ms.sourcegitcommit: 204e518e794b6b076a17488ee9ca1aaaa4beaaec
+ms.openlocfilehash: 0de40d08e9fc2b9cf87b7c3c41214fdd34ad26f3
+ms.sourcegitcommit: faea78fe3264cbafc2b02c04d98d5ce30e992124
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "106103951"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274585"
 ---
 # <a name="create-a-customer-for-an-indirect-reseller-using-partner-center-apis"></a>Crie um cliente para um revendedor indireto usando APIs do Partner Center
 
@@ -97,11 +97,11 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
 | Nome                                          | Tipo   | Necessário | Descrição                                                                                                                                                                                                                                                                                                                                           |
 |-----------------------------------------------|--------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [BillingProfile](#billing-profile)             | objeto | Yes      | A informação do perfil de faturação do cliente.                                                                                                                                                                                                                                                                                                           |
-| [EmpresaProfile](#company-profile)             | objeto | Yes      | Informação do perfil da empresa do cliente.                                                               
-| [PartnerId Associado](customer-resources.md#customer) | string | Yes      | O iD do revendedor indireto. O revendedor indireto, tal como indicado pelo ID aqui fornecido, deve ter uma parceria com o fornecedor indireto ou o pedido falhará. Note também que se o valor AssociatedPartnerId não for fornecido, o cliente é criado como cliente direto do fornecedor indireto e não como revendedor indireto. |
-|Domínio| String| Yes|O nome de domínio do cliente, como contoso.onmicrosoft.com.|
-|organizaçãoRegistrationNumber|    string|Yes|     Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia(BY), Hungria (HU), Cazaquistão(KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uz, Ucrânia(UA), Índia, Brasil, África do Sul, Polónia, Emirados Árabes Unidos, Arábia Saudita, Arábia Saudita, Para a empresa/organização do cliente localizada noutros países este é um campo opcional.|
+| [BillingProfile](#billing-profile)             | objeto | Sim      | A informação do perfil de faturação do cliente.                                                                                                                                                                                                                                                                                                           |
+| [EmpresaProfile](#company-profile)             | objeto | Sim      | Informação do perfil da empresa do cliente.                                                               
+| [PartnerId Associado](customer-resources.md#customer) | string | Sim      | O iD do revendedor indireto. O revendedor indireto, tal como indicado pelo ID aqui fornecido, deve ter uma parceria com o fornecedor indireto ou o pedido falhará. Note também que se o valor AssociatedPartnerId não for fornecido, o cliente é criado como cliente direto do fornecedor indireto e não como revendedor indireto. |
+|Domínio| String| Sim|O nome de domínio do cliente, como contoso.onmicrosoft.com.|
+|organizaçãoRegistrationNumber|    string|Sim|     Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia(BY), Hungria (HU), Cazaquistão(KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uz, Ucrânia(UA), Índia, Brasil, África do Sul, Polónia, Emirados Árabes Unidos, Arábia Saudita, Arábia Saudita, Para a empresa/organização do cliente localizada noutros países este é um campo opcional.|
 
 
 
@@ -111,11 +111,11 @@ Esta tabela descreve os campos mínimos exigidos do recurso [CustomerBillingProf
 
 | Nome             | Tipo                                     | Necessário | Descrição                                                                                                                                                                                                     |
 |------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| e-mail            | string                                   | Yes      | O endereço de e-mail do cliente.                                                                                                                                                                                   |
-| cultura          | string                                   | Yes      | A sua cultura preferida para a comunicação e a moeda, como "en-US". Consulte [o Partner Center com línguas e locais apoiados](partner-center-supported-languages-and-locales.md) para as culturas apoiadas. |
-| language         | string                                   | Yes      | A linguagem padrão. Dois códigos linguísticos de caracteres (por exemplo `en` `fr` ou) são suportados.                                                                                                                                |
-| nome da empresa \_    | string                                   | Yes      | O nome de empresa/organização registado.                                                                                                                                                                       |
-| endereço padrão \_ | [Endereço](utility-resources.md#address) | Yes      | O endereço registado da empresa/organização do cliente. Consulte o recurso [Address](utility-resources.md#address) para obter informações sobre eventuais limitações de comprimento.                                             |
+| e-mail            | string                                   | Sim      | O endereço de e-mail do cliente.                                                                                                                                                                                   |
+| cultura          | string                                   | Sim      | A sua cultura preferida para a comunicação e a moeda, como "en-US". Consulte [o Partner Center com línguas e locais apoiados](partner-center-supported-languages-and-locales.md) para as culturas apoiadas. |
+| language         | string                                   | Sim      | A linguagem padrão. Dois códigos linguísticos de caracteres (por exemplo `en` `fr` ou) são suportados.                                                                                                                                |
+| nome da empresa \_    | string                                   | Sim      | O nome de empresa/organização registado.                                                                                                                                                                       |
+| endereço padrão \_ | [Endereço](utility-resources.md#address) | Sim      | O endereço registado da empresa/organização do cliente. Consulte o recurso [Address](utility-resources.md#address) para obter informações sobre eventuais limitações de comprimento.                                             |
 
 #### <a name="company-profile"></a>Perfil da empresa
 
@@ -123,8 +123,8 @@ Esta tabela descreve os campos mínimos exigidos do recurso [CustomerCompanyProf
 
 | Nome   | Tipo   | Necessário | Descrição                                                  |
 |--------|--------|----------|--------------------------------------------------------------|
-| domínio | string | Yes     | O nome de domínio do cliente, como contoso.onmicrosoft.com. |
-| organizaçãoRegistrationNumber | string | Depende da condição | Número de registo da organização do cliente (também referido como número INN em determinados países). <br/><br/>A conclusão deste campo só é necessária se a empresa/organização de um cliente estiver localizada nos seguintes países: <br/><br/>- Arménia (AM) <br/>- Azerbaijão (AZ)<br/>- Bielorrússia (BY)<br/>- Hungria (HU)<br/>- Cazaquistão (KZ)<br/>- Quirguistão (KG)<br/>- Moldávia (MD)<br/>- Rússia (RU)<br/>- Tajiquistão (TJ)<br/>- Uzbequistão (UZ)<br/>- Ucrânia (UA)<br/><br/>Este campo não é necessário se a empresa/organização do cliente estiver localizada noutros países para além dos mostrados aqui.  |
+| domínio | string | Sim     | O nome de domínio do cliente, como contoso.onmicrosoft.com. |
+| organizaçãoRegistrationNumber | string | Depende da condição | Número de registo da organização do cliente (também referido como número INN em determinados países). <br/><br/>A conclusão deste campo só é necessária se a empresa/organização de um cliente estiver localizada nos seguintes países: <br/><br/>- Arménia (AM) <br/>- Azerbaijão (AZ)<br/>- Bielorrússia (BY)<br/>- Hungria (HU)<br/>- Cazaquistão (KZ)<br/>- Quirguistão (KG)<br/>- Moldávia (MD)<br/>- Rússia (RU)<br/>- Tajiquistão (TJ)<br/>- Uzbequistão (UZ)<br/>- Ucrânia (UA)<br/>- Índia <br/>- Brasil <br/>- África do Sul <br/>- Polónia <br/>- Emirados Árabes Unidos <br/>- Arábia Saudita <br/>- Turquia <br/>- Tailândia <br/>- Vietname <br/>- Myanmar <br/>- Iraque <br/>- Sudão do Sul <br/>- Venezuela<br/> <br/>Para a empresa/organização do cliente localizada noutros países este é um campo opcional.  |
 
 ### <a name="request-example"></a>Exemplo de pedido
 
