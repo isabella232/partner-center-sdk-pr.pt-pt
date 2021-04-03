@@ -4,12 +4,12 @@ description: Você pode obter uma coleção de detalhes de item de linha de cons
 ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 0b0ce9d4c8d310243d8b799445e5a64975f2d05d
-ms.sourcegitcommit: 4ec053c56fd210b174fe657aa7b86faf4e2b5a7c
+ms.openlocfilehash: 8b6ca8d6ff7af53dd2a258ea20e6eaeb26421440
+ms.sourcegitcommit: faea78fe3264cbafc2b02c04d98d5ce30e992124
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "105730251"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274670"
 ---
 # <a name="get-invoice-unbilled-commercial-consumption-line-items"></a>Obter faturas sem fatura de produtos de linha de consumo comercial
 
@@ -117,24 +117,24 @@ Para um exemplo semelhante, consulte:
 
 Pode utilizar as seguintes sintaxes para o seu pedido DE REST, dependendo da sua caixa de utilização. Para mais informações, consulte as descrições de cada sintaxe.
 
- | Método  | URI do pedido         | Descrição do caso de utilização de sintaxe |                                                                                                                                            |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Utilize esta sintaxe para devolver uma lista completa de todos os itens de linha para a fatura dada. |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | Utilize esta sintaxe para faturas grandes. Utilize esta sintaxe com um tamanho especificado e uma compensação baseada em 0 para devolver uma lista de itens de linha paged. |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Utilize esta sintaxe para obter a próxima página de itens da linha de reconciliação utilizando `seekOperation = "Next"` . |
+| Método  | URI do pedido                                                                                                                                                                                              | Descrição do caso de utilização de sintaxe                                                                                                     |
+|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period} HTTP/1.1                       | Utilize esta sintaxe para devolver uma lista completa de todos os itens de linha para a fatura dada.                                                    |
+| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1           | Utilize esta sintaxe para faturas grandes. Utilize esta sintaxe com um tamanho especificado e uma compensação baseada em 0 para devolver uma lista de itens de linha paged. |
+| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=usagelineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next | Utilize esta sintaxe para obter a próxima página de itens da linha de reconciliação utilizando `seekOperation = "Next"` .                                  |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 
 Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 
-| Nome                   | Tipo   | Necessário | Descrição                                                                     |
-|------------------------|--------|----------|---------------------------------------------------------------------------------|
-| provedor               | string | Sim      | O fornecedor: "**OneTime**".                                                |
-| tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "**UsageLineItems**", "**UsageLineItems**".               |
-| currencyCode           | string | Sim      | O código cambial para os itens de linha não bico.                                  |
+| Nome                   | Tipo   | Necessário | Descrição                                                                                                                                                                                                                                |
+|------------------------|--------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| provedor               | string | Sim      | O fornecedor: "**OneTime**".                                                                                                                                                                                                               |
+| tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "**UsageLineItems**", "**UsageLineItems**".                                                                                                                                                                    |
+| currencyCode           | string | Sim      | O código cambial para os itens de linha não bico.                                                                                                                                                                                             |
 | period                 | string | Sim      | O período de reconhecimento não bico (por exemplo: **atual,** **anterior).** Suponha que precisa de consultar os seus dados de utilização não faturados do ciclo de faturação (01/01/2020 – 01/31/2020) em janeiro, escolha o período como **"Corrente",** caso contrário **"Anterior".** |
-| size                   | número | No       | O número máximo de itens para devolver. O tamanho padrão é 2000.                    |
-| procurarOperação          | cadeia (de carateres) | No       | Prepare `seekOperation=Next` para obter a próxima página de itens da linha de reconciliação.                |
+| size                   | número | Não       | O número máximo de itens para devolver. O tamanho padrão é 2000.                                                                                                                                                                           |
+| procurarOperação          | cadeia (de carateres) | No       | Prepare `seekOperation=Next` para obter a próxima página de itens da linha de reconciliação.                                                                                                                                                                |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

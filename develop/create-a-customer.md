@@ -1,17 +1,17 @@
 ---
 title: Criar um cliente
 description: Saiba como um parceiro cloud Solution Provider (CSP) pode usar APIs do Partner Center para criar um novo cliente. O artigo descreve os pré-requisitos e o que mais acontece.
-ms.date: 11/13/2020
+ms.date: 03/30/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 3bc8081c682bdf522bcb0ca218f16cafab7b3a99
-ms.sourcegitcommit: 01e75175077611da92175c777a440a594fb05797
+ms.openlocfilehash: bc8e9d38353511e747ba4da99b11be40d08781e3
+ms.sourcegitcommit: faea78fe3264cbafc2b02c04d98d5ce30e992124
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "97770231"
+ms.lasthandoff: 04/03/2021
+ms.locfileid: "106274602"
 ---
 # <a name="create-a-customer-using-partner-center-apis"></a>Criar um cliente usando APIs do Partner Center
 
@@ -194,8 +194,7 @@ Esta tabela descreve os campos mínimos exigidos do recurso [CustomerCompanyProf
 | Nome   | Tipo   | Descrição                                                  |
 |--------|--------|--------------------------------------------------------------|
 | domínio | string | O nome de domínio do cliente, como contoso.onmicrosoft.com. |
-|organizaçãoRegistrationNumber|String|Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países. Arménia(AM), Azerbaijão(AZ), Bielorrússia (BY), Hungria (HU), Cazaquistão (KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uzhbequistão(UZ), Ucrânia (UA). Para a empresa/organização do cliente localizada noutros países, tal não deve ser especificado.|
-
+|organizaçãoRegistrationNumber|String|Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia(BY), Hungria (HU), Cazaquistão(KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão (TJ), Uz, Ucrânia(UA), Brasil(BR), Índia, África do Sul, Polónia, Emirados Árabes Unidos, Arábia Saudita, Turquia, Tailândia, Para a empresa/organização do cliente localizada noutros países este é um campo opcional.|
 
 ### <a name="request-example"></a>Exemplo de pedido
 

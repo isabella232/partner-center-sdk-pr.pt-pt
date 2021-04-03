@@ -1,17 +1,17 @@
 ---
 title: Recursos do cliente
 description: Recursos do cliente que representam um cliente ou revendedor.
-ms.date: 11/13/2020
+ms.date: 03/30/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: fbd72ab5710876ba303fd1e30e6e552ecf89c5cd
-ms.sourcegitcommit: 741cfa8585901de207c2e5da5eeebe26db0b0ad1
+ms.openlocfilehash: 78622258880ab77ca99eae98082cc66acb3b66a7
+ms.sourcegitcommit: 204e518e794b6b076a17488ee9ca1aaaa4beaaec
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "97770046"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "106103968"
 ---
 # <a name="customer-resources"></a>Recursos do cliente
 
@@ -22,14 +22,14 @@ ms.locfileid: "97770046"
 - Centro de Parceiros para Microsoft Cloud Germany
 - Centro de Parceiros do Microsoft Cloud for US Government
 
-## <a name="customer"></a>Customer
+## <a name="customer"></a>Cliente
 
 O recurso **Cliente** representa um cliente ou revendedor. Em geral, um recurso ao cliente pode ser qualquer pessoa, funcionário ou organização que deseje fazer negócios com a Microsoft e os revendedores da Microsoft. Os clientes também têm um perfil da empresa e um perfil de faturação.
 
 >[!NOTE]
 >O recurso **Cliente** tem um limite de taxa de 500 pedidos por minuto por identificador de inquilino.
 
-| Propriedade              | Tipo                                                             | Descrição                                                                                                                                  |
+| Propriedade              | Tipo                                                             | Description                                                                                                                                  |
 |-----------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                    | string                                                           | A identificação do cliente.                                                                                                                             |
 | commerceId            | string                                                           | A identificação do comércio.                                                                                                                             |
@@ -47,22 +47,21 @@ O recurso **Cliente** representa um cliente ou revendedor. Em geral, um recurso 
 
 O **recurso CustomerCompanyProfile** é informação adicional sobre a empresa ou organização.
 
-| Propriedade    | Tipo                                                           | Descrição                                                                       |
+| Propriedade    | Tipo                                                           | Description                                                                       |
 |-------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | inquilinoId    | string                                                         | O identificador de inquilino do cliente para a Azure AD. Isto também é chamado de MicrosoftID. |
 | domínio      | string                                                         | O nome do cliente, como contoso.onmicrosoft.com.                             |
 | nome da empresa | string                                                         | O nome da empresa ou organização.                                          |
 | ligações       | [RecursosLinks](utility-resources.md#resourcelinks)           | As ligações de recursos contidas no perfil.                                  |
 | atributos  | [RecursosTributos](utility-resources.md#resourceattributes) | Os metadados correspondem ao perfil.                             |
-
-|organizaçãoRegistrationNumber| Corda| Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países. Arménia(AM), Azerbaijão(AZ), Bielorrússia (BY), Hungria (HU), Cazaquistão (KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uzhbequistão(UZ), Ucrânia (UA). Para a empresa/organização do cliente localizada noutros países, esta não deve ser especificada.|
+|organizaçãoRegistrationNumber|String|Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia(BY), Hungria (HU), Cazaquistão(KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uz, Ucrânia(UA), Índia, Brasil, África do Sul, Polónia, Emirados Árabes Unidos, Arábia Saudita, Arábia Saudita, Para a empresa/organização do cliente localizada noutros países, tal não deve ser especificado.|
 
 
 ## <a name="customerbillingprofile"></a>CustomerBillingProfile
 
 O **recurso CustomerBillingProfile** é informação adicional utilizada para faturar o cliente.
 
-| Propriedade       | Tipo                                                           | Descrição                                                                                                                                            |
+| Propriedade       | Tipo                                                           | Description                                                                                                                                            |
 |----------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID             | string                                                         | O identificador de perfil.                                                                                                                                |
 | nomePróprio      | string                                                         | O primeiro nome do contacto de faturação na empresa do cliente. Esta é a pessoa a quem as faturas e outras comunicações de faturação serão direcionadas. |
@@ -79,7 +78,7 @@ O **recurso CustomerBillingProfile** é informação adicional utilizada para fa
 
 O recurso **CustomerRelationshipRequest** contém o URL utilizado pelo cliente para estabelecer uma relação de revendedor com um parceiro.
 
-| Propriedade   | Tipo                                                           | Descrição                                                              |
+| Propriedade   | Tipo                                                           | Description                                                              |
 |------------|----------------------------------------------------------------|--------------------------------------------------------------------------|
 | url        | string                                                         | O URL utilizado pelo cliente para estabelecer uma relação com um parceiro. |
 | atributos | [RecursosTributos](utility-resources.md#resourceattributes) | Os metadados atribuem correspondentes ao pedido de relacionamento.       |
