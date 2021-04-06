@@ -1,17 +1,17 @@
 ---
 title: Obter uma lista de categorias de ofertas por mercado
-description: Como obter uma coleção que contenha todas as categorias de oferta num determinado país/região e localidade.
+description: Saiba como obter uma coleção que contenha todas as categorias de oferta num dado país/região e local para todas as Microsoft Clouds.
 ms.date: 07/25/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 22c46ed03a8579c53ee18c14cbca9a1e19ddb82a
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 05aad095c6cb8eaee4cbf7ce976ca1b4b7a408c4
+ms.sourcegitcommit: f72173df911aee3ab29b008637190b4d85ffebfe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769542"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106500061"
 ---
 # <a name="get-a-list-of-offer-categories-by-market"></a>Obter uma lista de categorias de ofertas por mercado
 
@@ -62,7 +62,7 @@ Esta tabela lista os parâmetros de consulta necessários para obter as categori
 
 | Nome           | Tipo       | Necessário | Descrição            |
 |----------------|------------|----------|------------------------|
-| **país id** | **cadeia** | Y        | O ID do país/região. |
+| **país id** | **string** | Y        | O ID do país/região. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

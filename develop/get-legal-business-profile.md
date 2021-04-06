@@ -1,15 +1,15 @@
 ---
 title: Obter perfil comercial legal do parceiro
-description: Como obter o perfil de negócio legal de um parceiro.
+description: Aprenda a usar APIs para obter o seu perfil de negócio legal.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 5d7055dd0a6586e16b078109db4252250561eb29
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 1d488c8deb9f01110e92327035ce0c3c023fcb46
+ms.sourcegitcommit: f72173df911aee3ab29b008637190b4d85ffebfe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769847"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106500027"
 ---
 # <a name="get-the-partner-legal-business-profile"></a>Obter perfil comercial legal do parceiro
 

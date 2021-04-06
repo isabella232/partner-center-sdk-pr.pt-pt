@@ -1,17 +1,17 @@
 ---
 title: Eventos webhook do Partner Center
-description: Documentação para todos os eventos Webhook suportados pelo Partner Center.
+description: Aprenda a testar e usar eventos Webhook para notar quando as subscrições e outros eventos mudam no Partner Center.
 ms.date: 04/10/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 5358aab8efdd68ad52c583936304f99ffae12708
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 03ee1d4e74408b8cf69e2971054bf9060650cb77
+ms.sourcegitcommit: f72173df911aee3ab29b008637190b4d85ffebfe
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769248"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106500044"
 ---
 # <a name="partner-center-webhook-events"></a>Eventos webhook do Partner Center
 
@@ -123,7 +123,7 @@ Este evento é levantado quando a referência é criada.
 | Propriedade                  | Tipo                               | Descrição                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName                 | string                             | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor é "criado por referenciação".                                  |
-| RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/engagements/v1/referrals/{{ReferralID} |
+| RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/engagements/v1/referrals/{{ReferralID}}} |
 | ResourceName              | string                             | O nome do recurso que irá desencadear o evento. Para este evento, o valor é "referenciação".                          |
 | AuditUri                  | URI                                | (Opcional) O URI para obter o registo de auditoria, se é que existe. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}} |
 | ResourceChangeUtcDate     | corda no formato de data-hora UTC | A data e a hora em que ocorreu a alteração de recursos.                                                         |
@@ -149,7 +149,7 @@ Este evento é levantado quando a referência é atualizada.
 | Propriedade                  | Tipo                               | Descrição                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName                 | string                             | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor é "atualizado com referência".                                  |
-| RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/engagements/v1/referrals/{{ReferralID} |
+| RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/engagements/v1/referrals/{{ReferralID}}} |
 | ResourceName              | string                             | O nome do recurso que irá desencadear o evento. Para este evento, o valor é "referenciação".                          |
 | AuditUri                  | URI                                | (Opcional) O URI para obter o registo de auditoria, se é que existe. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}} |
 | ResourceChangeUtcDate     | corda no formato de data-hora UTC | A data e a hora em que ocorreu a alteração de recursos.                                                         |
@@ -173,9 +173,9 @@ Este evento é levantado quando a nova fatura estiver pronta.
 | Propriedade                  | Tipo                               | Descrição                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName | string | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor está "pronto para faturar". |
-| RecursosUri | URI | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{{{FaturaId} |
+| RecursosUri | URI | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{{{FaturaId}}} |
 | ResourceName | string | O nome do recurso que irá desencadear o evento. Para este evento, o valor é "fatura". |
-| AuditUri |  URI | (Opcional) O URI para obter o registo de auditoria, se é que existe. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}") |
+| AuditUri |  URI | (Opcional) O URI para obter o registo de auditoria, se é que existe. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/auditactivity/v1/auditrecords/{{AuditId}}}") |
 | ResourceChangeUtcDate | corda no formato de data-hora UTC | A data e a hora em que ocorreu a alteração de recursos. |
 
 #### <a name="example"></a>Exemplo
