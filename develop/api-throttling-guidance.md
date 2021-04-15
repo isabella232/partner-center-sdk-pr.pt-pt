@@ -1,17 +1,17 @@
 ---
 title: Documentação de orientação da limitação de largura de banda da API
 description: Para os parceiros que chamam APIs do Partner Center, saiba quais as APIs que são impactadas pelo estrangulamento da Microsoft API e pelas melhores práticas para evitar ou lidar melhor com o estrangulamento.
-ms.date: 09/09/2020
+ms.date: 04/14/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: vijvala
 ms.author: vijvala
-ms.openlocfilehash: a52751a97e699050075c1aac910cc51e94514f26
-ms.sourcegitcommit: 01e75175077611da92175c777a440a594fb05797
+ms.openlocfilehash: ab1138e19e06111299ab43ea13a6f033274aaa5d
+ms.sourcegitcommit: 3c3a21e73aaadf3023cf4c13b09809ceae5f027a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "97770232"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107496149"
 ---
 # <a name="api-throttling-guidance-for-partners-calling-partner-center-apis"></a>API acelera orientação para parceiros que chamam APIs do Partner Center 
 
@@ -62,10 +62,10 @@ Para utilizar o atraso de retry-after, faça o seguinte:
 
 ## <a name="apis-currently-impacted-by-throttling"></a>APIs atualmente impactados pelo estrangulamento
 
-A longo prazo, todos os Parceiros Center API que chamem o ponto final de "api.partnercenter.microsoft.com/" serão estrangulados. Atualmente, os limites de estrangulamento só são aplicados nas poucas APIs listadas abaixo. O Partner Center irá recolher a telemetria em cada uma das APIs e ajustará dinamicamente os limites de estrangulamento. A tabela que se segue lista as APIs onde o estrangulamento é atualmente aplicado.  
+A longo prazo, todos os Parceiros Center API que chamem o ponto final de "api.partnercenter.microsoft.com/" serão estrangulados. Atualmente, os limites de estrangulamento só são aplicados nas APIs listadas abaixo. O Partner Center irá recolher a telemetria em cada uma das APIs e ajustará dinamicamente os limites de estrangulamento. A tabela que se segue lista as APIs onde o estrangulamento é atualmente aplicado.  
 
 
-|**Operação**| **Documentação do Centro de Parceiros**|       
+|**Operação**| **Documentação do Centro de Parceiros**|
 |------------------------|----------------------------|
 |{baseURL}/v1/clientes/{customer_id}/encomendas|[criar uma ordem](create-an-order.md)|
 |{baseURL}/v1/customers/{customer-tenant-id}/subscrições/{id-for-subscription}/upgrades|[transição de uma subscrição](transition-a-subscription.md)|
@@ -79,6 +79,18 @@ A longo prazo, todos os Parceiros Center API que chamem o ponto final de "api.pa
 |{baseURL}/v1/clientes/{cliente-inquilino-id}|[obter um cliente por id](get-a-customer-by-id.md)|
 |{baseURL}/v1/produtoUpgrades/elegibilidade|[obter elegibilidade para atualização de produto](get-eligibility-for-product-upgrade.md)|
 |{baseURL}/v1/customers/{customer-tenant-id}/subscrições/{id-for-subscription} |[gerir subscrição](manage-orders.md#manage-a-subscription)|
+|{baseURL}/v1/clientes/{customer_id}/subscrições |[obter-all-of-a-customer-s-subscrições](get-all-of-a-customer-s-subscriptions.md)|
+|{baseURL}/v1/customers/{customer_id}/subscrições/{subscription_id}|[Obter uma subscrição por ID](get-a-subscription-by-id.md)|
+|{baseURL}/v1/clientes/{customer_id}/encomendas|[Receba todas as encomendas de clientes](get-all-of-a-customer-s-orders.md)|
+|{baseURL}/v1/customers/{customer_id}/orders/{order_id}|[Obter encomenda por ID](get-an-order-by-id.md)|
+|{baseURL}/v1/customers/{customer_id}/orders/{order_id}/provisioningstatus|[Obter o estado de aprovisionamento da subscrição](get-subscription-provisioning-status.md)|
+|{baseURL}/v1/customers/{customer_id}/subscrições/{subscription_id}|[Gerir encomendas e gerir uma subscrição](manage-orders.md#manage-a-subscription)|
+|{baseURL}/v1/customers/{customer_id}/subscrições/{subscription_id}/addons|[Obter uma lista de suplementos para uma subscrição](get-a-list-of-add-ons-for-a-subscription.md)|
+|{baseURL}/v1/customers/{customer_id}/subscrições/{subscription_id}/azureEntitlements|[Obtenha uma lista de direitos Azure para uma subscrição](get-a-list-of-azure-entitlements-for-subscription.md)|
+|{baseURL}/v1/customers/{customer_id}/subscrições/{subscription_id}/registrationstatus|[Obter o estado de registo da subscrição](get-subscription-registration-status.md)|
+|{baseURL}/v1/clientes/{cliente-inquilino-id}/transfers|[Obtenha todas as transferências de um cliente](get-all-of-a-customer-s-transfers.md)|
+|{baseURL}/v1/productUpgrades/{upgrade-id}/status|[Obter estado de atualização do produto](get-product-upgrade-status.md)|
+|{baseURL}/v1/customers/{customer-id}/subscrições/{subscription-id}/conversões|[Obter uma lista de ofertas de conversão de avaliação](get-a-list-of-trial-conversion-offers.md)|
 
 
 ### <a name="error-code-response"></a>Resposta do código de erro:
