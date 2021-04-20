@@ -1,15 +1,15 @@
 ---
 title: Obter os registos de utilização de um cliente do Azure
 description: Pode utilizar a API de utilização Azure para obter os registos de utilização da subscrição Azure de um cliente por um período de tempo especificado.
-ms.date: 11/01/2019
+ms.date: 04/19/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: bcdeb51b04039fd05b923150c85119385c0537e0
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 23c8d18462081c6d6c95c1d969f269cbb3f8754b
+ms.sourcegitcommit: abefe11421edc421491f14b257b2408b4f29b669
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769343"
+ms.lasthandoff: 04/20/2021
+ms.locfileid: "107745597"
 ---
 # <a name="get-a-customers-utilization-records-for-azure"></a>Obter os registos de utilização de um cliente do Azure
 
@@ -29,7 +29,7 @@ Pode obter os registos de utilização da subscrição Azure de um cliente por u
 
 - Um identificador de assinatura.
 
-Esta API devolve o consumo diário e de hora a hora por um período de tempo arbitrário. No entanto, *esta API não é apoiada para planos Azure.* Se tiver um plano Azure, consulte os artigos [Obtenha itens de linha de consumo sem faturação](get-invoice-unbilled-consumption-lineitems.md) e [obtenha itens de linha de consumo faturados.](get-invoice-billed-consumption-lineitems.md) Estes artigos descrevem como obter o consumo avaliado a um nível diário por metro por recurso. Este consumo de taxa é equivalente aos dados diários de cereais fornecidos pela API de utilização do Azure. Terá de usar o identificador de fatura para recuperar dados de utilização faturados. Ou, pode usar períodos atuais e anteriores para obter estimativas de utilização não bicos. *Os dados de cereais de hora a hora e os filtros de gama de datas arbitrárias não são atualmente suportados para os recursos de subscrição do plano Azure.*
+Esta API devolve o consumo diário e de hora a hora por um período de tempo arbitrário. No entanto, *esta API não é apoiada para planos Azure.* Se tiver um plano Azure, consulte os artigos [Obtenha itens de linha de consumo não faturados](get-invoice-unbilled-consumption-lineitems.md) e [obtenha itens de linha de consumo faturados.](get-invoice-billed-consumption-lineitems.md) Estes artigos descrevem como obter o consumo avaliado a um nível diário por metro por recurso. Este consumo de taxa é equivalente aos dados diários de cereais fornecidos pela API de utilização do Azure. Terá de usar o identificador de fatura para recuperar dados de utilização faturados. Ou, você pode usar períodos atuais e anteriores para obter estimativas de utilização não faturadas. *Os dados de cereais de hora a hora e os filtros de gama de datas arbitrárias não são atualmente suportados para os recursos de subscrição do plano Azure.*
 
 ## <a name="azure-utilization-api"></a>API de utilização de Azure
 
@@ -38,6 +38,12 @@ Esta API de utilização do Azure fornece acesso aos registos de utilização po
 Por exemplo, o sistema de faturação pega nos mesmos dados de utilização e aplica regras de atraso para determinar o que é contabilizado num ficheiro de reconciliação. Quando um período de faturação termina, todo o uso até ao final do dia em que o período de faturação termina é incluído no ficheiro de reconciliação. Qualquer utilização tardia dentro do período de faturação que é reportada no prazo de 24 horas após o fim do período de faturação é contabilizada no próximo ficheiro de reconciliação. Para as regras de atraso de como o parceiro é faturado, consulte [obter dados de consumo para uma subscrição do Azure](/previous-versions/azure/reference/mt219001(v=azure.100)).
 
 Esta API REST é paged. Se a carga útil de resposta for maior do que uma única página, deve seguir o próximo link para obter a próxima página dos registos de utilização.
+
+### <a name="scenario--partner-a-has-transferred-billing-ownership-of-azure-legacy-subscription-145p-to-partner-b"></a>Cenário : O parceiro A transferiu a propriedade da faturação da Azure Legacy Subscription (145P) para o Parceiro B
+
+Se um parceiro transferir a propriedade de uma subscrição de legado Azure para outro parceiro, quando o novo parceiro chama API de Utilização para subscrição transferida, eles têm de usar o ID de subscrição de comércio (que aparece na sua conta partner Center) em vez do ID do Direito Azure. O ID do Direito Azure só aparece para o Parceiro B quando são Admin em nome de (AOBO) para o portal Azure do Cliente. 
+
+Para ligar com sucesso para a API de Utilização para a subscrição transferida, o novo parceiro precisa de utilizar o ID de Subscrição de Comércio.
 
 ## <a name="c"></a>C\#
 
@@ -142,13 +148,13 @@ Utilize os seguintes parâmetros de percurso e consulta para obter os registos d
 
 | Nome | Tipo | Necessário | Descrição |
 | ---- | ---- | -------- | ----------- |
-| cliente-inquilino-id | string | Sim | Uma cadeia formatada pelo GUID que identifica o cliente. |
-| id de subscrição | string | Sim | Uma cadeia formatada por GUID que identifica a subscrição. |
-| start_time | cadeia no formato de compensação de data-hora UTC | Sim | O início do intervalo de tempo que representa quando a utilização foi reportada no sistema de faturação. |
-| end_time | cadeia no formato de compensação de data-hora UTC | Sim | O fim do intervalo de tempo que representa quando a utilização foi reportada no sistema de faturação. |
+| cliente-inquilino-id | string | Yes | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| id de subscrição | string | Yes | Uma cadeia formatada por GUID que identifica a subscrição. |
+| start_time | cadeia no formato de compensação de data-hora UTC | Yes | O início do intervalo de tempo que representa quando a utilização foi reportada no sistema de faturação. |
+| end_time | cadeia no formato de compensação de data-hora UTC | Yes | O fim do intervalo de tempo que representa quando a utilização foi reportada no sistema de faturação. |
 | granularidade | cadeia (de carateres) | No | Define a granularidade das agregações de utilização. As opções disponíveis são: `daily` (padrão) e `hourly` .
-| show_details | boolean | Não | Especifica se deve obter os detalhes de utilização ao nível da instância. A predefinição é `true`. |
-| size | número | Não | Especifica o número de agregações devolvidas por uma única chamada API. A predefinição é 1000. O máximo é 1000. |
+| show_details | boolean | No | Especifica se deve obter os detalhes de utilização ao nível da instância. A predefinição é `true`. |
+| size | número | No | Especifica o número de agregações devolvidas por uma única chamada API. A predefinição é 1000. O máximo é 1000. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
