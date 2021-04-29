@@ -1,15 +1,15 @@
 ---
 title: Cancelar uma encomenda da caixa de areia de integração
 description: Saiba como usar as APIs do Partner Center para cancelar diferentes tipos de pedidos de subscrição a partir de contas de caixas de areia de integração.
-ms.date: 08/16/2019
+ms.date: 04/28/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 363bf209e27d5223259c8c533710a3b35bbef1e6
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: c3bf862c62804a56e6f73dd3ec36d2e9eb65f997
+ms.sourcegitcommit: f59a9311c8a37d45695caf74794ec1697426acc9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770082"
+ms.lasthandoff: 04/29/2021
+ms.locfileid: "108210024"
 ---
 # <a name="cancel-an-order-from-the-integration-sandbox-using-partner-center-apis"></a>Cancelar uma encomenda da caixa de areia de integração usando APIs do Partner Center
 
@@ -22,8 +22,8 @@ ms.locfileid: "97770082"
 
 Este artigo descreve como usar as APIs do Partner Center para cancelar diferentes tipos de ordens de subscrição a partir de contas de caixas de areia de integração. Tais encomendas podem incluir instâncias reservadas, software e marketplace comercial Software como uma ordem de subscrição de Serviço (SaaS).
 
->[!NOTE]
->Tenha em atenção que os cancelamentos de instâncias reservadas ou encomendas de subscrição saaS de marketplace comercial só são possíveis a partir de contas de sandbox de integração.  
+>[!NOTE] 
+>Tenha em atenção que os cancelamentos de instâncias reservadas ou encomendas de subscrição saaS de marketplace comercial só são possíveis a partir de contas de sandbox de integração. Quaisquer encomendas de caixas de areia com mais de 60 dias não podem ser canceladas do Partner Center. Se precisar de assistência, contacte o Partner Center Support. 
 
 Para cancelar as ordens de produção de software através da API, utilize [as compras de cancelamento de software](cancel-software-purchases.md).
 Também pode cancelar as ordens de produção de software através do dashboard usando [cancelar uma compra](/partner-center/csp-software-subscriptions).
@@ -71,7 +71,7 @@ Utilize o seguinte parâmetro de consulta para eliminar um cliente.
 | Nome                   | Tipo     | Necessário | Descrição                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **cliente-inquilino-id** | **guid** | Y        | O valor é um design **de cliente-inquilino-inquilino** formatado guid que permite ao revendedor filtrar os resultados de um dado cliente que pertence ao revendedor. |
-| **ordem id** | **cadeia** | Y        | O valor é uma cadeia que denota os IDs de encomenda que precisam de ser cancelados. |
+| **ordem id** | **string** | Y        | O valor é uma cadeia que denota os IDs de encomenda que precisam de ser cancelados. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
