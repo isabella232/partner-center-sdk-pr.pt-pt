@@ -1,17 +1,17 @@
 ---
 title: Obtenha as qualificações de um cliente
 description: Saiba como usar a validação assíncrono para obter a qualificação de um cliente através da API do Partner Center. Os parceiros podem usá-lo para validar clientes da Educação.
-ms.date: 01/21/2021
+ms.date: 05/17/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: JoeyBytes
 ms.author: jobiesel
-ms.openlocfilehash: 09801792c059873b9f6b842e99286eda09d38b1a
-ms.sourcegitcommit: bbdb5f7c9ddd42c2fc4eaadbb67d61aeeae805ca
+ms.openlocfilehash: df605e4d400d29e14fd0b44bef34f88bbc7ca8b2
+ms.sourcegitcommit: 7d59c58ee36b217bd5cac089f918059e9dbb8a62
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105030574"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110027933"
 ---
 # <a name="get-a-customers-qualification-asynchronously"></a>Obtenha a qualificação de um cliente assíncronea
 
@@ -132,6 +132,71 @@ MS-RequestId: 037db222-6d8e-4d7f-ba78-df3dca33fb68
         "vettingStatus": "Denied",
         "vettingReason": "Not an Education Customer", // example Vetting Reason
         "vettingCreatedDate": "2020-12-03T10:37:38.885Z" // UTC
+    }
+]
+
+```
+
+#### <a name="state-owned-entity-samples"></a>Amostras de entidades estatais
+
+**Entidade Estatal através da amostra POST**
+
+```csharp
+
+//SOE
+POST {customer_id}/qualifications
+{
+“qualification”: “StateOwnedEntity”
+}
+
+//
+
+```
+
+**Entidade Estatal através da amostra de Qualificações**
+
+```csharp
+
+//SOE:
+GET {customer_id}/qualifications
+[
+    {
+        “qualification”: “StateOwnedEntity”
+    }
+]
+
+```
+
+**Entidade Estatal via Obter Qualificações com Educação**
+
+```csharp
+
+GET {customer_id}/qualifications
+[
+    {
+        “qualification”: “Education”,
+        “vettingStatus”: “Approved”
+    },
+{
+        “qualification”: “StateOwnedEntity”
+    }
+]
+
+```
+
+**Entidade Estatal via Obter Qualificações com GCC**
+
+```csharp
+
+GET {customer_id}/qualifications
+[
+    {
+        “qualification”: “GovernmentCommunityCloud”,
+        “vettingStatus”: “Approved”,
+        “vettingCreateDate”: “2021-05-06T19:59:56.6832021+00:00”
+    },
+{
+        “qualification”: “StateOwnedEntity”
     }
 ]
 
