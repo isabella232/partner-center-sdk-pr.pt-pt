@@ -427,10 +427,12 @@
           href: update-a-subscription-s-support-contact.md
 - name: Sandbox de integração
   items:
-    - name: Capacidades do sandbox do parceiro que suportam a relação de revendedor
+    - name: Capacidades de caixa de areia para relacionamento revendedor
       href: sandbox-scenario.md
     - name: Testar e depurar sandbox
       href: test-and-debug.md
+    - name: Capacidades de fornecedor indireto CSP na Sandbox
+      href: indirect-provider-sandbox-capabilities.md
     - name: Cancelar uma encomenda a partir do sandbox de integração
       href: cancel-an-order-from-the-integration-sandbox.md
     - name: Ativar subscrição do sandbox

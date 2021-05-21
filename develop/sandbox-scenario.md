@@ -1,17 +1,17 @@
 ---
-title: Capacidades do sandbox do parceiro que suportam a relação de revendedor
+title: Capacidades de caixa de areia para relacionamento revendedor
 description: A caixa de areia do parceiro tem capacidade de suportar relações entre o parceiro e o cliente
-ms.date: 11/10/2020
+ms.date: 05/01/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: af46811b3615e1f904a9619de85b0aca7622490b
-ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
+ms.openlocfilehash: 9bef4a15685ebbdc2212988f5ac5724b946cfd54
+ms.sourcegitcommit: 1aeaa12705a5945b8aab6bca254fedebd9c8bc4e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104711870"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "110243389"
 ---
-# <a name="partner-sandbox-capabilities-that-support-reseller-relationship"></a>Capacidades do sandbox do parceiro que suportam a relação de revendedor
+# <a name="sandbox-capabilities-for-reseller-relationship"></a>Capacidades de caixa de areia para relacionamento revendedor
 
 **Aplica-se a:**
 
@@ -33,55 +33,55 @@ Este artigo explica o que é suportado na Caixa de Areia para relações de reve
 1.  Sandbox Direct Bill Partners e Fornecedores Indiretos podem criar relações com o cliente Sandbox. 
 2.  Sandbox Direct Bill Partners e Fornecedores Indiretos não podem convidar clientes sandbox.
 
-
-
-### <a name="in-the-sandbox"></a>Na Caixa de Areia
-
-**Parceiros de conta diretos:**
-
-• Pode adicionar clientes existentes
-
-• Não é possível solicitar relações com novos clientes
-
-**Fornecedores indiretos:**
-
-• Pode adicionar clientes existentes
-
-• Não é possível solicitar relações com novos clientes
-
-• Não pode ter uma relação com um revendedor indireto
-
-**Revendedor indireto**: (em breve)
-
-• Pode ter relações com clientes existentes
-
-• Não é possível solicitar novos relacionamentos ou adicionar novos clientes
-
-### <a name="in-partner-center"></a>No Centro Parceiro
-
-**Parceiros de conta diretos:**
-
-• Pode adicionar novos clientes
-
-• Pode solicitar relações com novos clientes
-
-**Fornecedores indiretos:**
-
-• Pode adicionar novos clientes
-
-• Pode solicitar relações com novos clientes
-
-• Pode ter relações com revendedores indiretos
-
-**Revendedores indiretos:**
-
-• Não pode adicionar novos clientes
-
-• Pode solicitar relações com novos clientes
-
 3. Sandbox Direct Bill Partner e Fornecedores Indiretos são capazes de remover a relação de revendedor do Partner Center UI e API.
 
 4. Sandbox Remove Reseller Relationship vai ligar para Eliminar o cliente AP. Isto removerá a relação assim como eliminará o inquilino do cliente. {baseURL}/v1/Clientes/{cliente-Tenant-id}
+
+
+    ### <a name="in-the-sandbox"></a>Na Caixa de Areia
+
+    **Parceiros de conta diretos:**
+
+    - Pode adicionar clientes existentes
+
+    - Não é possível solicitar relações com novos clientes
+
+    **Fornecedores indiretos:**
+
+    - Pode adicionar clientes existentes
+
+    - Não é possível solicitar relações com novos clientes
+
+    - Não pode ter uma relação com um revendedor indireto
+
+    **Revendedor indireto:** 
+
+    -   Pode ter uma relação com os clientes existentes
+
+    -   Não é possível solicitar novos relacionamentos ou adicionar novos clientes
+
+    ### <a name="in-partner-center"></a>No Centro Parceiro
+
+    **Parceiros de conta diretos:**
+
+    -   Pode adicionar novos clientes
+
+    -   Pode solicitar relações com novos clientes
+
+    **Fornecedores indiretos:**
+
+    -   Pode adicionar novos clientes
+
+    -   Pode solicitar relações com novos clientes
+
+    -   Pode ter relações com revendedores indiretos
+
+    **Revendedores indiretos:**
+
+    -   Não pode adicionar novos clientes
+
+    -   Pode solicitar relações com novos clientes
+
 
 Siga a [Relação de Revendedor Remover](remove-a-reseller-relationship-with-a-customer.md) para obter mais detalhes. No entanto, existem algumas diferenças entre as capacidades do Produto e da Sandbox.
 
