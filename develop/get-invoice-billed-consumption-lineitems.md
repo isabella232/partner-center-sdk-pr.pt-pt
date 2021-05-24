@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 1e19792da6a7510bf02dd11b3e77f40a8365be2b
-ms.sourcegitcommit: 4ec053c56fd210b174fe657aa7b86faf4e2b5a7c
+ms.openlocfilehash: 1406938b16e5a363a73c36ef0338eb5fc4305279
+ms.sourcegitcommit: 89aefbff6dbe740b6f27a888492ffc2e5f98b1e9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "105730200"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110325450"
 ---
 # <a name="get-invoice-billed-commercial-consumption-line-items"></a>Obter fatura faturada itens de linha de consumo comercial
 
@@ -21,7 +21,6 @@ ms.locfileid: "105730200"
 
 Pode utilizar os seguintes métodos para obter uma recolha de detalhes para artigos de linha de fatura de consumo comercial (também conhecidos como itens de linha de utilização com classificação diária fechada) para uma fatura especificada.
 
-Esta API também suporta tipos de fornecedores **azure** para subscrições microsoft Azure (MS-AZR-0145P). Isto significa que esta API é uma característica compatível com retrocesso.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -129,11 +128,11 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 
 | Nome                   | Tipo   | Necessário | Descrição                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
-| fatura id             | string | Sim      | Uma corda que identifica a fatura.                             |
-| provedor               | string | Sim      | O provedor: "OneTime".                                  |
-| tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "UsageLineItems". |
-| currencyCode           | string | Sim      | O código cambial para os itens da linha faturada.                    |
-| period                 | string | Sim      | O período para o reconhecimento cobrado. exemplo: corrente, anterior.        |
+| fatura id             | string | Yes      | Uma corda que identifica a fatura.                             |
+| provedor               | string | Yes      | O provedor: "OneTime".                                  |
+| tipo de artigo de linha de fatura | string | Yes      | O tipo de detalhe de fatura: "UsageLineItems". |
+| currencyCode           | string | Yes      | O código cambial para os itens da linha faturada.                    |
+| period                 | string | Yes      | O período para o reconhecimento cobrado. exemplo: corrente, anterior.        |
 | size                   | número | No       | O número máximo de itens para devolver. O tamanho padrão é 2000       |
 | procurarOperação          | cadeia (de carateres) | No       | Desaperte a procuraOperação=Próxima para obter a próxima página de itens de linha de reconhecimento. |
 
