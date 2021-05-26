@@ -437,8 +437,10 @@
       href: cancel-an-order-from-the-integration-sandbox.md
     - name: Ativar subscrição do sandbox
       href: activate-sandbox-subscription-azure-marketplace-products.md
-    - name: Eliminar uma conta de cliente do sandbox de integração
-      href: delete-a-customer-account-from-the-integration-sandbox.md
+    - name: Criar Revendedor Indireto na Caixa de Areia
+      href: create-indirect-reseller-in-sandbox.md
+    - name: Eliminar Revendedor Indireto na Caixa de Areia
+      href: delete-indirect-reseller-in-sandbox.md
 - name: Referências
   href: /partner/develop/referrals
   items:
