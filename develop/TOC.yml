@@ -471,14 +471,17 @@
     - name: Obter detalhes dos pedidos da API
       href: get-api-request-details.md
 - name: Referência da API REST do Centro de Parceiros
-  href: partner-center-rest-api-reference.md
   items:
+    - name: Introdução da API do Partner Center REST
+      href: partner-center-rest-api-reference.md
     - name: Registo de alterações da API REST do Centro de Parceiros
       href: api-change-log.md
     - name: URLs REST do Centro de Parceiros
       href: partner-center-rest-urls.md
     - name: Cabeçalhos REST do Centro de Parceiros
       href: headers.md
+    - name: Referência da API REST do Centro de Parceiros
+      href: /rest/api/partner-center-rest/
     - name: Recursos REST do Centro de Parceiros
       href: partner-center-rest-resources.md
       items:
@@ -553,7 +556,7 @@
     - name: Webhooks do Centro de Parceiros
       href: partner-center-webhooks.md
 - name: Referência da API do .NET Gerida do Centro de Parceiros
-  href: /dotnet/api/
+  href: /dotnet/api/microsoft.store.partnercenter
   items:
     - name: Notas de versão da API do .NET do Centro de Parceiros
       href: dotnet-release-notes.md
