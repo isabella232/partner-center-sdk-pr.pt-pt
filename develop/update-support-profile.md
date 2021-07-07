@@ -4,31 +4,26 @@ description: Atualiza o perfil de suporte de um utilizador.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 605c509eeb18f301144fec6287c9611d5a5acfe2
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 143328c5501f525d52911eead805d420f79b78ff
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769595"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530349"
 ---
-# <a name="update-support-profile"></a><span data-ttu-id="4acf5-103">Atualizar perfil de suporte</span><span class="sxs-lookup"><span data-stu-id="4acf5-103">Update support profile</span></span>
+# <a name="update-support-profile"></a><span data-ttu-id="1fadd-103">Atualizar perfil de suporte</span><span class="sxs-lookup"><span data-stu-id="1fadd-103">Update support profile</span></span>
 
-<span data-ttu-id="4acf5-104">**Aplica-se a**</span><span class="sxs-lookup"><span data-stu-id="4acf5-104">**Applies To**</span></span>
+<span data-ttu-id="1fadd-104">**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government</span><span class="sxs-lookup"><span data-stu-id="1fadd-104">**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government</span></span>
 
-- <span data-ttu-id="4acf5-105">Partner Center</span><span class="sxs-lookup"><span data-stu-id="4acf5-105">Partner Center</span></span>
-- <span data-ttu-id="4acf5-106">Centro de Parceiros operado pela 21Vianet</span><span class="sxs-lookup"><span data-stu-id="4acf5-106">Partner Center operated by 21Vianet</span></span>
-- <span data-ttu-id="4acf5-107">Centro de Parceiros para Microsoft Cloud Germany</span><span class="sxs-lookup"><span data-stu-id="4acf5-107">Partner Center for Microsoft Cloud Germany</span></span>
-- <span data-ttu-id="4acf5-108">Centro de Parceiros do Microsoft Cloud for US Government</span><span class="sxs-lookup"><span data-stu-id="4acf5-108">Partner Center for Microsoft Cloud for US Government</span></span>
+<span data-ttu-id="1fadd-105">Atualiza o perfil de suporte de um utilizador.</span><span class="sxs-lookup"><span data-stu-id="1fadd-105">Updates a user's support profile.</span></span>
 
-<span data-ttu-id="4acf5-109">Atualiza o perfil de suporte de um utilizador.</span><span class="sxs-lookup"><span data-stu-id="4acf5-109">Updates a user's support profile.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="1fadd-106">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="1fadd-106">Prerequisites</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="4acf5-110">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="4acf5-110">Prerequisites</span></span>
+- <span data-ttu-id="1fadd-107">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="1fadd-107">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="1fadd-108">Este cenário suporta a autenticação apenas com credenciais app+User.</span><span class="sxs-lookup"><span data-stu-id="1fadd-108">This scenario supports authentication with App+User credentials only.</span></span>
 
-- <span data-ttu-id="4acf5-111">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="4acf5-111">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="4acf5-112">Este cenário suporta a autenticação apenas com credenciais app+User.</span><span class="sxs-lookup"><span data-stu-id="4acf5-112">This scenario supports authentication with App+User credentials only.</span></span>
+## <a name="c"></a><span data-ttu-id="1fadd-109">C\#</span><span class="sxs-lookup"><span data-stu-id="1fadd-109">C\#</span></span>
 
-## <a name="c"></a><span data-ttu-id="4acf5-113">C\#</span><span class="sxs-lookup"><span data-stu-id="4acf5-113">C\#</span></span>
-
-<span data-ttu-id="4acf5-114">Para atualizar o seu perfil de suporte, obtenha primeiro [o seu perfil de suporte](get-support-profile.md) e faça quaisquer alterações que desejar.</span><span class="sxs-lookup"><span data-stu-id="4acf5-114">To update your support profile, first [get your support profile](get-support-profile.md) and make any changes you wish.</span></span> <span data-ttu-id="4acf5-115">Em seguida, use a sua coleção [**IPartnerOperations.Profiles.**](/dotnet/api/microsoft.store.partnercenter.ipartner.profiles)</span><span class="sxs-lookup"><span data-stu-id="4acf5-115">Then, use your [**IPartnerOperations.Profiles**](/dotnet/api/microsoft.store.partnercenter.ipartner.profiles) collection.</span></span> <span data-ttu-id="4acf5-116">Ligue para a propriedade [**SupportProfile,**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile) seguida do método [**Update()**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.update) ou [**UpdateAsync().**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.updateasync)</span><span class="sxs-lookup"><span data-stu-id="4acf5-116">Call the [**SupportProfile**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile) property, followed by the [**Update()**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.update) or [**UpdateAsync()**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.updateasync) method.</span></span>
+<span data-ttu-id="1fadd-110">Para atualizar o seu perfil de suporte, obtenha primeiro [o seu perfil de suporte](get-support-profile.md) e faça quaisquer alterações que desejar.</span><span class="sxs-lookup"><span data-stu-id="1fadd-110">To update your support profile, first [get your support profile](get-support-profile.md) and make any changes you wish.</span></span> <span data-ttu-id="1fadd-111">Em seguida, use a sua coleção [**IPartnerOperations.Profiles.**](/dotnet/api/microsoft.store.partnercenter.ipartner.profiles)</span><span class="sxs-lookup"><span data-stu-id="1fadd-111">Then, use your [**IPartnerOperations.Profiles**](/dotnet/api/microsoft.store.partnercenter.ipartner.profiles) collection.</span></span> <span data-ttu-id="1fadd-112">Ligue para a propriedade [**SupportProfile,**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile) seguida do método [**Update()**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.update) ou [**UpdateAsync().**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.updateasync)</span><span class="sxs-lookup"><span data-stu-id="1fadd-112">Call the [**SupportProfile**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile) property, followed by the [**Update()**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.update) or [**UpdateAsync()**](/dotnet/api/microsoft.store.partnercenter.profiles.isupportprofile.updateasync) method.</span></span>
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -44,25 +39,25 @@ SupportProfile newSupportProfile = new SupportProfile
 SupportProfile updatedSupportProfile = partnerOperations.Profiles.SupportProfile.Update(newSupportProfile);
 ```
 
-<span data-ttu-id="4acf5-117">**Amostra**: [App de teste de consola](console-test-app.md).</span><span class="sxs-lookup"><span data-stu-id="4acf5-117">**Sample**: [Console test app](console-test-app.md).</span></span> <span data-ttu-id="4acf5-118">**Projeto**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateSupportProfile.cs</span><span class="sxs-lookup"><span data-stu-id="4acf5-118">**Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateSupportProfile.cs</span></span>
+<span data-ttu-id="1fadd-113">**Amostra**: [App de teste de consola](console-test-app.md).</span><span class="sxs-lookup"><span data-stu-id="1fadd-113">**Sample**: [Console test app](console-test-app.md).</span></span> <span data-ttu-id="1fadd-114">**Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateSupportProfile.cs</span><span class="sxs-lookup"><span data-stu-id="1fadd-114">**Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateSupportProfile.cs</span></span>
 
-## <a name="rest-request"></a><span data-ttu-id="4acf5-119">Pedido de DESCANSO</span><span class="sxs-lookup"><span data-stu-id="4acf5-119">REST request</span></span>
+## <a name="rest-request"></a><span data-ttu-id="1fadd-115">Pedido de DESCANSO</span><span class="sxs-lookup"><span data-stu-id="1fadd-115">REST request</span></span>
 
-### <a name="request-syntax"></a><span data-ttu-id="4acf5-120">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="4acf5-120">Request syntax</span></span>
+### <a name="request-syntax"></a><span data-ttu-id="1fadd-116">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="1fadd-116">Request syntax</span></span>
 
-| <span data-ttu-id="4acf5-121">Método</span><span class="sxs-lookup"><span data-stu-id="4acf5-121">Method</span></span>  | <span data-ttu-id="4acf5-122">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="4acf5-122">Request URI</span></span>                                                                     |
+| <span data-ttu-id="1fadd-117">Método</span><span class="sxs-lookup"><span data-stu-id="1fadd-117">Method</span></span>  | <span data-ttu-id="1fadd-118">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="1fadd-118">Request URI</span></span>                                                                     |
 |---------|---------------------------------------------------------------------------------|
-| <span data-ttu-id="4acf5-123">**PUT**</span><span class="sxs-lookup"><span data-stu-id="4acf5-123">**PUT**</span></span> | <span data-ttu-id="4acf5-124">[*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/supportprofile HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="4acf5-124">[*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/supportprofile HTTP/1.1</span></span> |
+| <span data-ttu-id="1fadd-119">**PUT**</span><span class="sxs-lookup"><span data-stu-id="1fadd-119">**PUT**</span></span> | <span data-ttu-id="1fadd-120">[*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/supportprofile HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="1fadd-120">[*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/supportprofile HTTP/1.1</span></span> |
 
-### <a name="request-headers"></a><span data-ttu-id="4acf5-125">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="4acf5-125">Request headers</span></span>
+### <a name="request-headers"></a><span data-ttu-id="1fadd-121">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="1fadd-121">Request headers</span></span>
 
-<span data-ttu-id="4acf5-126">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="4acf5-126">For more information, see [Partner Center REST headers](headers.md).</span></span>
+<span data-ttu-id="1fadd-122">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="1fadd-122">For more information, see [Partner Center REST headers](headers.md).</span></span>
 
-### <a name="request-body"></a><span data-ttu-id="4acf5-127">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="4acf5-127">Request body</span></span>
+### <a name="request-body"></a><span data-ttu-id="1fadd-123">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="1fadd-123">Request body</span></span>
 
-<span data-ttu-id="4acf5-128">O recurso de perfil de suporte completo.</span><span class="sxs-lookup"><span data-stu-id="4acf5-128">The full support profile resource.</span></span>
+<span data-ttu-id="1fadd-124">O recurso de perfil de suporte completo.</span><span class="sxs-lookup"><span data-stu-id="1fadd-124">The full support profile resource.</span></span>
 
-### <a name="request-example"></a><span data-ttu-id="4acf5-129">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="4acf5-129">Request example</span></span>
+### <a name="request-example"></a><span data-ttu-id="1fadd-125">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="1fadd-125">Request example</span></span>
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/supportprofile HTTP/1.1
@@ -85,15 +80,15 @@ Expect: 100-continue
 }
 ```
 
-## <a name="rest-response"></a><span data-ttu-id="4acf5-130">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="4acf5-130">REST response</span></span>
+## <a name="rest-response"></a><span data-ttu-id="1fadd-126">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="1fadd-126">REST response</span></span>
 
-<span data-ttu-id="4acf5-131">Se for bem sucedido, este método devolve as propriedades atualizadas do objeto **SupportProfile** no corpo de resposta.</span><span class="sxs-lookup"><span data-stu-id="4acf5-131">If successful, this method returns updated **SupportProfile** object properties in the response body.</span></span>
+<span data-ttu-id="1fadd-127">Se for bem sucedido, este método devolve as propriedades atualizadas do objeto **SupportProfile** no corpo de resposta.</span><span class="sxs-lookup"><span data-stu-id="1fadd-127">If successful, this method returns updated **SupportProfile** object properties in the response body.</span></span>
 
-### <a name="response-success-and-error-codes"></a><span data-ttu-id="4acf5-132">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="4acf5-132">Response success and error codes</span></span>
+### <a name="response-success-and-error-codes"></a><span data-ttu-id="1fadd-128">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="1fadd-128">Response success and error codes</span></span>
 
-<span data-ttu-id="4acf5-133">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="4acf5-133">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="4acf5-134">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="4acf5-134">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="4acf5-135">Para obter a lista completa, consulte [códigos de erro](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="4acf5-135">For the full list, see [Error Codes](error-codes.md).</span></span>
+<span data-ttu-id="1fadd-129">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="1fadd-129">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="1fadd-130">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="1fadd-130">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="1fadd-131">Para obter a lista completa, consulte [códigos de erro](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="1fadd-131">For the full list, see [Error Codes](error-codes.md).</span></span>
 
-### <a name="response-example"></a><span data-ttu-id="4acf5-136">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="4acf5-136">Response example</span></span>
+### <a name="response-example"></a><span data-ttu-id="1fadd-132">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="1fadd-132">Response example</span></span>
 
 ```http
 HTTP/1.1 200 OK
