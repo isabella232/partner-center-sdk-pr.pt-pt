@@ -4,40 +4,36 @@ description: Pode utilizar o recurso ProductUpgradeRequest para criar uma entida
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 45830033d93e0906eafc169cf04b997e2ff7c3d8
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 4e346b7f5294a8847047c85115d8c80f34eaca84
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768815"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973421"
 ---
-# <a name="create-a-product-upgrade-entity-for-a-customer"></a><span data-ttu-id="b9080-103">Criar uma entidade de atualização de produtos para um cliente</span><span class="sxs-lookup"><span data-stu-id="b9080-103">Create a product upgrade entity for a customer</span></span>
+# <a name="create-a-product-upgrade-entity-for-a-customer"></a><span data-ttu-id="13d6a-103">Criar uma entidade de atualização de produtos para um cliente</span><span class="sxs-lookup"><span data-stu-id="13d6a-103">Create a product upgrade entity for a customer</span></span>
 
-<span data-ttu-id="b9080-104">**Aplica-se a:**</span><span class="sxs-lookup"><span data-stu-id="b9080-104">**Applies to:**</span></span>
+<span data-ttu-id="13d6a-104">Pode criar uma entidade de upgrade de produtos para atualizar um cliente para uma determinada família de produtos (por exemplo, plano Azure) utilizando o recurso **ProductUpgradeRequest.**</span><span class="sxs-lookup"><span data-stu-id="13d6a-104">You can create a product upgrade entity to upgrade a customer to a given product family (for example, Azure plan) using the **ProductUpgradeRequest** resource.</span></span>
 
-- <span data-ttu-id="b9080-105">Partner Center</span><span class="sxs-lookup"><span data-stu-id="b9080-105">Partner Center</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="13d6a-105">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="13d6a-105">Prerequisites</span></span>
 
-<span data-ttu-id="b9080-106">Pode criar uma entidade de upgrade de produtos para atualizar um cliente para uma determinada família de produtos (por exemplo, plano Azure) utilizando o recurso **ProductUpgradeRequest.**</span><span class="sxs-lookup"><span data-stu-id="b9080-106">You can create a product upgrade entity to upgrade a customer to a given product family (for example, Azure plan) using the **ProductUpgradeRequest** resource.</span></span>
+- <span data-ttu-id="13d6a-106">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="13d6a-106">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="13d6a-107">Este cenário suporta a autenticação com credenciais app+utilizador.</span><span class="sxs-lookup"><span data-stu-id="13d6a-107">This scenario supports authentication with App+User credentials.</span></span> <span data-ttu-id="13d6a-108">Siga o [modelo de aplicação seguro](enable-secure-app-model.md) ao utilizar a autenticação App+User com APIs do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="13d6a-108">Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="b9080-107">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="b9080-107">Prerequisites</span></span>
+- <span data-ttu-id="13d6a-109">Um ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="13d6a-109">A customer ID (`customer-tenant-id`).</span></span> <span data-ttu-id="13d6a-110">Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="13d6a-110">If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard).</span></span> <span data-ttu-id="13d6a-111">Selecione **CSP** no menu Partner Center, seguido de **Clientes**.</span><span class="sxs-lookup"><span data-stu-id="13d6a-111">Select **CSP** from the Partner Center menu, followed by **Customers**.</span></span> <span data-ttu-id="13d6a-112">Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.**</span><span class="sxs-lookup"><span data-stu-id="13d6a-112">Select the customer from the customer list, then select **Account**.</span></span> <span data-ttu-id="13d6a-113">Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.**</span><span class="sxs-lookup"><span data-stu-id="13d6a-113">On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section.</span></span> <span data-ttu-id="13d6a-114">O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="13d6a-114">The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).</span></span>
 
-- <span data-ttu-id="b9080-108">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="b9080-108">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="b9080-109">Este cenário suporta a autenticação com credenciais app+utilizador.</span><span class="sxs-lookup"><span data-stu-id="b9080-109">This scenario supports authentication with App+User credentials.</span></span> <span data-ttu-id="b9080-110">Siga o [modelo de aplicação seguro](enable-secure-app-model.md) ao utilizar a autenticação App+User com APIs do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="b9080-110">Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.</span></span>
+- <span data-ttu-id="13d6a-115">A família de produtos à qual pretende atualizar o cliente.</span><span class="sxs-lookup"><span data-stu-id="13d6a-115">The product family to which you want to upgrade the customer.</span></span>
 
-- <span data-ttu-id="b9080-111">Um ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="b9080-111">A customer ID (`customer-tenant-id`).</span></span> <span data-ttu-id="b9080-112">Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="b9080-112">If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard).</span></span> <span data-ttu-id="b9080-113">Selecione **CSP** no menu Partner Center, seguido de **Clientes**.</span><span class="sxs-lookup"><span data-stu-id="b9080-113">Select **CSP** from the Partner Center menu, followed by **Customers**.</span></span> <span data-ttu-id="b9080-114">Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.**</span><span class="sxs-lookup"><span data-stu-id="b9080-114">Select the customer from the customer list, then select **Account**.</span></span> <span data-ttu-id="b9080-115">Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.**</span><span class="sxs-lookup"><span data-stu-id="b9080-115">On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section.</span></span> <span data-ttu-id="b9080-116">O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="b9080-116">The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).</span></span>
+## <a name="c"></a><span data-ttu-id="13d6a-116">C\#</span><span class="sxs-lookup"><span data-stu-id="13d6a-116">C\#</span></span>
 
-- <span data-ttu-id="b9080-117">A família de produtos à qual pretende atualizar o cliente.</span><span class="sxs-lookup"><span data-stu-id="b9080-117">The product family to which you want to upgrade the customer.</span></span>
+<span data-ttu-id="13d6a-117">Para atualizar um cliente para o plano Azure:</span><span class="sxs-lookup"><span data-stu-id="13d6a-117">To upgrade a customer to Azure plan:</span></span>
 
-## <a name="c"></a><span data-ttu-id="b9080-118">C\#</span><span class="sxs-lookup"><span data-stu-id="b9080-118">C\#</span></span>
+1. <span data-ttu-id="13d6a-118">Crie um objeto **ProductUpgradesRequest** e especifique o identificador do cliente e o "Azure" como a família do produto.</span><span class="sxs-lookup"><span data-stu-id="13d6a-118">Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.</span></span>
 
-<span data-ttu-id="b9080-119">Para atualizar um cliente para o plano Azure:</span><span class="sxs-lookup"><span data-stu-id="b9080-119">To upgrade a customer to Azure plan:</span></span>
+2. <span data-ttu-id="13d6a-119">Utilize a coleção **IAggregatePartner.ProductUpgrades.**</span><span class="sxs-lookup"><span data-stu-id="13d6a-119">Use the **IAggregatePartner.ProductUpgrades** collection.</span></span>
 
-1. <span data-ttu-id="b9080-120">Crie um objeto **ProductUpgradesRequest** e especifique o identificador do cliente e o "Azure" como a família do produto.</span><span class="sxs-lookup"><span data-stu-id="b9080-120">Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.</span></span>
+3. <span data-ttu-id="13d6a-120">Ligue para o método **Criar** e passe no objeto **ProductUpgradesRequest,** que irá devolver uma corda **de cabeçalho de localização.**</span><span class="sxs-lookup"><span data-stu-id="13d6a-120">Call the **Create** method and pass in the **ProductUpgradesRequest** object, which will return a **location header** string.</span></span>
 
-2. <span data-ttu-id="b9080-121">Utilize a coleção **IAggregatePartner.ProductUpgrades.**</span><span class="sxs-lookup"><span data-stu-id="b9080-121">Use the **IAggregatePartner.ProductUpgrades** collection.</span></span>
-
-3. <span data-ttu-id="b9080-122">Ligue para o método **Criar** e passe no objeto **ProductUpgradesRequest,** que irá devolver uma corda **de cabeçalho de localização.**</span><span class="sxs-lookup"><span data-stu-id="b9080-122">Call the **Create** method and pass in the **ProductUpgradesRequest** object, which will return a **location header** string.</span></span>
-
-4. <span data-ttu-id="b9080-123">Extrair o **id de atualização** da cadeia do cabeçalho de localização que pode ser usada para [consultar o estado de atualização](get-product-upgrade-status.md).</span><span class="sxs-lookup"><span data-stu-id="b9080-123">Extract the **upgrade-id** from the location header string which can be used to [query the upgrade status](get-product-upgrade-status.md).</span></span>
+4. <span data-ttu-id="13d6a-121">Extrair o **id de atualização** da cadeia de cabeçalho de localização que pode ser usada para [consultar o estado de atualização](get-product-upgrade-status.md).</span><span class="sxs-lookup"><span data-stu-id="13d6a-121">Extract the **upgrade-id** from the location header string that can be used to [query the upgrade status](get-product-upgrade-status.md).</span></span>
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -58,23 +54,23 @@ var upgradeId = Regex.Split(productUpgradeLocationHeader, "/")[1];
 
 ```
 
-## <a name="rest-request"></a><span data-ttu-id="b9080-124">Pedido de DESCANSO</span><span class="sxs-lookup"><span data-stu-id="b9080-124">REST request</span></span>
+## <a name="rest-request"></a><span data-ttu-id="13d6a-122">Pedido de DESCANSO</span><span class="sxs-lookup"><span data-stu-id="13d6a-122">REST request</span></span>
 
-### <a name="request-syntax"></a><span data-ttu-id="b9080-125">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="b9080-125">Request syntax</span></span>
+### <a name="request-syntax"></a><span data-ttu-id="13d6a-123">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="13d6a-123">Request syntax</span></span>
 
-| <span data-ttu-id="b9080-126">Método</span><span class="sxs-lookup"><span data-stu-id="b9080-126">Method</span></span>   | <span data-ttu-id="b9080-127">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="b9080-127">Request URI</span></span>                                                                                   |
+| <span data-ttu-id="13d6a-124">Método</span><span class="sxs-lookup"><span data-stu-id="13d6a-124">Method</span></span>   | <span data-ttu-id="13d6a-125">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="13d6a-125">Request URI</span></span>                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
-| <span data-ttu-id="b9080-128">**Publicar**</span><span class="sxs-lookup"><span data-stu-id="b9080-128">**POST**</span></span> | <span data-ttu-id="b9080-129">[*{baseURL}*](partner-center-rest-urls.md)/v1/productupgrades HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="b9080-129">[*{baseURL}*](partner-center-rest-urls.md)/v1/productupgrades HTTP/1.1</span></span> |
+| <span data-ttu-id="13d6a-126">**Publicar**</span><span class="sxs-lookup"><span data-stu-id="13d6a-126">**POST**</span></span> | <span data-ttu-id="13d6a-127">[*{baseURL}*](partner-center-rest-urls.md)/v1/productupgrades HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="13d6a-127">[*{baseURL}*](partner-center-rest-urls.md)/v1/productupgrades HTTP/1.1</span></span> |
 
-#### <a name="request-headers"></a><span data-ttu-id="b9080-130">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="b9080-130">Request headers</span></span>
+#### <a name="request-headers"></a><span data-ttu-id="13d6a-128">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="13d6a-128">Request headers</span></span>
 
-<span data-ttu-id="b9080-131">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="b9080-131">For more information, see [Partner Center REST headers](headers.md).</span></span>
+<span data-ttu-id="13d6a-129">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="13d6a-129">For more information, see [Partner Center REST headers](headers.md).</span></span>
 
-#### <a name="request-body"></a><span data-ttu-id="b9080-132">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="b9080-132">Request body</span></span>
+#### <a name="request-body"></a><span data-ttu-id="13d6a-130">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="13d6a-130">Request body</span></span>
 
-<span data-ttu-id="b9080-133">O organismo de pedido deve conter um recurso [ProductUpgradeRequest.](product-upgrade-resources.md#productupgraderequest)</span><span class="sxs-lookup"><span data-stu-id="b9080-133">The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productupgraderequest) resource.</span></span>
+<span data-ttu-id="13d6a-131">O organismo de pedido deve conter um recurso [ProductUpgradeRequest.](product-upgrade-resources.md#productupgraderequest)</span><span class="sxs-lookup"><span data-stu-id="13d6a-131">The request body must contain a [ProductUpgradeRequest](product-upgrade-resources.md#productupgraderequest) resource.</span></span>
 
-#### <a name="request-example"></a><span data-ttu-id="b9080-134">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="b9080-134">Request example</span></span>
+#### <a name="request-example"></a><span data-ttu-id="13d6a-132">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="13d6a-132">Request example</span></span>
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/productupgrades HTTP/1.1
@@ -95,15 +91,15 @@ Connection: Keep-Alive
 }
 ```
 
-## <a name="rest-response"></a><span data-ttu-id="b9080-135">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="b9080-135">REST response</span></span>
+## <a name="rest-response"></a><span data-ttu-id="13d6a-133">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="13d6a-133">REST response</span></span>
 
-<span data-ttu-id="b9080-136">Se for bem sucedida, a resposta contém um **cabeçalho de localização** que tem um URI que pode ser usado para recuperar o estado de atualização do produto.</span><span class="sxs-lookup"><span data-stu-id="b9080-136">If successful, the response contains a **Location** header that has a URI that can be used to retrieve product upgrade status.</span></span> <span data-ttu-id="b9080-137">Guarde este URI para utilização com outras APIs de REST relacionadas.</span><span class="sxs-lookup"><span data-stu-id="b9080-137">Save this URI for use with other related REST APIs.</span></span>
+<span data-ttu-id="13d6a-134">Se for bem sucedida, a resposta contém um **cabeçalho de localização** que tem um URI que pode ser usado para recuperar o estado de atualização do produto.</span><span class="sxs-lookup"><span data-stu-id="13d6a-134">If successful, the response contains a **Location** header that has a URI that can be used to retrieve product upgrade status.</span></span> <span data-ttu-id="13d6a-135">Guarde este URI para utilização com outras APIs de REST relacionadas.</span><span class="sxs-lookup"><span data-stu-id="13d6a-135">Save this URI for use with other related REST APIs.</span></span>
 
-### <a name="response-success-and-error-codes"></a><span data-ttu-id="b9080-138">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="b9080-138">Response success and error codes</span></span>
+### <a name="response-success-and-error-codes"></a><span data-ttu-id="13d6a-136">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="13d6a-136">Response success and error codes</span></span>
 
-<span data-ttu-id="b9080-139">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="b9080-139">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="b9080-140">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="b9080-140">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="b9080-141">Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="b9080-141">For the full list, see [Partner Center REST error codes](error-codes.md).</span></span>
+<span data-ttu-id="13d6a-137">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="13d6a-137">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="13d6a-138">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="13d6a-138">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="13d6a-139">Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="13d6a-139">For the full list, see [Partner Center REST error codes](error-codes.md).</span></span>
 
-### <a name="response-example"></a><span data-ttu-id="b9080-142">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="b9080-142">Response example</span></span>
+### <a name="response-example"></a><span data-ttu-id="13d6a-140">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="13d6a-140">Response example</span></span>
 
 ```http
 HTTP/1.1 202 Accepted

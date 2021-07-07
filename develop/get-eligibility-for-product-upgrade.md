@@ -1,42 +1,38 @@
 ---
 title: Verifique a elegibilidade de um cliente para a atualização de um plano Azure
-description: Pode utilizar o recurso ProductUpgradeRequest para devolver um recurso de melhoria de produtos para determinar se um cliente é elegível para atualizar a partir de uma subscrição do Microsoft Azure (MS-AZR-0145P) para um plano Azure.
+description: Pode utilizar o recurso ProductUpgradeRequest para devolver um recurso de melhoria de produtos para determinar se um cliente é elegível para atualizar a partir de uma subscrição de Microsoft Azure (MS-AZR-0145P) para um plano Azure.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 568ed3f4cff7d9cd520e608d43cb89bb78e00ccc
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 34a20611c7d92042b5432c5ffb3ba4702d77e0c2
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768725"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446263"
 ---
-# <a name="check-a-customers-eligibility-for-upgrading-to-an-azure-plan"></a><span data-ttu-id="3b133-103">Verifique a elegibilidade de um cliente para a atualização de um plano Azure</span><span class="sxs-lookup"><span data-stu-id="3b133-103">Check a customer's eligibility for upgrading to an Azure plan</span></span>
+# <a name="check-a-customers-eligibility-for-upgrading-to-an-azure-plan"></a><span data-ttu-id="a32b3-103">Verifique a elegibilidade de um cliente para a atualização de um plano Azure</span><span class="sxs-lookup"><span data-stu-id="a32b3-103">Check a customer's eligibility for upgrading to an Azure plan</span></span>
 
-<span data-ttu-id="3b133-104">**Aplica-se a:**</span><span class="sxs-lookup"><span data-stu-id="3b133-104">**Applies to:**</span></span>
+<span data-ttu-id="a32b3-104">Pode utilizar o recurso [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) para verificar se um cliente é elegível para atualizar para um plano Azure a partir de uma subscrição de Microsoft Azure (MS-AZR-0145P) Este método devolve um recurso [**de edição do Produto**](product-upgrade-resources.md#productupgradeseligibility) Com a elegibilidade do produto para upgrade do cliente.</span><span class="sxs-lookup"><span data-stu-id="a32b3-104">You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource to check if a customer is eligible to upgrade to an Azure plan from a Microsoft Azure (MS-AZR-0145P) subscription This method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource with the customer's product upgrade eligibility.</span></span>
 
-- <span data-ttu-id="3b133-105">Partner Center</span><span class="sxs-lookup"><span data-stu-id="3b133-105">Partner Center</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="a32b3-105">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="a32b3-105">Prerequisites</span></span>
 
-<span data-ttu-id="3b133-106">Pode utilizar o recurso [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) para verificar se um cliente é elegível para atualizar para um plano Azure a partir de uma subscrição microsoft Azure (MS-AZR-0145P) Este método devolve um recurso [**de edição do Produto**](product-upgrade-resources.md#productupgradeseligibility) Com a elegibilidade do produto para upgrade do cliente.</span><span class="sxs-lookup"><span data-stu-id="3b133-106">You can use the [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource to check if a customer is eligible to upgrade to an Azure plan from a Microsoft Azure (MS-AZR-0145P) subscription This method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource with the customer's product upgrade eligibility.</span></span>
+- <span data-ttu-id="a32b3-106">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="a32b3-106">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="a32b3-107">Este cenário suporta a autenticação com credenciais app+utilizador.</span><span class="sxs-lookup"><span data-stu-id="a32b3-107">This scenario supports authentication with App+User credentials.</span></span> <span data-ttu-id="a32b3-108">Siga o [modelo de aplicação seguro](enable-secure-app-model.md) ao utilizar a autenticação App+User com APIs do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="a32b3-108">Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="3b133-107">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="3b133-107">Prerequisites</span></span>
+- <span data-ttu-id="a32b3-109">Um ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="a32b3-109">A customer ID (`customer-tenant-id`).</span></span> <span data-ttu-id="a32b3-110">Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="a32b3-110">If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard).</span></span> <span data-ttu-id="a32b3-111">Selecione **CSP** no menu Partner Center, seguido de **Clientes**.</span><span class="sxs-lookup"><span data-stu-id="a32b3-111">Select **CSP** from the Partner Center menu, followed by **Customers**.</span></span> <span data-ttu-id="a32b3-112">Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.**</span><span class="sxs-lookup"><span data-stu-id="a32b3-112">Select the customer from the customer list, then select **Account**.</span></span> <span data-ttu-id="a32b3-113">Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.**</span><span class="sxs-lookup"><span data-stu-id="a32b3-113">On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section.</span></span> <span data-ttu-id="a32b3-114">O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="a32b3-114">The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).</span></span>
 
-- <span data-ttu-id="3b133-108">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="3b133-108">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="3b133-109">Este cenário suporta a autenticação com credenciais app+utilizador.</span><span class="sxs-lookup"><span data-stu-id="3b133-109">This scenario supports authentication with App+User credentials.</span></span> <span data-ttu-id="3b133-110">Siga o [modelo de aplicação seguro](enable-secure-app-model.md) ao utilizar a autenticação App+User com APIs do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="3b133-110">Follow the [secure app model](enable-secure-app-model.md) when using App+User authentication with Partner Center APIs.</span></span>
+- <span data-ttu-id="a32b3-115">A família dos produtos.</span><span class="sxs-lookup"><span data-stu-id="a32b3-115">The product family.</span></span>
 
-- <span data-ttu-id="3b133-111">Um ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="3b133-111">A customer ID (`customer-tenant-id`).</span></span> <span data-ttu-id="3b133-112">Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="3b133-112">If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard).</span></span> <span data-ttu-id="3b133-113">Selecione **CSP** no menu Partner Center, seguido de **Clientes**.</span><span class="sxs-lookup"><span data-stu-id="3b133-113">Select **CSP** from the Partner Center menu, followed by **Customers**.</span></span> <span data-ttu-id="3b133-114">Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.**</span><span class="sxs-lookup"><span data-stu-id="3b133-114">Select the customer from the customer list, then select **Account**.</span></span> <span data-ttu-id="3b133-115">Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.**</span><span class="sxs-lookup"><span data-stu-id="3b133-115">On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section.</span></span> <span data-ttu-id="3b133-116">O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="3b133-116">The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).</span></span>
+## <a name="c"></a><span data-ttu-id="a32b3-116">C\#</span><span class="sxs-lookup"><span data-stu-id="a32b3-116">C\#</span></span>
 
-- <span data-ttu-id="3b133-117">A família dos produtos.</span><span class="sxs-lookup"><span data-stu-id="3b133-117">The product family.</span></span>
+<span data-ttu-id="a32b3-117">Para verificar se um cliente é elegível para fazer upgrade para o plano Azure:</span><span class="sxs-lookup"><span data-stu-id="a32b3-117">To check if a customer is eligible to upgrade to Azure plan:</span></span>
 
-## <a name="c"></a><span data-ttu-id="3b133-118">C\#</span><span class="sxs-lookup"><span data-stu-id="3b133-118">C\#</span></span>
+1. <span data-ttu-id="a32b3-118">Crie um objeto **ProductUpgradesRequest** e especifique o identificador do cliente e o "Azure" como a família do produto.</span><span class="sxs-lookup"><span data-stu-id="a32b3-118">Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.</span></span>
 
-<span data-ttu-id="3b133-119">Para verificar se um cliente é elegível para fazer upgrade para o plano Azure:</span><span class="sxs-lookup"><span data-stu-id="3b133-119">To check if a customer is eligible to upgrade to Azure plan:</span></span>
-
-1. <span data-ttu-id="3b133-120">Crie um objeto **ProductUpgradesRequest** e especifique o identificador do cliente e o "Azure" como a família do produto.</span><span class="sxs-lookup"><span data-stu-id="3b133-120">Create a **ProductUpgradesRequest** object and specify the customer identifier and "Azure" as the product family.</span></span>
-
-2. <span data-ttu-id="3b133-121">Utilize a coleção **IAggregatePartner.ProductUpgrades.**</span><span class="sxs-lookup"><span data-stu-id="3b133-121">Use the **IAggregatePartner.ProductUpgrades** collection.</span></span>
-3. <span data-ttu-id="3b133-122">Ligue para o método **checkEelegibilidade** e passe no objeto **ProductUpgradesRequest,** que devolverá um objeto **de Melhoria de Produto.**</span><span class="sxs-lookup"><span data-stu-id="3b133-122">Call the **CheckEligibility** method and pass in the **ProductUpgradesRequest** object, which will return a **ProductUpgradesEligibility** object.</span></span>
+2. <span data-ttu-id="a32b3-119">Utilize a coleção **IAggregatePartner.ProductUpgrades.**</span><span class="sxs-lookup"><span data-stu-id="a32b3-119">Use the **IAggregatePartner.ProductUpgrades** collection.</span></span>
+3. <span data-ttu-id="a32b3-120">Ligue para o método **checkEelegibilidade** e passe no objeto **ProductUpgradesRequest,** que devolverá um objeto **de Melhoria de Produto.**</span><span class="sxs-lookup"><span data-stu-id="a32b3-120">Call the **CheckEligibility** method and pass in the **ProductUpgradesRequest** object, which will return a **ProductUpgradesEligibility** object.</span></span>
 
 ```csharp
 // IAggregatePartner partnerOperations;
@@ -60,23 +56,23 @@ if (productUpgradeEligibility.IsEligibile)
 
 ```
 
-## <a name="rest-request"></a><span data-ttu-id="3b133-123">Pedido de DESCANSO</span><span class="sxs-lookup"><span data-stu-id="3b133-123">REST request</span></span>
+## <a name="rest-request"></a><span data-ttu-id="a32b3-121">Pedido de DESCANSO</span><span class="sxs-lookup"><span data-stu-id="a32b3-121">REST request</span></span>
 
-### <a name="request-syntax"></a><span data-ttu-id="3b133-124">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="3b133-124">Request syntax</span></span>
+### <a name="request-syntax"></a><span data-ttu-id="a32b3-122">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="a32b3-122">Request syntax</span></span>
 
-| <span data-ttu-id="3b133-125">Método</span><span class="sxs-lookup"><span data-stu-id="3b133-125">Method</span></span>   | <span data-ttu-id="3b133-126">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="3b133-126">Request URI</span></span>                                                                                   |
+| <span data-ttu-id="a32b3-123">Método</span><span class="sxs-lookup"><span data-stu-id="a32b3-123">Method</span></span>   | <span data-ttu-id="a32b3-124">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="a32b3-124">Request URI</span></span>                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
-| <span data-ttu-id="3b133-127">**Publicar**</span><span class="sxs-lookup"><span data-stu-id="3b133-127">**POST**</span></span> | <span data-ttu-id="3b133-128">[*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/elegibilidade HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="3b133-128">[*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/eligibility HTTP/1.1</span></span> |
+| <span data-ttu-id="a32b3-125">**Publicar**</span><span class="sxs-lookup"><span data-stu-id="a32b3-125">**POST**</span></span> | <span data-ttu-id="a32b3-126">[*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/elegibilidade HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="a32b3-126">[*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/eligibility HTTP/1.1</span></span> |
 
-### <a name="request-headers"></a><span data-ttu-id="3b133-129">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="3b133-129">Request headers</span></span>
+### <a name="request-headers"></a><span data-ttu-id="a32b3-127">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="a32b3-127">Request headers</span></span>
 
-<span data-ttu-id="3b133-130">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="3b133-130">For more information, see [Partner Center REST headers](headers.md).</span></span>
+<span data-ttu-id="a32b3-128">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="a32b3-128">For more information, see [Partner Center REST headers](headers.md).</span></span>
 
-### <a name="request-body"></a><span data-ttu-id="3b133-131">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="3b133-131">Request body</span></span>
+### <a name="request-body"></a><span data-ttu-id="a32b3-129">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="a32b3-129">Request body</span></span>
 
-<span data-ttu-id="3b133-132">O organismo de pedido deve conter um recurso [**ProductUpgradeRequest.**](product-upgrade-resources.md#productupgraderequest)</span><span class="sxs-lookup"><span data-stu-id="3b133-132">The request body must contain a [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource.</span></span>
+<span data-ttu-id="a32b3-130">O organismo de pedido deve conter um recurso [**ProductUpgradeRequest.**](product-upgrade-resources.md#productupgraderequest)</span><span class="sxs-lookup"><span data-stu-id="a32b3-130">The request body must contain a [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) resource.</span></span>
 
-### <a name="request-example"></a><span data-ttu-id="3b133-133">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="3b133-133">Request example</span></span>
+### <a name="request-example"></a><span data-ttu-id="a32b3-131">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="a32b3-131">Request example</span></span>
 
 ```http
 POST https://api.partnercenter.microsoft.com/v1/productupgrades/eligibility HTTP/1.1
@@ -97,15 +93,15 @@ Connection: Keep-Alive
 }
 ```
 
-## <a name="rest-response"></a><span data-ttu-id="3b133-134">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="3b133-134">REST response</span></span>
+## <a name="rest-response"></a><span data-ttu-id="a32b3-132">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="a32b3-132">REST response</span></span>
 
-<span data-ttu-id="3b133-135">Se for bem sucedido, este método devolve um recurso [**de melhoria de identidade do produto**](product-upgrade-resources.md#productupgradeseligibility) no organismo.</span><span class="sxs-lookup"><span data-stu-id="3b133-135">If successful, this method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource in the body.</span></span>
+<span data-ttu-id="a32b3-133">Se for bem sucedido, este método devolve um recurso [**de melhoria de identidade do produto**](product-upgrade-resources.md#productupgradeseligibility) no organismo.</span><span class="sxs-lookup"><span data-stu-id="a32b3-133">If successful, this method returns a [**ProductUpgradesEligibility**](product-upgrade-resources.md#productupgradeseligibility) resource in the body.</span></span>
 
-### <a name="response-success-and-error-codes"></a><span data-ttu-id="3b133-136">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="3b133-136">Response success and error codes</span></span>
+### <a name="response-success-and-error-codes"></a><span data-ttu-id="a32b3-134">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="a32b3-134">Response success and error codes</span></span>
 
-<span data-ttu-id="3b133-137">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="3b133-137">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="3b133-138">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="3b133-138">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="3b133-139">Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="3b133-139">For the full list, see [Partner Center REST error codes](error-codes.md).</span></span>
+<span data-ttu-id="a32b3-135">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="a32b3-135">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="a32b3-136">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="a32b3-136">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="a32b3-137">Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="a32b3-137">For the full list, see [Partner Center REST error codes](error-codes.md).</span></span>
 
-### <a name="response-example"></a><span data-ttu-id="3b133-140">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="3b133-140">Response example</span></span>
+### <a name="response-example"></a><span data-ttu-id="a32b3-138">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="a32b3-138">Response example</span></span>
 
 ```http
 HTTP/1.1 200 Ok

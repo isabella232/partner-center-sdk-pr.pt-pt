@@ -4,50 +4,46 @@ description: Como obter uma lista de transferências de um cliente.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4a25a9f6ccba0a3d64934b23ccd83a535da05e4a
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: a5892e25953bc2eec4451bdbbd5accea008828b8
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768767"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760237"
 ---
-# <a name="get-a-customers-transfers"></a><span data-ttu-id="479b1-103">Obter as transferências de um cliente</span><span class="sxs-lookup"><span data-stu-id="479b1-103">Get a customer's transfers</span></span>
+# <a name="get-a-customers-transfers"></a><span data-ttu-id="9c626-103">Obter as transferências de um cliente</span><span class="sxs-lookup"><span data-stu-id="9c626-103">Get a customer's transfers</span></span>
 
-<span data-ttu-id="479b1-104">**Aplica-se a**</span><span class="sxs-lookup"><span data-stu-id="479b1-104">**Applies To**</span></span>
+<span data-ttu-id="9c626-104">Como obter uma lista de transferências de um cliente.</span><span class="sxs-lookup"><span data-stu-id="9c626-104">How to get a list of a customer's transfers.</span></span>
 
-- <span data-ttu-id="479b1-105">Partner Center</span><span class="sxs-lookup"><span data-stu-id="479b1-105">Partner Center</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="9c626-105">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="9c626-105">Prerequisites</span></span>
 
-<span data-ttu-id="479b1-106">Como obter uma lista de transferências de um cliente.</span><span class="sxs-lookup"><span data-stu-id="479b1-106">How to get a list of a customer's transfers.</span></span>
+- <span data-ttu-id="9c626-106">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="9c626-106">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="9c626-107">Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.</span><span class="sxs-lookup"><span data-stu-id="9c626-107">This scenario supports authentication with both standalone App and App+User credentials.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="479b1-107">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="479b1-107">Prerequisites</span></span>
+- <span data-ttu-id="9c626-108">Um ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="9c626-108">A customer ID (`customer-tenant-id`).</span></span> <span data-ttu-id="9c626-109">Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="9c626-109">If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard).</span></span> <span data-ttu-id="9c626-110">Selecione **CSP** no menu Partner Center, seguido de **Clientes**.</span><span class="sxs-lookup"><span data-stu-id="9c626-110">Select **CSP** from the Partner Center menu, followed by **Customers**.</span></span> <span data-ttu-id="9c626-111">Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.**</span><span class="sxs-lookup"><span data-stu-id="9c626-111">Select the customer from the customer list, then select **Account**.</span></span> <span data-ttu-id="9c626-112">Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.**</span><span class="sxs-lookup"><span data-stu-id="9c626-112">On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section.</span></span> <span data-ttu-id="9c626-113">O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="9c626-113">The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).</span></span>
 
-- <span data-ttu-id="479b1-108">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="479b1-108">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="479b1-109">Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.</span><span class="sxs-lookup"><span data-stu-id="479b1-109">This scenario supports authentication with both standalone App and App+User credentials.</span></span>
+### <a name="request-syntax"></a><span data-ttu-id="9c626-114">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="9c626-114">Request syntax</span></span>
 
-- <span data-ttu-id="479b1-110">Um ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="479b1-110">A customer ID (`customer-tenant-id`).</span></span> <span data-ttu-id="479b1-111">Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center.</span><span class="sxs-lookup"><span data-stu-id="479b1-111">If you don't know the customer's ID, you can look it up in the Partner Center [dashboard](https://partner.microsoft.com/dashboard).</span></span> <span data-ttu-id="479b1-112">Selecione **CSP** no menu Partner Center, seguido de **Clientes**.</span><span class="sxs-lookup"><span data-stu-id="479b1-112">Select **CSP** from the Partner Center menu, followed by **Customers**.</span></span> <span data-ttu-id="479b1-113">Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.**</span><span class="sxs-lookup"><span data-stu-id="479b1-113">Select the customer from the customer list, then select **Account**.</span></span> <span data-ttu-id="479b1-114">Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.**</span><span class="sxs-lookup"><span data-stu-id="479b1-114">On the customer’s Account page, look for the **Microsoft ID** in the **Customer Account Info** section.</span></span> <span data-ttu-id="479b1-115">O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).</span><span class="sxs-lookup"><span data-stu-id="479b1-115">The Microsoft ID is the same as the customer ID  (`customer-tenant-id`).</span></span>
-
-### <a name="request-syntax"></a><span data-ttu-id="479b1-116">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="479b1-116">Request syntax</span></span>
-
-| <span data-ttu-id="479b1-117">Método</span><span class="sxs-lookup"><span data-stu-id="479b1-117">Method</span></span>  | <span data-ttu-id="479b1-118">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="479b1-118">Request URI</span></span>                                                                                          |
+| <span data-ttu-id="9c626-115">Método</span><span class="sxs-lookup"><span data-stu-id="9c626-115">Method</span></span>  | <span data-ttu-id="9c626-116">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="9c626-116">Request URI</span></span>                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
-| <span data-ttu-id="479b1-119">**Obter**</span><span class="sxs-lookup"><span data-stu-id="479b1-119">**GET**</span></span> | <span data-ttu-id="479b1-120">[*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/transferes HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="479b1-120">[*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/transfers HTTP/1.1</span></span> |
+| <span data-ttu-id="9c626-117">**Obter**</span><span class="sxs-lookup"><span data-stu-id="9c626-117">**GET**</span></span> | <span data-ttu-id="9c626-118">[*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/transferes HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="9c626-118">[*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/transfers HTTP/1.1</span></span> |
 
-### <a name="uri-parameter"></a><span data-ttu-id="479b1-121">Parâmetro URI</span><span class="sxs-lookup"><span data-stu-id="479b1-121">URI parameter</span></span>
+### <a name="uri-parameter"></a><span data-ttu-id="9c626-119">Parâmetro URI</span><span class="sxs-lookup"><span data-stu-id="9c626-119">URI parameter</span></span>
 
-<span data-ttu-id="479b1-122">Esta tabela lista o parâmetro de consulta necessário para obter todas as subscrições.</span><span class="sxs-lookup"><span data-stu-id="479b1-122">This table lists the required query parameter to get all the subscriptions.</span></span>
+<span data-ttu-id="9c626-120">Esta tabela lista o parâmetro de consulta necessário para obter todas as subscrições.</span><span class="sxs-lookup"><span data-stu-id="9c626-120">This table lists the required query parameter to get all the subscriptions.</span></span>
 
-| <span data-ttu-id="479b1-123">Nome</span><span class="sxs-lookup"><span data-stu-id="479b1-123">Name</span></span>               | <span data-ttu-id="479b1-124">Tipo</span><span class="sxs-lookup"><span data-stu-id="479b1-124">Type</span></span>   | <span data-ttu-id="479b1-125">Necessário</span><span class="sxs-lookup"><span data-stu-id="479b1-125">Required</span></span> | <span data-ttu-id="479b1-126">Descrição</span><span class="sxs-lookup"><span data-stu-id="479b1-126">Description</span></span>                                           |
+| <span data-ttu-id="9c626-121">Nome</span><span class="sxs-lookup"><span data-stu-id="9c626-121">Name</span></span>               | <span data-ttu-id="9c626-122">Tipo</span><span class="sxs-lookup"><span data-stu-id="9c626-122">Type</span></span>   | <span data-ttu-id="9c626-123">Necessário</span><span class="sxs-lookup"><span data-stu-id="9c626-123">Required</span></span> | <span data-ttu-id="9c626-124">Descrição</span><span class="sxs-lookup"><span data-stu-id="9c626-124">Description</span></span>                                           |
 |--------------------|--------|----------|-------------------------------------------------------|
-| <span data-ttu-id="479b1-127">cliente-inquilino-id</span><span class="sxs-lookup"><span data-stu-id="479b1-127">customer-tenant-id</span></span> | <span data-ttu-id="479b1-128">string</span><span class="sxs-lookup"><span data-stu-id="479b1-128">string</span></span> | <span data-ttu-id="479b1-129">Sim</span><span class="sxs-lookup"><span data-stu-id="479b1-129">Yes</span></span>      | <span data-ttu-id="479b1-130">Uma cadeia formatada pelo GUID que identifica o cliente.</span><span class="sxs-lookup"><span data-stu-id="479b1-130">A GUID-formatted string that identifies the customer.</span></span> |
+| <span data-ttu-id="9c626-125">cliente-inquilino-id</span><span class="sxs-lookup"><span data-stu-id="9c626-125">customer-tenant-id</span></span> | <span data-ttu-id="9c626-126">string</span><span class="sxs-lookup"><span data-stu-id="9c626-126">string</span></span> | <span data-ttu-id="9c626-127">Yes</span><span class="sxs-lookup"><span data-stu-id="9c626-127">Yes</span></span>      | <span data-ttu-id="9c626-128">Uma cadeia formatada pelo GUID que identifica o cliente.</span><span class="sxs-lookup"><span data-stu-id="9c626-128">A GUID-formatted string that identifies the customer.</span></span> |
 
-### <a name="request-headers"></a><span data-ttu-id="479b1-131">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="479b1-131">Request headers</span></span>
+### <a name="request-headers"></a><span data-ttu-id="9c626-129">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="9c626-129">Request headers</span></span>
 
-<span data-ttu-id="479b1-132">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="479b1-132">For more information, see [Partner Center REST headers](headers.md).</span></span>
+<span data-ttu-id="9c626-130">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="9c626-130">For more information, see [Partner Center REST headers](headers.md).</span></span>
 
-### <a name="request-body"></a><span data-ttu-id="479b1-133">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="479b1-133">Request body</span></span>
+### <a name="request-body"></a><span data-ttu-id="9c626-131">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="9c626-131">Request body</span></span>
 
-<span data-ttu-id="479b1-134">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="479b1-134">None.</span></span>
+<span data-ttu-id="9c626-132">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="9c626-132">None.</span></span>
 
-### <a name="request-example"></a><span data-ttu-id="479b1-135">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="479b1-135">Request example</span></span>
+### <a name="request-example"></a><span data-ttu-id="9c626-133">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="9c626-133">Request example</span></span>
 
 ```http
 GET /v1/customers/b67f0b00-f9e8-4c57-bcb5-0b8b95c6ccf0/transfers HTTP/1.1
@@ -58,15 +54,15 @@ MS-CorrelationId: dec58181-67b5-4831-c2c9-2fa099122f5d
 Connection: Keep-Alive
 ```
 
-## <a name="rest-response"></a><span data-ttu-id="479b1-136">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="479b1-136">REST response</span></span>
+## <a name="rest-response"></a><span data-ttu-id="9c626-134">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="9c626-134">REST response</span></span>
 
-<span data-ttu-id="479b1-137">Se for bem sucedido, este método devolve uma lista de recursos da [TransferEntity](transfer-entity-resources.md) no organismo de resposta.</span><span class="sxs-lookup"><span data-stu-id="479b1-137">If successful, this method returns a list of [TransferEntity](transfer-entity-resources.md) resources in the response body.</span></span>
+<span data-ttu-id="9c626-135">Se for bem sucedido, este método devolve uma lista de recursos da [TransferEntity](transfer-entity-resources.md) no organismo de resposta.</span><span class="sxs-lookup"><span data-stu-id="9c626-135">If successful, this method returns a list of [TransferEntity](transfer-entity-resources.md) resources in the response body.</span></span>
 
-### <a name="response-success-and-error-codes"></a><span data-ttu-id="479b1-138">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="479b1-138">Response success and error codes</span></span>
+### <a name="response-success-and-error-codes"></a><span data-ttu-id="9c626-136">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="9c626-136">Response success and error codes</span></span>
 
-<span data-ttu-id="479b1-139">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="479b1-139">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="479b1-140">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="479b1-140">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="479b1-141">Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="479b1-141">For the full list, see [Partner Center REST error codes](error-codes.md).</span></span>
+<span data-ttu-id="9c626-137">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="9c626-137">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="9c626-138">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="9c626-138">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="9c626-139">Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="9c626-139">For the full list, see [Partner Center REST error codes](error-codes.md).</span></span>
 
-### <a name="response-example"></a><span data-ttu-id="479b1-142">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="479b1-142">Response example</span></span>
+### <a name="response-example"></a><span data-ttu-id="9c626-140">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="9c626-140">Response example</span></span>
 
 ```http
 HTTP/1.1 200 OK
