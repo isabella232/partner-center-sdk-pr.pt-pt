@@ -4,31 +4,26 @@ description: Atualiza o perfil de faturação de uma organização.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: ccf938fff285704f54d4717b2678e1419d857d8d
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 0ef736a722cde16f95ed6dfdbdab278c98fcf738
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768995"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530060"
 ---
-# <a name="update-an-organization-profile"></a><span data-ttu-id="72d25-103">Atualizar um perfil de organização</span><span class="sxs-lookup"><span data-stu-id="72d25-103">Update an organization profile</span></span>
+# <a name="update-an-organization-profile"></a><span data-ttu-id="5d8b3-103">Atualizar um perfil de organização</span><span class="sxs-lookup"><span data-stu-id="5d8b3-103">Update an organization profile</span></span>
 
-<span data-ttu-id="72d25-104">**Aplica-se a**</span><span class="sxs-lookup"><span data-stu-id="72d25-104">**Applies To**</span></span>
+<span data-ttu-id="5d8b3-104">**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government</span><span class="sxs-lookup"><span data-stu-id="5d8b3-104">**Applies to**: Partner Center | Partner Center operated by 21Vianet | Partner Center for Microsoft Cloud Germany | Partner Center for Microsoft Cloud for US Government</span></span>
 
-- <span data-ttu-id="72d25-105">Partner Center</span><span class="sxs-lookup"><span data-stu-id="72d25-105">Partner Center</span></span>
-- <span data-ttu-id="72d25-106">Centro de Parceiros operado pela 21Vianet</span><span class="sxs-lookup"><span data-stu-id="72d25-106">Partner Center operated by 21Vianet</span></span>
-- <span data-ttu-id="72d25-107">Centro de Parceiros para Microsoft Cloud Germany</span><span class="sxs-lookup"><span data-stu-id="72d25-107">Partner Center for Microsoft Cloud Germany</span></span>
-- <span data-ttu-id="72d25-108">Centro de Parceiros do Microsoft Cloud for US Government</span><span class="sxs-lookup"><span data-stu-id="72d25-108">Partner Center for Microsoft Cloud for US Government</span></span>
+<span data-ttu-id="5d8b3-105">Atualiza o perfil de faturação de um parceiro.</span><span class="sxs-lookup"><span data-stu-id="5d8b3-105">Updates a partner's billing profile.</span></span>
 
-<span data-ttu-id="72d25-109">Atualiza o perfil de faturação de um parceiro.</span><span class="sxs-lookup"><span data-stu-id="72d25-109">Updates a partner's billing profile.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="5d8b3-106">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="5d8b3-106">Prerequisites</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="72d25-110">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="72d25-110">Prerequisites</span></span>
+- <span data-ttu-id="5d8b3-107">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="5d8b3-107">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="5d8b3-108">Este cenário suporta a autenticação apenas com credenciais app+User.</span><span class="sxs-lookup"><span data-stu-id="5d8b3-108">This scenario supports authentication with App+User credentials only.</span></span>
 
-- <span data-ttu-id="72d25-111">Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="72d25-111">Credentials as described in [Partner Center authentication](partner-center-authentication.md).</span></span> <span data-ttu-id="72d25-112">Este cenário suporta a autenticação apenas com credenciais app+User.</span><span class="sxs-lookup"><span data-stu-id="72d25-112">This scenario supports authentication with App+User credentials only.</span></span>
+## <a name="c"></a><span data-ttu-id="5d8b3-109">C\#</span><span class="sxs-lookup"><span data-stu-id="5d8b3-109">C\#</span></span>
 
-## <a name="c"></a><span data-ttu-id="72d25-113">C\#</span><span class="sxs-lookup"><span data-stu-id="72d25-113">C\#</span></span>
-
-<span data-ttu-id="72d25-114">Para atualizar o seu perfil de organização, recupere o perfil e faça as alterações necessárias.</span><span class="sxs-lookup"><span data-stu-id="72d25-114">To update your organization profile, retrieve the profile and make any necessary changes.</span></span> <span data-ttu-id="72d25-115">Em seguida, use a sua coleção **IAggregatePartner.Profiles** e ligue para a propriedade **OrganizationProfile.**</span><span class="sxs-lookup"><span data-stu-id="72d25-115">Then, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property.</span></span> <span data-ttu-id="72d25-116">Por fim, ligue para o método **'Atualização).).**</span><span class="sxs-lookup"><span data-stu-id="72d25-116">Finally, call the **Update()** method.</span></span>
+<span data-ttu-id="5d8b3-110">Para atualizar o seu perfil de organização, recupere o perfil e faça as alterações necessárias.</span><span class="sxs-lookup"><span data-stu-id="5d8b3-110">To update your organization profile, retrieve the profile and make any necessary changes.</span></span> <span data-ttu-id="5d8b3-111">Em seguida, use a sua coleção **IAggregatePartner.Profiles** e ligue para a propriedade **OrganizationProfile.**</span><span class="sxs-lookup"><span data-stu-id="5d8b3-111">Then, use your **IAggregatePartner.Profiles** collection and call the **OrganizationProfile** property.</span></span> <span data-ttu-id="5d8b3-112">Por fim, ligue para o método **'Atualização).).**</span><span class="sxs-lookup"><span data-stu-id="5d8b3-112">Finally, call the **Update()** method.</span></span>
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -41,25 +36,25 @@ organizationProfile.DefaultAddress.PhoneNumber = ((long)(new Random().NextDouble
 OrganizationProfile updatedOrganizationProfile = partnerOperations.Profiles.OrganizationProfile.Update(organizationProfile);
 ```
 
-<span data-ttu-id="72d25-117">**Amostra**: [App de teste de consola](console-test-app.md).</span><span class="sxs-lookup"><span data-stu-id="72d25-117">**Sample**: [Console test app](console-test-app.md).</span></span> <span data-ttu-id="72d25-118">**Projeto**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs</span><span class="sxs-lookup"><span data-stu-id="72d25-118">**Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs</span></span>
+<span data-ttu-id="5d8b3-113">**Amostra**: [App de teste de consola](console-test-app.md).</span><span class="sxs-lookup"><span data-stu-id="5d8b3-113">**Sample**: [Console test app](console-test-app.md).</span></span> <span data-ttu-id="5d8b3-114">**Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs</span><span class="sxs-lookup"><span data-stu-id="5d8b3-114">**Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs</span></span>
 
-## <a name="rest-request"></a><span data-ttu-id="72d25-119">Pedido de DESCANSO</span><span class="sxs-lookup"><span data-stu-id="72d25-119">REST request</span></span>
+## <a name="rest-request"></a><span data-ttu-id="5d8b3-115">Pedido de DESCANSO</span><span class="sxs-lookup"><span data-stu-id="5d8b3-115">REST request</span></span>
 
-### <a name="request-syntax"></a><span data-ttu-id="72d25-120">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="72d25-120">Request syntax</span></span>
+### <a name="request-syntax"></a><span data-ttu-id="5d8b3-116">Solicitar sintaxe</span><span class="sxs-lookup"><span data-stu-id="5d8b3-116">Request syntax</span></span>
 
-| <span data-ttu-id="72d25-121">Método</span><span class="sxs-lookup"><span data-stu-id="72d25-121">Method</span></span>  | <span data-ttu-id="72d25-122">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="72d25-122">Request URI</span></span>                                                                   |
+| <span data-ttu-id="5d8b3-117">Método</span><span class="sxs-lookup"><span data-stu-id="5d8b3-117">Method</span></span>  | <span data-ttu-id="5d8b3-118">URI do pedido</span><span class="sxs-lookup"><span data-stu-id="5d8b3-118">Request URI</span></span>                                                                   |
 |---------|-------------------------------------------------------------------------------|
-| <span data-ttu-id="72d25-123">**PUT**</span><span class="sxs-lookup"><span data-stu-id="72d25-123">**PUT**</span></span> | <span data-ttu-id="72d25-124">[*{baseURL}*](partner-center-rest-urls.md)/v1/perfis/organização HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="72d25-124">[*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/organization HTTP/1.1</span></span> |
+| <span data-ttu-id="5d8b3-119">**PUT**</span><span class="sxs-lookup"><span data-stu-id="5d8b3-119">**PUT**</span></span> | <span data-ttu-id="5d8b3-120">[*{baseURL}*](partner-center-rest-urls.md)/v1/perfis/organização HTTP/1.1</span><span class="sxs-lookup"><span data-stu-id="5d8b3-120">[*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/organization HTTP/1.1</span></span> |
 
-### <a name="request-headers"></a><span data-ttu-id="72d25-125">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="72d25-125">Request headers</span></span>
+### <a name="request-headers"></a><span data-ttu-id="5d8b3-121">Cabeçalhos do pedido</span><span class="sxs-lookup"><span data-stu-id="5d8b3-121">Request headers</span></span>
 
-<span data-ttu-id="72d25-126">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="72d25-126">For more information, see [Partner Center REST headers](headers.md).</span></span>
+<span data-ttu-id="5d8b3-122">Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).</span><span class="sxs-lookup"><span data-stu-id="5d8b3-122">For more information, see [Partner Center REST headers](headers.md).</span></span>
 
-### <a name="request-body"></a><span data-ttu-id="72d25-127">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="72d25-127">Request body</span></span>
+### <a name="request-body"></a><span data-ttu-id="5d8b3-123">Corpo do pedido</span><span class="sxs-lookup"><span data-stu-id="5d8b3-123">Request body</span></span>
 
-<span data-ttu-id="72d25-128">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="72d25-128">None.</span></span>
+<span data-ttu-id="5d8b3-124">Nenhum.</span><span class="sxs-lookup"><span data-stu-id="5d8b3-124">None.</span></span>
 
-### <a name="request-example"></a><span data-ttu-id="72d25-129">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="72d25-129">Request example</span></span>
+### <a name="request-example"></a><span data-ttu-id="5d8b3-125">Exemplo de pedido</span><span class="sxs-lookup"><span data-stu-id="5d8b3-125">Request example</span></span>
 
 ```http
 PUT https://api.partnercenter.microsoft.com/v1/profiles/organization HTTP/1.1
@@ -103,15 +98,15 @@ Expect: 100-continue
 }
 ```
 
-## <a name="rest-response"></a><span data-ttu-id="72d25-130">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="72d25-130">REST response</span></span>
+## <a name="rest-response"></a><span data-ttu-id="5d8b3-126">Resposta do REST</span><span class="sxs-lookup"><span data-stu-id="5d8b3-126">REST response</span></span>
 
-<span data-ttu-id="72d25-131">Se for bem sucedido, este método devolve um objeto **OrganizationProfile** no corpo de resposta.</span><span class="sxs-lookup"><span data-stu-id="72d25-131">If successful, this method returns an **OrganizationProfile** object in the response body.</span></span>
+<span data-ttu-id="5d8b3-127">Se for bem sucedido, este método devolve um objeto **OrganizationProfile** no corpo de resposta.</span><span class="sxs-lookup"><span data-stu-id="5d8b3-127">If successful, this method returns an **OrganizationProfile** object in the response body.</span></span>
 
-### <a name="response-success-and-error-codes"></a><span data-ttu-id="72d25-132">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="72d25-132">Response success and error codes</span></span>
+### <a name="response-success-and-error-codes"></a><span data-ttu-id="5d8b3-128">Códigos de sucesso e erro de resposta</span><span class="sxs-lookup"><span data-stu-id="5d8b3-128">Response success and error codes</span></span>
 
-<span data-ttu-id="72d25-133">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="72d25-133">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="72d25-134">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="72d25-134">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="72d25-135">Para obter a lista completa, consulte [códigos de erro](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="72d25-135">For the full list, see [Error Codes](error-codes.md).</span></span>
+<span data-ttu-id="5d8b3-129">Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem.</span><span class="sxs-lookup"><span data-stu-id="5d8b3-129">Each response comes with an HTTP status code that indicates success or failure and additional debugging information.</span></span> <span data-ttu-id="5d8b3-130">Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais.</span><span class="sxs-lookup"><span data-stu-id="5d8b3-130">Use a network trace tool to read this code, error type, and additional parameters.</span></span> <span data-ttu-id="5d8b3-131">Para obter a lista completa, consulte [códigos de erro](error-codes.md).</span><span class="sxs-lookup"><span data-stu-id="5d8b3-131">For the full list, see [Error Codes](error-codes.md).</span></span>
 
-### <a name="response-example"></a><span data-ttu-id="72d25-136">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="72d25-136">Response example</span></span>
+### <a name="response-example"></a><span data-ttu-id="5d8b3-132">Exemplo de resposta</span><span class="sxs-lookup"><span data-stu-id="5d8b3-132">Response example</span></span>
 
 ```http
 HTTP/1.1 200 OK
