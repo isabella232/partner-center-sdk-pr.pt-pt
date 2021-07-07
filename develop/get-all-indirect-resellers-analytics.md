@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 9f9c030278ba8fef9090f7be89064ac6054129ef
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 4252f5fcbbcb038f382408074c8fd6ede3fd1f58
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769445"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760747"
 ---
 # <a name="get-all-indirect-resellers-analytics-information"></a>Obter todas as informações de análise de revendedores indiretos
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter todas as informações de análise de revendedores indiretos para os seus clientes.
 
@@ -38,7 +33,7 @@ Como obter todas as informações de análise de revendedores indiretos para os 
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 
-| Parâmetro                             | Tipo     | Descrição                              |
+| Parâmetro                             | Tipo     | Description                              |
 |:--------------------------------------|:---------|:-----------------------------------------|
 | partnerTenantId                       | string   | A Identificação do Inquilino do parceiro para o qual pretende recuperar dados de revendedores indiretos. |
 | ID                                    | string   | ID do revendedor indireto                                                                 |

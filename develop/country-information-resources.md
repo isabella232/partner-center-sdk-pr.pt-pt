@@ -4,27 +4,22 @@ description: Saiba como utilizar apis do Partner Center com recursos de informa�
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: ba0974cf736ff86038f8abf9c77d6a648984d1df
-ms.sourcegitcommit: 4c253abb24140a6e00b0aea8e79a08823ea5a623
+ms.openlocfilehash: caf56282d21df35ae9e179a98a37317f864117a3
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "97770143"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973830"
 ---
 # <a name="country-information-resources-available-from-partner-center-apis"></a>Recursos de informação do país disponíveis nas APIs do Partner Center
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Os seguintes recursos são metadados descritivos para um país/região.
 
 ## <a name="countryinformation"></a>Informação do País
 
-| Propriedade                      | Tipo               | Descrição                                                                                        |
+| Propriedade                      | Tipo               | Description                                                                                        |
 |-------------------------------|--------------------|----------------------------------------------------------------------------------------------------|
 | ExtensãoData                 | string             | Os dados da extensão.                                                                                |
 | Iso2Code                      | string             | Um código ISO-2.                                                                                     |
@@ -53,7 +48,7 @@ Os seguintes recursos são metadados descritivos para um país/região.
 
 Descreve as regras de formatação de endereços para um país/região.
 
-| Propriedade                | Tipo               | Descrição                                                                                        |
+| Propriedade                | Tipo               | Description                                                                                        |
 |-------------------------|--------------------|----------------------------------------------------------------------------------------------------|
 | Iso2Code                | string             | Um código ISO-2.                                                                                     |
 | PadrãoCultura          | string             | A cultura padrão.                                                                               |

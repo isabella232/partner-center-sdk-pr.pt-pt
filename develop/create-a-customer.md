@@ -1,25 +1,21 @@
 ---
 title: Criar um cliente
-description: Saiba como um parceiro cloud Solution Provider (CSP) pode usar APIs do Partner Center para criar um novo cliente. O artigo descreve os pré-requisitos e o que mais acontece.
+description: Saiba como um parceiro Fornecedor de Soluções em Nuvem (CSP) pode usar APIs do Partner Center para criar um novo cliente. O artigo descreve os pré-requisitos e o que mais acontece.
 ms.date: 03/30/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: bc8e9d38353511e747ba4da99b11be40d08781e3
-ms.sourcegitcommit: faea78fe3264cbafc2b02c04d98d5ce30e992124
+ms.openlocfilehash: 6232ca77d057f2f5168b73d81ec551669d540246
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106274602"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973728"
 ---
 # <a name="create-a-customer-using-partner-center-apis"></a>Criar um cliente usando APIs do Partner Center
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo explica como criar um novo cliente.
 
@@ -28,7 +24,7 @@ Este artigo explica como criar um novo cliente.
 
 Como parceiro de fornecedor de soluções em nuvem (CSP), quando criar um cliente pode fazer encomendas em nome do cliente. Quando cria um cliente, também cria:
 
-- Um objeto de inquilino Azure Ative (AD) para o cliente.
+- Um objeto de inquilino Azure Ative Directory (AD) para o cliente.
 
 - Uma relação entre o revendedor e o cliente, usada para privilégios administrativos delegados.
 
@@ -92,7 +88,7 @@ var customerToCreate = new Customer()
 var newCustomer = partnerOperations.Customers.Create(customerToCreate);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: CreateCustomer.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateCustomer.cs
 
 ## <a name="java"></a>Java
 
@@ -144,7 +140,7 @@ Customer newCustomer = partnerOperations.getCustomers().create( customerToCreate
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
-Para criar um cliente execute o comando [**New-PartnerCustomer.**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomer.md)
+Para criar um cliente, execute o comando [**New-PartnerCustomer.**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/New-PartnerCustomer.md)
 
 ```powershell
 New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity 'Redmond' -BillingAddressCountry 'US' -BillingAddressPostalCode '98052' -BillingAddressState 'WA' -ContactEmail 'jdoe@customer.com' -ContactFirstName 'Jane' -ContactLastName 'Doe' -Culture 'en-US' -Domain 'newcustomer.onmicrosoft.com' -Language 'en' -Name 'New Customer'
@@ -170,7 +166,7 @@ New-PartnerCustomer -BillingAddressLine1 '1 Microsoft Way' -BillingAddressCity '
 
 Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
-| Nome                              | Tipo   | Descrição                                 |
+| Nome                              | Tipo   | Description                                 |
 |-----------------------------------|--------|---------------------------------------------|
 | [BillingProfile](#billing-profile) | objeto | A informação do perfil de faturação do cliente. |
 | [EmpresaProfile](#company-profile) | objeto | Informação do perfil da empresa do cliente. |
@@ -179,7 +175,7 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
 Esta tabela descreve os campos mínimos exigidos do recurso [CustomerBillingProfile](customer-resources.md#customerbillingprofile) necessário para criar um novo cliente.
 
-| Nome             | Tipo                                     | Descrição                                                                                                                                                                                                     |
+| Nome             | Tipo                                     | Description                                                                                                                                                                                                     |
 |------------------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | e-mail            | string                                   | O endereço de e-mail do cliente.                                                                                                                                                                                   |
 | cultura          | string                                   | A sua cultura preferida para a comunicação e a moeda, como "en-US". Consulte [o Partner Center com línguas e locais apoiados](partner-center-supported-languages-and-locales.md) para as culturas apoiadas. |
@@ -191,10 +187,10 @@ Esta tabela descreve os campos mínimos exigidos do recurso [CustomerBillingProf
 
 Esta tabela descreve os campos mínimos exigidos do recurso [CustomerCompanyProfile](customer-resources.md#customercompanyprofile) necessário para criar um novo cliente.
 
-| Nome   | Tipo   | Descrição                                                  |
+| Nome   | Tipo   | Description                                                  |
 |--------|--------|--------------------------------------------------------------|
 | domínio | string | O nome de domínio do cliente, como contoso.onmicrosoft.com. |
-|organizaçãoRegistrationNumber|String|Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia(BY), Hungria (HU), Cazaquistão(KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão (TJ), Uz, Ucrânia(UA), Brasil(BR), Índia, África do Sul, Polónia, Emirados Árabes Unidos, Arábia Saudita, Turquia, Tailândia, Para a empresa/organização do cliente localizada noutros países este é um campo opcional.|
+|organizaçãoRegistrationNumber|String|Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia(BY), Hungria (HU), Cazaquistão(KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uzhbequistão(UZ), Ucrânia(UA), Brasil(BR), Índia, África do Sul, Polónia, Emirados Árabes Unidos, Arábia Saudita, Turquia, Tailândia, Vietname, Myanmar, Iraque, Sudão do Sul e Venezuela. Para a empresa/organização do cliente localizada noutros países, este é um campo opcional.|
 
 ### <a name="request-example"></a>Exemplo de pedido
 

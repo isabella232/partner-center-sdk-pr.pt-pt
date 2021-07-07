@@ -4,21 +4,16 @@ description: Saiba como utilizar os recursos de conversão de API do Partner Cen
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d3ade5a5af76e7c637962b6bfe076ac806f337bf
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: 1863c365627807d8de2534a2d3116807a5de70e1
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770069"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973898"
 ---
 # <a name="conversion-resources-to-convert-trial-subscriptions-to-paid"></a>Recursos de conversão para converter assinaturas de ensaio para pagos
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Os recursos de conversão suportam a conversão de uma subscrição experimental para uma subscrição paga.
 
@@ -26,7 +21,7 @@ Os recursos de conversão suportam a conversão de uma subscrição experimental
 
 Contém informações usadas para converter uma subscrição experimental para uma subscrição paga.
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 | -------- | ---- | ----------- |
 | offerId | string | O identificador de oferta da oferta original, a oferta experimental. |
 | targetOfferId | string | O identificador de oferta para a oferta alvo. |
@@ -38,7 +33,7 @@ Contém informações usadas para converter uma subscrição experimental para u
 
 Representa um erro ocorrido durante a conversão.
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 | -------- | ---- | ----------- |
 | code | string | O código de erro associado ao problema. Valores possíveis: **Outros** (erro geral), **ConversõesNotFound** (não é possível encontrar conversões para a subscrição experimental para converter).
 | descrição | string | O texto amigável que descreve a questão. |
@@ -47,9 +42,9 @@ Representa um erro ocorrido durante a conversão.
 
 Representa o resultado da realização de uma conversão de subscrição.
 
-| Propriedade       | Tipo                                | Descrição                                                            |
+| Propriedade       | Tipo                                | Description                                                            |
 |----------------|-------------------------------------|------------------------------------------------------------------------|
 | subscriptionId | string                              | O identificador de assinatura.                                           |
 | offerId        | string                              | O identificador de oferta original.                                         |
 | targetOfferId  | string                              | O identificador de oferta para a oferta alvo.                             |
-| erro          | [ConversorEror](#conversionerror) | O erro encontrado durante a tentativa de conversão, se aplicável.. |
+| erro          | [ConversorEror](#conversionerror) | O erro encontrado durante a tentativa de conversão, se aplicável. |

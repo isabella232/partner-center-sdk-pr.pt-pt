@@ -6,23 +6,18 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: c95488b62449e1ab6bd2eeefea58d6686c291f4c
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 857caa667245503f111b27379a5c8f93aa1fb0b0
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769710"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760662"
 ---
 # <a name="get-a-customers-subscriptions-by-partner-mpn-id"></a>Obter as subscrições de um cliente por ID do MPN do parceiro
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Como obter uma lista de subscrições fornecidas por um determinado parceiro a um cliente especificado.
+Como obter uma lista de subscrições fornecidas por um determinado parceiro da Microsoft Partner Network (MPN) a um cliente especificado.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -30,7 +25,7 @@ Como obter uma lista de subscrições fornecidas por um determinado parceiro a u
 
 - Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
-- Um identificador parceiro da Microsoft Partner Network (MPN).
+- Um identificador mpn parceiro.
 
 ## <a name="c"></a>C\#
 
@@ -44,7 +39,7 @@ Para obter uma lista de subscrições fornecidas por um determinado parceiro a u
 var customerSubscriptionsByMpnId = partnerOperations.Customers.ById(customerId).Subscriptions.ByPartner(partnerMpnId).Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetSubscriptionsByMpnid.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscriptionsByMpnid.cs
 
 ## <a name="java"></a>Java
 
@@ -87,8 +82,8 @@ Utilize os seguintes parâmetros de percurso e consulta para identificar o clien
 
 | Nome        | Tipo   | Necessário | Descrição                                                 |
 |-------------|--------|----------|-------------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada GUID que identifica o cliente.       |
-| mpn-id      | int    | Sim      | Um ID da Rede de Parceiros da Microsoft que identifica o parceiro. |
+| id cliente | string | Yes      | Uma cadeia formatada GUID que identifica o cliente.       |
+| mpn-id      | int    | Yes      | Um ID da Rede de Parceiros da Microsoft que identifica o parceiro. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

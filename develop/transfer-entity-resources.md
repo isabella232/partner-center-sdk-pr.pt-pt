@@ -4,18 +4,14 @@ description: Um parceiro cria uma transferência quando um cliente quer que a su
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 96c43d255fcd31e6dc4de50baa0e19f5d8855685
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 544b9682bb0e1428fad088c818a62492198897b2
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769218"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530145"
 ---
 # <a name="transferentity-resources"></a>Recursos da Entidade de Transferência
-
-**Aplica-se a:**
-
-- Partner Center
 
 Um parceiro cria uma transferência quando um cliente quer que a sua subscrição com o parceiro seja transferida para outro parceiro.
 
@@ -23,7 +19,7 @@ Um parceiro cria uma transferência quando um cliente quer que a sua subscriçã
 
 Descreve uma Entidade de Transferência.
 
-| Propriedade              | Tipo             | Descrição                                                                                            |
+| Propriedade              | Tipo             | Description                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
 | ID                    | string           | Um identificador de entidade de transferência que é fornecido após a criação bem sucedida da Entidade de Transferência.                               |
 | createdTime           | DateTime         | A data em que a Entidade de Transferência foi criada, em formato de data-hora. Aplicada após a criação bem sucedida da Entidade de Transferência.      |
@@ -43,7 +39,7 @@ Descreve uma Entidade de Transferência.
 
 Representa um item contido numa Entidade de Transferência.
 
-| Propriedade             | Tipo                             | Descrição                                                                                             |
+| Propriedade             | Tipo                             | Description                                                                                             |
 |----------------------|----------------------------------|---------------------------------------------------------------------------------------------------------|
 | ID                   | string                           | Um identificador único para um item de linha de transferência. Aplicada após a criação bem sucedida da Entidade de Transferência.   |
 | subscriptionId       | string                           | O identificador de assinatura.                                                                            |
@@ -60,7 +56,7 @@ Representa um item contido numa Entidade de Transferência.
 
 Representa o resultado de uma aceitação de transferência.
 
-| Propriedade          | Tipo                                                  | Descrição                        |
+| Propriedade          | Tipo                                                  | Description                        |
 |-------------------|-------------------------------------------------------|------------------------------------|
 | encomendas            | Lista de objetos [da Ordem.](order-resources.md#order)    | A coleção de ordens.          |
 | transeuntes    | Lista de objetos [TransferError.](#transfererror)      | A recolha de erros de transferência. |
@@ -69,7 +65,7 @@ Representa o resultado de uma aceitação de transferência.
 
 Representa um erro que ocorre quando uma transferência é aceite.
 
-| Propriedade          | Tipo   | Descrição                                     |
+| Propriedade          | Tipo   | Description                                     |
 |-------------------|--------|-------------------------------------------------|
 | transferGroupId   | string | O grupo de pedidos identificação da ordem com o erro. |
 | code              | int    | O código de erro.                                 |
@@ -80,15 +76,15 @@ Representa um erro que ocorre quando uma transferência é aceite.
 
 Um [Enum/dotnet/api/system.enum) com valores que indicam um tipo de erro de ordem.
 
-| Valor | Posição | Descrição |
+| Valor | Posição | Description |
 | --- | --- | --- |
 | PartnerTokenMissing | 800001 | Parceiro Token desaparecido no contexto do pedido. |
 | Inválido | 800002 | Entrada de pedido inválido. |
 | ServiçoExcepção | 800003 | Erro de serviço inesperado. |
 | InvalidOfferId | 800004 | ID de oferta inválida. |
 | CriarOrderror | 800005 | Criar ordem não é bem sucedido. |
-| MpnIdNotFound | 800015 | MPN Id não foi encontrado. |
-| NotValidIndirectResellerMpnId | 800016 | O MPN Id não é um Revendedor Indireto válido. |
+| MpnIdNotFound | 800015 | A identificação da MPN não foi encontrada. |
+| NotValidIndirectResellerMpnId | 800016 | O MPN ID não é um Revendedor Indireto válido. |
 | TransferIdNotFound | 900100   | Pedido de transferência não encontrado.   |
 | TransferNotAllowedIfStatusIsInProgress | 900101 | O pedido de transferência já está em curso.|
 | TransferNotAllowedIfStatusIsCompleted | 900102 | O pedido de transferência já está completo.|

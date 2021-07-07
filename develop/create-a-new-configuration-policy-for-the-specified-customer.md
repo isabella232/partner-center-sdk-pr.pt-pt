@@ -4,19 +4,16 @@ description: Saiba como utilizar as APIs do Partner Center para criar uma nova p
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 21a0bfde7f931371ff09d6c27de0281a4ed3b3cb
-ms.sourcegitcommit: 4c253abb24140a6e00b0aea8e79a08823ea5a623
+ms.openlocfilehash: 530ff72862204bda093385252450f4eb81b63160
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "97770167"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973677"
 ---
 # <a name="create-a-new-configuration-policy-for-the-specified-customer"></a>Criar uma nova política de configuração para o cliente especificado
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Como criar uma nova política de configuração para o cliente especificado.
 
@@ -55,7 +52,7 @@ var createdConfigurationPolicy =
     partnerOperations.Customers.ById(selectedCustomerId).ConfigurationPolicies.Create(configurationPolicyToCreate);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: CreateConfigurationPolicy.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateConfigurationPolicy.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -71,7 +68,7 @@ Utilize os seguintes parâmetros de trajetória ao criar o pedido.
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| id cliente | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -83,10 +80,10 @@ O organismo de pedido deve conter um objeto com as informações da política de
 
 | Nome           | Tipo             | Necessário | Descrição                      |
 |----------------|------------------|----------|----------------------------------|
-| name           | string           | Sim      | O nome amigável da apólice. |
-| categoria       | string           | Sim      | A categoria política.             |
+| name           | string           | Yes      | O nome amigável da apólice. |
+| categoria       | string           | Yes      | A categoria política.             |
 | descrição    | cadeia (de carateres)           | No       | A descrição da apólice.          |
-| policySettings | matriz de cadeias (de carateres) | Sim      | As definições de política.             |
+| policySettings | matriz de cadeias (de carateres) | Yes      | As definições de política.             |
 
 ### <a name="request-example"></a>Exemplo de pedido
 

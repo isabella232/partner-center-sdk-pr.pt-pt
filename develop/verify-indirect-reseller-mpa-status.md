@@ -4,21 +4,18 @@ description: Pode utilizar a API AgreementStatus para verificar se um revendedor
 ms.date: 07/24/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: fa9480424eccc933bc9c28c3879a195fbd5f2bb1
-ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
+ms.openlocfilehash: f83acc61624a72354c390905b1250bc021dd39aa
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104711908"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111529839"
 ---
 # <a name="verify-an-indirect-resellers-microsoft-partner-agreement-signing-status"></a>Verifique o estado de assinatura do Acordo de Parceiro da Microsoft de um revendedor indireto
 
-**Aplica-se a:**
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Pode verificar se um revendedor indireto assinou o Microsoft Partner Agreement utilizando o seu ID (MPN) (PGA/PLA) ou O ID do Fornecedor de Soluções cloud (CSP) (ID da Microsoft). Pode utilizar um destes identificadores para verificar o estado de assinatura do Acordo de Parceiro da Microsoft utilizando a API **do AgreementStatus.**
+Pode verificar se um revendedor indireto assinou o Microsoft Partner Agreement utilizando o seu ID (MPN) (PGA/PLA) ou Fornecedor de Soluções em Nuvem (CSP) (ID) de inquilinos(Microsoft ID). Pode utilizar um destes identificadores para verificar o estado de assinatura do Acordo de Parceiro da Microsoft utilizando a API **do AgreementStatus.**
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -43,7 +40,7 @@ var agreementSignatureStatusByTenantId = partnerOperations.Compliance.AgreementS
 ```
 
 - Amostra: **[App de teste de consola](console-test-app.md)**
-- Projeto: **PartnerCenterSDK.FeaturesSamples**
+- Project: **PartnerCenterSDK.FeaturesSamples**
 - Classe: **GetAgreementSignatureStatus.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -214,7 +211,7 @@ Connection: close
 }
 ```
 
-#### <a name="csp-indirect-reseller-mpn-id-pgapla-is-either-invalid-or-not-migrated-from-partner-membership-center-to-partner-center"></a>CSP Reseller Indirect MPN Id (PGA/PLA) é inválido ou não migrado do Centro de Membros de Parceiros para Centro de Parceiros
+#### <a name="csp-indirect-reseller-mpn-id-pgapla-is-either-invalid-or-not-migrated-from-partner-membership-center-to-partner-center"></a>CSP Reseller Indirect MPN ID (PGA/PLA) é inválido ou não migrado do Centro de Membros de Parceiros para Centro de Parceiros
 
 A resposta de exemplo a seguir é devolvida quando o revendedor indireto MPN ID (PGA/PLA) passou ou é inválido ou não é migrado do Centro de Membros do Parceiro para o Partner Center. [Saiba mais](https://partner.microsoft.com/resources/detail/migrate-pmc-pc-mpa-guide-pptx)
 

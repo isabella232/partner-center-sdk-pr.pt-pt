@@ -4,26 +4,22 @@ description: Saiba como confirmar a aceitação do Cliente do Microsoft Customer
 ms.date: 02/08/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 62a6cebd5d6d093377dd5940dcff6204b7095c70
-ms.sourcegitcommit: ebb36208d6e2dea705f62b7d60d471f10c55132e
+ms.openlocfilehash: 002508109191ede53cd06f25efc38286647fd67c
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100006061"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974017"
 ---
 # <a name="confirm-customer-acceptance-of-the-microsoft-customer-agreement-using-partner-center-apis"></a>Confirme a aceitação do cliente do Acordo de Cliente da Microsoft utilizando APIs do Partner Center
 
-**Aplica-se a:**
+**Aplica-se a**: Centro de Parceiros
 
-- Partner Center
+**Não se aplica a:** Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-O Partner Center suporta atualmente a confirmação da aceitação pelo cliente do Microsoft Customer Agreement apenas na nuvem pública da *Microsoft.* Esta funcionalidade não se aplica atualmente a:
+O Partner Center suporta atualmente a confirmação da aceitação pelo cliente do Microsoft Customer Agreement apenas na nuvem pública da Microsoft.
 
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Este artigo descreve como confirmar ou re-confirmar a aceitação do cliente do Microsoft Customer Agreement.
+Este artigo descreve como confirmar ou reconfirmar a aceitação do cliente do Microsoft Customer Agreement.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,8 +35,8 @@ Este artigo descreve como confirmar ou re-confirmar a aceitação do cliente do 
   - Nome próprio
   - Apelido
   - Endereço de e-mail
-  - Número de telefone (opcional)
-- Se os valores seguintes mudarem para um cliente, o Partner Center permitirá a criação de outro acordo para esse cliente: Endereço de endereço de e-mail de nome de primeiro nome Número de telefone Caso os parceiros recebam o seguinte código de erro, devido à criação de um cliente duplicado
+  - Telefone número (opcional)
+- Se os valores seguintes mudarem para um cliente, o Partner Center permitirá a criação de outro acordo para esse cliente: Endereço de e-mail de nome de primeiro nome Telefone número Caso os parceiros receberão o seguinte código de erro, devido à criação de um cliente duplicado
 
 
 ```
@@ -57,9 +53,9 @@ Este artigo descreve como confirmar ou re-confirmar a aceitação do cliente do 
 
 ## <a name="net"></a>.NET
 
-Para confirmar ou confirmar a aceitação do cliente do Acordo de Cliente da Microsoft:
+Para confirmar ou reconfirmar a aceitação do cliente do Acordo de Cliente da Microsoft:
 
-1. Recupere os metadados do acordo para o Acordo de Cliente da Microsoft. Tem de obter o **modeloId** do Microsoft Customer Agreement. Para mais detalhes, consulte [obter metadados de acordo para o Acordo de Cliente da Microsoft.](get-customer-agreement-metadata.md)
+1. Recupere os metadados do acordo para o Acordo de Cliente da Microsoft. Tem de obter o **modeloId** do Microsoft Customer Agreement. Para obter mais informações, consulte [obter metadados de acordo para o Acordo de Cliente da Microsoft.](get-customer-agreement-metadata.md)
 
    ```csharp
    // IAggregatePartner partnerOperations;
@@ -98,9 +94,9 @@ Uma amostra completa pode ser encontrada na classe [CreateCustomerAgreement](htt
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
-Para confirmar ou confirmar a aceitação do cliente do Acordo de Cliente da Microsoft:
+Para confirmar ou reconfirmar a aceitação do cliente do Acordo de Cliente da Microsoft:
 
-1. Recupere os metadados do acordo para o Acordo de Cliente da Microsoft. Tem de obter o **modeloId** do Microsoft Customer Agreement. Para mais detalhes, consulte [obter metadados de acordo para o Acordo de Cliente da Microsoft.](get-customer-agreement-metadata.md)
+1. Recupere os metadados do acordo para o Acordo de Cliente da Microsoft. Tem de obter o **modeloId** do Microsoft Customer Agreement. Para obter mais informações, consulte [obter metadados de acordo para o Acordo de Cliente da Microsoft.](get-customer-agreement-metadata.md)
 
 2. Crie um novo recurso [ **do Agreement**](agreement-resources.md) para confirmar que um cliente aceitou o Acordo de Cliente da Microsoft. Utilize a seguinte [sintaxe de pedido DEE](#request-syntax).
 
@@ -116,7 +112,7 @@ Utilize o seguinte parâmetro de consulta para especificar o cliente que está a
 
 | Nome               | Tipo | Necessário | Descrição                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| cliente-inquilino-id | GUID | Sim | O valor é um **cliente-id-inquilino-inquilino-id,** que é um identificador que lhe permite especificar um cliente. |
+| cliente-inquilino-id | GUID | Yes | O valor é um **cliente-id-inquilino-inquilino-id,** que é um identificador que lhe permite especificar um cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

@@ -4,20 +4,16 @@ description: Como obter o contacto de suporte de uma subscrição.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: df3bce48902d95dc541c4a45e4e633569fc4406e
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: b6c98e5ed96f2ca4787e93504c9e094bd46ae783
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769272"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760764"
 ---
 # <a name="get-a-subscriptions-support-contact"></a>Obter o contacto de suporte de uma subscrição
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter o contacto de suporte de uma subscrição.
 
@@ -42,7 +38,7 @@ Para obter o contacto de suporte de uma subscrição, comece por utilizar o mét
 var supportContact = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId).SupportContact.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetSubscriptionSupportContact.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscriptionSupportContact.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -58,8 +54,8 @@ Utilize os seguintes parâmetros de percurso para identificar o cliente e a subs
 
 | Nome            | Tipo   | Necessário | Descrição                                                     |
 |-----------------|--------|----------|-----------------------------------------------------------------|
-| id cliente     | string | Sim      | Uma cadeia formatada GUID que identifica o cliente.           |
-| id de subscrição | string | Sim      | Uma cadeia formatada GUID que identifica a subscrição do ensaio. |
+| id cliente     | string | Yes      | Uma cadeia formatada GUID que identifica o cliente.           |
+| id de subscrição | string | Yes      | Uma cadeia formatada GUID que identifica a subscrição do ensaio. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

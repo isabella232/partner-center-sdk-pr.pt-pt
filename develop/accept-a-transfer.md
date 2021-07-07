@@ -4,18 +4,16 @@ description: Saiba como utilizar a API do Partner Center REST para aceitar uma t
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: fd9a6788b3dd022470e516ba928a6cd873970e53
-ms.sourcegitcommit: 8a5c37376a29e29fe0002a980082d4acc6b91131
+ms.openlocfilehash: 762f2106d6173e352bec11936c96bc3a9c9f89cb
+ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "97769962"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112025756"
 ---
 # <a name="accept-a-transfer-of-subscriptions-for-a-customer-using-partner-center-rest-apis"></a>Aceitar uma transferência de subscrições para um cliente usando As APIs do Partner Center REST
 
-**Aplica-se a:**
-
-- Partner Center
+Este artigo abrange como utilizar a API REST no Partner Center para aceitar a transferência de subscrições para um cliente. O exemplo inclui a sintaxe REST, cabeçalhos e respostas REST.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,8 +37,8 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente e especific
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
-| **transferência id** | string   | Sim      | Um id de transferência formatado GUID que identifica a transferência.             |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **transferência id** | string   | Yes      | Um id de transferência formatado GUID que identifica a transferência.             |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

@@ -4,18 +4,14 @@ description: Saiba como usar as APIs do Partner Center para cancelar um recurso 
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 38708c17b31e39a5e7c436e0d76b4ebabbc3a801
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: 95fa265a3c103d1ec55066f12a3ede7fdb2d0170
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770076"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974289"
 ---
 # <a name="cancel-a-commercial-marketplace-subscription-using-partner-center-apis"></a>Cancelar uma subscrição de marketplace comercial usando APIs do Partner Center
-
-**Aplica-se a:**
-
-- Partner Center
 
 Este artigo descreve como pode usar a API do Partner Center para cancelar um recurso de [subscrição](subscription-resources.md) de marketplace comercial que corresponda ao ID do cliente e da subscrição.
 
@@ -62,7 +58,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 
 ### <a name="sample-console-test-app"></a>Aplicação de teste de consola de amostra
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

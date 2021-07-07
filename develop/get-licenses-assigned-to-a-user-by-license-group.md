@@ -4,18 +4,14 @@ description: Como obter uma lista de licenças atribuídas pelo utilizador para 
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 28c10e3e2acb30e4110213344959a87d4ddfcffb
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 54acf6f315e3062d03903a98d0c6c1946065f95e
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769668"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446008"
 ---
 # <a name="get-licenses-assigned-to-a-user-by-license-group"></a>Obter licenças atribuídas a um utilizador por grupo de licenças
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter uma lista de licenças atribuídas pelo utilizador para os grupos de licença especificados.
 
@@ -63,13 +59,13 @@ var customerUserBothAadAndSfbAssignedLicenses = partnerOperations.Customers.ById
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 
-Utilize os seguintes parâmetros de percurso e consulta para identificar os grupos de clientes, utilizadores e licenças.
+Utilize os seguintes parâmetros de percurso e consulta para identificar o cliente, o utilizador e os grupos de licença.
 
 | Nome            | Tipo   | Necessário | Descrição                                                                                                                                                                                                                                                           |
 |-----------------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id cliente     | string | Sim      | Uma cadeia formatada GUID que identifica o cliente.                                                                                                                                                                                                                 |
-| user-id         | string | Sim      | Uma cadeia formatada GUID que identifica o utilizador.                                                                                                                                                                                                                     |
-| licenseGroupIds | cadeia (de carateres) | No       | Um valor enum que indica o grupo de licenças das licenças atribuídas. Valores válidos: Grupo1, Grupo 1 - Este grupo tem todos os produtos cuja licença pode ser gerida no Diretório Ativo Azure (AAD). Grupo2 - Este grupo tem apenas licenças de produtos Minecraft. |
+| id cliente     | string | Yes      | Uma cadeia formatada GUID que identifica o cliente.                                                                                                                                                                                                                 |
+| user-id         | string | Yes      | Uma cadeia formatada GUID que identifica o utilizador.                                                                                                                                                                                                                     |
+| licenseGroupIds | cadeia (de carateres) | No       | Um valor enum que indica o grupo de licenças das licenças atribuídas. Valores válidos: Grupo1, Grupo 1 - Este grupo tem todos os produtos cuja licença pode ser gerida no Azure Ative Directory (AAD). Grupo2 - Este grupo tem apenas Minecraft licenças de produtos. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

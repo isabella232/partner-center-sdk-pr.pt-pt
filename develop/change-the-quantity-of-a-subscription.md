@@ -4,21 +4,16 @@ description: Saiba como utilizar as APIs do Partner Center para alterar a quanti
 ms.date: 06/05/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b9b781c50895aa3a14819bec43fcca1e931e3b30
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: d57ece4dd19ef2852f39130916222c54a9ccc85a
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770070"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974102"
 ---
 # <a name="change-the-quantity-of-licenses-in-a-customer-subscription"></a>Alterar a quantidade de licenças numa subscrição de cliente
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza uma [subscrição](subscription-resources.md) para aumentar ou diminuir a quantidade de licenças.
 
@@ -51,7 +46,7 @@ selectedSubscription.Quantity++;
 var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscription.Id).Patch(selectedSubscription);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

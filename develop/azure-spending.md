@@ -4,23 +4,18 @@ description: Saiba como os parceiros da CSP podem usar as APIs do Partner Center
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 02a2995a06473cc6990d1234acd522a3b38a03d3
-ms.sourcegitcommit: d1104d5c27f8fb3908a87532f80c432f0147ef5d
+ms.openlocfilehash: 472554de1c354559d5bc4b21959c109467891806
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "97769997"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974323"
 ---
 # <a name="azure-spending-api-resources-to-manage-partner-or-customer-spending-and-usage-against-a-budget"></a>Azure gasta recursos de API para gerir gastos de parceiros ou clientes e uso contra um orçamento 
 
-**Aplica-se a:**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Os parceiros cloud Solution Provider (CSP) podem ver e gerir os seus gastos de Azure através de APIs do Partner Center. Também podem visualizar programáticamente os gastos dos seus clientes contra um orçamento de despesas da Azure.
+Fornecedor de Soluções em Nuvem parceiros (CSP) podem ver e gerir os seus gastos de Azure através de APIs do Partner Center. Também podem visualizar programáticamente os gastos dos seus clientes contra um orçamento de despesas da Azure.
 
 Para obter mais informações, consulte [cenários em que os parceiros da CSP podem utilizar as APIs do Partner Center para gerir contas e encomendas de clientes e parceiros.](scenarios.md)
 

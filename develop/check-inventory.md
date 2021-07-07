@@ -4,18 +4,14 @@ description: Saiba como usar as APIs do Partner Center para verificar o inventá
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6921760abc0b95aff820467e84b3e8e9435731cd
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: b982dbd7e5e10d454ef87a1e750546ea50eb8438
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770087"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974085"
 ---
 # <a name="check-the-inventory-of-catalog-items-using-partner-center-apis"></a>Verifique o inventário de itens de catálogo usando APIs do Partner Center
-
-**Aplica-se a:**
-
-- Partner Center
 
 Como verificar o inventário para obter um conjunto específico de itens de catálogo.
 
@@ -68,7 +64,7 @@ Utilize o seguinte parâmetro de consulta para verificar o inventário.
 
 | Nome                   | Tipo     | Necessário | Descrição                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-| código de país           | string   | Sim      | Uma identificação país/região.                                            |
+| código de país           | string   | Yes      | Uma identificação país/região.                                            |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

@@ -6,20 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: ff3116b8757e28e03615930ebd19bc75f34e2efe
-ms.sourcegitcommit: 01e75175077611da92175c777a440a594fb05797
+ms.openlocfilehash: b18fde8a11d3ed3dd31e50fdba746dd6b0bf3f97
+ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "97770240"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112025738"
 ---
 # <a name="get-a-list-of-self-serve-policies"></a>Obtenha uma lista de políticas de autosserviço
 
-**Aplica-se a:**
-
-- Partner Center
-
-Este artigo descreve como obter uma coleção de recursos que representa políticas de autosserviço para uma entidade.
+Obtém uma coleção de recursos que representa políticas de autosserviço para uma entidade.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -44,7 +40,7 @@ var SelfServePolicies = scopedPartnerOperations.SelfServePolicies.Get(customerId
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **GetSelfServePolicies.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -61,7 +57,7 @@ Use o seguinte parâmetro de consulta para obter uma lista de clientes.
 
 | Nome          | Tipo       | Necessário | Descrição                                        |
 |---------------|------------|----------|----------------------------------------------------|
-| **entity_id** | **cadeia** | Y        | O identificador de entidade que solicita acesso. Esta será a identificação do inquilino do cliente. |
+| **entity_id** | **string** | Y        | O identificador de entidade que solicita acesso. Esta será a identificação do inquilino do cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

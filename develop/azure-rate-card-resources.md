@@ -6,24 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 2d011153f508ea0a745413b88003333452d0af24
-ms.sourcegitcommit: d1104d5c27f8fb3908a87532f80c432f0147ef5d
+ms.openlocfilehash: e0b1bc9d764e2132315205653f46cef73b25e02f
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "97770015"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974340"
 ---
 # <a name="azure-rate-card-resources-to-get-real-time-current-azure-prices-on-azure-offers-in-your-region"></a>Recursos de cartão de tarifa Azure para obter em tempo real, preços atuais do Azure em ofertas Azure na sua região
 
-**Aplica-se a:**
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+O Cartão Azure Rate oferece preços em tempo real para ofertas Azure. Os preços do Azure são dinâmicos e mudam frequentemente. A Microsoft publica atualizações no Partner Center, mas a API REST fornece a forma mais rápida de os parceiros Fornecedor de Soluções em Nuvem obterem os preços atuais.
 
-O Cartão Azure Rate oferece preços em tempo real para ofertas Azure. Os preços do Azure são bastante dinâmicos e mudam frequentemente. A Microsoft publica atualizações no Partner Center, mas a API REST fornece a forma mais rápida de os parceiros do Cloud Solution Provider obterem os preços atuais.
-
-Para acompanhar o uso e ajudar a prever a sua fatura mensal e as contas para clientes individuais, pode combinar uma consulta de Cartão de Tarifa para [Obter preços para o Microsoft Azure](get-prices-for-microsoft-azure.md) com um pedido para obter os [registos de utilização de um cliente para o Azure.](get-a-customer-s-utilization-record-for-azure.md)
+Para acompanhar o uso e ajudar a prever a sua fatura mensal e as faturas para clientes individuais, pode combinar uma consulta de Cartão de Tarifa para [Obter preços para Microsoft Azure](get-prices-for-microsoft-azure.md) com um pedido para obter os [registos de utilização de um cliente para o Azure.](get-a-customer-s-utilization-record-for-azure.md)
 
 Os preços diferem por mercado e por moeda, e esta API tem em conta a localização. Por padrão, a API utiliza as definições de perfil do seu parceiro no Partner Center e no seu idioma do navegador, e essas definições são personalizáveis. A consciência da localização é especialmente relevante se você gerir vendas em vários mercados a partir de um único escritório centralizado.
 
@@ -31,7 +27,7 @@ Os preços diferem por mercado e por moeda, e esta API tem em conta a localizaç
 
 Descreve as propriedades de um recurso de cartão Azure Rate.
 
-| Propriedade      | Tipo                                      | Descrição                                                       |
+| Propriedade      | Tipo                                      | Description                                                       |
 |---------------|-------------------------------------------|-------------------------------------------------------------------|
 | moeda      | string                                    | A moeda em que as taxas são fornecidas.                     |
 | isTaxIncluded | boolean                                   | Todas as tarifas são pré-impostos, por isso esta propriedade retorna como `false` . |
@@ -46,7 +42,7 @@ Descreve as propriedades de um recurso de cartão Azure Rate.
 
 ## <a name="azuremeter"></a>AzureMeter
 
-| Propriedade         | Tipo             | Descrição                                                                                   |
+| Propriedade         | Tipo             | Description                                                                                   |
 |------------------|------------------|-----------------------------------------------------------------------------------------------|
 | ID               | string           | O identificador único do Metro.                                                                    |
 | name             | string           | Nome amigável do medidor.                                                                   |
@@ -54,14 +50,14 @@ Descreve as propriedades de um recurso de cartão Azure Rate.
 | etiquetas             | matriz de cadeias (de carateres) | Etiquetas de contadores opcionais. Esta matriz pode estar vazia.                                                 |
 | categoria         | string           | Categoria do recurso.                                                                     |
 | subcategoria      | string           | Subcategoria do recurso.                                                                 |
-| region           | string           | Região do id.                                                                             |
+| region           | string           | Região da identificação.                                                                             |
 | unit             | string           | O tipo de quantidade (horas, bytes, etc.)                                                     |
 | includedQuantity | número           | Quantidade de contadores que está incluída gratuitamente.                                               |
 | eficazDate    | string           | A data em que este contador está em vigor.                                                             |
 
 ## <a name="azureofferterm"></a>AzureOfferTerm
 
-| Propriedade         | Tipo             | Descrição                             |
+| Propriedade         | Tipo             | Description                             |
 |------------------|------------------|-----------------------------------------|
 | name             | string           | Nome amigável do termo de oferta.        |
 | desconto         | número           | O desconto aplicado, se houver.           |

@@ -4,19 +4,16 @@ description: Como carregar uma lista de informações sobre dispositivos para cr
 ms.date: 08/08/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 0b48971b862418136c42e78ae973a5aea27404a1
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 285af12034562262c99b2aa3b139e948b0fdd462
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769739"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111529737"
 ---
 # <a name="upload-a-list-of-devices-to-create-a-new-batch-for-the-specified-customer"></a>Carregar uma lista de dispositivos para criar um novo lote para o cliente especificado
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Como carregar uma lista de informações sobre dispositivos para criar um novo lote para o cliente especificado. Isto cria um lote de dispositivo para inscrição em implementação de toque zero, e associa os dispositivos e o lote do dispositivo com o cliente especificado.
 
@@ -72,7 +69,7 @@ var trackingLocation =
     partnerOperations.Customers.ById(selectedCustomerId).DeviceBatches.Create(newDeviceBatch);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: CreateDeviceBatch.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateDeviceBatch.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -88,7 +85,7 @@ Utilize os seguintes parâmetros de trajetória ao criar o pedido.
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| id cliente | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

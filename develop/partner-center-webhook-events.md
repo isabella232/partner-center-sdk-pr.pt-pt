@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 03ee1d4e74408b8cf69e2971054bf9060650cb77
-ms.sourcegitcommit: f72173df911aee3ab29b008637190b4d85ffebfe
+ms.openlocfilehash: e5e363a2f928dd38304887547bdc0e5d652728d6
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106500044"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547745"
 ---
 # <a name="partner-center-webhook-events"></a>Eventos webhook do Partner Center
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Os eventos webhook do Partner Center são eventos de mudança de recursos entregues sob a forma de POSTs HTTP para um URL registado. Para receber um evento do Partner Center, você hospeda uma chamada onde o Partner Center pode POST o evento. O evento está assinado digitalmente para que possa validar que foi enviado do Partner Center.
 
@@ -32,14 +27,14 @@ Os seguintes eventos webhook são suportados pelo Partner Center.
 
 ### <a name="test-event"></a>Evento de Teste
 
-Este evento permite-lhe auto-a bordo e testar o seu registo solicitando um evento de teste e, em seguida, rastreando o seu progresso. Poderá ver as mensagens de falha que estão a ser recebidas da Microsoft enquanto tenta entregar o evento. Isto só se aplicará a eventos "criados por testes" e os dados com mais de 7 dias serão purgados.
+Este evento permite-lhe auto-a bordo e testar o seu registo solicitando um evento de teste e, em seguida, rastreando o seu progresso. Poderá ver as mensagens de falha que estão a ser recebidas da Microsoft enquanto tenta entregar o evento. Isto só se aplicará a eventos "criados por testes" e os dados com mais de sete dias serão purgados.
 
 >[!NOTE]
 >Existe um limite de aceleração de 2 pedidos por minuto ao publicar um evento criado pelo teste.
 
 #### <a name="properties"></a>Propriedades
 
-| Propriedade                  | Tipo                               | Descrição                                                                                                  |
+| Propriedade                  | Tipo                               | Description                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName                 | string                             | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor é "criado no teste".                                          |
 | RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/registration/validationEvents/{{CorrelationId}} |
@@ -61,14 +56,14 @@ Este evento permite-lhe auto-a bordo e testar o seu registo solicitando um event
 
 ### <a name="subscription-updated-event"></a>Evento Atualizado de Assinatura
 
-Este evento é levantado quando a subscrição especificada muda. Um evento atualizado de subscrição é gerado quando há uma alteração interna para além de quando as alterações são feitas através da API do Centro Parceiro.  Este evento só será gerado quando houver alterações ao nível do comércio, por exemplo, quando o número de licenças for alterado e quando o estado da subscrição mudar. Não será gerado quando os recursos forem criados dentro da subscrição.
+Este evento é levantado quando a subscrição especificada muda. Um evento atualizado de subscrição é gerado quando há uma alteração interna para além de quando as alterações são feitas através da API do Centro Parceiro.  Este evento só será gerado quando houver alterações ao nível do comércio, por exemplo, quando o número de licenças for alterado e quando o estado da subscrição for alterado. Não será gerado quando os recursos forem criados dentro da subscrição.
 
 >[!NOTE]
 >Há um atraso de até 48 horas entre a hora em que uma subscrição muda e quando o evento Atualizado de Subscrição é ativado.
 
 #### <a name="properties"></a>Propriedades
 
-| Propriedade                  | Tipo                               | Descrição                                                                                                  |
+| Propriedade                  | Tipo                               | Description                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName                 | string                             | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor é "atualizado por subscrição".                                  |
 | RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/customers/{CustomerId}}/subscrições/{{SubscriptionId}}" |
@@ -90,11 +85,11 @@ Este evento é levantado quando a subscrição especificada muda. Um evento atua
 
 ### <a name="threshold-exceeded-event"></a>Evento Excededo limiar
 
-Este evento é aumentado quando a quantidade de utilização do Microsoft Azure para qualquer cliente excede o seu orçamento de gastos de utilização (o seu limiar). Para obter mais informações, consulte [Desconfiem de um orçamento de gastos Azure para os seus clientes/parceiro-centro/set-an-azure-spend-budget-for-your-customers).
+Este evento é angariado quando o montante de Microsoft Azure utilização para qualquer cliente excede o seu orçamento de gastos de utilização (o seu limiar). Para obter mais informações, consulte [Desconfiem de um orçamento de gastos Azure para os seus clientes/parceiro-centro/set-an-azure-spend-budget-for-your-customers).
 
 #### <a name="properties"></a>Propriedades
 
-| Propriedade                  | Tipo                               | Descrição                                                                                                  |
+| Propriedade                  | Tipo                               | Description                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName                 | string                             | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor é "usagerecords-thresholdExceeded".                                  |
 | RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/webhooks/v1/customers/usagerecords" |
@@ -120,7 +115,7 @@ Este evento é levantado quando a referência é criada.
 
 #### <a name="properties"></a>Propriedades
 
-| Propriedade                  | Tipo                               | Descrição                                                                                                  |
+| Propriedade                  | Tipo                               | Description                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName                 | string                             | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor é "criado por referenciação".                                  |
 | RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/engagements/v1/referrals/{{ReferralID}}} |
@@ -146,7 +141,7 @@ Este evento é levantado quando a referência é atualizada.
 
 #### <a name="properties"></a>Propriedades
 
-| Propriedade                  | Tipo                               | Descrição                                                                                                  |
+| Propriedade                  | Tipo                               | Description                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName                 | string                             | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor é "atualizado com referência".                                  |
 | RecursosUri               | URI                                | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/engagements/v1/referrals/{{ReferralID}}} |
@@ -170,7 +165,7 @@ Este evento é levantado quando a referência é atualizada.
 
 Este evento é levantado quando a nova fatura estiver pronta.
 
-| Propriedade                  | Tipo                               | Descrição                                                                                                  |
+| Propriedade                  | Tipo                               | Description                                                                                                  |
 |---------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------|
 | EventName | string | O nome do evento. No formulário {recurso}-{ação}. Para este evento, o valor está "pronto para faturar". |
 | RecursosUri | URI | O URI para obter o recurso. Utiliza a sintaxe: "[*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{{{FaturaId}}} |

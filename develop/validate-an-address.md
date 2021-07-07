@@ -4,21 +4,16 @@ description: Como validar um endereço utilizando a API de validação de endere
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 22d5faec2fdab4907067bb01cb74e110032dea9a
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 14d45977f3af6e8bba1b7cb7f969aa7c5bb671da
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768930"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111529890"
 ---
 # <a name="validate-an-address"></a>Validar um endereço
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como validar um endereço utilizando a API de validação de endereços.
 

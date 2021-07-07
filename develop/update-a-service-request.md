@@ -1,25 +1,21 @@
 ---
 title: Atualizar um pedido de serviço
-description: Como atualizar um pedido de atendimento ao cliente existente que um Fornecedor de Soluções Cloud apresentou com a Microsoft em nome do cliente.
+description: Como atualizar um pedido de atendimento ao cliente existente que um Fornecedor de Soluções em Nuvem apresentou à Microsoft em nome do cliente.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a1df0d1f5fa4630b346d1c8b9cffabb86ce34cfb
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: efa7b2a98b6f95a763ca6e3811c43cc655c18e2b
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769740"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530094"
 ---
 # <a name="update-a-service-request"></a>Atualizar um pedido de serviço
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Como atualizar um pedido de atendimento ao cliente existente que um Fornecedor de Soluções Cloud apresentou com a Microsoft em nome do cliente.
+Como atualizar um pedido de atendimento ao cliente existente que um Fornecedor de Soluções em Nuvem apresentou à Microsoft em nome do cliente.
 
 No painel partner Center, esta operação pode ser realizada selecionando primeiro [um cliente.](get-a-customer-by-name.md) Em seguida, selecione **a gestão** de serviço na barra lateral esquerda. No cabeçalho **de pedidos de apoio,** selecione o pedido de serviço em questão. Para terminar, faça as alterações desejadas ao pedido de serviço e, em seguida, **selecione Enviar.**
 
@@ -31,7 +27,7 @@ No painel partner Center, esta operação pode ser realizada selecionando primei
 
 ## <a name="c"></a>C\#
 
-Para atualizar um pedido de serviço do cliente, ligue para o método [**IServiceRequestCollection.ById**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) com o id pedido de serviço para identificar e devolver a interface de pedido de serviço. Em seguida, ligue para o método [**IServiceRequest.Patch**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patch) ou [**PatchAsync**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patchasync) para atualizar o pedido de serviço. Para fornecer os valores atualizados, crie um novo objeto [**de ServiceRequest**](/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) vazio e desaje assimte apenas os valores de propriedade que pretende alterar. Em seguida, passe esse objeto na chamada para o método Patch ou PatchAsync.
+Para atualizar um pedido de serviço do cliente, ligue para o método [**IServiceRequestCollection.ById**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequestcollection.byid) com o ID de pedido de serviço para identificar e devolver a interface de pedido de serviço. Em seguida, ligue para o método [**IServiceRequest.Patch**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patch) ou [**PatchAsync**](/dotnet/api/microsoft.store.partnercenter.servicerequests.iservicerequest.patchasync) para atualizar o pedido de serviço. Para fornecer os valores atualizados, crie um novo objeto [**de ServiceRequest**](/dotnet/api/microsoft.store.partnercenter.models.servicerequests.servicerequest) vazio e desaje assimte apenas os valores de propriedade que pretende alterar. Em seguida, passe esse objeto na chamada para o método Patch ou PatchAsync.
 
 ``` csharp
 // IAggregatePartner partnerOperations;
@@ -43,7 +39,7 @@ ServiceRequest updatedServiceRequest = partnerOperations.ServiceRequests.ById(ex
 });
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: UpdatePartnerServiceRequest.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdatePartnerServiceRequest.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

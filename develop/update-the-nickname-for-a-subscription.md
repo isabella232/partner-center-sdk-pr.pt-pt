@@ -4,21 +4,16 @@ description: Atualiza o nome ou apelido amigável para a Subscrição de um clie
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 57a9fec4b69d4a64128425ea58b4bb84d0d7dd54
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 195a85fcf29b3e4c9fe0e578d4d8cb80ca068c40
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769644"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530009"
 ---
 # <a name="update-the-nickname-for-a-subscription"></a>Atualizar a alcunha para uma subscrição
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza o nome ou apelido amigável para a [Subscrição](subscription-resources.md)de um cliente . Este nome aparece no Partner Center para ajudar a diferenciar as subscrições na conta do cliente.
 
@@ -48,7 +43,7 @@ Subscription selectedSubscription = customerSubscriptions.Items.FirstOrDefault(s
 var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscription.Id).Patch(selectedSubscription);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: UpdateSubscription.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: UpdateSubscription.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

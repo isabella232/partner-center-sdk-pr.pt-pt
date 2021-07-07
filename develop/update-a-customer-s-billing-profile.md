@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: sourishdeb
 ms.author: sodeb
-ms.openlocfilehash: adf4e3de9941fded632e0561624d91d854c5aa24
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 1605c3e8cb050717209cb482d2299e2a42b9b186
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769776"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530043"
 ---
 # <a name="update-a-customers-billing-profile"></a>Atualizar o perfil de faturação de um cliente
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza o perfil de faturação de um cliente, incluindo o endereço associado ao perfil.
 
@@ -45,7 +40,7 @@ var billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profil
 billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profiles.Billing.Update(billingProfile);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: UpdateCustomerBillingProfile.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: UpdateCustomerBillingProfile.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

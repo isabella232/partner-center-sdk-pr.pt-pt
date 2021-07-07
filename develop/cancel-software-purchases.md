@@ -4,18 +4,14 @@ description: Opção de autosserviço para cancelar subscrições de software e 
 ms.date: 12/19/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 25fd10a171fa6ca01f3442d49145443f2382cc18
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 877702ac930919ff72c6cc45a3c0e8ecc7e1b5f4
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769326"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974238"
 ---
 # <a name="cancel-software-purchases"></a>Cancelar compras de software
-
-**Aplica-se a:**
-
-- Partner Center
 
 Pode utilizar as APIs do Partner Center para cancelar subscrições de software e compras perpétuas de software (desde que essas compras fossem efetuas dentro da janela de cancelamento a partir da data de compra). Você não precisa criar um bilhete de apoio para escamar tais cancelamentos, e pode usar os seguintes métodos de autosserviço em vez disso.
 
@@ -71,7 +67,7 @@ Utilize os seguintes parâmetros de consulta para eliminar um cliente.
 | Nome                   | Tipo     | Necessário | Descrição                                                                                                                                            |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **cliente-inquilino-id** | **guid** | Y        | O valor é um identificador de inquilino de cliente formatado GUID que permite ao revendedor filtrar os resultados de um dado cliente que pertence ao revendedor. |
-| **ordem id** | **cadeia** | Y        | O valor é uma cadeia que denota o identificador da ordem que pretende cancelar. |
+| **ordem id** | **string** | Y        | O valor é uma cadeia que denota o identificador da ordem que pretende cancelar. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

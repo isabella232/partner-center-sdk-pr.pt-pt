@@ -6,20 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: Kim-Davis
 ms.author: kimnich
-ms.openlocfilehash: b470c59cecf8b214e6d90a244e928e5d15ebd3e0
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 7deda4098ceb9eb4e1ee75056c53c754618bf3e2
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769080"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760611"
 ---
 # <a name="get-all-referrals-analytics-information"></a>Obter todas as informações de análise de referências
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter todas as informações de análise de referências para os seus clientes.
 
@@ -37,7 +33,7 @@ Como obter todas as informações de análise de referências para os seus clien
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 
-| Parâmetro | Tipo | Descrição |
+| Parâmetro | Tipo | Description |
 |-----------|------|-------------|
 | filter | string | Devolve dados correspondentes à condição do filtro.</br> **Exemplo:**</br>  `.../referrals?filter=field eq 'value'` |
 | groupby | string | Suporta termos e datas. Lógica de curto-circuito para limitar o número de baldes.</br> **Exemplo:**</br>  `.../referrals?groupby=termField1,dateField1,termField2` |

@@ -4,21 +4,16 @@ description: Atualiza a subscrição de um cliente para uma subscrição-alvo es
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9b757eee8bc65c16b5c65221a4c14b6c0fd6369e
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 01455315825cad026830268b6bbd55509e964bb5
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768936"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530242"
 ---
 # <a name="transition-a-subscription"></a>Fazer a transição de uma subscrição
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza a subscrição de um cliente para uma subscrição-alvo especificada.
 
@@ -43,7 +38,7 @@ Para atualizar a subscrição de um cliente, primeiro [obtenha a subscrição do
 UpgradeResult upgradeResult = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(subscriptionIdForUpgrade).Upgrades.Create(targetOffer);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: UpgradeSubscription.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: UpgradeSubscription.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -70,7 +65,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

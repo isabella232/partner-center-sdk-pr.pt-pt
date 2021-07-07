@@ -4,19 +4,16 @@ description: Como atualizar a política de configuração especificada para o cl
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 42c57a92020723415b4621e9f9d7c5c3278bfb77
-ms.sourcegitcommit: 970031473b2e8cd3d08c6c097949c057a51df3ef
+ms.openlocfilehash: 5e008f41a44f2b7cf3ddfd705505175c69bbad38
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505344"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530243"
 ---
 # <a name="update-a-configuration-policy-for-the-specified-customer"></a>Atualizar uma política de configuração para o cliente especificado
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Como atualizar a política de configuração especificada para o cliente especificado.
 
@@ -50,7 +47,7 @@ ConfigurationPolicy updatedConfigurationPolicy =
     partnerOperations.Customers.ById(selectedCustomerId).ConfigurationPolicies.ById(selectedConfigurationPolicyId).Patch(configPolicyToBeUpdated);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: UpdateConfigurationPolicy.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateConfigurationPolicy.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -66,8 +63,8 @@ Utilize os seguintes parâmetros de trajetória ao criar o pedido.
 
 | Nome        | Tipo   | Necessário | Descrição                                                   |
 |-------------|--------|----------|---------------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente.         |
-| id de política   | string | Sim      | Uma cadeia formatada por GUID que identifica a política de atualização. |
+| id cliente | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente.         |
+| id de política   | string | Yes      | Uma cadeia formatada por GUID que identifica a política de atualização. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -77,14 +74,14 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 O organismo de pedido deve conter um objeto que forneça a informação da apólice.
 
-| Nome            | Tipo             | Necessário | Updatable | Descrição                                                                                                                                              |
+| Nome            | Tipo             | Necessário | Updatable | Description                                                                                                                                              |
 |-----------------|------------------|----------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID              | string           | Sim      | Não        | A cadeia formatada pelo GUID que identifica a política.                                                                                                    |
-| name            | string           | Sim      | Sim       | O nome amigável da apólice.                                                                                                                         |
-| categoria        | string           | Sim      | Não        | A categoria política.                                                                                                                                     |
-| descrição     | cadeia (de carateres)           | No       | Sim       | A descrição da apólice.                                                                                                                                  |
-| dispositivosAssed | número           | Não       | Não        | O número de dispositivos.                                                                                                                                   |
-| policySettings  | matriz de cadeias (de carateres) | Sim      | Sim       | As definições de política: "nenhum", "remover \_ oem \_ pré-instalações", "utilizador oobe \_ não administrador \_ \_ \_ local", "saltar \_ as \_ definições expressas", "saltar \_ o registo de \_ oem", "saltar \_ eula". |
+| ID              | string           | Yes      | No        | A cadeia formatada pelo GUID que identifica a política.                                                                                                    |
+| name            | string           | Yes      | Yes       | O nome amigável da apólice.                                                                                                                         |
+| categoria        | string           | Yes      | No        | A categoria política.                                                                                                                                     |
+| descrição     | cadeia (de carateres)           | No       | Yes       | A descrição da apólice.                                                                                                                                  |
+| dispositivosAssed | número           | No       | No        | O número de dispositivos.                                                                                                                                   |
+| policySettings  | matriz de cadeias (de carateres) | Yes      | Yes       | As definições de política: "nenhum", "remover \_ oem \_ pré-instalações", "utilizador oobe \_ não administrador \_ \_ \_ local", "saltar \_ as \_ definições expressas", "saltar \_ o registo de \_ oem", "saltar \_ eula". |
 
 ### <a name="request-example"></a>Exemplo de pedido
 

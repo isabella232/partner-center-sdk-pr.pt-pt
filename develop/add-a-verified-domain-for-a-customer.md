@@ -4,21 +4,16 @@ description: Saiba como adicionar um domínio verificado à lista de domínios a
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d0ea9998324e99c7986645dc90fdfba0a2a71571
-ms.sourcegitcommit: 8a5c37376a29e29fe0002a980082d4acc6b91131
+ms.openlocfilehash: a8157bff5ac37100713a057ac68ac94c89ba28b8
+ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "97769967"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112025688"
 ---
 # <a name="add-a-verified-domain-to-the-list-of-approved-domains-for-an-existing-customer"></a>Adicione um domínio verificado à lista de domínios aprovados para um cliente existente 
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como adicionar um domínio verificado à lista de domínios aprovados para um cliente existente.
 
@@ -64,8 +59,8 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
 | Nome                                                  | Tipo   | Necessário                                      | Descrição                                                |
 |-------------------------------------------------------|--------|-----------------------------------------------|--------------------------------------------------------|
-| Nome deDomain Verificado                                    | string | Sim                                           | O nome de domínio verificado. |
-| [Domínio](#domain)                                     | objeto | Sim                                           | Contém a informação de domínio. |
+| Nome deDomain Verificado                                    | string | Yes                                           | O nome de domínio verificado. |
+| [Domínio](#domain)                                     | objeto | Yes                                           | Contém a informação de domínio. |
 | [Restrições de Domínio](#domain-federation-settings) | objeto | Sim (Se AutenticaçãoType = `Federated` )     | As definições da federação de domínio a serem utilizadas se o domínio for um `Federated` domínio e não um `Managed` domínio. |
 
 ### <a name="domain"></a>Domínio
@@ -74,14 +69,14 @@ Esta tabela descreve as propriedades de **domínio** necessárias e opcionais no
 
 | Nome               | Tipo                                     | Necessário | Descrição                                                                                                                                                                                                     |
 |--------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AutenticaçãoType                                    | string           | Sim      | Define se o domínio é um `Managed` domínio ou um `Federated` domínio. Valores suportados: `Managed` `Federated` . . .|
-| Funcionalidade                                            | string           | Sim      | Especifica a capacidade de domínio. Por exemplo, `Email`.                  |
-| IsDefault                                             | booleano nupável | Não       | Indica se o domínio é o domínio padrão para o inquilino. Valores suportados: `True` `False` . . . `Null` .        |
-| IsInitial                                             | booleano nupável | Não       | Indica se o domínio é um domínio inicial. Valores suportados: `True` `False` . . . `Null` .                       |
-| Nome                                                  | string           | Sim      | O nome de domínio.                                                          |
+| AutenticaçãoType                                    | string           | Yes      | Define se o domínio é um `Managed` domínio ou um `Federated` domínio. Valores suportados: `Managed` `Federated` . . .|
+| Funcionalidade                                            | string           | Yes      | Especifica a capacidade de domínio. Por exemplo, `Email`.                  |
+| IsDefault                                             | booleano nupável | No       | Indica se o domínio é o domínio padrão para o inquilino. Valores suportados: `True` `False` . . . `Null` .        |
+| IsInitial                                             | booleano nupável | No       | Indica se o domínio é um domínio inicial. Valores suportados: `True` `False` . . . `Null` .                       |
+| Name                                                  | string           | Yes      | O nome de domínio.                                                          |
 | RootDomain                                            | cadeia (de carateres)           | No       | O nome do domínio raiz.                                              |
-| Estado                                                | string           | Sim      | O estado do domínio. Por exemplo, `Verified`. Valores suportados:  `Unverified` `Verified` . . . `PendingDeletion` .                               |
-| VerificaçãoMethod                                    | string           | Sim      | O tipo de método de verificação de domínio. Valores suportados: `None` `DnsRecord` . . . `Email` .                                    |
+| Estado                                                | string           | Yes      | O estado do domínio. Por exemplo, `Verified`. Valores suportados:  `Unverified` `Verified` . . . `PendingDeletion` .                               |
+| VerificaçãoMethod                                    | string           | Yes      | O tipo de método de verificação de domínio. Valores suportados: `None` `DnsRecord` . . . `Email` .                                    |
 
 ### <a name="domain-federation-settings"></a>Definições da federação de domínio
 
@@ -92,17 +87,17 @@ Esta tabela descreve as propriedades necessárias e opcionais **de DomínioFeder
 | ActiveLogOnUri                         | cadeia (de carateres)           | No      | A logon URI usada por clientes ricos. Esta propriedade é a URL STS Auth do parceiro. |
 | DefaultInteractiveAuthenticationMethod | cadeia (de carateres)           | No      | Indica o método de autenticação predefinido que deve ser utilizado quando uma aplicação requer que o utilizador tenha início de sessão interativo. |
 | Federação Nome de Marca                    | cadeia (de carateres)           | No      | O nome da marca da federação.        |
-| EmitenteUri                              | string           | Sim     | O nome do emitente dos certificados.                        |
-| LogOffUri                              | string           | Sim     | O logoff URI. Esta propriedade descreve o URI de sedupro de domínio federado.        |
+| EmitenteUri                              | string           | Yes     | O nome do emitente dos certificados.                        |
+| LogOffUri                              | string           | Yes     | O logoff URI. Esta propriedade descreve o URI de sedupro de domínio federado.        |
 | MetadadataExchangeUri                    | cadeia (de carateres)           | No      | O URL que especifica o ponto final de troca de metadados utilizado para a autenticação a partir de aplicações ricas do cliente. |
 | NextSigningCertificate                 | cadeia (de carateres)           | No      | O certificado utilizado para o futuro próximo pela ADFS V2 STS para assinar reclamações. Esta propriedade é uma representação codificada base64 do certificado. |
-| OpenIdConnectDiscoveryEndpoint         | cadeia (de carateres)           | No      | O OpenID Connect Discovery Endpoint do IDP STS federado. |
-| PassiveLogOnUri                        | string           | Sim     | O logon URI usado por clientes passivos mais velhos. Esta propriedade é o endereço para enviar pedidos de inscrição federados. |
-| Autoria DesferiçãoProtocol        | string           | Sim     | O formato para o token de autenticação. Por exemplo, `WsFed`. Valores suportados: `WsFed` , `Samlp` |
-| PromptLoginBehavior                    | string           | Sim     | O tipo de comportamento de login rápido.  Por exemplo, `TranslateToFreshPasswordAuth`. Valores suportados: `TranslateToFreshPasswordAuth` `NativeSupport` , `Disabled` |
-| AssinaturaCertificada                     | string           | Sim     | O certificado atualmente utilizado pela ADFS V2 STS para assinar reclamações. Esta propriedade é uma representação codificada base64 do certificado. |
+| OpenIdConnectDiscoveryEndpoint         | cadeia (de carateres)           | No      | O OpenID Ligação Discovery Endpoint do IDP STS federado. |
+| PassiveLogOnUri                        | string           | Yes     | O logon URI usado por clientes passivos mais velhos. Esta propriedade é o endereço para enviar pedidos de inscrição federados. |
+| Autoria DesferiçãoProtocol        | string           | Yes     | O formato para o token de autenticação. Por exemplo, `WsFed`. Valores suportados: `WsFed` , `Samlp` |
+| PromptLoginBehavior                    | string           | Yes     | O tipo de comportamento de login rápido.  Por exemplo, `TranslateToFreshPasswordAuth`. Valores suportados: `TranslateToFreshPasswordAuth` `NativeSupport` , `Disabled` |
+| AssinaturaCertificada                     | string           | Yes     | O certificado atualmente utilizado pela ADFS V2 STS para assinar reclamações. Esta propriedade é uma representação codificada base64 do certificado. |
 | AssinaturaCertificateUpdateStatus         | cadeia (de carateres)           | No      | Indica o estado de atualização do certificado de assinatura. |
-| AssinaturaCertificateUpdateStatus         | booleano nupável | Não      | Indica se o IDP STS suporta O MFA. Valores suportados: `True` `False` . . . `Null` .|
+| AssinaturaCertificateUpdateStatus         | booleano nupável | No      | Indica se o IDP STS suporta O MFA. Valores suportados: `True` `False` . . . `Null` .|
 
 ### <a name="request-example"></a>Exemplo de pedido
 

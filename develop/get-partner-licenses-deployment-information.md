@@ -4,18 +4,14 @@ description: Como obter licenças de parceiros de informação agregada para inc
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 229f63d4df4f59cd0fde2bd0fc5e3f10cf6b25c0
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 2464242fc6dc4e7464511eac5d4197630e22fac0
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769836"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445989"
 ---
 # <a name="get-partner-licenses-deployment-information"></a>Obter informações de implementação de licenças do parceiro
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter licenças de parceiros de informação agregada para incluir todos os clientes.
 

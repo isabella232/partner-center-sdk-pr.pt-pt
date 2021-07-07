@@ -4,21 +4,16 @@ description: Aprenda a usar a sua conta de caixa de areia de integração partne
 ms.date: 09/11/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 3ff4a7ec3ad984b09c60d3d820423c614fb8020d
-ms.sourcegitcommit: 9f8ba784171ab4f980ed0c60ef6f2323849c4a98
+ms.openlocfilehash: 7a9d7755cd9f493f44f9a7bbf613e0f80cf7b4ac
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100499886"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530111"
 ---
 # <a name="test-and-debug-with-your-partner-center-integration-sandbox-to-avoid-paying-unexpected-charges"></a>Teste e depure com a sua caixa de areia de integração partner Center para evitar pagar taxas inesperadas
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Para testar o seu código, deverá utilizar a sua conta de caixa de areia de integração no Partner Center (e nos tokens correspondentes) para que não incorre acidentalmente em novos encargos que a sua empresa é responsável pelo pagamento. Para obter mais informações sobre este ambiente de teste em produção (TiP), consulte [Configurar o acesso api no Partner Center](set-up-api-access-in-partner-center.md).
 
@@ -41,7 +36,7 @@ Existem vários ficheiros de fatura e reconciliação disponíveis nos ambientes
 
 ### <a name="azure-plan"></a>Plano do Azure
 
-Por defeito, os parceiros não podem providenciar planos Azure usando as suas contas de caixa de areia. Os parceiros que necessitem de o fazer com a sua conta de caixa de areia devem solicitar o acesso. Para se candidatar ao acesso, contacte o gestor de conta da Microsoft ou o contacto comercial. Os parceiros que já solicitaram o acesso às subscrições da Microsoft Azure (MS-AZR-0145P) nas suas contas de sandbox não precisam de solicitar novamente o acesso. Será-lhes concedido acesso automaticamente aos planos Azure.
+Por predefinição, os parceiros não podem aprovisionar planos do Azure com as contas de sandbox. Os parceiros que necessitem de o fazer com a conta de sandbox têm de solicitar o acesso. Para se candidatar ao acesso, contacte o seu gestor de conta microsoft ou contacto comercial. Os parceiros que já solicitaram o acesso à provisão Microsoft Azure assinaturas (MS-AZR-0145P) nas suas contas de sandbox não precisam de voltar a solicitar o acesso. Será-lhes concedido acesso automaticamente aos planos Azure.
 
 Para os parceiros cujas contas de caixa de areia tenham sido aprovadas para a disposição dos planos Azure, aplicam-se os seguintes limites:
 
@@ -57,7 +52,7 @@ Para os parceiros cujas contas de caixa de areia tenham sido aprovadas para a di
 
 - Cada conta parceira de sandbox tem um limite de gastos de $2.000 (USD) por ciclo de faturação em todos os planos da Azure. Uma vez que um parceiro atinja o limite de gastos, todos os planos Azure serão temporariamente desactivdos até ao próximo ciclo de faturação.
 
-### <a name="cloud-solution-provider-csp-azure-subscription-offers"></a>Ofertas de subscrição do Cloud Solution Provider (CSP) Azure
+### <a name="cloud-solution-provider-csp-azure-subscription-offers"></a>ofertas de subscrição Fornecedor de Soluções em Nuvem (CSP) Azure
 
 As ofertas de subscrição da CSP Azure já não estão disponíveis por defeito nas contas da caixa de areia. Estes incluem MS-AZR-0146P, MS-AZR-DE-0146P e MS-AZR-USGOV-0146P para subscrições CSP Azure em Microsoft Public Cloud, German Cloud e Government Cloud, respectivamente. Os parceiros que necessitem de acesso a estas ofertas com a sua conta de caixa de areia devem solicitar o acesso. Para se candidatar ao acesso, discuta com o seu gestor de conta microsoft ou contacto comercial.
 

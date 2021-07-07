@@ -4,19 +4,16 @@ description: Como atualizar uma lista de dispositivos com uma política de confi
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 04c2ef33116335db40bd2934dc7e33d57f015097
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 35b35873eb253b0929bfc01662b0beb9b31d0c6b
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769752"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530077"
 ---
 # <a name="update-a-list-of-devices-with-a-policy"></a>Atualizar uma lista de dispositivos com uma política
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Como atualizar uma lista de dispositivos com uma política de configuração para o cliente especificado.
 
@@ -74,7 +71,7 @@ var trackingLocation =
     partnerOperations.Customers.ById(selectedCustomerId).DevicePolicy.Update(devicePolicyUpdateRequest);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: UpdateDevicesPolicy.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateDevicesPolicy.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -90,7 +87,7 @@ Utilize os seguintes parâmetros de trajetória ao criar o pedido.
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| id cliente | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

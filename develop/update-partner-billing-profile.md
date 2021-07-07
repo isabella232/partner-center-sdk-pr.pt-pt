@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: parthpandyaMSFT
 ms.author: parthp
-ms.openlocfilehash: 34e7d2396d6dbdd45a6cf87a3bda481f51326f1e
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 2b09a0045df15d774c892a59fba8502d4d4f7024
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769193"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111529771"
 ---
 # <a name="update-the-partner-billing-profile"></a>Atualizar perfil de faturação do parceiro
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza o perfil de faturação de um parceiro
 
@@ -43,7 +38,7 @@ existingBillingProfile.PurchaseOrderNumber = new Random().Next(9000, 10000).ToSt
 BillingProfile updatedPartnerBillingProfile = partnerOperations.Profiles.BillingProfile.Update(existingBillingProfile);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: UpdateBillingProfile.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateBillingProfile.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

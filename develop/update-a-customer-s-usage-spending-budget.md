@@ -4,20 +4,16 @@ description: Atualizar o orçamento de gastos atribuído para a utilização de 
 ms.date: 02/05/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 839305fb8fad3ce2442ab93e1d8a4a170b4d41c2
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 043bd442266d081105e5e8767b6d597e89fc9e8b
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769758"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111529720"
 ---
 # <a name="update-a-customers-usage-spending-budget"></a>Atualizar o orçamento de gastos de utilização de um cliente
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualizar o [orçamento de gastos](customer-usage-resources.md#customerusagesummary) atribuído para a utilização de um cliente.
 

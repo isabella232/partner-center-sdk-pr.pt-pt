@@ -4,21 +4,16 @@ description: Reativa uma Subscrição que foi previamente suspensa por não paga
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 17c63e9c6d4c9e111bfea28e97319696534fa122
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: c2b6e3574119f9c645cc3f730047d2a23484ad8a
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769614"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547720"
 ---
 # <a name="reactivate-a-suspended-subscription"></a>Reativar uma subscrição suspensa
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Reativa uma [Subscrição](subscription-resources.md) que foi previamente suspensa por não pagamento.
 
@@ -49,7 +44,7 @@ updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).Subsc
 
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: FeatureSamplesApplication. **Classe**: ActualizaçõesSubscrição
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: FuncionalidadessamplesApplicação. **Classe**: ActualizaçõesSubscrição
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

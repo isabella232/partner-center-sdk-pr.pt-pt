@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: sourishdeb
 ms.author: sodeb
-ms.openlocfilehash: 8a2879db061ced799e29d84e71be5b1259b07689
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: 435309229e2cb038c936028943f4c2cf27b032a7
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770088"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974119"
 ---
 # <a name="change-a-customer-subscription-billing-cycle"></a>Alterar um ciclo de faturação de subscrição de clientes
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza uma [Encomenda](order-resources.md) de faturação mensal a anual ou de faturação anual a mensal.
 
@@ -29,7 +24,7 @@ No painel de instrumentos partner Center, esta operação pode ser realizada nav
 **Fora do âmbito** deste artigo:
 
 - Alteração do ciclo de faturação para ensaios
-- Alteração dos ciclos de faturação para quaisquer ofertas não anuais (mensalmente, 6 anos) & assinaturas Azure
+- Alteração dos ciclos de faturação para quaisquer ofertas não anuais (mensais, seis anos) & assinaturas Azure
 - Alteração dos ciclos de faturação para subscrições inativas
 - Alteração dos ciclos de faturação para subscrições baseadas em licenças de serviços online da Microsoft
 

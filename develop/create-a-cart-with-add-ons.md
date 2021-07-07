@@ -6,20 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 81c41405a2f56eb4d1d3447d14b93e05d550cc70
-ms.sourcegitcommit: 4c253abb24140a6e00b0aea8e79a08823ea5a623
+ms.openlocfilehash: 513a9607b9194c36253630c91de9622325317c3a
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "97770130"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973762"
 ---
 # <a name="create-a-cart-with-add-ons-to-a-customer-order"></a>Criar um carrinho com suplementos a uma encomenda de clientes
 
-**Aplica-se a:**
-
-- Partner Center
-
-Pode comprar suplementos através de um carrinho. Para obter mais informações sobre o que está atualmente disponível para vender, consulte [as ofertas do Partner no programa Cloud Solution Provider](/partner-center/csp-offers).
+Pode comprar suplementos através de um carrinho. Para obter mais informações sobre o que está atualmente disponível para vender, consulte [as ofertas do Partner no programa Fornecedor de Soluções em Nuvem.](/partner-center/csp-offers)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -82,7 +78,7 @@ var cart = new Cart()
 var createdCart = partnerOperations.Customers.ById(customerId).Carts.Create(cart);
 ```
 
-Siga estas medidas para criar um carrinho que permita a compra de complementos(s) contra subscrições de base existentes):
+Siga estes passos para criar um carrinho que permita a compra de addons(s) contra subscrições de base existentes):
 
 1. Crie um **Carrinho** com um novo **CartLineItem** contendo o ID de subscrição na propriedade **ProvisioningContext** com a chave "ParentSubscriptionId".
 
@@ -129,7 +125,7 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -142,15 +138,15 @@ Esta tabela descreve as propriedades do [Carrinho](cart-resources.md) no corpo d
 | Propriedade              | Tipo             | Necessário        | Descrição |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
 | ID                    | cadeia (de carateres)           | No              | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                                  |
-| criaçãoTimeStamp     | DateTime         | Não              | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.         |
-| últimampadatimestamp de Tempos | DateTime         | Não              | A data em que o carrinho foi atualizado pela última vez, em formato de data-hora. Aplicado após a criação bem sucedida do carrinho.    |
-| expiraçãoTimeStamp   | DateTime         | Não              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
+| criaçãoTimeStamp     | DateTime         | No              | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.         |
+| últimampadatimestamp de Tempos | DateTime         | No              | A data em que o carrinho foi atualizado pela última vez, em formato de data-hora. Aplicado após a criação bem sucedida do carrinho.    |
+| expiraçãoTimeStamp   | DateTime         | No              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
 | últimoModifiedUser      | cadeia (de carateres)           | No              | O utilizador que atualizou pela última vez o carrinho. Aplicado após a criação bem sucedida do carrinho.                             |
-| lineitems             | Matriz de objetos | Sim             | Uma matriz de recursos [CartLineItem.](cart-resources.md#cartlineitem)                                             |
+| lineitems             | Matriz de objetos | Yes             | Uma matriz de recursos [CartLineItem.](cart-resources.md#cartlineitem)                                             |
 
 Esta tabela descreve as propriedades [do CartLineItem](cart-resources.md#cartlineitem) no corpo de pedido.
 
-| Propriedade             | Tipo                             | Descrição                                                                                                                                           |
+| Propriedade             | Tipo                             | Description                                                                                                                                           |
 |----------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                   | string                           | Um identificador único para um item de linha de carrinho. Aplicado após a criação bem sucedida do carrinho.                                                                   |
 | catalogId            | string                           | O identificador de artigos de catálogo.                                                                                                                          |
@@ -158,11 +154,11 @@ Esta tabela descreve as propriedades [do CartLineItem](cart-resources.md#cartlin
 | quantidade             | int                              | O número de licenças ou instâncias.                                                                                                                  |
 | currencyCode         | string                           | O código da moeda.                                                                                                                                    |
 | billingCycle         | Objeto                           | O tipo de ciclo de faturação definido para o período atual.                                                                                                 |
-| participantes         | Lista de pares de cordas de objeto      | Uma coleção de PartnerId on Record (MPNID) na compra.                                                                                          |
+| participantes         | Lista de pares de cordas de objeto      | Uma coleção de PartnerId on Record (MPN ID) na compra.                                                                                          |
 | provisionamentoContexto  | Cadeia de<do dicionário,> de cordas       | Um contexto utilizado para o provisionamento da oferta.                                                                                                             |
 | orderGroup           | string                           | Um grupo para indicar quais os itens que podem ser colocados juntos.                                                                                               |
 | addonItems           | Lista de **objetos CartLineItem** | Uma coleção de itens de linha de carrinhos para addons que serão adquiridos para a subscrição base que resulta da compra do item da linha do carrinho dos pais. |
-| erro                | Objeto                           | Aplicado após o carrinho é criado em caso de erro.                                                                                                    |
+| erro                | Objeto                           | Aplicado após o carrinho é criado se houver um erro.                                                                                                    |
 
 ### <a name="request-example-new-base-subscription"></a>Exemplo de pedido (nova subscrição base)
 

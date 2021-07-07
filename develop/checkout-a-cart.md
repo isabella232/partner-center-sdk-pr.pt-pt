@@ -4,21 +4,16 @@ description: Saiba como verificar um pedido de um cliente num carrinho usando AP
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 094817a34cd29bc96788fcfb6a16610a8192d784
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: 9ee06797602b22a1f8257c94880a2d81e2280f2e
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770081"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974051"
 ---
 # <a name="checkout-an-order-for-a-customer-in-a-cart"></a>Check-out um pedido para um cliente em um carrinho
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como fazer o check-out de um pedido para um cliente em um carrinho.
 
@@ -83,8 +78,8 @@ Utilize os seguintes parâmetros de percurso para identificar o cliente e especi
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
-| **cart-id**     | string   | Sim      | Um carro-id formatado GUID que identifica o carrinho.                     |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **cart-id**     | string   | Yes      | Um carro-id formatado GUID que identifica o carrinho.                     |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

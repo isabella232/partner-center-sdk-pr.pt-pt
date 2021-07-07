@@ -4,18 +4,14 @@ description: Como criar uma transferência de subscrições para um cliente.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d5e70cc5b7ce4fcfa715f581a2151f0b8d1922b0
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: d459a0a96912ab27f312bc73af16af2d4fdb518c
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768828"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973711"
 ---
 # <a name="create-a-transfer"></a>Criar uma transferência
-
-**Aplica-se a:**
-
-- Partner Center
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -37,7 +33,7 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -50,17 +46,17 @@ Esta tabela descreve as propriedades da [Entidade transferina](transfer-entity-r
 | Propriedade              | Tipo          | Necessário  | Descrição                                                                                |
 |-----------------------|---------------|-----------|--------------------------------------------------------------------------------------------|
 | ID                    | cadeia (de carateres)        | No    | Um identificador de entidade de transferência que é fornecido após a criação bem sucedida da Entidade de Transferência.                               |
-| createdTime           | DateTime      | Não    | A data em que a Entidade de Transferência foi criada, em formato de data-hora. Aplicada após a criação bem sucedida da Entidade de Transferência.      |
-| última Hora DaModified      | DateTime      | Não    | A data em que a Entidade de Transferência foi atualizada pela última vez, em formato de data-hora. Aplicada após a criação bem sucedida da Entidade de Transferência. |
+| createdTime           | DateTime      | No    | A data em que a Entidade de Transferência foi criada, em formato de data-hora. Aplicada após a criação bem sucedida da Entidade de Transferência.      |
+| última Hora DaModified      | DateTime      | No    | A data em que a Entidade de Transferência foi atualizada pela última vez, em formato de data-hora. Aplicada após a criação bem sucedida da Entidade de Transferência. |
 | últimoModifiedUser      | cadeia (de carateres)        | No    | O utilizador que atualizou pela última vez a Entidade de Transferência. Aplicada após a criação bem sucedida da Entidade de Transferência.                          |
 | nome do cliente          | cadeia (de carateres)        | No    | Opcional. O nome do cliente cujas assinaturas estão a ser transferidas.                                              |
 | customerTenantId      | cadeia (de carateres)        | No    | Um id de cliente formatado GUID que identifica o cliente. Aplicada após a criação bem sucedida da Entidade de Transferência.         |
 | partnertenantid       | cadeia (de carateres)        | No    | Um parceiro-id formatado GUID que identifica o parceiro.                                                                   |
 | fontePartnerName     | cadeia (de carateres)        | No    | Opcional. O nome da organização do parceiro que está a iniciar a transferência.                                           |
-| sourcePartnerTenantId | string        | Sim   | Um parceiro-id formatado GUID que identifica o parceiro que inicia a transferência.                                           |
+| sourcePartnerTenantId | string        | Yes   | Um parceiro-id formatado GUID que identifica o parceiro que inicia a transferência.                                           |
 | targetPartnerName     | cadeia (de carateres)        | No    | Opcional. O nome da organização do parceiro a quem a transferência é dirigida.                                         |
-| targetPartnerTenantId | string        | Sim   | Um parceiro-id formatado GUID que identifica o parceiro a quem a transferência é alvo.                                  |
-| lineitems             | Matriz de objetos | Sim| Uma matriz de recursos [TransferLineItem.](transfer-entity-resources.md#transferlineitem)                                   |
+| targetPartnerTenantId | string        | Yes   | Um parceiro-id formatado GUID que identifica o parceiro a quem a transferência é alvo.                                  |
+| lineitems             | Matriz de objetos | Yes| Uma matriz de recursos [TransferLineItem.](transfer-entity-resources.md#transferlineitem)                                   |
 | status                | cadeia (de carateres)        | No    | O estado da Entidade de Transferência. Os valores possíveis são "Ative" (pode ser eliminado/submetido) e "Concluído" (já foi concluído). Aplicada após a criação bem sucedida da Entidade de Transferência.|
 
 Esta tabela descreve as propriedades [transferLineItem](transfer-entity-resources.md#transferlineitem) no corpo de pedido.
@@ -68,14 +64,14 @@ Esta tabela descreve as propriedades [transferLineItem](transfer-entity-resource
 |      Propriedade       |            Tipo             | Necessário | Descrição                                                                                     |
 |---------------------|-----------------------------|----------|-------------------------------------------------------------------------------------------------|
 | ID                   | cadeia (de carateres)                     | No       | Um identificador único para um item de linha de transferência. Aplicada após a criação bem sucedida da Entidade de Transferência.|
-| subscriptionId       | string                     | Sim      | O identificador de assinatura.                                                                         |
-| quantidade             | int                        | Não       | O número de licenças ou instâncias.                                                                 |
-| billingCycle         | Objeto                     | Não       | O tipo de ciclo de faturação definido para o período atual.                                                |
+| subscriptionId       | string                     | Yes      | O identificador de assinatura.                                                                         |
+| quantidade             | int                        | No       | O número de licenças ou instâncias.                                                                 |
+| billingCycle         | Objeto                     | No       | O tipo de ciclo de faturação definido para o período atual.                                                |
 | nome amigável         | cadeia (de carateres)                     | No       | Opcional. O nome amigável para o item definido pelo parceiro para ajudar a desambiguar.                |
-| partnerIdOnRecord    | cadeia (de carateres)                     | No       | PartnerId on Record (MPNID) sobre a compra que acontece quando a transferência é aceite.              |
+| partnerIdOnRecord    | cadeia (de carateres)                     | No       | PartnerId on Record (MPN ID) sobre a compra que acontece quando a transferência é aceite.              |
 | offerId              | cadeia (de carateres)                     | No       | O identificador da oferta.                                                                                |
-| addonItems           | Lista de objetos **TransferLineItem** | Não | Uma recolha de itens de linha da TransferEntity para addons que serão transferidos juntamente com a subscrição base que está a ser transferida. Aplicada após a criação bem sucedida da Entidade de Transferência.|
-| transferEror        | cadeia (de carateres)                     | No       | Aplicada após transferência A Entidade é aceite em caso de erro.                                        |
+| addonItems           | Lista de objetos **TransferLineItem** | No | Uma recolha de itens de linha da TransferEntity para addons que serão transferidos juntamente com a subscrição base que está a ser transferida. Aplicada após a criação bem sucedida da Entidade de Transferência.|
+| transferEror        | cadeia (de carateres)                     | No       | Aplicada após transferência A Entidade é aceite se houver um erro.                                        |
 | status               | cadeia (de carateres)                     | No       | O estado do lineitem na Entidade de Transferência.                                                    |
 
 ### <a name="request-example"></a>Exemplo de pedido

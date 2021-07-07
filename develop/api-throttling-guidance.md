@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: vijvala
 ms.author: vijvala
-ms.openlocfilehash: ab1138e19e06111299ab43ea13a6f033274aaa5d
-ms.sourcegitcommit: 3c3a21e73aaadf3023cf4c13b09809ceae5f027a
+ms.openlocfilehash: f18518e88b9bb08d4fd248922f4ce2fefdde004f
+ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107496149"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112025654"
 ---
 # <a name="api-throttling-guidance-for-partners-calling-partner-center-apis"></a>API acelera orientação para parceiros que chamam APIs do Partner Center 
-
-**Aplica-se a**
-
-- Partner Center
 
 A Microsoft está a implementar o estrangulamento da API para permitir um desempenho mais consistente dentro de um período de tempo para os parceiros que chamam as APIs do Partner Center. O estrangulamento limita o número de pedidos a um serviço num período de tempo para evitar o uso excessivo de recursos. Enquanto o Partner Center é projetado para lidar com um grande volume de pedidos, se um número esmagador de pedidos ocorrer por poucos parceiros, o estrangulamento ajuda a manter o melhor desempenho e fiabilidade para todos os parceiros.  
 
@@ -37,7 +33,7 @@ As causas mais comuns de estrangulamento dos clientes incluem:
 
 ## <a name="best-practices-to-avoid-throttling"></a>Melhores práticas para evitar estrangulamentos 
  
-Práticas de programação como a votação contínua de um recurso para verificar atualizações e digitalização regular de recolha de recursos para verificar recursos novos ou eliminados são mais propensos a conduzir a estrangulamentos e irão degradar o desempenho global. As chamadas simultâneas da API podem levar a um elevado número de pedidos por tempo unitário, o que também fará com que os pedidos sejam estrangulados. Em vez disso, deve alavancar o rastreio de alterações e alterar notificações. Além disso, deverá ser capaz de aproveitar os registos de atividade para detetar alterações, consulte [os registos de atividade do Partner Center](get-a-record-of-partner-center-activity-by-user.md) para obter mais informações.  Recomendamos vivamente aos parceiros que considerem a utilização do registo de atividade API para obter mais eficiência e evitar estrangulamentos. Veja também o exemplo da utilização de registos de atividades, abaixo.
+Práticas de programação como a votação contínua de um recurso para verificar atualizações e digitalização regular de recolha de recursos para verificar recursos novos ou eliminados são mais propensos a conduzir a estrangulamentos e irão degradar o desempenho global. As chamadas simultâneas da API podem levar a um elevado número de pedidos por tempo unitário, o que também fará com que os pedidos sejam estrangulados. Em vez disso, deve utilizar o rastreio de alterações e alterar notificações. Além disso, deverá ser capaz de utilizar registos de atividade para detetar alterações. Para obter mais informações, consulte [os registos de atividade do Partner Center](get-a-record-of-partner-center-activity-by-user.md).  Recomendamos vivamente aos parceiros que considerem a utilização do registo de atividade API para obter mais eficiência e evitar estrangulamentos. Veja também o exemplo da utilização de registos de atividades, abaixo.
 
 ## <a name="best-practices-to-handle-throttling"></a>Melhores práticas para lidar com o estrangulamento
 
@@ -62,7 +58,7 @@ Para utilizar o atraso de retry-after, faça o seguinte:
 
 ## <a name="apis-currently-impacted-by-throttling"></a>APIs atualmente impactados pelo estrangulamento
 
-A longo prazo, todos os Parceiros Center API que chamem o ponto final de "api.partnercenter.microsoft.com/" serão estrangulados. Atualmente, os limites de estrangulamento só são aplicados nas APIs listadas abaixo. O Partner Center irá recolher a telemetria em cada uma das APIs e ajustará dinamicamente os limites de estrangulamento. A tabela que se segue lista as APIs onde o estrangulamento é atualmente aplicado.  
+No final, todos os Parceiros API que chamarem o ponto final de "api.partnercenter.microsoft.com/" serão estrangulados. Atualmente, os limites de estrangulamento só são aplicados nas APIs listadas abaixo. O Partner Center irá recolher a telemetria em cada uma das APIs e ajustará dinamicamente os limites de estrangulamento. A tabela que se segue lista as APIs onde o estrangulamento é atualmente aplicado.  
 
 
 |**Operação**| **Documentação do Centro de Parceiros**|
@@ -76,7 +72,7 @@ A longo prazo, todos os Parceiros Center API que chamem o ponto final de "api.pa
 |{baseURL}/v1/customers/{customer-id}/subscrições/{subscription-id}/registrations|[registar uma subscrição](register-a-subscription.md)|
 |{baseURL}/v1/productupgrads|[criar entidade de atualização de produtos](create-product-upgrade-entity.md)|
 |{baseURL}/v1/customers/{customer-id}/subscrições/{subscription-id}/conversões |[converter uma subscrição experimental para pago](convert-a-trial-subscription-to-paid.md)|
-|{baseURL}/v1/clientes/{cliente-inquilino-id}|[obter um cliente por id](get-a-customer-by-id.md)|
+|{baseURL}/v1/clientes/{cliente-inquilino-id}|[obter um cliente por ID](get-a-customer-by-id.md)|
 |{baseURL}/v1/produtoUpgrades/elegibilidade|[obter elegibilidade para atualização de produto](get-eligibility-for-product-upgrade.md)|
 |{baseURL}/v1/customers/{customer-tenant-id}/subscrições/{id-for-subscription} |[gerir subscrição](manage-orders.md#manage-a-subscription)|
 |{baseURL}/v1/clientes/{customer_id}/subscrições |[obter-all-of-a-customer-s-subscrições](get-all-of-a-customer-s-subscriptions.md)|

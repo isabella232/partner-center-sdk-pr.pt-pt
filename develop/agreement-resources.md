@@ -6,24 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: aarzh-AaronZhang
 ms.author: v-aarzh
-ms.openlocfilehash: d964b1c7c6d70814ef68e48f05611ecbb113c8fe
-ms.sourcegitcommit: d1104d5c27f8fb3908a87532f80c432f0147ef5d
+ms.openlocfilehash: 5fa196e711d9ff899b61ba20e75edd92749165e5
+ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "97770021"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112025627"
 ---
 # <a name="agreement-resources-representing-a-microsoft-cloud-customer-agreement"></a>Recursos do acordo que representam um acordo de cliente na nuvem da Microsoft
 
-**Aplica-se a:**
+**Aplica-se a**: Centro de Parceiros
 
-- Partner Center
+**Não se aplica a:** Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-O recurso **Do Acordo** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft. Não é aplicável a:
-
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+O recurso **Do Acordo** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft.
 
 O recurso **Do Acordo** representa um acordo de cliente na nuvem da Microsoft.
 
@@ -31,7 +27,7 @@ O recurso **Do Acordo** representa um acordo de cliente na nuvem da Microsoft.
 
 O recurso **do Acordo** representa os detalhes da certificação fornecida pelo parceiro.
 
-| Propriedade       | Tipo   | Descrição                                                                                               |
+| Propriedade       | Tipo   | Description                                                                                               |
 |----------------|--------|-----------------------------------------------------------------------------------------------------------|
 | userId         | string                         | Identificador de objetos do utilizador registado no inquilino parceiro que está a fornecer confirmação em nome da organização parceira. Ao utilizar a autenticação App+User para criar um recurso Do Acordo, o Partner Center obtém automaticamente o valor de atributo **userId** a partir do token App+User.                                                                             |
 | principalContact | [Contacto](./utility-resources.md#contact) | Informação sobre o utilizador da organização do cliente que aceitou o acordo, incluindo:  **primeiro Nome,** **último Nome,** **e-mail** e **telefoneNumber** (opcional). |

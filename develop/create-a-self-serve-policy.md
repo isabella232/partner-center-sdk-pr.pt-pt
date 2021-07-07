@@ -4,20 +4,16 @@ description: Como criar uma nova política de autosserviço.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: fd1579b2775ead57a440db0d6afb3bf22164c319
-ms.sourcegitcommit: 01e75175077611da92175c777a440a594fb05797
+ms.openlocfilehash: 14f46e22fbd294c765b745204cf62474250cbfbd
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "97770216"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973694"
 ---
 # <a name="create-a-selfservepolicy"></a>Criar uma AutoServePolicy
 
-**Aplica-se a:**
-
-- Partner Center
-
-Este tópico explica como criar uma nova política de autosserviço.
+Este artigo explica como criar uma nova política de autosserviço.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -65,7 +61,7 @@ SelfServePolicy createdSelfServePolicy = scopedPartnerOperations.selfServePolici
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **CreateSelfServePolicies.cs**
 
 
@@ -80,13 +76,13 @@ Por exemplo, consulte o seguinte:
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
 - É necessária uma identificação de pedido e uma identificação de correlação.
-- Consulte [os cabeçalhos REST do Partner Center](headers.md) para obter mais informações.
+- Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).
 
 ### <a name="request-body"></a>Corpo do pedido
 
 Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
-| Nome                              | Tipo   | Descrição                                 |
+| Nome                              | Tipo   | Description                                 |
 |------------------------------------------------------------------|--------|---------------------------------------------|
 | [AutoServePolicy](self-serve-policy-resources.md#selfservepolicy)| objeto | A informação política de autosserviço. |
 
@@ -94,7 +90,7 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
 Esta tabela descreve os campos mínimos exigidos do recurso [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) necessário para criar uma nova política de autosserviço.
 
-| Propriedade              | Tipo             | Descrição                                                                                            |
+| Propriedade              | Tipo             | Description                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
 | SelfServeEntity       | SelfServeEntity  | A entidade self-serve a quem está a ser concedido acesso.                                                     |
 | Grantor               | Grantor          | O concededor que está a conceder acesso.                                                                    |
@@ -142,7 +138,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                |
+| Código de Estado HTTP     | Código de erro   | Description                                                                |
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 409                  | 600041       | A política de autosserviço já existe.                                                     |
 

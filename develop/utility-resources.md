@@ -4,21 +4,16 @@ description: A API do Partner Center REST contém muitos recursos que descrevem 
 ms.date: 03/30/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 115b0508f956c4b60e4db53193ef2585fa0c9a34
-ms.sourcegitcommit: 204e518e794b6b076a17488ee9ca1aaaa4beaaec
+ms.openlocfilehash: 095cf36d47b147eb6df28d8747889e218c270659
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "106103985"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111529669"
 ---
 # <a name="utility-resources"></a>Recursos de utilitário
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 A API do Partner Center REST contém muitos recursos que descrevem modelos de dados de finalidade geral utilizados em todo o SDK.
 
@@ -93,7 +88,7 @@ Descreve uma palavra-passe específica e se essa palavra-passe tiver de ser alte
 | Propriedade            | Tipo                          | Description                                                            |
 |---------------------|-------------------------------|------------------------------------------------------------------------|
 | Palavra-passe            | [SecureString](#securestring) | A senha.                                                          |
-| ForceChangePassword | boolean                       | Determina se a palavra-passe precisa de ser alterada à força no próximo login. |
+| ForceChangePassword | boolean                       | Determina se a palavra-passe precisa de ser alterada à força no próximo s-in. |
 
 ## <a name="resourcelinks"></a>RecursosLinks
 
@@ -125,7 +120,7 @@ As lojas garantiram informações, como uma palavra-passe.
 
 ## <a name="validationcode"></a>ValidaçãoDesco
 
-Representa o código de validação da Nuvem Comunitária do Governo de um parceiro.
+Representa o código de validação Nuvem da Comunidade Governamental de um parceiro.
 
 | Propriedade         | Tipo         | Description                                                              |
 |------------------|--------------|--------------------------------------------------------------------------|

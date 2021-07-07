@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 8225623ade7e922ac23ebf0ed9215686b0601244
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 74d5981436ba29ea4f6f93a5693ec6da82777eb4
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769224"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547755"
 ---
 # <a name="partner-center-webhooks"></a>Webhooks do Centro de Parceiros
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 As APIs do Partner Center Webhook permitem que os parceiros se registem para eventos de mudança de recursos. Estes eventos são entregues sob a forma de POSTs HTTP para o URL registado do parceiro. Para receber um evento do Partner Center, os parceiros irão acolher uma chamada onde o Partner Center pode publicar o evento de mudança de recursos. O evento será assinado digitalmente para que o parceiro possa verificar se foi enviado do Partner Center.
 
@@ -39,7 +34,7 @@ Os parceiros podem selecionar a partir de eventos Webhook, como os seguintes exe
 
 - **Evento Excededo limiar ("usagerecords-thresholdExceeded")**
 
-    Este evento é aumentado quando a quantidade de utilização do Microsoft Azure para qualquer cliente excede o seu orçamento de gastos de utilização (o seu limiar). Para obter mais informações, consulte [Desconfiem de um orçamento de gastos Azure para os seus clientes/parceiro-centro/set-an-azure-spend-budget-for-your-customers).
+    Este evento é angariado quando o montante de Microsoft Azure utilização para qualquer cliente excede o seu orçamento de gastos de utilização (o seu limiar). Para obter mais informações, consulte [Desconfiem de um orçamento de gastos Azure para os seus clientes/parceiro-centro/set-an-azure-spend-budget-for-your-customers).
 
 - **Evento Criado de Referência ("Referenciação-criado")**
 

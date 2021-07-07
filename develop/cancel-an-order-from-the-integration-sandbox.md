@@ -4,26 +4,21 @@ description: Saiba como usar as APIs do Partner Center para cancelar diferentes 
 ms.date: 04/28/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c3bf862c62804a56e6f73dd3ec36d2e9eb65f997
-ms.sourcegitcommit: f59a9311c8a37d45695caf74794ec1697426acc9
+ms.openlocfilehash: 4c4b658f406e420d8d3cd425688364fe3d440d3d
+ms.sourcegitcommit: a3a78ec0f5078645b5a4f3b534165eef30f2c822
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/29/2021
-ms.locfileid: "108210024"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113104976"
 ---
 # <a name="cancel-an-order-from-the-integration-sandbox-using-partner-center-apis"></a>Cancelar uma encomenda da caixa de areia de integração usando APIs do Partner Center
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo descreve como usar as APIs do Partner Center para cancelar diferentes tipos de ordens de subscrição a partir de contas de caixas de areia de integração. Tais encomendas podem incluir instâncias reservadas, software e marketplace comercial Software como uma ordem de subscrição de Serviço (SaaS).
 
->[!NOTE] 
->Tenha em atenção que os cancelamentos de instâncias reservadas ou encomendas de subscrição saaS de marketplace comercial só são possíveis a partir de contas de sandbox de integração. Quaisquer encomendas de caixas de areia com mais de 60 dias não podem ser canceladas do Partner Center. Se precisar de assistência, contacte o Partner Center Support. 
+> [!NOTE] 
+> Tenha em atenção que os cancelamentos de instâncias reservadas ou encomendas de subscrição saaS de marketplace comercial só são possíveis a partir de contas de sandbox de integração. Quaisquer encomendas de caixas de areia com mais de 60 dias não podem ser canceladas do Partner Center.
 
 Para cancelar as ordens de produção de software através da API, utilize [as compras de cancelamento de software](cancel-software-purchases.md).
 Também pode cancelar as ordens de produção de software através do dashboard usando [cancelar uma compra](/partner-center/csp-software-subscriptions).

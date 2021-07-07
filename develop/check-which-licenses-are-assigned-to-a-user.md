@@ -4,20 +4,16 @@ description: Saiba como usar as APIs do Partner Center para obter uma lista de l
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b754ba4ecba7067f78c6868b387bac0190bfd230
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: a51fc4493e2476107206b03be66004d030e2aa47
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770094"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974068"
 ---
 # <a name="get-licenses-assigned-to-a-user-within-a-customer-account"></a>Obtenha licenças atribuídas a um utilizador dentro de uma conta de cliente
 
-**Aplica-se a:**
-
-- Partner Center
-
-Como obter uma lista de licenças atribuídas a um utilizador dentro de uma conta de cliente. Os exemplos mostrados aqui devolvem licenças atribuídas ao grupo1, o grupo de licenças padrão que representa licenças geridas pela Azure Ative Directory. Para obter licenças atribuídas a grupos de licenças especificados, consulte [obter licenças atribuídas a um utilizador por grupo de licenças.](get-licenses-assigned-to-a-user-by-license-group.md)
+Como obter uma lista de licenças atribuídas a um utilizador dentro de uma conta de cliente. Os exemplos mostrados aqui devolvem licenças atribuídas ao grupo1, o grupo de licenças padrão que representa licenças geridas por Azure Ative Directory. Para obter licenças atribuídas a grupos de licenças especificados, consulte [obter licenças atribuídas a um utilizador por grupo de licenças.](get-licenses-assigned-to-a-user-by-license-group.md)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,7 +35,7 @@ Para verificar quais as licenças atribuídas a um utilizador do grupo de licen�
 var customerUserAssignedLicenses = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(selectedCustomerUserId).Licenses.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: CustomerUserAssignedLicenses.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CustomerUserAssignedLicenses.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -55,8 +51,8 @@ Utilize os seguintes parâmetros de percurso para identificar o cliente e o util
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada GUID que identifica o cliente. |
-| user-id     | string | Sim      | Uma cadeia formatada GUID que identifica o utilizador.     |
+| id cliente | string | Yes      | Uma cadeia formatada GUID que identifica o cliente. |
+| user-id     | string | Yes      | Uma cadeia formatada GUID que identifica o utilizador.     |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

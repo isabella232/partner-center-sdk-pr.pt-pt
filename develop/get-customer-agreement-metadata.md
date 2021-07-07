@@ -6,24 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khakiali
 ms.author: alikhaki
-ms.openlocfilehash: c3ebecc51859c9d2240d319d823f7e555eaecc27
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 5c20b317edf16b159050884070683880cf7e45bb
+ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769433"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112025726"
 ---
 # <a name="get-agreement-metadata-for-the-microsoft-customer-agreement"></a>Obter metadados de contrato para o Contrato de Cliente Microsoft
 
-**Aplica-se a:**
+**Aplica-se a**: Centro de Parceiros
 
-- Partner Center
+**Não se aplica a:** Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-Os metadados de acordo para o Acordo de Cliente da Microsoft são atualmente suportados pelo Partner Center apenas na nuvem pública da *Microsoft.* Não se aplica a:
-
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+Os metadados de acordo para o Microsoft Customer Agreement são atualmente suportados pelo Partner Center apenas na nuvem pública da Microsoft.
 
 Tem de recuperar os metadados do acordo para o Acordo de Cliente da Microsoft antes de poder:
 
@@ -74,7 +70,7 @@ Para recuperar os metadados do acordo para o Acordo de Cliente da Microsoft:
 
 | Nome                   | Tipo     | Necessário | Descrição                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
-| tipo de acordo | cadeia (de carateres) | No | Utilize este parâmetro para estender a resposta de consulta ao tipo de acordo específico. Os valores suportados são: <br/><br/>**MicrosoftCloudAgreement** que inclui metadados de acordo apenas do tipo *MicrosoftCloudAgreement*<br/><br/>**MicrosoftCustomerAgreement** que inclui metadados de acordo apenas do tipo *MicrosoftCustomerAgreement*.<br/><br/>**\*** que devolve todos os metadados do acordo. (Não utilize **\*** a menos que o seu código tenha a lógica de tempo de execução necessária para lidar com tipos de acordos desconhecidos porque a Microsoft pode introduzir metadados de acordo com novos tipos de acordo a qualquer momento.)<br/><br/> **Nota:** Se o parâmetro URI não for especificado, a consulta predefine o **MicrosoftCloudAgreement** para retrocompatibilidade.  |
+| tipo de acordo | cadeia (de carateres) | No | Utilize este parâmetro para estender a resposta de consulta ao tipo de acordo específico. Os valores suportados são: <br/><br/>**MicrosoftCloudAgreement** que inclui metadados de acordo apenas do tipo *MicrosoftCloudAgreement*<br/><br/>**MicrosoftCustomerAgreement** que inclui metadados de acordo apenas do tipo *MicrosoftCustomerAgreement*.<br/><br/>**\**_ que devolve todos os metadados do acordo. (Não use _* \* *_ a menos que o seu código tenha a lógica de tempo de execução necessária para lidar com tipos de acordos desconhecidos, porque a Microsoft pode introduzir metadados de acordo com novos tipos de acordo a qualquer momento.) <br/> <br/> _* Nota:** Se o parâmetro URI não for especificado, a consulta predefine o **MicrosoftCloudAgreement** para retrocompatibilidade.  |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

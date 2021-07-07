@@ -4,21 +4,16 @@ description: Como determinar se um domínio está disponível para utilização.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 84edb5b7510642ec44dad3d4f92349e40eb10b24
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: e2b8f0438516cc0aff9c4d8159c22de43ec582e4
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769607"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530281"
 ---
 # <a name="verify-domain-availability"></a>Verificar a disponibilidade do domínio
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como determinar se um domínio está disponível para utilização.
 
@@ -39,7 +34,7 @@ Para verificar se um domínio está disponível, ligue pela primeira vez [**iAgg
 bool result = partnerOperations.Domains.ByDomain(domain).Exists();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: CheckDomainAvailability.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CheckDomainAvailability.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -55,7 +50,7 @@ Utilize o seguinte parâmetro de consulta para verificar a disponibilidade de do
 
 | Nome       | Tipo       | Necessário | Descrição                                   |
 |------------|------------|----------|-----------------------------------------------|
-| **domínio** | **cadeia** | Y        | Uma corda que identifica o domínio para verificar. |
+| **domínio** | **string** | Y        | Uma corda que identifica o domínio para verificar. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -63,7 +58,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

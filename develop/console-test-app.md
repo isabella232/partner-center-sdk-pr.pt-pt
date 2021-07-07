@@ -4,21 +4,16 @@ description: Esta aplicação de teste de consola fornece código de amostra par
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e82bac3ccc22d0e7cf898e5b2d2e002c622584ae
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: b35167104deeede50107d59fca6112c10dc7b4bf
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769181"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974034"
 ---
 # <a name="console-test-app"></a>Aplicação de teste da consola
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 A aplicação de teste de consola é fornecida em C# e Java, fornece códigos de amostra para todos os cenários suportados pelas APIs do Partner Center. Também pode usá-lo para testar.
 
@@ -35,7 +30,7 @@ Descarregue o código de amostra para a aplicação de teste da consola.
 
 De **acordo com os cenários,** os *App.config* ficheiros, pode definir parâmetros que serão automaticamente transmitidos para os cenários que executou.
 
-Para modificar a lista de cenários que são executados, comente linhas no **IPartnerScenario \[ \] mainScenarios** ou num método individual **Get Scenarios** encontrado no ficheiro *Program.cs.*
+Para modificar a lista de cenários que são executados, comente linhas no **IPartnerScenario \[ \] mainScenarios** ou num método individual **Get Scenarios** encontrado no ficheiro *.cs Programa.*
 
 ## <a name="java"></a>Java
 
@@ -69,7 +64,7 @@ Todas estas definições são necessárias para que as chamadas de API da amostr
 
 Para a Concessão de **Privacidade do Utilizador,** é-lhe exigido que altere:
 
-- **ApplicationId** (o seu ID de aplicação Azure Ative Directory usado para login)
+- **ApplicationId** (o seu ID de aplicação Azure Ative Directory utilizado para login)
 - **Nome do Utilizador** (o seu nome de utilizador de diretório ativo)
 - **Palavra-passe** (a sua senha de diretório ativa).
 

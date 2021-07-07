@@ -6,20 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 6f473c7a7d43b1a3929d983fb23dae92fdafbc0f
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: ffcbbb9cf14b1b2a5b3becab541d3042c3cad508
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769896"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760679"
 ---
 # <a name="get-all-service-requests-for-a-customer"></a>Obter todos os pedidos de serviço para um cliente
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Recebe todos os pedidos de atendimento de um cliente.
 
@@ -42,7 +38,7 @@ Para apresentar uma lista de todos os pedidos de serviço de um cliente, utilize
 ResourceCollection<ServiceRequest> serviceRequests = partnerOperations.Customers.ById(customerId).ServiceRequests.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerCenterSDK.FeaturesSamples **Class**: CustomerManagedServices.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: CustomerManagedServices.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -58,7 +54,7 @@ Utilize o seguinte parâmetro de consulta para obter todos os pedidos de serviç
 
 | Nome                   | Tipo     | Necessário | Descrição                            |
 |------------------------|----------|----------|----------------------------------------|
-| **cliente-inquilino-id** | **guid** | Y        | Um GUID correspondente ao cliente.. |
+| **cliente-inquilino-id** | **guid** | Y        | Um GUID correspondente ao cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

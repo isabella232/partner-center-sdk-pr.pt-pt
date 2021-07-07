@@ -4,21 +4,16 @@ description: Atualiza o perfil de faturação de uma organização.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: ccf938fff285704f54d4717b2678e1419d857d8d
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 0ef736a722cde16f95ed6dfdbdab278c98fcf738
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768995"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530060"
 ---
 # <a name="update-an-organization-profile"></a>Atualizar um perfil de organização
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza o perfil de faturação de um parceiro.
 
@@ -41,7 +36,7 @@ organizationProfile.DefaultAddress.PhoneNumber = ((long)(new Random().NextDouble
 OrganizationProfile updatedOrganizationProfile = partnerOperations.Profiles.OrganizationProfile.Update(organizationProfile);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateOrganizationProfile.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

@@ -1,29 +1,25 @@
 ---
 title: Recursos de transfereelegibilidade
-description: Um parceiro cria uma transferência quando um cliente quer que a sua subscrição com o parceiro seja transferida para outro parceiro.
+description: Um parceiro pode criar uma transferência quando um cliente solicita a sua subscrição com o parceiro para ser transferido para outro parceiro.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: dcac5724a1f708bc540a3aac7ce74b2eda60a296
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 8f121d499abffb4c4dda688c2a91c25f83d2e863
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768960"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530213"
 ---
 # <a name="transfereligibility-resources"></a>Recursos de transfereelegibilidade
 
-**Aplica-se a:**
-
-- Partner Center
-
-Um parceiro cria uma transferência quando um cliente quer que a sua subscrição com o parceiro seja transferida para outro parceiro.
+Um parceiro pode criar uma transferência quando um cliente solicita a sua subscrição com o parceiro para ser transferido para outro parceiro. Utilize a TransferEligibility para verificar se uma subscrição é elegível para ser transferida.
 
 ## <a name="transfereligibility"></a>Transfereligibilidade
 
 Descreve uma transferência Eelegibilidade.
 
-| Propriedade              | Tipo             | Descrição                                                                              |
+| Propriedade              | Tipo             | Description                                                                              |
 |-----------------------|------------------|------------------------------------------------------------------------------------------|
 | ID                    | string           | O identificador de assinatura do cliente.                                                  |
 | isEligível            | bool             | Indica se a subscrição é elegível para a transferência.                         |

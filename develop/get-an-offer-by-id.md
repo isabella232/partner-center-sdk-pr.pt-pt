@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: brentserbus
 ms.author: brserbus
-ms.openlocfilehash: 9448276e817affb823eddabbcab8757c79615fbd
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: f759cbdeefb4f550c41b41de40e9979e72e4ddeb
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769908"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760645"
 ---
 # <a name="get-an-offer-by-id"></a>Obter oferta por ID
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém um recurso **de Oferta** que corresponda ao ID da oferta.
 
@@ -43,7 +38,7 @@ Para encontrar uma oferta específica por ID, use a sua coleção **IAggregatePa
 var offer = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: GetOffer.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOffer.cs
 
 ## <a name="java"></a>Java
 
@@ -86,7 +81,7 @@ Get-PartnerOffer -Country $countryCode -OfferId $offerId
 | Nome           | Tipo       | Necessário | Descrição                           |
 |----------------|------------|----------|---------------------------------------|
 | **oferta id**   | **guid**   | Y        | Um GUID que corresponda à oferta. |
-| **país id** | **cadeia** | Y        | O ID do país/região.                |
+| **país id** | **string** | Y        | O ID do país/região.                |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

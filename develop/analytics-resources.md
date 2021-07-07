@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: v-sumukh
 ms.author: v-sumukh
-ms.openlocfilehash: 9bd47b99f0abaa181e5f255dd6e46151363917e7
-ms.sourcegitcommit: d1104d5c27f8fb3908a87532f80c432f0147ef5d
+ms.openlocfilehash: 69c6c195ba1a0d657a91320b2f9b08b5269a8499
+ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "97770003"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "112025603"
 ---
 # <a name="analytics-api-resources-that-help-you-report-on-license-usage-deployment-and-consumption"></a>Recursos API analíticos que o ajudam a reportar sobre o uso, implementação e consumo de licenças
-
-**Aplica-se a:**
-
-- Partner Center
 
 Os recursos aqui definidos contêm dados utilizados para reportar sobre o uso, implantação e consumo.
 
@@ -25,7 +21,7 @@ Os recursos aqui definidos contêm dados utilizados para reportar sobre o uso, i
 
 O recurso **PartnerLicensesDeploymentInsights** contém insights de nível de parceiro sobre a implementação de licenças.
 
-| Propriedade                  | Tipo                                                           | Descrição                                                                         |
+| Propriedade                  | Tipo                                                           | Description                                                                         |
 |---------------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | proratedDeploymentPercent | número                                                         | A percentagem de licenças implementadas.                                                |
 | licençasSold              | número                                                         | O número de licenças vendidas.                                                        |
@@ -38,7 +34,7 @@ O recurso **PartnerLicensesDeploymentInsights** contém insights de nível de pa
 
 O recurso **PartnerLicensesUsageInsights** contém insights de nível de parceiro sobre o uso da licença.
 
-| Propriedade                     | Tipo                                                           | Descrição                                                                    |
+| Propriedade                     | Tipo                                                           | Description                                                                    |
 |------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------|
 | proratedLicensesUsagePercent | número                                                         | A percentagem de licenças implementadas.                                           |
 | carga de trabalhoName                 | string                                                         | O nome da carga de trabalho (por exemplo: troca).                                             |
@@ -51,7 +47,7 @@ O recurso **PartnerLicensesUsageInsights** contém insights de nível de parceir
 
 O recurso **CustomerLicensesDeploymentInsights** contém insights ao nível do cliente sobre a implementação da licença.
 
-| Propriedade          | Tipo                                                           | Descrição                                                                          |
+| Propriedade          | Tipo                                                           | Description                                                                          |
 |-------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | licençasDeployed  | número                                                         | O número de licenças implementadas.                                                     |
 | licençasSold      | número                                                         | O número de licenças vendidas.                                                         |
@@ -69,10 +65,10 @@ O recurso **CustomerLicensesDeploymentInsights** contém insights ao nível do c
 
 O recurso **CustomerLicensesUsageInsights** contém insights ao nível do cliente sobre o uso da licença.
 
-| Propriedade          | Tipo                                                           | Descrição                                                                     |
+| Propriedade          | Tipo                                                           | Description                                                                     |
 |-------------------|----------------------------------------------------------------|---------------------------------------------------------------------------------|
 | código de carga de trabalho      | string                                                         | O código de carga de trabalho.                                                              |
-| carga de trabalhoName      | número                                                         | O nome da carga de trabalho (por exemplo: Troca).                                              |
+| carga de trabalhoName      | número                                                         | O nome da carga de trabalho (por exemplo: Exchange).                                              |
 | usePercent      | número                                                         | A percentagem ajustada de licenças utilizadas.                                       |
 | licençasActivar    | número                                                         | O número de licenças ativas.                                                  |
 | licençasQualizado | número                                                         | O número de licenças qualificadas.                                               |

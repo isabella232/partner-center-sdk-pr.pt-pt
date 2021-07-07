@@ -4,18 +4,14 @@ description: Saiba como usar as APIs do Partner Center para converter uma subscr
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 59dcf6caf21d407b2fba4cc8438bc435fda9dc77
-ms.sourcegitcommit: a25d4951f25502cdf90cfb974022c5e452205f42
+ms.openlocfilehash: c1876cfc796b683bfff00b7d137bcfe0b7162c78
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "97770064"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973864"
 ---
 # <a name="convert-a-trial-subscription-to-paid-using-partner-center-apis"></a>Converter uma subscrição experimental para pago usando APIs do Partner Center
-
-**Aplica-se a:**
-
-- Partner Center
 
 Pode converter uma subscrição experimental a pagar.
 
@@ -29,7 +25,7 @@ Pode converter uma subscrição experimental a pagar.
 
 - Uma oferta de conversão disponível.
 
-## <a name="convert-a-trial-subscription-to-paid-through-code"></a>Converter uma subscrição experimental para ser pago através do código
+## <a name="convert-a-trial-subscription-to-a-paid-subscription-through-code"></a>Converter uma subscrição experimental para uma subscrição paga através de código
 
 Para converter uma subscrição experimental para uma paga, você deve primeiro obter uma coleção das conversões de ensaio disponíveis. Em seguida, deve escolher a oferta de conversão que pretende comprar.
 
@@ -127,8 +123,8 @@ Utilize os seguintes parâmetros de percurso para identificar a subscrição do 
 
 | Nome            | Tipo   | Necessário | Descrição                                                     |
 |-----------------|--------|----------|-----------------------------------------------------------------|
-| id cliente     | string | Sim      | Uma cadeia formatada GUID que identifica o cliente.           |
-| id de subscrição | string | Sim      | Uma cadeia formatada GUID que identifica a subscrição do ensaio. |
+| id cliente     | string | Yes      | Uma cadeia formatada GUID que identifica o cliente.           |
+| id de subscrição | string | Yes      | Uma cadeia formatada GUID que identifica a subscrição do ensaio. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

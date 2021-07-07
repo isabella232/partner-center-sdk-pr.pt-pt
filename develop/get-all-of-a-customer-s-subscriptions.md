@@ -4,21 +4,16 @@ description: Como obter uma coleção de assinaturas de um cliente.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a037e4a81fccbff0a02b0bdf6d93478ee15fd50f
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 01ac9e5169258d0ac263d5bbe8cff567c76f98ed
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769716"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760628"
 ---
 # <a name="get-a-customers-subscriptions"></a>Obter as subscrições de um cliente
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter uma coleção de assinaturas de um cliente.
 
@@ -39,7 +34,7 @@ Para obter uma lista de todas as subscrições de um cliente, utilize primeiro o
 var customerSubscriptions = partnerOperations.Customers.ById(customerId).Subscriptions.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetSubscriptions.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscriptions.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -55,7 +50,7 @@ Esta tabela lista o parâmetro de consulta necessário para obter todas as subsc
 
 | Nome               | Tipo   | Necessário | Descrição                                           |
 |--------------------|--------|----------|-------------------------------------------------------|
-| cliente-inquilino-id | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| cliente-inquilino-id | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

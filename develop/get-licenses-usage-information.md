@@ -1,23 +1,19 @@
 ---
 title: Obter informações de utilização de licenças
-description: Como obter informações de utilização de licenças ao nível da carga de trabalho para Office and Dynamics.
+description: Como obter informações de utilização de licenças ao nível da carga de trabalho para Office e Dinâmica.
 ms.date: 10/25/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a144fd078a36289e4a2c70880817b1f0ca627e8a
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: ea3658089ce7eb5c1ad7cc65c3db34f9b6353cdd
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769428"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445985"
 ---
 # <a name="get-licenses-usage-information"></a>Obter informações de utilização de licenças
 
-**Aplica-se a**
-
-- Partner Center
-
-Como obter informações de utilização de licenças ao nível da carga de trabalho para Office and Dynamics.
+Como obter informações de utilização de licenças ao nível da carga de trabalho para Office e Dinâmica.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,11 +35,11 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 | Parâmetro         | Tipo     | Descrição | Obrigatório |
 |-------------------|----------|-------------|----------|
-| top               | string   | O número de filas de dados a devolver no pedido. O valor máximo e o valor predefinido se não especificado for 10000. Se houver mais linhas na consulta, o corpo de resposta inclui um próximo link que pode usar para solicitar a próxima página de dados. | Não |
-| saltar              | int      | O número de filas para saltar na consulta. Utilize este parâmetro para páginar através de grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recupera as primeiras 10000 linhas de dados, top=10000 e skip=10000 recupera as próximas 10000 linhas de dados, e assim por diante. | Não |
-| filter            | string   | O parâmetro do *filtro* do pedido contém uma ou mais declarações que filtram as linhas na resposta. Cada declaração contém um campo e valor que estão associados aos **`eq`** **`ne`** ou operadores, e as declarações podem ser combinadas usando **`and`** ou **`or`** . Aqui estão alguns parâmetros *de filtragem* de exemplo:<br/><br/>*filter=workloadCode eq 'SFB'*<br/><br/>*filter=workloadCode eq 'SFB'* ou *(canal eq 'Revendedor'*)<br/><br/>Pode especificar os seguintes campos:<br/><br/>**código de carga de trabalho**<br/>**carga de trabalhoName**<br/>**serviceCode**<br/>**nome de serviço**<br/>**canal**<br/>**customerTenantId**<br/>**nome do cliente**<br/>**productId**<br/>**produtoName** | Não |
-| groupby           | string   | Uma declaração que aplica agregação de dados apenas aos campos especificados. Pode especificar os seguintes campos:<br/><br/>**código de carga de trabalho**<br/>**carga de trabalhoName**<br/>**serviceCode**<br/>**nome de serviço**<br/>**channelcustomerTenantId**<br/>**nome do cliente**<br/>**productId**<br/>**produtoName**<br/><br/>As linhas de dados devolvidas conterão os campos especificados no parâmetro *groupby,* bem como os seguintes:<br/><br/>**licençasActivar**<br/>**licençasQualizado** | Não |
-| processadoDadade tempo | DateTime | Pode-se especificar a data a partir da qual os dados de utilização foram tratados. Incumprimentos até à data mais recente quando os dados foram tratados | Não |
+| top               | string   | O número de filas de dados a devolver no pedido. O valor máximo e o valor predefinido se não especificado for 10000. Se houver mais linhas na consulta, o corpo de resposta inclui um próximo link que pode usar para solicitar a próxima página de dados. | No |
+| saltar              | int      | O número de filas para saltar na consulta. Utilize este parâmetro para páginar através de grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recupera as primeiras 10000 linhas de dados, top=10000 e skip=10000 recupera as próximas 10000 linhas de dados, e assim por diante. | No |
+| filter            | string   | O parâmetro do *filtro* do pedido contém uma ou mais declarações que filtram as linhas na resposta. Cada declaração contém um campo e valor que estão associados aos **`eq`** **`ne`** ou operadores, e as declarações podem ser combinadas usando **`and`** ou **`or`** . Aqui estão alguns parâmetros *de filtragem* de exemplo:<br/><br/>*filter=workloadCode eq 'SFB'*<br/><br/>*filter=workloadCode eq 'SFB'* ou *(canal eq 'Revendedor'*)<br/><br/>Pode especificar os seguintes campos:<br/><br/>**código de carga de trabalho**<br/>**carga de trabalhoName**<br/>**serviceCode**<br/>**nome de serviço**<br/>**canal**<br/>**customerTenantId**<br/>**nome do cliente**<br/>**productId**<br/>**produtoName** | No |
+| groupby           | string   | Uma declaração que aplica agregação de dados apenas aos campos especificados. Pode especificar os seguintes campos:<br/><br/>**código de carga de trabalho**<br/>**carga de trabalhoName**<br/>**serviceCode**<br/>**nome de serviço**<br/>**channelcustomerTenantId**<br/>**nome do cliente**<br/>**productId**<br/>**produtoName**<br/><br/>As linhas de dados devolvidas conterão os campos especificados no parâmetro *groupby* e os seguintes:<br/><br/>**licençasActivar**<br/>**licençasQualizado** | No |
+| processadoDadade tempo | DateTime | Pode-se especificar a data a partir da qual os dados de utilização foram tratados. Incumprimentos até à data mais recente quando os dados foram tratados | No |
 
 ### <a name="request-example"></a>Exemplo de pedido
 
@@ -61,7 +57,7 @@ Host: api.partnercenter.microsoft.com
 
 Se for bem sucedido, o organismo de resposta contém os seguintes campos que contêm dados sobre a utilização das licenças.
 
-| Campo             | Tipo     | Descrição                                   |
+| Campo             | Tipo     | Description                                   |
 |-------------------|----------|-----------------------------------------------|
 | código de carga de trabalho      | string   | Código de carga de trabalho                                 |
 | carga de trabalhoName      | string   | Nome da carga de trabalho                                 |
