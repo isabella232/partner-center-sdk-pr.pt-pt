@@ -4,18 +4,14 @@ description: Atualizar detalhes numa conta de utilizador existente para o seu cl
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 52a43341bf2c3ba64d8c232af01f3fbae6765d82
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 6ebfdbb5df1d56416835af771fd6b70190776012
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769182"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445277"
 ---
 # <a name="update-user-accounts-for-a-customer"></a>Atualizar as contas de utilizador para um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Atualizar detalhes numa conta de utilizador existente para o seu cliente.
 
@@ -50,7 +46,7 @@ User updatedCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomer
 
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: CustomerUserUpdate.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerUserUpdate.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

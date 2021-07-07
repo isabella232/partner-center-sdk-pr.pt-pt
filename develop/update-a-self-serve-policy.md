@@ -4,20 +4,16 @@ description: Como atualizar uma política de autosserviço.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4d53ab8e5b8ef5b7be83360a3f43ec7791b2e3b4
-ms.sourcegitcommit: 01e75175077611da92175c777a440a594fb05797
+ms.openlocfilehash: d94382e73fd2a79751fe5f8f8414df2befde584f
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "97770248"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445260"
 ---
 # <a name="update-a-selfservepolicy"></a>Atualizar uma AutoServePolicy
 
-**Aplica-se a:**
-
-- Partner Center
-
-Este tópico explica como atualizar uma política de autosserviço.
+Este artigo explica como atualizar uma política de autosserviço.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -53,13 +49,13 @@ partnerOperations.SelfServePolicies.ById(policy.id).Put(policy);
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
 - É necessário um identificador de pedido e um identificador de correlação.
-- Consulte [os cabeçalhos REST do Partner Center](headers.md) para obter mais informações.
+- Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).
 
 ### <a name="request-body"></a>Corpo do pedido
 
 Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
-| Nome                              | Tipo   | Descrição                                 |
+| Nome                              | Tipo   | Description                                 |
 |------------------------------------------------------------------|--------|---------------------------------------------|
 | [AutoServePolicy](self-serve-policy-resources.md#selfservepolicy)| objeto | A informação política de autosserviço. |
 
@@ -67,7 +63,7 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
 Esta tabela descreve os campos mínimos exigidos do recurso [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) necessário para criar uma nova política de autosserviço.
 
-| Propriedade              | Tipo             | Descrição                                                                                            |
+| Propriedade              | Tipo             | Description                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
 | ID                    | string           | Um identificador de política de autosserviço que é fornecido após a criação bem sucedida da política de autosserviço.     |
 | SelfServeEntity       | SelfServeEntity  | A entidade self-serve a quem está a ser concedido acesso.                                                     |
@@ -118,7 +114,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                |
+| Código de Estado HTTP     | Código de erro   | Description                                                                |
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 404                  | 600039       | A política de autosserviço não foi encontrada                                            |
 | 404                  | 600040       | O identificador de política de autosserviço está incorreto                                  |

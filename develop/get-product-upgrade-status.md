@@ -1,23 +1,19 @@
 ---
 title: Obtenha o estado de atualização do produto para um cliente
-description: Pode utilizar o recurso ProductUpgradeRequest para determinar o estado de uma atualização do produto para um cliente para uma nova família de produtos, como por exemplo a partir de uma assinatura Microsoft Azure (MS-AZR-0145P) para um plano Azure.
+description: Pode utilizar o recurso ProductUpgradeRequest para determinar o estado de uma atualização do produto para um cliente para uma nova família de produtos, como por exemplo, a partir de uma subscrição de Microsoft Azure (MS-AZR-0145P) para um plano Azure.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 1819887d459ec72a48ea2b7a5a4121dc56718313
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 03d925dd0fae987226ad1f8e71fad380ba144b83
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769061"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445566"
 ---
 # <a name="get-the-product-upgrade-status-for-a-customer"></a>Obtenha o estado de atualização do produto para um cliente
 
-**Aplica-se a:**
-
-- Partner Center
-
-Pode utilizar o recurso [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) para obter o estado de uma atualização para uma nova família de produtos. Este recurso aplica-se quando está a atualizar um cliente a partir de uma subscrição do Microsoft Azure (MS-AZR-0145P) para um plano Azure. Um pedido bem sucedido devolve o recurso [**de melhoria de produtos.**](product-upgrade-resources.md#productupgradeseligibility)
+Pode utilizar o recurso [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) para obter o estado de uma atualização para uma nova família de produtos. Este recurso aplica-se quando está a atualizar um cliente a partir de uma subscrição de Microsoft Azure (MS-AZR-0145P) para um plano Azure. Um pedido bem sucedido devolve o recurso [**de melhoria de produtos.**](product-upgrade-resources.md#productupgradeseligibility)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -77,7 +73,7 @@ Utilize o seguinte parâmetro de consulta para especificar o cliente para o qual
 
 | Nome               | Tipo | Necessário | Descrição                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| **upgrade-id** | GUID | Sim | O valor é um identificador de upgrade formatado guid. Pode utilizar este identificador para especificar uma atualização para rastrear. |
+| **upgrade-id** | GUID | Yes | O valor é um identificador de upgrade formatado guid. Pode utilizar este identificador para especificar uma atualização para rastrear. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

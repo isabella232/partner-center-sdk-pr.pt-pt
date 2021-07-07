@@ -4,18 +4,14 @@ description: Crie um mercado online para vender ofertas de soluções de nuvem (
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 83ae0c789f95485ec3eb272434e57421a8f93fb6
-ms.sourcegitcommit: 970031473b2e8cd3d08c6c097949c057a51df3ef
+ms.openlocfilehash: 8550492c7a4201a955c7b051b453103628612f3e
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505327"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973354"
 ---
 # <a name="csp-customer-storefront-builder-quick-start-guide"></a>Guia de Início Rápido da Loja Web para Clientes CSP
-
-**Aplica-se a:**
-
-- Partner Center
 
 Crie um mercado online para vender ofertas de soluções de nuvem (CSP) utilizando o CSP Customer Storefront Builder.
 
@@ -44,11 +40,11 @@ O CSP Customer Storefront Builder pretende ser uma forma rápida de criar um web
 
 - O Partner Center não pode aceder diretamente ou atualizar este website com funcionalidades novas ou alteradas de SDK ou API. Quaisquer novas funcionalidades ou melhorias devem ser possuídas, desenvolvidas e geridas por parceiros, incluindo a adição de novas funcionalidades do Partner Center SDK ou API.
 
-- Este CSP Customer Storefront Builder fornece atualmente a capacidade de configurar o pagamento a uma conta pro/PayU Money (para a Índia) de PayPal. Se os parceiros precisarem de alterar o processador de pagamento, terão de alterar o código para suportar o seu método de pagamento preferido.
+- Este CSP Customer Storefront Builder fornece atualmente a capacidade de configurar o pagamento a uma conta PayPal Pro/PayU Money (para a Índia). Se os parceiros precisarem de alterar o processador de pagamento, terão de alterar o código para suportar o seu método de pagamento preferido.
 
 - Qualquer informação relacionada com o pagamento adicionada no CSP Customer Storefront Builder não é armazenada ou mantida no Partner Center.
 
-- PayPal configuração de pagamento funcionará em quaisquer geografias onde PayPal esteja disponível. PayPal disponibilidade e suporte é controlado exclusivamente por PayPal, podendo ser descontinuado a qualquer momento por PayPal.
+- PayPal configuração de pagamento funcionará em quaisquer geografias onde PayPal esteja disponível. PayPal disponibilidade e suporte é controlado exclusivamente por PayPal, podendo ser interrompidos a qualquer momento por PayPal.
 
 - A configuração de pagamento payU funcionará apenas na Índia atualmente. A disponibilidade e suporte payU são controlados exclusivamente pelo PayU e podem ser descontinuados a qualquer momento pelo PayU.
 
@@ -70,7 +66,7 @@ O processo de criação de um website de fachada é:
 
 Opções de implementação:
 
-- Descarregue o código de amostra da [loja Partner Center](https://github.com/Microsoft/Partner-Center-Storefront) do GitHub
+- Descarregue o código de amostra da loja Partner [Center](https://github.com/Microsoft/Partner-Center-Storefront) a partir de GitHub
 - Integre com a Azure para implementar o site configurado
 - Implementar numa subscrição existente ou trazer a sua própria subscrição
 
@@ -78,7 +74,7 @@ Opções de implementação:
 
 Não são necessárias competências de desenvolvimento para personalizar uma montra.
 
-Inicie sessão com as credenciais de administração do Centro Parceiro para configurar:
+Inscreva-se com as credenciais de administração do Centro Parceiro para configurar:
 
 - **Marca:** nome da empresa, logotipo, contactos e muito mais.
 

@@ -4,18 +4,14 @@ description: Como recuperar uma lista de ofertas de conversão experimental.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e1eadecde9efa0b59fc7790bd474889bb32821dc
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 981910560faf7b7957b28e643c09a003826b9cff
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769541"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873926"
 ---
 # <a name="get-a-list-of-trial-conversion-offers"></a>Obter uma lista de ofertas de conversão de avaliação
-
-**Aplica-se a**
-
-- Partner Center
 
 Como recuperar uma lista de ofertas de conversão experimental.
 
@@ -55,8 +51,8 @@ Utilize os seguintes parâmetros de percurso para identificar a subscrição do 
 
 | Nome            | Tipo   | Necessário | Descrição                                                     |
 |-----------------|--------|----------|-----------------------------------------------------------------|
-| id cliente     | string | Sim      | Uma cadeia formatada GUID que identifica o cliente.           |
-| id de subscrição | string | Sim      | Uma cadeia formatada GUID que identifica a subscrição do ensaio. |
+| id cliente     | string | Yes      | Uma cadeia formatada GUID que identifica o cliente.           |
+| id de subscrição | string | Yes      | Uma cadeia formatada GUID que identifica a subscrição do ensaio. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

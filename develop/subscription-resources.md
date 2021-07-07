@@ -4,21 +4,16 @@ description: Os recursos de subscrição podem fornecer mais informações sobre
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: fd835e46e99b1fcb1e0b0e694ad73b1dca1240c9
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 35d8c86ab061797109b3c152eff02f354b7ea23a
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768965"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547463"
 ---
 # <a name="subscription-resources"></a>Recursos de subscrição
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Uma subscrição permite que um cliente utilize um serviço por um certo período de tempo. Nem todos os campos se aplicarão a todas as subscrições. Muitos campos só se aplicam em determinados pontos do ciclo de vida, como se uma subscrição for suspensa ou cancelada.
 
@@ -29,7 +24,7 @@ Uma subscrição permite que um cliente utilize um serviço por um certo períod
 
 O recurso **de subscrição** representa o ciclo de vida de uma subscrição e inclui propriedades que definem os estados ao longo do ciclo de vida da subscrição.
 
-| Propriedade             | Tipo                                                          | Descrição                                                                                                                                                                   |
+| Propriedade             | Tipo                                                          | Description                                                                                                                                                                   |
 |----------------------|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                   | string                                                        | O identificador de assinatura.                                                                                                                                                  |
 | offerId              | string                                                        | O identificador da oferta.                                                                                                                                                         |
@@ -41,7 +36,7 @@ O recurso **de subscrição** representa o ciclo de vida de uma subscrição e i
 | parentSubscriptionId | string                                                        | Recebe ou define o identificador de assinatura dos pais.                                                                                                                              |
 | criaçãoDate         | string                                                        | Obtém ou define a data de criação, em formato de data-hora.                                                                                                                          |
 | effectiveStartDate   | cadeia no formato de hora de data UTC                                | Obtém ou define a data de início efetiva para esta subscrição, em formato de data-hora. É usado para datar uma subscrição migrada ou para alinhá-la com outra.                |
-| compromissoEndDate    | cadeia no formato de hora de data UTC                                | A data limite de compromisso para esta subscrição, em formato de data-hora. Para as assinaturas que não são autorrenováveis, esta é uma data muito, muito distante no futuro.       |
+| compromissoEndDate    | cadeia no formato de hora de data UTC                                | A data limite de compromisso para esta subscrição, em formato de data-hora. Para as subscrições que não são autorrenováveis, esta representa uma data muito distante no futuro.       |
 | status               | string                                                        | O estado de subscrição: "nenhum", "ativo", "pendente", "suspenso", ou "eliminado".                                                                                                         |
 | autoRenewEnabled     | boolean                                                       | Obtém um valor que indique se a subscrição é renovada automaticamente.                                                                                                    |
 | billingType          | string                                                        | Especifica como a subscrição é faturada: "nenhuma", "utilização" ou "licença".                                                                                                      |
@@ -65,7 +60,7 @@ O recurso **de subscrição** representa o ciclo de vida de uma subscrição e i
 
 O recurso **SubscriptionLinks** descreve a recolha de links anexados a um recurso de subscrição.
 
-| Propriedade           | Tipo                               | Descrição                           |
+| Propriedade           | Tipo                               | Description                           |
 |--------------------|------------------------------------|---------------------------------------|
 | oferta              | [Ligação](utility-resources.md#link) | Recebe ou define a oferta.               |
 | parentalidadeSubscrição | [Ligação](utility-resources.md#link) | Recebe ou define a subscrição dos pais. |
@@ -81,7 +76,7 @@ O recurso **SubscriptionLinks** descreve a recolha de links anexados a um recurs
 
 O recurso **SubscriptionProvisioningStatus** fornece informações sobre o estado de provisão de uma subscrição.
 
-| Propriedade   | Tipo                                                           | Descrição                                                          |
+| Propriedade   | Tipo                                                           | Description                                                          |
 |------------|----------------------------------------------------------------|----------------------------------------------------------------------|
 | skuId      | string                                                         | Uma corda formatada GUID que identifica o produto SKU.             |
 | status     | string                                                         | Indica o estado de provisionamento: "sucesso", "pendente" ou "falhado". |
@@ -93,16 +88,16 @@ O recurso **SubscriptionProvisioningStatus** fornece informações sobre o estad
 
 O **recurso SubscriptionRegistrationStatus** descreve a recolha de links anexados a um recurso de subscrição.
 
-| Propriedade           | Tipo                               | Descrição                                                                           |
+| Propriedade           | Tipo                               | Description                                                                           |
 |--------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | subscriptionId     | string                             | O identificador de assinatura.                                                          |
-| status             | string                             | Indica o estado de inscrição: "registado", "registo" ou "não registado".    |
+| status             | string                             | Indica o estado de inscrição: "registado", "registo", ou "não registado".    |
 
 ## <a name="supportcontact"></a>SupportContact
 
 O recurso **SupportContact** representa um contacto de suporte para a subscrição de um cliente.
 
-| Propriedade        | Tipo                                                           | Descrição                                                                     |
+| Propriedade        | Tipo                                                           | Description                                                                     |
 |-----------------|----------------------------------------------------------------|---------------------------------------------------------------------------------|
 | supportTenantId | string                                                         | Uma corda formatada GUID que indica o identificador de inquilino do contacto de suporte. |
 | supportMpnId    | string                                                         | O identificador da Microsoft Partner Network (MPN) do contacto.                       |
@@ -114,7 +109,7 @@ O recurso **SupportContact** representa um contacto de suporte para a subscriç�
 
 O recurso **RegisterSubscription** devolve um link que pode ser usado para consultar o estado de registo de uma subscrição. O estado de registo é devolvido no organismo de resposta de um pedido aceite com sucesso para registar uma assinatura Azure.
 
-| Propriedade                | Tipo                               | Descrição                                                                           |
+| Propriedade                | Tipo                               | Description                                                                           |
 |-------------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | httpResponseMessage     | objeto                             | Devoluções HTTP Status Code 202 "Aceito", com um cabeçalho de localização contendo um link para consultar o estado de registo. Por exemplo, `"/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus"` |
 
@@ -122,7 +117,7 @@ O recurso **RegisterSubscription** devolve um link que pode ser usado para consu
 
 O recurso **RefundOption** representa uma possível opção de reembolso para a subscrição.
 
-| Propriedade          | Tipo | Descrição                                                                         |
+| Propriedade          | Tipo | Description                                                                         |
 |-------------------|--------|-------------------------------------------------------------------------------------|
 | tipo | string | O tipo de reembolso. Os valores suportados são "Parcial" e "Completo" |
 | expira Depois      | cadeia no formato de hora de data UTC | A hora de tempo quando esta opção expirar. Se nulo, isto significa que não tem expiração. |
@@ -131,7 +126,7 @@ O recurso **RefundOption** representa uma possível opção de reembolso para a 
 
 O recurso **AzureEntitlement** representa os direitos Azure para a subscrição.
 
-| Propriedade          | Tipo | Descrição                                                                         |
+| Propriedade          | Tipo | Description                                                                         |
 |-------------------|--------|-------------------------------------------------------------------------------------|
 | ID | string | O identificador de direitos |
 | nome amigável      | string | O nome amigável do direito. |

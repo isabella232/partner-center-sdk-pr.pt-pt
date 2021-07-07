@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 9d5ec9172ed92d33e6ff291eafd523cbc13bfbbd
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 27a2391a22a9439461fb53764b87c1cafa68b875
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769092"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873892"
 ---
 # <a name="get-a-list-of-skus-for-a-product-by-country"></a>Obter uma lista de SKUs para um produto (por país)
-
-**Aplica-se a:**
-
-- Partner Center
 
 Você pode obter uma coleção de SKUs disponíveis em um país para um produto específico usando APIs partner Center.
 
@@ -126,10 +122,10 @@ Utilize os seguintes parâmetros de percurso e consulta para obter uma lista de 
 
 | Nome                   | Tipo     | Necessário | Descrição                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-| id produto             | string   | Sim      | Uma corda que identifica o produto.                           |
-| código de país           | string   | Sim      | Uma identificação país/região.                                            |
+| id produto             | string   | Yes      | Uma corda que identifica o produto.                           |
+| código de país           | string   | Yes      | Uma identificação país/região.                                            |
 | segmento-alvo         | cadeia (de carateres)   | No       | Uma corda que identifica o segmento alvo utilizado para a filtragem. |
-| reservationScope | cadeia (de carateres)   | No | Ao consultar uma lista de SKUs para um produto de Reserva Azure, especifique `reservationScope=AzurePlan` para obter uma lista de SKUs que são aplicáveis ao AzurePlan. Exclua este parâmetro para obter uma lista de SKUs para um produto Azure Reservation que são aplicáveis às subscrições do Microsoft Azure (MS-AZR-0145P).  |
+| reservationScope | cadeia (de carateres)   | No | Ao consultar uma lista de SKUs para um produto Azure Reservation, especifique `reservationScope=AzurePlan` para obter uma lista de SKUs que são aplicáveis ao AzurePlan. Exclua este parâmetro para obter uma lista de SKUs para produtos Azure Reservation que são aplicáveis às assinaturas Microsoft Azure (MS-AZR-0145P).  |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -151,7 +147,7 @@ MS-RequestId: 18b41adf-29b5-48eb-b14f-c9683a4e5b7d
 MS-CorrelationId: e75c1060-852e-4b49-92b0-cd15167a0d51
 ```
 
-Obtenha uma lista de SKUs para um produto Azure Reservation. Apenas incluem as SKUs aplicáveis aos planos Azure e não as subscrições da Microsoft Azure (MS-AZR-0145P):
+Obtenha uma lista de SKUs para um produto Azure Reservation. Apenas incluem as SKUs aplicáveis aos planos Azure e não Microsoft Azure (MS-AZR-0145P) subscrições:
 
 ```http
 GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ5S/skus?country=US&reservationScope=AzurePlan HTTP/1.1
@@ -161,7 +157,7 @@ MS-RequestId: 18b41adf-29b5-48eb-b14f-c9683a4e5b7d
 MS-CorrelationId: e75c1060-852e-4b49-92b0-cd15167a0d51
 ```
 
-Obtenha uma lista de SKUs para um produto Azure Reservation. Apenas incluem os SKUs aplicáveis às subscrições do Microsoft Azure (MS-AZR-0145P) e não os planos Azure:
+Obtenha uma lista de SKUs para um produto Azure Reservation. Apenas incluem os SKUs aplicáveis às assinaturas Microsoft Azure (MS-AZR-0145P) e não planos Azure:
 
 ```http
 GET http://api.partnercenter.microsoft.com/v1/products/DZH318Z0BQ5S/skus?country=US HTTP/1.1
@@ -181,7 +177,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                                               |
+| Código de Estado HTTP     | Código de erro   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Não é permitido o acesso ao objetivo solicitado.                                                     |
 | 404                  | 400013       | O produto-mãe não foi encontrado.                                                                         |

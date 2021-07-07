@@ -1,30 +1,26 @@
 ---
-title: Obter uma política de self-service por ID
+title: Obtenha uma política de autosserviço por ID
 description: Obtém a política de autosserviço especificada utilizando o seu ID.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: ec01d0d9b7c3858cdacf1dbaad3b2b0bb7b6a1a4
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 074d7ba65c7aab91687a67f50e871cee913fc2bb
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769086"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873841"
 ---
-# <a name="get-a-self-serve-policy-by-id"></a>Obter uma política de self-service por ID
-
-**Aplica-se a**
-
-- Partner Center
+# <a name="get-a-self-serve-policy-by-id"></a>Obtenha uma política de autosserviço por ID
 
 Obtém a política de autosserviço especificada utilizando o seu ID.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com credenciais app+utilizador.
-- Uma identificação de autosserviço da política.
+- Uma identificação de política de autosserviço.
 
 ## <a name="examples"></a>Exemplos
 
@@ -43,11 +39,11 @@ Utilize os seguintes parâmetros de trajetória para obter o produto especificad
 
 | Nome                       | Tipo         | Necessário | Descrição                                                     |
 |----------------------------|--------------|----------|-----------------------------------------------------------------|
-| **SelfServePolicy-id**     | **cadeia**   | Sim      | Uma corda que identifica a política de autosserviço.                 |
+| **SelfServePolicy-id**     | **string**   | Yes      | Uma corda que identifica a política de autosserviço.                 |
 
-**Cabeçalhos do pedido**
+**Pedido de cabeçalhos**
 
-- Consulte [os Cabeçalhos](headers.md) para obter mais informações.
+- Para obter mais informações, consulte [Headers](headers.md).
 
 **Corpo de pedido**
 
@@ -73,7 +69,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                |
+| Código de Estado HTTP     | Código de erro   | Description                                                                |
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 404                  | 600039       | A política de autosserviço não encontrada.                                                     |
 

@@ -4,18 +4,14 @@ description: Compreenda as APIs REST que o ajudam a impor a autenticação de v�
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.date: 05/29/2020
-ms.openlocfilehash: dcd3ac364e0d86ecac2c51eb34de48f1d66e2158
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: cbdf081f7d9424280e778364b130c7ac1c26f0e3
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769223"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445328"
 ---
 # <a name="partner-security-requirements-status"></a>Estado dos requisitos de segurança dos parceiros
-
-Aplica-se a:
-
-- Partner Center
 
 Este artigo descreve listas as APIs REST relacionadas com a autenticação de vários fatores (MFA) no Partner Center. Estas APIs ajudam-no a impor MFA para cada conta de utilizador no seu inquilino parceiro. 
 

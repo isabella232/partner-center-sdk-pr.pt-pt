@@ -4,21 +4,16 @@ description: Suspende um recurso de Subscrição que corresponda ao ID do client
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f351c87efe2bdc810a66c64a9d01b7d376f8a6e3
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 7dae7c3422a403c48a2b10424c4ae5dbdbc498ea
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769596"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547347"
 ---
 # <a name="suspend-a-subscription"></a>Suspender uma subscrição
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Suspende um recurso [de Subscrição](subscription-resources.md) que corresponda ao ID do cliente e subscrição devido a fraude ou não pagamento.
 
@@ -48,7 +43,7 @@ updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).Subsc
    });
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

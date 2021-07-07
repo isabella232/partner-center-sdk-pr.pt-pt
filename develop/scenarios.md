@@ -1,26 +1,21 @@
 ---
 title: Cenários de API do Centro Parceiro
-description: Saiba como os parceiros do programa Cloud Solution Provider podem usar a API do Partner Center para gerir programáticamente contas de clientes, encomendas, suporte e faturação.
+description: Saiba como Fornecedor de Soluções em Nuvem parceiros de programas podem usar a API do Partner Center para gerir programáticamente contas de clientes, encomendas, suporte e faturação.
 ms.date: 10/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 14dbd501e3d075c3880fae6f362feef797cba133
-ms.sourcegitcommit: 8a5c37376a29e29fe0002a980082d4acc6b91131
+ms.openlocfilehash: d74400a975323d5f0f276dbdece3621d8b47a609
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "97769956"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547483"
 ---
 # <a name="partner-center-api-scenarios-that-let-you-programmatically-manage-customer-accounts"></a>Cenários de API do Partner Center que lhe permitem gerir programaticamente as contas dos clientes
 
-**Aplica-se a:**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Este artigo descreve algumas das formas como os parceiros no programa Cloud Solution Provider podem usar a API do Partner Center para gerir programáticamente áreas como:
+Este artigo descreve algumas das formas como os parceiros no programa Fornecedor de Soluções em Nuvem podem usar a API do Partner Center para gerir programáticamente áreas como:
 
 - Contas de clientes
 - Encomendas

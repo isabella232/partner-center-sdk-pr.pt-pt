@@ -4,20 +4,16 @@ description: Como recuperar um URL de pedido de relacionamento para enviar a um 
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 5f899734b774ff460e005e20df8658275b2ce9d5
-ms.sourcegitcommit: d4e652e3b73c6137704d43d4a472cc5aa5549f11
+ms.openlocfilehash: 07804b36dfe0892cf8b531e0731188260c014f49
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "97770272"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547460"
 ---
 # <a name="retrieve-a-relationship-request-url"></a>Obter um URL de pedido de relação
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para Microsoft Cloud Germany
 
 Como recuperar um URL de pedido de relacionamento para enviar a um cliente.
 
@@ -35,7 +31,7 @@ Para recuperar um URL de pedido de relacionamento, utilize primeiro [**o IAggreg
 var customerRelationshipRequest = partnerOperations.Customers.RelationshipRequest.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetCustomerRelationshipRequest.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerRelationshipRequest.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -51,7 +47,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

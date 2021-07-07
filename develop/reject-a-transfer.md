@@ -4,18 +4,14 @@ description: Como rejeitar uma transferência de subscrições para um cliente.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e4a182ff92a21cf72ca1c2da9de7e211b433725f
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: d09905979a89c9b2092462512c485524cd681d5f
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768978"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445379"
 ---
 # <a name="reject-a-transfer"></a>Rejeitar uma transferência
-
-**Aplica-se a:**
-
-- Partner Center
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,8 +35,8 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente e especific
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
-| **transferência id** | string   | Sim      | Um id de transferência formatado GUID que identifica a transferência.             |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **transferência id** | string   | Yes      | Um id de transferência formatado GUID que identifica a transferência.             |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

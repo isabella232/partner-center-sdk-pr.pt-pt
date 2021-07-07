@@ -6,20 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: ba1885f46043a75274595239fe61ce3ef0998acf
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: f003980f1b521ad0ac26dbfd0d4821b9096fdd27
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769037"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873909"
 ---
 # <a name="get-a-usage-summary-for-a-partner"></a>Obtenha um resumo de utilização para um parceiro
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode utilizar o recurso **PartnerUsageSummary** para obter um resumo de utilização do parceiro de todos os clientes que adquiriram um serviço ou recurso Azure específico durante o período de faturação atual.
 
@@ -46,7 +42,7 @@ Para obter um resumo de utilização para todos os clientes que adquiriram um se
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **GetPartnerUsageSummary.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO

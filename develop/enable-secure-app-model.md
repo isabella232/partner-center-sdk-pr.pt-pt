@@ -6,20 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-csp
 author: aarzh-AaronZhang
 ms.author: v-aarzh
-ms.openlocfilehash: 3e153e1e7d4e38580d8cb39a3996e56365ff5fbe
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 5d35c0512ba8edcf3742ee69d38c699a9a8c16d2
+ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769302"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111906406"
 ---
 # <a name="enabling-the-secure-application-model-framework"></a>Enabling the Secure Application Model framework (Ativar a arquitetura do Modelo de Aplicação Segura)
 
-**Aplica-se a:**
-
-- Partner Center
-
-A Microsoft está a introduzir um quadro seguro e escalável para autenticar parceiros de soluções de nuvem (CSP) e fornecedores de painéis de controlo (CPV) através da arquitetura de autenticação multi-factor (MFA) do Microsoft Azure.
+A Microsoft está a introduzir uma estrutura segura e escalável para autenticar parceiros de soluções de nuvem (CSP) e fornecedores de painéis de controlo (CPV) através da arquitetura de autenticação multi-factor (MFA) Microsoft Azure Ative Directory.
 
 Pode utilizar o novo modelo para elevar a segurança para chamadas de integração da API do Partner Center. Isto ajudará todas as partes (incluindo Microsoft, parceiros CSP e CPVs) a proteger as suas infraestruturas e dados dos clientes contra riscos de segurança.
 
@@ -94,7 +90,7 @@ Tem de criar e registar uma aplicação web no Partner Center antes de e fazer c
 
 5. Note as seguintes informações a partir das definições da sua aplicação web em Azure AD:
 
-   - ID da Aplicação
+   - ID da aplicação
    - Segredo da aplicação
 
 > [!NOTE]
@@ -177,7 +173,7 @@ Corpo de resposta:
 
 ### <a name="get-access-token"></a>Obter ficha de acesso
 
-Tem de obter um token de acesso antes de poder fazer chamadas para as APIs do Centro de Parceiros. Você deve usar um token de atualização para obter um token de acesso porque o token de acesso geralmente tem uma vida útil muito limitada (por exemplo, menos de uma hora).
+Tem de obter um token de acesso antes de poder fazer chamadas para as APIs do Centro de Parceiros. Você deve usar um token de atualização para obter um token de acesso porque os tokens de acesso geralmente têm uma vida útil muito limitada (por exemplo, menos de uma hora).
 
 Pedido de espaço reservado:
 

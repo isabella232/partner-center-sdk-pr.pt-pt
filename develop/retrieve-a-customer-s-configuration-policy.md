@@ -4,19 +4,16 @@ description: Como recuperar a política de configuração especificada para o cl
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8d5d4ee83d1a66f33872d8b1f1327f47eeb4465e
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: f9a8cb435c63d8d02c3b4633abc8723353116f37
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769788"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547500"
 ---
 # <a name="retrieve-a-customers-configuration-policy"></a>Obter a política de configuração de um cliente
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Como recuperar a política de configuração especificada para o cliente especificado.
 
@@ -41,7 +38,7 @@ ConfigurationPolicy retrievedConfigurationPolicy =
     partnerOperations.Customers.ById(selectedCustomerId).ConfigurationPolicies.ById(selectedConfigurationPolicyId).Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetConfigurationPolicy.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetConfigurationPolicy.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -57,8 +54,8 @@ Utilize os seguintes parâmetros de percurso e consulta ao criar o pedido.
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
-| id de política   | string | Sim      | Uma cadeia formatada por GUID que identifica a política.   |
+| id cliente | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| id de política   | string | Yes      | Uma cadeia formatada por GUID que identifica a política.   |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -66,7 +63,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

@@ -4,18 +4,14 @@ description: Obtém uma lista de recursos do CustomerUser eliminados para um cli
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9b1a9b85e3eba7ae7ec1dab8e951134d03371604
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: f4fec958a9a6bb580d35de1cf3007e1db3b2b650
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769535"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445311"
 ---
 # <a name="view-deleted-users-for-a-customer"></a>Ver utilizadores eliminados para um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Obtém uma lista de recursos do CustomerUser eliminados para um cliente por identificação do cliente. Pode configurar opcionalmente o tamanho da página. Deve fornecer um filtro.
 
@@ -27,7 +23,7 @@ Obtém uma lista de recursos do CustomerUser eliminados para um cliente por iden
 
 ## <a name="what-happens-when-you-delete-a-user-account"></a>O que acontece quando se apaga uma conta de utilizador?
 
-O estado do utilizador está definido para "inativo" quando apaga uma conta de utilizador. Permanece assim durante trinta dias, após o que a conta de utilizador e os seus dados associados são purgados e tornados irrecuperáveis. Se pretender restaurar uma conta de utilizador eliminada dentro da janela de trinta dias, consulte [Restaurar um utilizador eliminado para um cliente](restore-a-user-for-a-customer.md). Uma vez eliminada e marcada como "inativa", a conta de utilizador deixou de ser devolvida como membro da coleção de utilizadores (por exemplo, utilizando [a lista de todas as contas de utilizador para um cliente).](get-a-list-of-all-user-accounts-for-a-customer.md) Para obter uma lista de utilizadores eliminados que ainda não foram purgados, é necessário consultar as contas dos utilizadores que tenham sido definidas como inativas.
+O estado do utilizador está definido para "inativo" quando apaga uma conta de utilizador. Permanece assim durante 30 dias, após o que a conta de utilizador e os seus dados associados são purgados e tornados irrecuperáveis. Se pretender restaurar uma conta de utilizador eliminada dentro da janela de 30 dias, consulte [Restaurar um utilizador eliminado para um cliente](restore-a-user-for-a-customer.md). Uma vez eliminada e marcada como "inativa", a conta de utilizador deixou de ser devolvida como membro da coleção de utilizadores (por exemplo, utilizando [a lista de todas as contas de utilizador para um cliente).](get-a-list-of-all-user-accounts-for-a-customer.md) Para obter uma lista de utilizadores eliminados que ainda não foram purgados, é necessário consultar as contas dos utilizadores que tenham sido definidas como inativas.
 
 ## <a name="c"></a>C\#
 
@@ -47,7 +43,7 @@ var simpleQueryWithFilter = QueryFactory.Instance.BuildIndexedQuery(customerUser
 var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.Query(simpleQueryWithFilter);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetCustomerInactiveUsers.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerInactiveUsers.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -63,9 +59,9 @@ Utilize os seguintes parâmetros de percurso e consulta ao criar o pedido.
 
 | Nome        | Tipo   | Necessário | Descrição                                                                                                                                                                        |
 |-------------|--------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id cliente | guid   | Sim      | O valor é um id de cliente formatado GUID que identifica o cliente.                                                                                                            |
-| size        | int    | Não       | O número de resultados a apresentar ao mesmo tempo. Este parâmetro é opcional.                                                                                                     |
-| filter      | filter | Sim      | A consulta que filtra a procura do utilizador. Para recuperar os utilizadores eliminados, deve incluir e codificar a seguinte cadeia: {"Field":"UserState","Value":"Inative", "Operador":"igual"}. |
+| id cliente | guid   | Yes      | O valor é um id de cliente formatado GUID que identifica o cliente.                                                                                                            |
+| size        | int    | No       | O número de resultados a apresentar ao mesmo tempo. Este parâmetro é opcional.                                                                                                     |
+| filter      | filter | Yes      | A consulta que filtra a procura do utilizador. Para recuperar os utilizadores eliminados, deve incluir e codificar a seguinte cadeia: {"Field":"UserState","Value":"Inative", "Operador":"igual"}. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

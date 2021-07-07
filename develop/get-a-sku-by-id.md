@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 54ef72413d2d2b9e7154e82e4bbdd7427a79a2dd
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 9516a87a438a0a84a6f6069c1f9b2a2e97e90fba
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769091"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873858"
 ---
 # <a name="get-a-sku-by-id"></a>Obter um SKU por ID
-
-**Aplica-se a**
-
-- Partner Center
 
 Obtém um SKU para o produto especificado utilizando o ID SKU especificado.
 
@@ -57,9 +53,9 @@ Utilize os seguintes parâmetros de percurso e consulta para obter um SKU para o
 
 | Nome                   | Tipo     | Necessário | Descrição                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-| id produto             | string   | Sim      | Uma corda que identifica o produto.                           |
-| sku-id                 | string   | Sim      | Uma corda que identifica o SKU.                               |
-| código de país           | string   | Sim      | Uma identificação país/região.                                            |
+| id produto             | string   | Yes      | Uma corda que identifica o produto.                           |
+| sku-id                 | string   | Yes      | Uma corda que identifica o SKU.                               |
+| código de país           | string   | Yes      | Uma identificação país/região.                                            |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -93,7 +89,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                                               |
+| Código de Estado HTTP     | Código de erro   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 404                  | 400013       | O produto não foi encontrado.                                                                                    |
 | 404                  | 400018       | Sku não foi encontrado.                                                                                        |

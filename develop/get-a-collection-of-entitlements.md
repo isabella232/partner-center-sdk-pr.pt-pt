@@ -4,18 +4,14 @@ description: Como obter uma coleção de direitos.
 ms.date: 01/28/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d2cc485429941dd2080bd285553333a01fc0ffd1
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 7bb8d3aefb11fae0af4bce790b41598d935de57c
+ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769290"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111906417"
 ---
 # <a name="get-a-collection-of-entitlements"></a>Obter uma coleção de elegibilidade
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter uma coleção de direitos.
 
@@ -56,9 +52,9 @@ Utilize os seguintes parâmetros de percurso e consulta ao criar o pedido.
 
 | Nome | Tipo | Necessário | Descrição |
 |------|------|----------|-------------|
-| customerId | string | Sim | Um cliente formatado GUIDId que identifica o cliente. |
+| customerId | string | Yes | Um cliente formatado GUIDId que identifica o cliente. |
 | DireitoTipo | cadeia (de carateres) | No | Pode ser usado para especificar o tipo de direitos a recuperar **(software** ou **reservaInstance).** Se não estiver definido, todos os tipos serão recuperados |
-| showExpiry | boolean | Não | Bandeira opcional que indica se são necessárias datas de validade dos direitos. |
+| showExpiry | boolean | No | Bandeira opcional que indica se são necessárias datas de validade dos direitos. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -307,7 +303,7 @@ Os exemplos que se seguem mostram-lhe como recuperar informações sobre produto
 
 ### <a name="c-example"></a>Exemplo \# C
 
-Para obter mais detalhes relacionados com as reservas de máquinas virtuais a partir de um direito, invoque o URI exposto sob o título "Artifacts.link with artifactType = virtual_machine_reserved_instance .
+Para obter mais detalhes relacionados com as reservas de máquinas virtuais a partir de um direito, invoque o URI exposto sob entitledArtifacts.link com artefactoType = virtual_machine_reserved_instance.
 
 ``` csharp
 ResourceCollection<Entitlement> entitlements = partnerOperations.Customers.ById(selectedCustomerId).Entitlements.ByEntitlementType("VirtualMachineReservedInstance").Get();

@@ -4,21 +4,16 @@ description: Configurar contas para o desenvolvimento contra o Partner Center SD
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 873ff2ff9cecbfa92429958d3bfe2aa79fc3ad9a
-ms.sourcegitcommit: d5de47c08ba661ba5de4935caa6843d7c2c91710
+ms.openlocfilehash: 2c564baa9b626ff6ce21f9bcc517902d7cf99244
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "97769416"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547432"
 ---
 # <a name="set-up-api-access-in-partner-center"></a>Set up API access in Partner Center (Configurar o acesso da API no Centro de Parceiros)
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros do Microsoft Cloud for US Government
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para Microsoft Cloud for US Government | Centro de Parceiros para Microsoft Cloud Germany
 
 Este artigo descreve as contas que precisa de desenvolver contra o Partner Center SDK. Este artigo também explica como criar uma [conta de caixa de areia de integração](#integration-sandbox-account) e testar na caixa de areia de integração.
 
@@ -64,7 +59,7 @@ Esta secção descreve como configurar uma conta principal do Parceiro e uma con
 
 5. Depois de ver a mensagem de confirmação, inscreva-se no Partner Dashboard.
 
-6. Volte a entrar com a sua nova conta de administração de caixas de areia de integração. Certifique-se de que utiliza o formato **username@domain** para as suas credenciais juntamente com a palavra-passe que acabou de especificar.
+6. Volte a entrar com a sua nova conta de administração de caixas de areia de integração. Certifique-se de que utiliza o formato **username@domain** para as suas credenciais juntamente com a palavra-passe que especificou.
 
 7. Escolha **Configurar conta** acima **das tarefas correntes** para completar a configuração da conta de caixa de areia.
 

@@ -1,27 +1,23 @@
 ---
-title: Obtenha os códigos de validação da Cloud comunitária do governo de um parceiro
-description: Como obter os códigos de validação da Cloud comunitária do governo de um parceiro.
+title: Obtenha os códigos de validação Nuvem da Comunidade Governamental de um parceiro
+description: Como obter os códigos de validação Nuvem da Comunidade Governamental de um parceiro.
 ms.date: 11/08/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khakiali
 ms.author: alikhaki
-ms.openlocfilehash: d84a3d3c69d835e42565c4e6f1edb06ab338340a
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 04bccf587628337004a5825b534048945f791839
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769284"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873875"
 ---
 # <a name="get-a-partners-validation-codes"></a>Obter os códigos de validação de um parceiro
 
-**Aplica-se a**
+Este artigo descreve como obter uma coleção de códigos de validação Nuvem da Comunidade Governamental de um parceiro. Um código de validação é necessário para criar um cliente na nuvem comunitária do governo.
 
-- Partner Center
-
-Como obter uma coleção de códigos de validação da Comunidade comunitária de um parceiro. Um código de validação é necessário para criar um cliente na nuvem comunitária do governo.
-
-Se estiver interessado em ter a sua organização ou organização de clientes aprovada para o Office 365 Government GCC para cSP, consulte [Office 365 Government GCC for CSP Partner and Customer Eligibility Criteria/partner-center/csp-gcc-validate).
+Se estiver interessado em ter a sua organização ou organização do seu cliente aprovada para Office 365 Administração Pública GCC para CSP, consulte [Office 365 Administração Pública GCC para critérios de elegibilidade do CSP Partner e do Cliente.](/partner-center/csp-gcc-validate)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

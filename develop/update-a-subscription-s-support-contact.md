@@ -4,20 +4,16 @@ description: Como atualizar o contacto de suporte de uma subscrição a um dos r
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c8c6b658cfe6e14c75b0c06b177920ce3eb1b4ed
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 8c89f91fc9e89384a7be1237c08d7a9a1cfe3164
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769589"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530366"
 ---
 # <a name="update-a-subscriptions-support-contact"></a>Atualizar o contacto de suporte de uma subscrição
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como atualizar o contacto de suporte de uma subscrição a um dos revendedores de valor acrescentado do parceiro.
 
@@ -52,7 +48,7 @@ var supportContact = new SupportContact()
 var updatedSupportContact = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionID).SupportContact.Update(supportContact);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: UpdateSubscriptionSupportContact.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: UpdateSubscriptionSupportContact.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -68,8 +64,8 @@ Utilize os seguintes parâmetros de percurso para identificar o cliente e a subs
 
 | Nome            | Tipo   | Necessário | Descrição                                                     |
 |-----------------|--------|----------|-----------------------------------------------------------------|
-| id cliente     | string | Sim      | Uma cadeia formatada GUID que identifica o cliente.           |
-| id de subscrição | string | Sim      | Uma cadeia formatada GUID que identifica a subscrição do ensaio. |
+| id cliente     | string | Yes      | Uma cadeia formatada GUID que identifica o cliente.           |
+| id de subscrição | string | Yes      | Uma cadeia formatada GUID que identifica a subscrição do ensaio. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

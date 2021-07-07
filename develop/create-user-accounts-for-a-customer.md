@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 9131a1c4c37d07b1994b67379ec8361fda13a371
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: d086d7ba72c9d9e42dc88684ddeafc9a597bfd7c
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768809"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973388"
 ---
 # <a name="create-user-accounts-for-a-customer"></a>Criar contas de utilizador para um cliente
-
-**Aplica-se a:**
-
-- Partner Center
 
 Crie uma nova conta de utilizador para o seu cliente.
 
@@ -55,7 +51,7 @@ var userToCreate = new CustomerUser()
 User createdUser = partnerOperations.Customers.ById(selectedCustomerId).Users.Create(userToCreate);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: CustomerUserCreate.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerUserCreate.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -71,7 +67,7 @@ Utilize os seguintes parâmetros de consulta para identificar o cliente correto.
 
 | Nome | Tipo | Necessário | Descrição |
 |----- |----- | -------- |------------ |
-| **cliente-inquilino-id** | **guid** | Y | O valor é um **design de cliente-inquilino formatado** guid. Permite ao revendedor filtrar os resultados de um determinado cliente que pertence ao revendedor. |
+| **cliente-inquilino-id** | **guid** | Y | O valor é um **design de cliente-inquilino-inquilino-inquilino formatado** guid. Permite ao revendedor filtrar os resultados de um determinado cliente que pertence ao revendedor. |
 | **id utilizador** | **guid** | N | O valor é um **id de utilizador** formatado GUID que pertence a uma única conta de utilizador. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido

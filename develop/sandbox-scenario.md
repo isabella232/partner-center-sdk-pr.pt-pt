@@ -4,21 +4,16 @@ description: A caixa de areia do parceiro tem capacidade de suportar relações 
 ms.date: 05/01/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9bef4a15685ebbdc2212988f5ac5724b946cfd54
-ms.sourcegitcommit: 1aeaa12705a5945b8aab6bca254fedebd9c8bc4e
+ms.openlocfilehash: aa6c4fb9ef71bacfad7e0f1510fec15f6af60a05
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "110243389"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547398"
 ---
 # <a name="sandbox-capabilities-for-reseller-relationship"></a>Capacidades de caixa de areia para relacionamento revendedor
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo explica o que é suportado na Caixa de Areia para relações de revendedor entre o parceiro e o cliente. 
 
@@ -35,7 +30,7 @@ Este artigo explica o que é suportado na Caixa de Areia para relações de reve
 
 3. Sandbox Direct Bill Partner e Fornecedores Indiretos são capazes de remover a relação de revendedor do Partner Center UI e API.
 
-4. Sandbox Remove Reseller Relationship vai ligar para Eliminar o cliente AP. Isto removerá a relação assim como eliminará o inquilino do cliente. {baseURL}/v1/Clientes/{cliente-Tenant-id}
+4. Sandbox Remove Reseller Relationship vai ligar para Eliminar o cliente AP. Isto removerá a relação e eliminará o inquilino do cliente. {baseURL}/v1/Clientes/{cliente-Tenant-id}
 
 
     ### <a name="in-the-sandbox"></a>Na Caixa de Areia
@@ -56,7 +51,7 @@ Este artigo explica o que é suportado na Caixa de Areia para relações de reve
 
     **Revendedor indireto:** 
 
-    -   Pode ter uma relação com os clientes existentes
+    -   Pode ter relações com clientes existentes
 
     -   Não é possível solicitar novos relacionamentos ou adicionar novos clientes
 

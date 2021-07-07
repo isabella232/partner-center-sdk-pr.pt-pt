@@ -4,21 +4,16 @@ description: Atualiza o perfil de suporte de um utilizador.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 605c509eeb18f301144fec6287c9611d5a5acfe2
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 143328c5501f525d52911eead805d420f79b78ff
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769595"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530349"
 ---
 # <a name="update-support-profile"></a>Atualizar perfil de suporte
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza o perfil de suporte de um utilizador.
 
@@ -44,7 +39,7 @@ SupportProfile newSupportProfile = new SupportProfile
 SupportProfile updatedSupportProfile = partnerOperations.Profiles.SupportProfile.Update(newSupportProfile);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateSupportProfile.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: UpdateSupportProfile.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

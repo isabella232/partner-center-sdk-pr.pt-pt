@@ -4,27 +4,23 @@ description: Como adquirir itens de catálogo utilizando a API do Partner Center
 ms.date: 07/12/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f2b3a34cdb6b29cb7eaaf5d977e4588f538fff09
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: d3e0deedff194b1c836d9266c2201a2b3a52cc1b
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768882"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445362"
 ---
 # <a name="purchase-catalog-items"></a>Comprar itens do catálogo
-
-**Aplica-se a**
-
-- Partner Center
 
 O seguinte cenário demonstra o processo genérico de compra de artigos do catálogo através da API do Partner Center.
 
 ## <a name="discovery"></a>Deteção
 
-Selecione produtos e SKUs e verifique a sua disponibilidade utilizando os seguintes modelos API do Partner Center:
+Selecione produtos e Unidades de Armazenamento (SKUs) e verifique a sua disponibilidade utilizando os seguintes modelos API do Partner Center:
 
 - [Produto](product-resources.md#product) - Uma construção de agrupamento para bens ou serviços puriáveis. Um produto por si só não é um item purivel.
-- [SKU](product-resources.md#sku) - Uma unidade de armazenamento de stock (SKU) em baixo de um produto. Estes representam as diferentes formas do produto.
+- [SKU](product-resources.md#sku) - Um SKU purável sob um produto. Estes representam as diferentes formas do produto.
 - [Disponibilidade](product-resources.md#availability) - Uma configuração na qual um SKU está disponível para compra (como país, moeda e segmento da indústria).
 
 Para adquirir um artigo no catálogo, complete os seguintes passos:

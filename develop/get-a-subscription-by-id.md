@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 6690a6886eeb31a78cdb556280d4bdc2b4beb124
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 75f21a3f76e5502ba40b89995aa26bd0e668b3fa
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769626"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873824"
 ---
 # <a name="get-a-subscription-by-id"></a>Obter uma subscrição por ID
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém um recurso [de subscrição](subscription-resources.md) que corresponda ao ID do cliente e ao ID de subscrição.
 
@@ -44,7 +39,7 @@ Para obter uma subscrição por ID, comece por obter uma interface para as opera
 var subscriptionDetails = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(subscriptionID).Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetSubscription.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetSubscription.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

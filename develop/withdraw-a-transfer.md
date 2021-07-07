@@ -4,18 +4,14 @@ description: Como retirar uma transferência criada de subscrições para um cli
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a9e1e2a33d21fc1338a36b8ac96b528e70b61c86
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 3c15cf09b4e466e178c7afb5f9d324fe1199418e
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768702"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445209"
 ---
 # <a name="withdraw-a-transfer"></a>Retirar uma transferência
-
-**Aplica-se a:**
-
-- Partner Center
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,8 +35,8 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
-| **transferência id** | string   | Sim      | Um id de transferência formatado GUID que identifica a transferência.             |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **transferência id** | string   | Yes      | Um id de transferência formatado GUID que identifica a transferência.             |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

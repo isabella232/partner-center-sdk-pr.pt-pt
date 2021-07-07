@@ -4,20 +4,16 @@ description: Como comprar um suplemento a uma subscrição existente.
 ms.date: 11/29/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 975a2516bccdc6274bfec5d6a3286a649fc4f808
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: d8b700a2ad41a37ca0ad745f3e7767449974b18a
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769656"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547687"
 ---
 # <a name="purchase-an-add-on-to-a-subscription"></a>Comprar um suplemento para uma subscrição
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para Microsoft Cloud for US Government
 
 Como comprar um suplemento a uma subscrição existente.
 
@@ -33,7 +29,7 @@ Como comprar um suplemento a uma subscrição existente.
 
 ## <a name="purchasing-an-add-on-through-code"></a>Compra de um código add-on através
 
-Ao adquirir um complemento a uma subscrição está a atualizar a ordem de subscrição original com a encomenda para o add-on. No seguinte, customerId é o ID do cliente, subscriçãoId é o ID de subscrição, e addOnOfferId é o ID de oferta para o add-on.
+Ao adquirir um complemento a uma subscrição, está a atualizar a ordem de subscrição original com a encomenda para o add-on. No seguinte, customerId é o ID do cliente, subscriçãoId é o ID de subscrição, e addOnOfferId é o ID de oferta para o add-on.
 
 Eis os passos:
 
@@ -43,7 +39,7 @@ Eis os passos:
     var subscriptionOperations = partnerOperations.Customers.ById(customerId).Subscriptions.ById(subscriptionId);
     ```
 
-2.  Utilize essa interface para instantaneaizar um objeto de subscrição. Isto dá-lhe os detalhes da subscrição dos pais, incluindo o id do pedido.
+2.  Utilize essa interface para instantaneaizar um objeto de subscrição. Isto dá-lhe os detalhes da subscrição dos pais, incluindo o ID da encomenda.
 
     ``` csharp
     var parentSubscription = subscriptionOperations.Get();
@@ -75,7 +71,7 @@ Eis os passos:
 
 ## <a name="c"></a>C\#
 
-Para adquirir um addon, comece por obter uma interface para as operações de subscrição, ligando para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o ID do cliente para identificar o cliente, e o método [**Subscrições.ById**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) para identificar a subscrição que tem a oferta adicional. Utilize essa [**interface**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) para recuperar os detalhes da subscrição chamando [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.get). Por que precisa dos detalhes da subscrição? Porque precisa do pedido de identificação da ordem de subscrição. Esta é a ordem para ser atualizado com o addon.
+Para adquirir um addon, comece por obter uma interface para as operações de subscrição, ligando para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o ID do cliente para identificar o cliente, e o método [**Subscrições.ById**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) para identificar a subscrição que tem a oferta adicional. Utilize essa [**interface**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription) para recuperar os detalhes da subscrição chamando [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.get). Os detalhes da subscrição contêm o ID de encomenda da ordem de subscrição, que é a ordem a ser atualizada com o addon.
 
 Em seguida, instantânea um novo objeto [**de Encomenda**](/dotnet/api/microsoft.store.partnercenter.models.orders.order) e povoa-o com uma única instância [**LineItem**](/dotnet/api/microsoft.store.partnercenter.models.orders.orderlineitem) que contém a informação para identificar o addon, como mostrado no seguinte corte de código. Utilizará este novo objeto para atualizar a ordem de subscrição com o addon. Por fim, ligue para o método [**Patch**](/dotnet/api/microsoft.store.partnercenter.orders.iorder.patch) para atualizar a ordem de subscrição, depois de primeiro identificar o cliente com [**iAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) e a encomenda com [**Encomendas.ById**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.byid).
 
@@ -113,7 +109,7 @@ var orderToUpdate = new Order()
 Order updatedOrder = partnerOperations.Customers.ById(customerId).Orders.ById(parentSubscription.OrderId).Patch(orderToUpdate);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: AddSubscriptionAddOn.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: AddSubscriptionAddOn.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

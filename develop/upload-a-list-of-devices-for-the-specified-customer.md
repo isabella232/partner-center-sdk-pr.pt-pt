@@ -4,19 +4,16 @@ description: Como enviar uma lista de informações sobre dispositivos para um l
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d01ac1a42c50416487167070be9d104562300baf
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 3fa9cff39113130c54cecfaef1f8ca28e0ac5adf
+ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769745"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111530315"
 ---
 # <a name="upload-a-list-of-devices-to-an-existing-batch-for-the-specified-customer"></a>Carregar uma lista de dispositivos para um lote existente para o cliente especificado
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Como enviar uma lista de informações sobre dispositivos para um lote existente para o cliente especificado. Isto associa os dispositivos a um lote de dispositivo já criado.
 
@@ -74,7 +71,7 @@ var trackingLocation =
     partnerOperations.Customers.ById(selectedCustomerId).DeviceBatches.ById(selectedDeviceBatchId).Devices.Create(devicesToBeUploaded);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: CreateDevices.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CreateDevices.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -90,8 +87,8 @@ Utilize os seguintes parâmetros de percurso e consulta ao criar o pedido.
 
 | Nome           | Tipo   | Necessário | Descrição                                           |
 |----------------|--------|----------|-------------------------------------------------------|
-| id cliente    | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
-| devicebatch-id | string | Sim      | Um identificador de cordas que identifica o lote do dispositivo. |
+| id cliente    | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| devicebatch-id | string | Yes      | Um identificador de cordas que identifica o lote do dispositivo. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

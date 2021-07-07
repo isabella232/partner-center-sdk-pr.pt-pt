@@ -1,26 +1,21 @@
 ---
 title: Fornecer suporte
-description: Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Centro de Parceiros para gerir programaticamente pedidos de suporte e serviço.
+description: Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parceiros podem usar o Centro de Parceiros para gerir programaticamente pedidos de suporte e serviço.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 71bcd766c14554112f63f4e063a6f9a2f35b1228
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 6b8c8c846ab0e1d8669cc296c2490c921526a62c
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769488"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547713"
 ---
 # <a name="provide-support"></a>Fornecer suporte
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para gerir programaticamente pedidos de suporte e serviço.
+Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parceiros podem usar o Partner Center para gerir programaticamente pedidos de suporte e serviço.
 
 ## <a name="admin-services-for-a-customer"></a>Serviços de administração para um cliente
 

@@ -4,18 +4,14 @@ description: Compreenda detalhes de autenticação de vários fatores (MFA) para
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.date: 05/29/2020
-ms.openlocfilehash: 5eb77c3c10e95c9dc835cfe05e014b9256531b51
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: b41a0e46fa6e0643e82a5a2dbfb7141f54a0f824
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768852"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445549"
 ---
 # <a name="partner-security-requirements-resources"></a>Recursos de requisitos de segurança dos parceiros
-
-**Aplica-se a:**
-
-- Partner Center
 
 Este artigo ajuda-o a compreender detalhes de adoção de autenticação de vários fatores (MFA), para ajudar a sua organização a cumprir o estatuto de requisito de segurança do parceiro. 
 
@@ -33,9 +29,9 @@ Indicar um utilizador que acede ao portal Partner Center sem autenticação MFA.
 
 ## <a name="api-request-summarized-by-application"></a>Pedido de API resumido por Aplicação
 
-Um resumo do pedido de API feito pela APP + Credencial do Utilizador, agregado por data de pedido e Id de aplicação.
+Um resumo do pedido de API feito pela APP + Credencial do utilizador, agregado por data de pedido e ID de aplicação.
 
-| Propriedade                            | Tipo            | Descrição               |
+| Propriedade                            | Tipo            | Description               |
 |-------------------------------------|-----------------|---------------------------|
 | LoginDate                           | datetime        | Data de pedido da API          |
 | MfaCompliantRequestCount            | long            | Contagem de pedidos com MFA    |
@@ -48,7 +44,7 @@ Um resumo do pedido de API feito pela APP + Credencial do Utilizador, agregado p
 
 Pedido de API feito pela APP + Credencial do Utilizador. 
 
-| Propriedade                            | Tipo            | Descrição                              |
+| Propriedade                            | Tipo            | Description                              |
 |-------------------------------------|-----------------|------------------------------------------|
 | RequestId                           | string          | MS-RequestId                             |
 | CorrelationId                       | string          | MS-CorrelationId                         |
