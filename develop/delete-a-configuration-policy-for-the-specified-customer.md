@@ -4,19 +4,16 @@ description: Como eliminar uma política de configuração para um cliente espec
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 586878367fc0873ef0fb1415799b2b7022954053
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 2d6a7d392bd6af6850eb7716528e6745943bb7bb
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769391"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973031"
 ---
 # <a name="delete-a-configuration-policy-for-the-specified-customer"></a>Eliminar uma política de configuração para o cliente especificado
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Como eliminar uma política de configuração para um cliente especificado e identificador de política.
 
@@ -46,7 +43,7 @@ string selectedPolicyId;
 partnerOperations.Customers.ById(selectedCustomerId).ConfigurationPolicies.ById(selectedPolicyId).Delete();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: DeleteConfigurationPolicy.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: DeleteConfigurationPolicy.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -62,8 +59,8 @@ Utilize os seguintes parâmetros de trajetória ao criar o pedido.
 
 | Nome        | Tipo   | Necessário | Descrição                                                   |
 |-------------|--------|----------|---------------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente.         |
-| id de política   | string | Sim      | Uma cadeia formatada por GUID que identifica a política de eliminar. |
+| id cliente | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente.         |
+| id de política   | string | Yes      | Uma cadeia formatada por GUID que identifica a política de eliminar. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -71,7 +68,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

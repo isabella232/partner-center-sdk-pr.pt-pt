@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 0a39d7142e5bf97f9fb345416964d4ed6bb935ad
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 2cb2822935113fe1c5337b4ffc899fccff333d2f
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769871"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760186"
 ---
 # <a name="get-an-order-by-id"></a>Obter encomenda por ID
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém um recurso [de Encomenda](order-resources.md) que corresponda ao cliente e encomende iD de encomenda.
 
@@ -49,7 +44,7 @@ Para obter uma encomenda de um cliente por ID:
 var order = partnerOperations.Customers.ById(selectedCustomerId).Orders.ById(selectedOrderId).Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: GetOrder.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetOrder.cs
 
 ## <a name="java"></a>Java
 
@@ -97,8 +92,8 @@ Esta tabela lista os parâmetros de consulta necessários para obter uma encomen
 
 | Nome                   | Tipo     | Necessário | Descrição                                            |
 |------------------------|----------|----------|--------------------------------------------------------|
-| cliente-inquilino-id     | string   | Sim      | Uma cadeia formatada GUID correspondente ao cliente. |
-| id-for-order           | string   | Sim      | Uma corda correspondente à identificação da ordem.                |
+| cliente-inquilino-id     | string   | Yes      | Uma cadeia formatada GUID correspondente ao cliente. |
+| id-for-order           | string   | Yes      | Uma corda correspondente à identificação da ordem.                |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

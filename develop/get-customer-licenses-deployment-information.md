@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 3a39c6c908048305ff2dabf85a29d7ddc3628500
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 91fe9da185aa59025d4dc8263257b207edb4a5be
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769854"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446467"
 ---
 # <a name="get-customer-licenses-deployment-information"></a>Obter informações de implementação de licenças do cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter insights de implementação de licenças para um cliente específico.
 
@@ -53,7 +49,7 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome        | Tipo | Necessário | Descrição                                                |
 |-------------|------|----------|------------------------------------------------------------|
-| id cliente | guid | Sim      | Um id de cliente formatado GUID que identifica o cliente. |
+| id cliente | guid | Yes      | Um id de cliente formatado GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

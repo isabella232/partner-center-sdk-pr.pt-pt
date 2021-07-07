@@ -4,19 +4,16 @@ description: As funcionalidades de implementação do dispositivo API do Partner
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 72292ee59955bb35be7ad9d59789a3e109d5f7ec
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 46fd8b53d6d42816d498103192122a81b5f6564f
+ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768774"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111906488"
 ---
 # <a name="device-deployment"></a>Implementação de dispositivos
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 As APIs do Partner Center fornecem acesso a funcionalidades de implementação de toque zero para que possa simplificar a configuração segura do dispositivo para os seus clientes.
 

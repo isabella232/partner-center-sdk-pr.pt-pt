@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: c281dcdeb93771a69a388ad64e1127b24156c809
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 7fe987c7dc50d55b26cd72d5aead52963eb1cfbe
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769440"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760220"
 ---
 # <a name="get-all-azure-usage-analytics-information"></a>Obter todas as informações de análise de utilização do Azure
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter todas as informações de análise de uso da Azure para os seus clientes.
 
@@ -38,14 +33,14 @@ Como obter todas as informações de análise de uso da Azure para os seus clien
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 
-|Parâmetro        |Tipo                        |Descrição               |
+|Parâmetro        |Tipo                        |Description               |
 |:----------------|:---------------------------|:-------------------------|
 |top              | string                     | O número de filas de dados a devolver no pedido. O valor máximo e o valor predefinido se não especificado for 10000. Se houver mais linhas na consulta, o corpo de resposta inclui um próximo link que pode usar para solicitar a próxima página de dados.                        |
 |saltar             | int                        | O número de filas para saltar na consulta. Utilize este parâmetro para páginar através de grandes conjuntos de dados. Por exemplo, `top=10000 and skip=0` recupera as primeiras 10000 linhas de `top=10000 and skip=10000` dados, recupera as próximas 10000 linhas de dados, e assim por diante.                       |
 |filter           | string                     | O parâmetro do *filtro* do pedido contém uma ou mais declarações que filtram as linhas na resposta. Cada declaração contém um campo e valor que estão associados aos `eq` `ne` ou operadores, e as declarações podem ser combinadas usando `and` ou `or` . Pode especificar as seguintes cordas:<br/><br/>                                                       `customerTenantId`<br/> `customerName`<br/> `subscriptionId`<br/> `subscriptionName`<br/> `usageDate` <br/> `resourceLocation` <br/> `meterCategory` <br/> `meterSubcategory` <br/> `meterUnit`<br/> `reservationOrderId` <br/> `reservationId`<br/> `consumptionMeterId` <br/> `serviceType` <br/><br/>**Exemplo:**<br/> `.../usage/azure?filter=meterCategory eq 'Data Management'`<br/><br/> **Exemplo:**<br/>`.../usage/azure?filter=meterCategory eq 'Data Management' or (usageDate le cast('2018-01-01', Edm.DateTimeOffset) and usageDate le cast('2018-04-01', Edm.DateTimeOffset))`                        |
 |agregaçãoLevel | string                    | Especifica o intervalo de tempo para a recuperação de dados agregados. Pode ser uma das seguintes cordas: `day` `week` , ou `month` . Se não for especificado, o padrão é `day` .<br/><br/>                                              O `aggregationLevel` parâmetro não é suportado sem um `groupby` . O `aggregationLevel` parâmetro aplica-se a todos os campos de data presentes no `groupby` .                                                      |
 |orderby          |string                     | Uma declaração que encomenda os valores de dados de resultados para cada instalação. A sintaxe é `...&orderby=field [order],field [order],...`. O `field` parâmetro pode ser uma das seguintes cordas:<br/><br/>                    `customerTenantId`<br/>`customerName`<br/>`subscriptionId`<br/>`subscriptionName`<br/>`usageDate`<br/>`resourceLocation`<br/>`meterCategory`<br/>`meterSubcategory`<br/>`meterUnit`<br/> `reservationOrderId` <br/> `reservationId`<br/> `consumptionMeterId` <br/> `serviceType` <br/><br/> O parâmetro *de encomenda* é opcional e pode ser `asc` ou `desc` especificar a ordem ascendente ou descendente para cada campo, respectivamente. A predefinição é `asc`.<br/><br/>**Exemplo:**<br/> `...&orderby=meterCategory,meterUnit`                                                                                           |
-|groupby          |string                    | Uma declaração que aplica agregação de dados apenas aos campos especificados. Pode especificar os seguintes campos:<br/><br/>                                                                                                                     `customerTenantId`<br/>`customerName`<br/> `subscriptionId` <br/> `subscriptionName` <br/> `usageDate` <br/> `resourceLocation` <br/> `meterCategory` <br/> `meterSubcategory` <br/> `meterUnit` <br/> `reservationOrderId` <br/> `reservationId` <br/> `consumptionMeterId` <br/> `serviceType` <br/><br/>As linhas de dados devolvidas conterão os campos especificados no `groupby`  parâmetro, bem como a *Quantidade*.<br/><br/>O `groupby` parâmetro pode ser usado com o `aggregationLevel` parâmetro.<br/><br/>**Exemplo:**<br/>`...&groupby=meterCategory,meterUnit` |
+|groupby          |string                    | Uma declaração que aplica agregação de dados apenas aos campos especificados. Pode especificar os seguintes campos:<br/><br/>                                                                                                                     `customerTenantId`<br/>`customerName`<br/> `subscriptionId` <br/> `subscriptionName` <br/> `usageDate` <br/> `resourceLocation` <br/> `meterCategory` <br/> `meterSubcategory` <br/> `meterUnit` <br/> `reservationOrderId` <br/> `reservationId` <br/> `consumptionMeterId` <br/> `serviceType` <br/><br/>As linhas de dados devolvidas conterão os campos especificados no `groupby`  parâmetro e na *quantidade*.<br/><br/>O `groupby` parâmetro pode ser usado com o `aggregationLevel` parâmetro.<br/><br/>**Exemplo:**<br/>`...&groupby=meterCategory,meterUnit` |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

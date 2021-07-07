@@ -4,19 +4,16 @@ description: Como eliminar um dispositivo que pertence a um cliente especificado
 ms.date: 06/20/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 69b5440f2cf07d3cb4ecd5addf429acd64530257
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: a1e05ceb8615d6f84c1df101c542342f9a6eb04b
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769386"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973082"
 ---
 # <a name="delete-a-device-for-the-specified-customer"></a>Eliminar um dispositivo para o cliente especificado
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Este artigo explica como eliminar um dispositivo que pertence a um cliente especificado.
 
@@ -51,7 +48,7 @@ string selectedDeviceId;
 partnerOperations.Customers.ById(selectedCustomerId).DeviceBatches.ById(selectedDeviceBatchId).Devices.ById(selectedDeviceId).Delete();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: DeleteDevice.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: DeleteDevice.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -67,9 +64,9 @@ Utilize os seguintes parâmetros de trajetória ao criar o pedido.
 
 | Nome           | Tipo   | Necessário | Descrição                                                        |
 |----------------|--------|----------|--------------------------------------------------------------------|
-| id cliente    | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente.              |
-| devicebatch-id | string | Sim      | O identificador de lote do dispositivo que contém o dispositivo. |
-| dispositivo id      | string | Sim      | O identificador do dispositivo.                                             |
+| id cliente    | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente.              |
+| devicebatch-id | string | Yes      | O identificador de lote do dispositivo que contém o dispositivo. |
+| dispositivo id      | string | Yes      | O identificador do dispositivo.                                             |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -77,7 +74,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

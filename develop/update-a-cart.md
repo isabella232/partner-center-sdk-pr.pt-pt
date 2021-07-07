@@ -4,18 +4,14 @@ description: Como atualizar um pedido para um cliente em um carrinho.
 ms.date: 10/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 7c0806ccc87281b9b34005f22cd8d6ad57fb5de5
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 8954d4dad39f9b1a1b9a2f213e0231f01856fcd2
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768941"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446688"
 ---
 # <a name="update-a-cart"></a>Atualizar um carrinho
-
-**Aplica-se a**
-
-- Partner Center
 
 Como atualizar um pedido para um cliente em um carrinho.
 
@@ -29,7 +25,7 @@ Como atualizar um pedido para um cliente em um carrinho.
 
 ## <a name="c"></a>C\#
 
-Para atualizar uma encomenda para um cliente, obtenha o carrinho utilizando o método **Get()** passando o ID do cliente e do carrinho utilizando a função **ById().** Faça as alterações necessárias no carrinho. Agora ligue para o método **Put** utilizando o iD do cliente e do carrinho utilizando o método **ById().**
+Para atualizar uma encomenda para um cliente, obtenha o carrinho utilizando o método **Get()** passando os IDs do cliente e do carrinho utilizando a função **ById().** Faça as alterações necessárias no carrinho. Agora ligue para o método **Put** utilizando iDs de cliente e carrinho usando o método **ById().**
 
 Por fim, ligue para o método **Put()** ou **PutAsync** para criar a encomenda.
 
@@ -59,8 +55,8 @@ Utilize os seguintes parâmetros de trajetória para identificar o cliente e esp
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
-| **cart-id**     | string   | Sim      | Um carro-id formatado GUID que identifica o carrinho.                     |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **cart-id**     | string   | Yes      | Um carro-id formatado GUID que identifica o carrinho.                     |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -73,26 +69,26 @@ Esta tabela descreve as propriedades do [Carrinho](cart-resources.md) no corpo d
 | Propriedade              | Tipo             | Necessário        | Descrição                                                                                               |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
 | ID                    | cadeia (de carateres)           | No              | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                                  |
-| criaçãoTimeStamp     | DateTime         | Não              | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.        |
-| últimampadatimestamp de Tempos | DateTime         | Não              | A data em que o carrinho foi atualizado pela última vez, em formato de data-hora. Aplicado após a criação bem sucedida do carrinho.    |
-| expiraçãoTimeStamp   | DateTime         | Não              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
+| criaçãoTimeStamp     | DateTime         | No              | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.        |
+| últimampadatimestamp de Tempos | DateTime         | No              | A data em que o carrinho foi atualizado pela última vez, em formato de data-hora. Aplicado após a criação bem sucedida do carrinho.    |
+| expiraçãoTimeStamp   | DateTime         | No              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
 | últimoModifiedUser      | cadeia (de carateres)           | No              | O utilizador que atualizou pela última vez o carrinho. Aplicado após a criação bem sucedida do carrinho.                             |
-| lineitems             | Matriz de objetos | Sim             | Uma matriz de recursos [CartLineItem.](cart-resources.md#cartlineitem)                                               |
+| lineitems             | Matriz de objetos | Yes             | Uma matriz de recursos [CartLineItem.](cart-resources.md#cartlineitem)                                               |
 
 Esta tabela descreve as propriedades [do CartLineItem](cart-resources.md#cartlineitem) no corpo de pedido.
 
 | Propriedade             | Tipo                        | Necessário     | Descrição                                                                                        |
 |----------------------|-----------------------------|--------------|----------------------------------------------------------------------------------------------------|
 | ID                   | cadeia (de carateres)                      | No           | Um identificador único para um item de linha de carrinho. Aplicado após a criação bem sucedida do carrinho.                |
-| catalogId            | string                      | Sim          | O identificador de artigos de catálogo.                                                                       |
+| catalogId            | string                      | Yes          | O identificador de artigos de catálogo.                                                                       |
 | nome amigável         | cadeia (de carateres)                      | No           | Opcional. O nome amigável para o item definido pelo parceiro para ajudar a desambiguar.              |
-| quantidade             | int                         | Sim          | O número de licenças ou instâncias.     |
+| quantidade             | int                         | Yes          | O número de licenças ou instâncias.     |
 | currencyCode         | cadeia (de carateres)                      | No           | O código da moeda.                                                                                 |
-| billingCycle         | Objeto                      | Sim          | O tipo de ciclo de faturação definido para o período atual.                                              |
-| participantes         | Lista de pares de cordas de objeto | Não           | Uma coleção de participantes na compra.                                                      |
-| provisionamentoContexto  | Cadeia de<do dicionário,> de cordas  | Não           | Um contexto utilizado para o provisionamento da oferta.                                                          |
+| billingCycle         | Objeto                      | Yes          | O tipo de ciclo de faturação definido para o período atual.                                              |
+| participantes         | Lista de pares de cordas de objeto | No           | Uma coleção de participantes na compra.                                                      |
+| provisionamentoContexto  | Cadeia de<do dicionário,> de cordas  | No           | Um contexto utilizado para o provisionamento da oferta.                                                          |
 | orderGroup           | cadeia (de carateres)                      | No           | Um grupo para indicar quais os itens que podem ser colocados juntos.                                            |
-| erro                | Objeto                      | Não           | Aplicado após o carrinho é criado em caso de erro.                                                 |
+| erro                | Objeto                      | No           | Aplicado após o carrinho é criado em caso de erro.                                                 |
 
 ### <a name="request-example"></a>Exemplo de pedido
 

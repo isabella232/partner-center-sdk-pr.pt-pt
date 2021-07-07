@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: a2f42001365324a65376318cb1f2d57dc123df0c
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 3a7cac98a8081a8557dcadfb0724f5497be7d14c
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769271"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760271"
 ---
 # <a name="get-a-user-account-by-id"></a>Obter uma conta de utilizador por ID
-
-**Aplica-se a**
-
-- Partner Center
 
 Obtenha uma conta de utilizador específica para um cliente.
 
@@ -38,7 +34,7 @@ Para recuperar uma conta de utilizador para um cliente, ligue para o método [**
 var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(selectedCustomerUserId).Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetCustomerUserDetails.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerUserDetails.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 824303d40e1dcb0405246c8e29562c4527d147fd
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: c31bc12d8d484cc8042f36aa865145600d9e6738
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768761"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760203"
 ---
 # <a name="get-the-availability-by-id"></a>Obtenha a disponibilidade por ID
-
-**Aplica-se a**
-
-- Partner Center
 
 Obtém a disponibilidade para o produto especificado e SKU usando um ID de disponibilidade.
 
@@ -87,10 +83,10 @@ Use os seguintes parâmetros de caminho e consulta para obter uma disponibilidad
 
 | Nome                   | Tipo     | Necessário | Descrição                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-| id produto             | string   | Sim      | Uma corda formatada GUID que identifica o produto.            |
-| sku-id                 | string   | Sim      | Uma corda formatada GUID que identifica o SKU.                |
-| disponibilidade id        | string   | Sim      | Uma cadeia formatada GUID que identifica a disponibilidade.       |
-| código de país           | string   | Sim      | Uma identificação país/região.                                            |
+| id produto             | string   | Yes      | Uma corda formatada GUID que identifica o produto.            |
+| sku-id                 | string   | Yes      | Uma corda formatada GUID que identifica o SKU.                |
+| disponibilidade id        | string   | Yes      | Uma cadeia formatada GUID que identifica a disponibilidade.       |
+| código de país           | string   | Yes      | Uma identificação país/região.                                            |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -123,10 +119,10 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                                               |
+| Código de Estado HTTP     | Código de erro   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 404                  | 400013       | O produto não foi encontrado.                                                                                    |
-| 404                  | 400018       | Sku não foi encontrado.                                                                                        |
+| 404                  | 400018       | O SKU não foi encontrado.                                                                                        |
 | 404                  | 400019       | Disponibilidade não encontrada.                                                                                   |
 
 ### <a name="response-example"></a>Exemplo de resposta

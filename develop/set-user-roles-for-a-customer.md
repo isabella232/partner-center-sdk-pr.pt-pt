@@ -4,18 +4,14 @@ description: Dentro de uma conta de cliente, há um conjunto de funções de dir
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f42120e40e54ff8bd6242634d97268091abf8e1c
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: a035d711ffa91200fa7b479ed5ec53929aa4feaf
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769590"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446705"
 ---
 # <a name="set-user-roles-for-a-customer"></a>Definir funções de utilizador para um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Dentro de uma conta de cliente, há um conjunto de funções de diretório. Pode atribuir contas de utilizador a essas funções.
 
@@ -47,7 +43,7 @@ UserMember userMemberToAdd = new UserMember()
 var userMemberAdded = partnerOperations.Customers.ById(selectedCustomer.Id).DirectoryRoles.ById(selectedRole.Id).UserMembers.Create(userMemberToAdd);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: AddUserMemberToDirectoryRole.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: AddUserMemberToDirectoryRole.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -76,9 +72,9 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
 | Nome                  | Tipo       | Necessário | Descrição                            |
 |-----------------------|------------|----------|----------------------------------------|
-| **ID**                | **cadeia** | Y        | O ID do utilizador para adicionar ao papel. |
-| **DisplayName**       | **cadeia** | Y        | O nome de exibição amigável do utilizador. |
-| **Nome do UtilizadorPrincipal** | **cadeia** | Y        | O nome do diretor do utilizador.        |
+| **ID**                | **string** | Y        | O ID do utilizador para adicionar ao papel. |
+| **DisplayName**       | **string** | Y        | O nome de exibição amigável do utilizador. |
+| **Nome do UtilizadorPrincipal** | **string** | Y        | O nome do diretor do utilizador.        |
 | **Atributos**        | **objeto** | Y        | Contém "ObjectType":"UserMember"     |
 
 ### <a name="request-example"></a>Exemplo de pedido
@@ -107,7 +103,7 @@ Expect: 100-continue
 
 ## <a name="rest-response"></a>Resposta do REST
 
-Este método devolve a conta do utilizador com a identificação de função anexada quando o utilizador é atribuído com sucesso a função.
+Este método devolve a conta do utilizador com o ID de função anexado quando o utilizador é atribuído com sucesso a função.
 
 ### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 

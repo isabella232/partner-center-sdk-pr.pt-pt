@@ -1,21 +1,17 @@
 ---
-title: Obtenha detalhes de transferência por id
+title: Obtenha detalhes de transferência por ID
 description: Como obter detalhes de uma transferência de subscrições para um cliente.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c39e9483f1e51469981b0d6fa2541a6372ff2dac
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 1347f95debec458b8c70c5e803cef6203ad34818
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768911"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445940"
 ---
-# <a name="get-transfer-details-by-id"></a>Obtenha detalhes de transferência por id
-
-**Aplica-se a:**
-
-- Partner Center
+# <a name="get-transfer-details-by-id"></a>Obtenha detalhes de transferência por ID
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -39,8 +35,8 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente e especific
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
-| **transferência id** | string   | Sim      | Um id de transferência formatado GUID que identifica a transferência.             |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **transferência id** | string   | Yes      | Um id de transferência formatado GUID que identifica a transferência.             |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

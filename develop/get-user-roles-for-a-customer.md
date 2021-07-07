@@ -4,18 +4,14 @@ description: Obtenha uma lista de todas as funções/permissões anexadas a uma 
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8dad5c035c08905c3d39052de07ebb912452a16b
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 8f58e8b7eae5bb47265bb1ac83fcdcd160f735d2
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768906"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445923"
 ---
 # <a name="get-user-roles-for-a-customer"></a>Obter funções de utilizador para um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Obtenha uma lista de todas as funções/permissões anexadas a uma conta de utilizador. As variações incluem obter uma lista de todas as permissões em todas as contas de utilizador para um cliente, e obter uma lista de utilizadores que têm uma determinada função.
 
@@ -36,7 +32,7 @@ Para recuperar todas as funções de diretório para um cliente especificado, re
 var directoryRoles = partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetCustomerDirectoryRoles.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetCustomerDirectoryRoles.cs
 
 Para recuperar uma lista de utilizadores de clientes que têm uma determinada função, primeiro recupere o ID do cliente especificado e o ID de papel de diretório. Em seguida, use a sua coleção **IAggregatePartner.Customers** e ligue para o método **ById().** Em seguida, ligue para a propriedade **Do Diretório,** em seguida, o método **ById()** e, em seguida, a propriedade **UserMembers,** o seguido pelo método **Get()** ou **GetAsync().**
 
@@ -48,7 +44,7 @@ Para recuperar uma lista de utilizadores de clientes que têm uma determinada fu
 var userMembers = partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.ById(selectedDirectoryRoleId).UserMembers.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: GetCustomerDirectoryRoleUserMembers.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: GetCustomerDirectoryRoleUserMembers.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

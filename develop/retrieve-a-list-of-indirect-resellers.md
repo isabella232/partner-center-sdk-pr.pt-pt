@@ -4,18 +4,14 @@ description: Como recuperar uma lista dos revendedores indiretos do parceiro ins
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e53237b97fa26d3a987f0ee7de491084b596af4a
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 58f5c3378b5b941fdc9dafcf28f5efbc58c29c7c
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769787"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446569"
 ---
 # <a name="retrieve-a-list-of-indirect-resellers"></a>Obter uma lista de revendedores indiretos
-
-**Aplica-se a**
-
-- Partner Center
 
 Como recuperar uma lista dos revendedores indiretos do parceiro inscrito.
 
@@ -33,7 +29,7 @@ Para recuperar uma lista de revendedores indiretos com quem o parceiro inscrito 
 var indirectResellers = partnerOperations.Relationships.Get(PartnerRelationshipType.IsIndirectCloudSolutionProviderOf);
 ```
 
-**Amostra**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetIndirectResellers.cs
+**Amostra**: [Aplicativo de teste de consola](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetIndirectResellers.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -49,7 +45,7 @@ Utilize o seguinte parâmetro de consulta para identificar o tipo de relacioname
 
 | Nome               | Tipo    | Necessário  | Descrição                         |
 |--------------------|---------|-----------|-------------------------------------|
-| relationship_type  | string  | Sim       | O valor é a representação de uma das cordas encontradas no [PartnerRelationshipType](/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype).<br/><br/> Se o parceiro estiver inscrito como fornecedor e pretender obter uma lista dos revendedores indiretos com quem estabeleceram uma relação, utilize o IsIndirectCloudSolutionProviderOf.<br/><br/> Se o parceiro for inscrito como revendedor e pretender obter uma lista dos fornecedores indiretos com quem estabeleceram uma relação, utilize o IsIndirectResellerOf.    |
+| relationship_type  | string  | Yes       | O valor é a representação de uma das cordas encontradas no [PartnerRelationshipType](/dotnet/api/microsoft.store.partnercenter.models.relationships.partnerrelationshiptype).<br/><br/> Se o parceiro estiver inscrito como fornecedor e pretender obter uma lista dos revendedores indiretos com quem estabeleceram uma relação, utilize o IsIndirectCloudSolutionProviderOf.<br/><br/> Se o parceiro for inscrito como revendedor e pretender obter uma lista dos fornecedores indiretos com quem estabeleceram uma relação, utilize o IsIndirectResellerOf.    |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: JoeyBytes
 ms.author: jobiesel
-ms.openlocfilehash: df605e4d400d29e14fd0b44bef34f88bbc7ca8b2
-ms.sourcegitcommit: 7d59c58ee36b217bd5cac089f918059e9dbb8a62
+ms.openlocfilehash: 4795b6e1ad008f9d854dc7efbee0c2099aefa609
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110027933"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446314"
 ---
 # <a name="get-a-customers-qualification-asynchronously"></a>Obtenha a qualificação de um cliente assíncronea
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter as qualificações de um cliente assíncroneamente.
 
@@ -37,7 +33,7 @@ Para obter as qualificações de um cliente, ligue para o método [**IAggregateP
 var customerQualifications = partnerOperations.Customers.ById(customerId).Qualification.GetQualifications();
 ```
 
-**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Projeto**: Classe SdkSamples : GetCustomerQualifications.cs
+**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Project**: Classe SdkSamples : GetCustomerQualifications.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

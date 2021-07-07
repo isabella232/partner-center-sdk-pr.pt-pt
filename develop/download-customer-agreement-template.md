@@ -6,24 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 8c794d264ad64a42fa6ca823ddfc3841248c01cd
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: fccb9e3d4a837f3e8043f8c7ae1e3911d819afd7
+ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769175"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111906526"
 ---
 # <a name="get-a-download-link-for-the-microsoft-customer-agreement-template"></a>Obtenha um link de descarregamento para o modelo do Contrato de Cliente da Microsoft
 
-**Aplica-se a:**
+**Aplica-se a**: Centro de Parceiros
 
-- Partner Center
+**Não se aplica a:** Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-O recurso **AgreementDocument** é atualmente suportado pelo Partner Center apenas na nuvem pública da *Microsoft.* Este recurso não se aplica a:
-
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+O recurso **AgreementDocument** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft.
 
 Este artigo descreve como obter um link para descarregar o modelo de Acordo de Cliente da Microsoft, com base no país e no idioma do cliente.
 
@@ -41,7 +37,7 @@ Este artigo descreve como obter um link para descarregar o modelo de Acordo de C
 >
 > - O Microsoft Customer Agreement é específico por país. Ao solicitar um link para descarregar o modelo do Microsoft Customer Agreement, certifique-se de especificar o país correto com base na localização do cliente. ou lista de países apoiados, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages)
 >
-> - Para alguns países, o Microsoft Customer Agreement está disponível em vários idiomas. Para melhor experiência do cliente, escolha o idioma que melhor corresponda às necessidades do cliente. Para obter a lista de línguas apoiadas, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages)
+> - Para alguns países, o Microsoft Customer Agreement está disponível em vários idiomas. Para melhor experiência do cliente, escolha o idioma que melhor corresponda às necessidades do cliente. Para a lista de línguas apoiadas, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages)
 > - Este método só é suportado com o Microsoft Customer Agreement.
 
 ## <a name="net"></a>.NET
@@ -64,9 +60,9 @@ Para obter um link para descarregar o modelo do Microsoft Customer Agreement:
 
 4. Pegue a propriedade **Document.**
 
-5. Ligue para o método **ByCountry** e especifique o país do cliente ao qual o modelo de contrato se aplica. A consulta é padrão para *nós* se o método não for especificado. Para obter uma lista de códigos de país apoiados, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages) Este método é **sensível a casos.**
+5. Ligue para o método **ByCountry** e especifique o país do cliente ao qual o modelo de contrato se aplica. A consulta é padrão para *nós* se o método não for especificado. Para obter uma lista de códigos de países apoiados, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages) Este método é **sensível a casos.**
 
-6. Ligue para o método **ByLanguage** e especifique o idioma em que o modelo de contrato deve ser localizado. A consulta é padrão para *en-US* se o método não for especificado ou o código de país especificado não for suportado para o país especificado. Para obter a lista de códigos linguísticos suportados, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages)
+6. Ligue para o método **ByLanguage** e especifique o idioma em que o modelo de acordo deve ser localizado. A consulta é padrão para *en-US* se o método não for especificado ou o código de país especificado não for suportado para o país especificado. Para obter a lista de códigos linguísticos suportados, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages)
 
 7. Ligue para o método **Get** or **GetAsync.**
 
@@ -108,8 +104,8 @@ Pode utilizar os seguintes parâmetros URI com o seu pedido:
 
 | Nome                   | Tipo   | Necessário | Descrição                                 |
 |------------------------|--------|----------|---------------------------------------------|
-| acordo-modelo-id  | string | Sim      | Identificador único do tipo de acordo. Pode obter o modeloId para o Acordo de Cliente da Microsoft recuperando os metadados do acordo para o Microsoft Customer Agreement. Para obter mais informações, consulte [obter metadados de acordo para o Acordo de Cliente da Microsoft.](./get-customer-agreement-metadata.md) Este parâmetro é **sensível a maiôs.**|
-| país                | cadeia (de carateres) | No       | Indica o país ao qual se aplica o modelo de acordo. A consulta é padrão para *nós* se o parâmetro não for especificado. Para obter uma lista de códigos de país apoiados, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages)|
+| acordo-modelo-id  | string | Yes      | Identificador único do tipo de acordo. Pode obter o modeloId para o Acordo de Cliente da Microsoft recuperando os metadados do acordo para o Microsoft Customer Agreement. Para obter mais informações, consulte [obter metadados de acordo para o Acordo de Cliente da Microsoft.](./get-customer-agreement-metadata.md) Este parâmetro é **sensível a maiôs.**|
+| país                | cadeia (de carateres) | No       | Indica o país ao qual se aplica o modelo de acordo. A consulta é padrão para *nós* se o parâmetro não for especificado. Para obter uma lista de códigos de países apoiados, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages)|
 | language               | cadeia (de carateres) | No       | Indica o idioma no qual o modelo de contrato deve ser localizado. A consulta é padrão para *en-US* se o parâmetro não for especificado ou o código de país especificado não suportado para o país especificado. Para obter a lista de códigos de países suportados, consulte a [Lista de países e línguas apoiados.](#list-of-supported-countries-and-languages)|
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido

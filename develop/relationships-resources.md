@@ -4,18 +4,14 @@ description: Descreve recursos relacionados com relacionamentos.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c5701414bd704b375dc23859b920609d5a975d9f
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 7dba1e99a6c97c759e3c61cde1e7565faa2ef4d1
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768876"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445736"
 ---
 # <a name="relationships-resources"></a>Recursos de relacionamento
-
-**Aplica-se a**
-
-- Partner Center
 
 Descreve recursos relacionados com relacionamentos.
 
@@ -23,7 +19,7 @@ Descreve recursos relacionados com relacionamentos.
 
 Representa uma relação entre dois parceiros.
 
-| Propriedade         | Tipo                                                           | Descrição                                                                                                                                    |
+| Propriedade         | Tipo                                                           | Description                                                                                                                                    |
 |------------------|----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID               | string                                                         | O identificador do parceiro. O identificador do parceiro especifica o id do inquilino do parceiro que está no lado destinatário (a partir) da relação. |
 | localização         | string                                                         | A localização do parceiro.                                                                                                                   |
@@ -37,7 +33,7 @@ Representa uma relação entre dois parceiros.
 
 Fornece o URL através do qual um cliente pode estabelecer uma relação com um parceiro.
 
-| Propriedade   | Tipo                                                           | Descrição                   |
+| Propriedade   | Tipo                                                           | Description                   |
 |------------|----------------------------------------------------------------|-------------------------------|
 | url        | string                                                         | A URL de pedido de relacionamento. |
 | atributos | [RecursosTributos](utility-resources.md#resourceattributes) | Os atributos dos metadados.      |

@@ -4,18 +4,14 @@ description: Como obter uma lista de transferências de um cliente.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4a25a9f6ccba0a3d64934b23ccd83a535da05e4a
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: a5892e25953bc2eec4451bdbbd5accea008828b8
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768767"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760237"
 ---
 # <a name="get-a-customers-transfers"></a>Obter as transferências de um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter uma lista de transferências de um cliente.
 
@@ -37,7 +33,7 @@ Esta tabela lista o parâmetro de consulta necessário para obter todas as subsc
 
 | Nome               | Tipo   | Necessário | Descrição                                           |
 |--------------------|--------|----------|-------------------------------------------------------|
-| cliente-inquilino-id | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| cliente-inquilino-id | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

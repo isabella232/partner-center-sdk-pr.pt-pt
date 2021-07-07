@@ -6,20 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: mowrim
 ms.author: mowrim
-ms.openlocfilehash: 372b94ac7217899ca560cf943bf11a7e8906872d
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: f329b6a3f9a61522a9fad1f0ead021563c393118
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769314"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973414"
 ---
 # <a name="create-an-azure-plan"></a>Criar um plano Azure
 
-**Aplica-se a:**
-
-* Partner Center
-
-Você pode comprar, criar e gerir um plano Azure usando as APIs do Partner Center. O processo é semelhante à criação de uma subscrição do Microsoft Azure (MS-AZR-0145P). Tem de [obter o item do catálogo para o plano Azure,](#get-the-catalog-item-for-azure-plan)em seguida, criar e enviar uma [encomenda](#create-and-submit-an-order).
+Você pode comprar, criar e gerir um plano Azure usando as APIs do Partner Center. O processo é semelhante à criação de uma subscrição de Microsoft Azure (MS-AZR-0145P). Tem de [obter o item do catálogo para o plano Azure,](#get-the-catalog-item-for-azure-plan)em seguida, criar e enviar uma [encomenda](#create-and-submit-an-order).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -65,7 +61,7 @@ Após o processo ser processado com sucesso, será criado um recurso **de Subscr
 * [Obter as subscrições de um cliente](get-all-of-a-customer-s-subscriptions.md)
 * [Obter uma lista de subscrições por encomenda](get-a-list-of-subscriptions-by-order.md)
 
-Quando um plano Azure é criado no Partner Center, uma subscrição de utilização Azure correspondente também é criada em Azure. Também pode criar subscrições adicionais de utilização do Azure ao abrigo do mesmo plano Azure utilizando Azure Portal e Azure APIs. Pode obter os identificadores de todas as subscrições de utilização do Azure associadas a um plano Azure seguindo os passos em [Obter uma lista de direitos Azure para subscrição do Partner Center](get-a-list-of-azure-entitlements-for-subscription.md)
+Quando um plano Azure é criado no Partner Center, uma subscrição de utilização Azure correspondente também é criada em Azure. Também pode criar subscrições adicionais de utilização do Azure ao abrigo do mesmo plano Azure utilizando o portal Azure e as APIs Azure. Pode obter os identificadores de todas as subscrições de utilização do Azure associadas a um plano Azure seguindo os passos em [Obter uma lista de direitos Azure para subscrição do Partner Center](get-a-list-of-azure-entitlements-for-subscription.md)
 
 ## <a name="lifecycle-management"></a>Gestão do ciclo de vida
 

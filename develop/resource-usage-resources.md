@@ -4,26 +4,22 @@ description: Pode utilizar o recurso ResourceUsageRecord para descrever o custo 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b0a28620eec86e86630aef93b13f26c9dd675a5d
-ms.sourcegitcommit: faea78fe3264cbafc2b02c04d98d5ce30e992124
+ms.openlocfilehash: eb626b9d4cb4c57a07f45bcf7b914f534e62ab68
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106274568"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446586"
 ---
 # <a name="resource-usage-record-resources"></a>Recursos de registo de utilização de recursos
-
-**Aplica-se a:**
-
-- Partner Center
 
 Pode utilizar o recurso **ResourceUsageRecord** para descrever o custo monetário estimado da utilização do nível de recursos de uma subscrição no ciclo de faturação atual.
 
 ## <a name="resourceusagerecord"></a>ResourceUsageRecord
 
-| Propriedade          | Tipo               | Descrição                                                                                                                                                                                                |
+| Propriedade          | Tipo               | Description                                                                                                                                                                                                |
 |-------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SubscriptionId    | string             | Recebe ou define o identificador de assinatura. Para as subscrições microsoft Azure (MS-AZR-0145P), este valor é o identificador de subscrição de comércio. Para os planos Azure, este valor é o identificador do plano Azure). |
+| SubscriptionId    | string             | Recebe ou define o identificador de assinatura. Para Microsoft Azure (MS-AZR-0145P), este valor é o identificador de subscrição de comércio. Para os planos Azure, este valor é o identificador do plano Azure). |
 | RecursosUri       | string             | Recebe ou define o recurso URI."                                                                                                                                                                            |
 | ResourceType      | string             | Recebe ou define o tipo de recurso.                                                                                                                                                                            |
 | Direitodid     | string             | Obtém ou define o identificador de direito (o identificador de assinatura Azure).                                                                                                                               |

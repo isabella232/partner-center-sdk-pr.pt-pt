@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 1406938b16e5a363a73c36ef0338eb5fc4305279
-ms.sourcegitcommit: 89aefbff6dbe740b6f27a888492ffc2e5f98b1e9
+ms.openlocfilehash: 285b6fbda774c9396dee8947550ed774d52bf901
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110325450"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446229"
 ---
 # <a name="get-invoice-billed-commercial-consumption-line-items"></a>Obter fatura faturada itens de linha de consumo comercial
-
-**Aplica-se a:**
-
-- Partner Center
 
 Pode utilizar os seguintes métodos para obter uma recolha de detalhes para artigos de linha de fatura de consumo comercial (também conhecidos como itens de linha de utilização com classificação diária fechada) para uma fatura especificada.
 
@@ -107,7 +103,7 @@ while (fetchNext)
 Para um exemplo semelhante, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **Partner Center SDK Samples**
+- Project: **Amostras SDK do Centro Parceiro**
 - Classe: **GetBilledConsumptionReconLineItemsPaging.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO

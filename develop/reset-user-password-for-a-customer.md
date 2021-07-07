@@ -1,25 +1,21 @@
 ---
 title: Repor a palavra-passe de utilizador para um cliente
-description: A reposição de uma palavra-passe é muito semelhante à atualização de outros detalhes numa conta de utilizador existente para o seu cliente.
+description: A reposição de uma palavra-passe é semelhante à atualização de outros detalhes numa conta de utilizador existente para o seu cliente.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: e0df93c2db55ec0fe49fc0e3089b7e11928f32bb
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: f3661a588f566485cbd58035c63ae9f8e5d383af
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768875"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445685"
 ---
 # <a name="reset-user-password-for-a-customer"></a>Repor a palavra-passe de utilizador para um cliente
 
-**Aplica-se a**
-
-- Partner Center
-
-A reposição de uma palavra-passe é muito semelhante à atualização de outros detalhes numa conta de utilizador existente para o seu cliente.
+A reposição de uma palavra-passe é semelhante à atualização de outros detalhes numa conta de utilizador existente para o seu cliente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -52,7 +48,7 @@ User updatedCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomer
 
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: CustomerUserUpdate.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerUserUpdate.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

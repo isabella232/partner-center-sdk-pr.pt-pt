@@ -1,21 +1,17 @@
 ---
 title: Criar pedido de cliente para revendedor indireto
-description: Saiba como utilizar as APIs do Partner Center para criar uma encomenda para um cliente de um revendedor indireto. O artigo inclui pré-requisitos, passos e exmplicas.
+description: Saiba como utilizar as APIs do Partner Center para criar uma encomenda para um cliente de um revendedor indireto. O artigo inclui pré-requisitos, passos e exemplos.
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f72ecec8d82e6b8a1bc53c277206cafd7d8a4e03
-ms.sourcegitcommit: 4c253abb24140a6e00b0aea8e79a08823ea5a623
+ms.openlocfilehash: 6253ba2289ea1f58e7d8eaa960d7d0daaa887f0d
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "97770152"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973553"
 ---
 # <a name="create-an-order-for-a-customer-of-an-indirect-reseller"></a>Criar uma encomenda para um cliente de um revendedor indireto
-
-**Aplica-se a:**
-
-- Partner Center
 
 Como criar uma encomenda para um cliente de um revendedor indireto.
 
@@ -81,7 +77,7 @@ var order = new Order()
 var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(order);
 ```
 
-**Amostra**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: PlaceOrderForCustomer.cs
+**Amostra**: [Aplicativo de teste de consola](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: PlaceOrderForCustomer.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -97,7 +93,7 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada GUID que identifica o cliente. |
+| id cliente | string | Yes      | Uma cadeia formatada GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -112,11 +108,11 @@ Esta tabela descreve as propriedades da **Ordem** no organismo de pedido.
 | Nome | Tipo | Necessário | Descrição |
 | ---- | ---- | -------- | ----------- |
 | ID | cadeia (de carateres) | No | Um identificador de ordem que é fornecido após a criação bem sucedida da ordem. |
-| referênciaStomerId | string | Sim | O identificador de clientes. |
+| referênciaStomerId | string | Yes | O identificador de clientes. |
 | billingCycle | cadeia (de carateres) | No | A frequência com que o parceiro é cobrado por esta ordem. O padrão é &quot; mensal e é aplicado após a &quot; criação bem sucedida da ordem. Os valores suportados são os nomes dos membros encontrados no [**BillingCycleType**](/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Nota: a funcionalidade anual de faturação ainda não está disponível em geral. O apoio à faturação anual está para breve. |
-| lineitems | matriz de objetos | Sim | Uma série de recursos [**orderLineItem.**](#orderlineitem) |
+| lineitems | matriz de objetos | Yes | Uma série de recursos [**orderLineItem.**](#orderlineitem) |
 | criaçãoDate | cadeia (de carateres) | No | A data em que a encomenda foi criada, em formato de data-hora. Aplicado após a criação bem sucedida da ordem. |
-| atributos | objeto | Não | Contém "ObjectType": "Order". |
+| atributos | objeto | No | Contém "ObjectType": "Order". |
 
 #### <a name="orderlineitem"></a>OrderLineItem
 
@@ -124,14 +120,14 @@ Esta tabela descreve as propriedades **orderLineItem** no organismo de pedido.
 
 | Nome | Tipo | Necessário | Descrição |
 | ---- | ---- | -------- | ----------- |
-| lineItemNumber | int | Sim | Cada item de linha da coleção obtém um número de linha único, contando de 0 a 1. |
-| offerId | string | Sim | O identificador da oferta. |
+| lineItemNumber | int | Yes | Cada item de linha da coleção obtém um número de linha único, contando de 0 a 1. |
+| offerId | string | Yes | O identificador da oferta. |
 | subscriptionId | cadeia (de carateres) | No | O identificador de assinatura. |
 | parentSubscriptionId | cadeia (de carateres) | No | Opcional. A identificação da subscrição dos pais numa oferta de complemento. Aplica-se apenas ao PATCH. |
 | nome amigável | cadeia (de carateres) | No | Opcional. O nome amigável para a subscrição definida pelo parceiro para ajudar a desambiguar. |
-| quantidade | int | Sim | O número de licenças para uma assinatura baseada em licença. |
+| quantidade | int | Yes | O número de licenças para uma assinatura baseada em licença. |
 | partnerIdOnRecord | cadeia (de carateres) | No | Quando um fornecedor indireto estoende uma encomenda em nome de um revendedor indireto, povoe este campo apenas com o ID MPN do **revendedor indireto** (nunca o ID do fornecedor indireto). Isto garante uma contabilização adequada dos incentivos. **A não prestação do ID MPN do revendedor não faz com que a ordem falhe. No entanto, o revendedor não é registado e, consequentemente, os cálculos de incentivos podem não incluir a venda.** |
-| atributos | objeto | Não | Contém "ObjectType":"OrderLineItem". |
+| atributos | objeto | No | Contém "ObjectType":"OrderLineItem". |
 
 ### <a name="request-example"></a>Exemplo de pedido
 

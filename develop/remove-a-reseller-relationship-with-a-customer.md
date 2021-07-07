@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 084797997e57c63b5c447379bb08ecb88ebd0cc4
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 45eca3564c3b9078e04d1f8155d08849a589d52f
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769602"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446603"
 ---
 # <a name="remove-a-reseller-relationship-with-a-customer"></a>Remover uma relação de revendedor com um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Remova uma relação de revendedor com um cliente com o quais já não tenha transações.
 
@@ -35,7 +31,7 @@ Para remover a relação de revendedor para um cliente, certifique-se primeiro d
 
 Para determinar se quaisquer instâncias VM Reservadas Azure para o cliente devem ser canceladas, recupere a recolha de direitos ligando para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) utilizando o identificador de clientes para especificar o cliente, e a propriedade Entitlements para recuperar uma interface para operações de cobrança de [**direitos.**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) Ligue para o método [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) para recuperar a coleção de direitos. Filtrar a coleção para quaisquer direitos com um valor [**EntitlementType**](entitlement-resources.md#entitlementtype) de [**EntitlementType.VirtualMachineReservedInstance**](entitlement-resources.md#entitlementtype) e, se houver, cancele-os chamando o apoio antes de prosseguir.
 
-Em seguida, recupere uma coleção das subscrições do cliente ligando para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) utilizando o identificador de clientes para especificar o cliente, e a propriedade [**de Subscrições**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) para recuperar uma interface para operações de recolha de subscrição. Por fim, ligue para o método [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) para recuperar a recolha de subscrições do cliente. Traverse a coleção de subscrição e certifique-se de que nenhuma das subscrições tem um valor de propriedade [**subscrição.Status**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) do [**SubscriptionStatus.Ative**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus). Se uma subscrição ainda estiver ativa, consulte [suspender uma subscrição](https://review.docs.microsoft.com/partner-center/develop/suspend-a-subscription) para obter informações sobre como suspendê-la.
+Em seguida, recupere uma coleção das subscrições do cliente ligando para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) utilizando o identificador de clientes para especificar o cliente, e a propriedade [**de Subscrições**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) para recuperar uma interface para operações de recolha de subscrição. Por fim, ligue para o método [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.get) or [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.getasync) para recuperar a recolha de subscrições do cliente. Traverse a coleção de subscrição e certifique-se de que nenhuma das subscrições tem um valor de propriedade [**subscrição.Status**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) do [**SubscriptionStatus.Ative**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus). Se uma subscrição ainda estiver ativa, consulte [suspender uma subscrição](suspend-a-subscription.md) para obter informações sobre como suspendê-la.
 
 Depois de confirmar que todas as instâncias ativas do Azure Reserved VM para esse cliente são canceladas e todas as subscrições ativas estão suspensas, pode remover a relação de revendedor para o cliente. Em primeiro lugar, crie um novo objeto [Cliente/dotnet/api/microsoft.store.partnercenter.customer.customer.customer. [](/dotnet/api/microsoft.store.partnercenter.models.customers.customerpartnerrelationship) Em seguida, ligue para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) utilizando o identificador de clientes para especificar o cliente e ligar para o método **Patch,** passando no novo objeto do cliente.
 
@@ -81,7 +77,7 @@ if (customer.RelationshipToPartner == CustomerPartnerRelationship.None)
 }
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: DeletePartnerCustomerRelationship.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: DeletePartnerCustomerRelationship.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

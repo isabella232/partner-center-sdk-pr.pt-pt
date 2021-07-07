@@ -4,21 +4,16 @@ description: Como eliminar uma conta de cliente da caixa de areia de integraçã
 ms.date: 06/20/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e3a1642c0202c174ddd4f65a6aeda2752def9176
-ms.sourcegitcommit: b1ff781b67b1d322820bbcac2c583229201a8c07
+ms.openlocfilehash: b9d9e44ac9c40bd4e3c7e1a9e04253f853dfd96c
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "97769422"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973133"
 ---
 # <a name="delete-a-customer-account-from-the-integration-sandbox"></a>Eliminar uma conta de cliente do sandbox de integração
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo explica como quebrar a relação entre o parceiro e a conta do cliente e recuperar a quota de Testes em Produção (Dica) de integração de areia.
 
@@ -31,7 +26,7 @@ Este artigo explica como quebrar a relação entre o parceiro e a conta do clien
 
 - Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
-- Todas as instâncias de compra de máquinas virtuais reservadas Azure e as ordens de compra de software devem ser canceladas antes de eliminar um cliente da caixa de areia de integração da Dica.
+- Todas as instâncias de compra de máquinas virtuais reservadas Azure e as ordens de compra de software devem ser canceladas antes de eliminar um cliente da caixa de areia de integração da Ponta.
 
 ## <a name="c"></a>C\#
 
@@ -47,7 +42,7 @@ Para eliminar um cliente da caixa de areia de integração da Ponta:
 
     3. Ligue para o método **Get** or **GetAsync** para recuperar a coleção [**Entitlement.**](entitlement-resources.md)
 
-3. Certifique-se de que todas as instâncias de compra de máquinas virtuais reservadas a Azure e as encomendas de compra de software para esse cliente são canceladas. Para cada [**Direito**](entitlement-resources.md) na coleção:
+3. Certifique-se de que todas as instâncias de compra de máquinas virtuais reservadas a Azure e as encomendas de compra de software para esse cliente estão canceladas. Para cada [**Direito**](entitlement-resources.md) na coleção:
 
     1. Use o [**direito. ReferenceOrder.Id**](entitlement-resources.md#referenceorder) obter uma cópia local da [Encomenda](order-resources.md#order) correspondente da recolha de encomendas do cliente.
 
@@ -64,7 +59,7 @@ Para eliminar um cliente da caixa de areia de integração da Ponta:
 
     IPartner tipAccountPartnerOperations = PartnerService.Instance.CreatePartnerOperations(tipAccountCredentials);
 
-    // Get all entitlements whose order must be cancelled.
+    // Get all entitlements whose order must be canceled.
     ResourceCollection<Entitlement> entitlements = tipAccountPartnerOperations.Customers.ById(customerTenantId).Entitlements.Get();
 
     // Cancel all orders
@@ -79,7 +74,7 @@ Para eliminar um cliente da caixa de areia de integração da Ponta:
     bool proceed = true;
     do
     {
-        // Check if all the orders were cancelled.
+        // Check if all the orders were canceled.
         foreach (var entitlement in entitlements)
         {
             var order = tipAccountPartnerOperations.Customers.ById(customerTenantId).Orders.ById(entitlement.ReferenceOrder.Id).Get();
@@ -99,7 +94,7 @@ Para eliminar um cliente da caixa de areia de integração da Ponta:
 
 5. Certifique-se de que todas as encomendas são canceladas ligando para o método **Eliminar** para o cliente.
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center PartnerCenterSDK.FeaturesSamples **Class**: DeleteCustomerFromTipAccount.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center PartnerCenterSDK.FeaturesSamples **Class**: DeleteCustomerFromTipAccount.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

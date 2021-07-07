@@ -4,18 +4,14 @@ description: Atualize a nova propriedade de uma subscrição que corresponda ao 
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8dccec57901ea4ea429b74044e3b6c28178c43f6
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: cc0b4c4bff5e8762ffcc2552b2e9e36bcf93686c
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769584"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446671"
 ---
 # <a name="update-autorenew-for-a-commercial-marketplace-subscription"></a>Atualizar a renovação automática de uma subscrição de marketplace comercial
-
-**Aplica-se a**
-
-- Partner Center
 
 Atualizar a nova propriedade de um mercado comercial O recurso [de subscrição](subscription-resources.md) que corresponda ao ID do cliente e da subscrição.
 
@@ -43,7 +39,7 @@ selectedSubscription.AutoRenewEnabled = false;
 var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ById(selectedSubscription.Id).Patch(selectedSubscription);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: UpdateSubscription.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

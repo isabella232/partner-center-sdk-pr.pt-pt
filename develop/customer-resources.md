@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 78622258880ab77ca99eae98082cc66acb3b66a7
-ms.sourcegitcommit: 204e518e794b6b076a17488ee9ca1aaaa4beaaec
+ms.openlocfilehash: 7d76de33c9a0d28e9d3fb0b0821cbd37ad67e7af
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "106103968"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973150"
 ---
 # <a name="customer-resources"></a>Recursos do cliente
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 ## <a name="customer"></a>Cliente
 
@@ -36,7 +31,7 @@ O recurso **Cliente** representa um cliente ou revendedor. Em geral, um recurso 
 | empresaProfile        | [CustomerCompanyProfile](#customercompanyprofile)                | Informações adicionais sobre a empresa ou organização.                                                                                    |
 | billingProfile        | [CustomerBillingProfile](#customerbillingprofile)                | Informação adicional usada para faturação.                                                                                                     |
 | relationshipToPartner | string                                                           | Define o programa de licenciamento que o parceiro utiliza para este cliente: "nenhum", "revendedor", "conselheiro", "sindicalização" ou "suporte à \_ microsoft". |
-| permitir DelegatedAccess  | boolean                                                          | Se o parceiro foi concedido privilégios de administração delegados por este cliente. Esta propriedade só está disponível quando se recebe um cliente por ID, não por lista.                                                         |
+| permitir DelegatedAccess  | boolean                                                          | Indica se o parceiro recebeu privilégios de administração delegados por este cliente. Esta propriedade só está disponível quando se recebe um cliente por ID, não por lista.                                                         |
 | userCredentis       | [UserCredentials](user-resources.md#usercredentials) | As credenciais de utilizador.                                                                                                                        |
 | customDomains         | matriz de cadeias (de carateres)                                                 | Lista de domínios personalizados de um cliente.                                                                                                        |
 | PartnerId associado   | string                                                           | O revendedor indireto associado a esta conta de cliente. Este valor só pode ser definido por parceiros CSP indiretos.                              |
@@ -54,7 +49,7 @@ O **recurso CustomerCompanyProfile** é informação adicional sobre a empresa o
 | nome da empresa | string                                                         | O nome da empresa ou organização.                                          |
 | ligações       | [RecursosLinks](utility-resources.md#resourcelinks)           | As ligações de recursos contidas no perfil.                                  |
 | atributos  | [RecursosTributos](utility-resources.md#resourceattributes) | Os metadados correspondem ao perfil.                             |
-|organizaçãoRegistrationNumber|String|Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia(BY), Hungria (HU), Cazaquistão(KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uz, Ucrânia(UA), Índia, Brasil, África do Sul, Polónia, Emirados Árabes Unidos, Arábia Saudita, Arábia Saudita, Para a empresa/organização do cliente localizada noutros países, tal não deve ser especificado.|
+|organizaçãoRegistrationNumber|String|Número de registo da organização do cliente (também referido como número INN em determinados países). Apenas necessário para a empresa/organização do cliente localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia(BY), Hungria (HU), Cazaquistão(KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uz, Ucrânia(UA), Índia, Brasil, África do Sul, Polónia, Emirados Árabes Unidos, Arábia Saudita, Arábia Saudita, Para a empresa/organização do cliente localizada noutros países, esta não deve ser especificada.|
 
 
 ## <a name="customerbillingprofile"></a>CustomerBillingProfile

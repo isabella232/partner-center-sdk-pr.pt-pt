@@ -4,18 +4,14 @@ description: Você pode obter uma coleção de detalhes de item de linha de cons
 ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8b6ca8d6ff7af53dd2a258ea20e6eaeb26421440
-ms.sourcegitcommit: faea78fe3264cbafc2b02c04d98d5ce30e992124
+ms.openlocfilehash: 1b7dba3333aaec8df73f0e8147b0bbbc78b9b184
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/03/2021
-ms.locfileid: "106274670"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446151"
 ---
 # <a name="get-invoice-unbilled-commercial-consumption-line-items"></a>Obter faturas sem fatura de produtos de linha de consumo comercial
-
-**Aplica-se a:**
-
-- Partner Center
 
 Como obter uma coleção de detalhes de linha de consumo comercial não bico.
 
@@ -108,7 +104,7 @@ while (fetchNext)
 Para um exemplo semelhante, consulte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **Partner Center SDK Samples**
+- Project: **Amostras SDK do Centro Parceiro**
 - Classe: **GetUnBilledConsumptionReconLineItemsPaging.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -129,11 +125,11 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 
 | Nome                   | Tipo   | Necessário | Descrição                                                                                                                                                                                                                                |
 |------------------------|--------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| provedor               | string | Sim      | O fornecedor: "**OneTime**".                                                                                                                                                                                                               |
-| tipo de artigo de linha de fatura | string | Sim      | O tipo de detalhe de fatura: "**UsageLineItems**", "**UsageLineItems**".                                                                                                                                                                    |
-| currencyCode           | string | Sim      | O código cambial para os itens de linha não bico.                                                                                                                                                                                             |
-| period                 | string | Sim      | O período de reconhecimento não bico (por exemplo: **atual,** **anterior).** Suponha que precisa de consultar os seus dados de utilização não faturados do ciclo de faturação (01/01/2020 – 01/31/2020) em janeiro, escolha o período como **"Corrente",** caso contrário **"Anterior".** |
-| size                   | número | Não       | O número máximo de itens para devolver. O tamanho padrão é 2000.                                                                                                                                                                           |
+| provedor               | string | Yes      | O fornecedor: "**OneTime**".                                                                                                                                                                                                               |
+| tipo de artigo de linha de fatura | string | Yes      | O tipo de detalhe de fatura: "**UsageLineItems**", "**UsageLineItems**".                                                                                                                                                                    |
+| currencyCode           | string | Yes      | O código cambial para os itens de linha não bico.                                                                                                                                                                                             |
+| period                 | string | Yes      | O período de reconhecimento não bico (por exemplo: **atual,** **anterior).** Suponha que precisa de consultar os seus dados de utilização não faturados do ciclo de faturação (01/01/2020 – 01/31/2020) em janeiro, escolha o período como **"Corrente",** caso contrário **"Anterior".** |
+| size                   | número | No       | O número máximo de itens para devolver. O tamanho padrão é 2000.                                                                                                                                                                           |
 | procurarOperação          | cadeia (de carateres) | No       | Prepare `seekOperation=Next` para obter a próxima página de itens da linha de reconciliação.                                                                                                                                                                |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido

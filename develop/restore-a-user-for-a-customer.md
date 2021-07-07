@@ -4,18 +4,14 @@ description: Como restaurar um Utilizador eliminado pelo ID do cliente e iD do u
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9fd86a268c804a2fdd5efd67a8982afc043c95a6
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 23caf91c6b29b292c2638b4a1ad208c606c47492
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769799"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445719"
 ---
 # <a name="restore-a-deleted-user-for-a-customer"></a>Restaurar um utilizador eliminado para um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Como restaurar um **Utilizador** eliminado pelo ID do cliente e iD do utilizador.
 
@@ -29,7 +25,7 @@ Como restaurar um **Utilizador** eliminado pelo ID do cliente e iD do utilizador
 
 ## <a name="when-can-you-restore-a-deleted-user-account"></a>Quando pode restaurar uma conta de utilizador eliminada?
 
-O estado do utilizador está definido para "inativo" quando apaga uma conta de utilizador. Permanece assim durante trinta dias, após o que a conta de utilizador e os seus dados associados são purgados e tornados irrecuperáveis. Só é possível restaurar uma conta de utilizador eliminada durante esta janela de trinta dias. Uma vez eliminada e marcada como "inativa", a conta de utilizador deixou de ser devolvida como membro da coleção de utilizadores (por exemplo, utilizando [a lista de todas as contas de utilizador para um cliente).](get-a-list-of-all-user-accounts-for-a-customer.md)
+O estado do utilizador está definido para "inativo" quando apaga uma conta de utilizador. Permanece assim durante 30 dias, após o que a conta de utilizador e os seus dados associados são purgados e tornados irrecuperáveis. Só é possível restaurar uma conta de utilizador eliminada durante esta janela de 30 dias. Uma vez eliminada e marcada como "inativa", a conta de utilizador deixou de ser devolvida como membro da coleção de utilizadores (por exemplo, utilizando [a lista de todas as contas de utilizador para um cliente).](get-a-list-of-all-user-accounts-for-a-customer.md)
 
 ## <a name="c"></a>C\#
 
@@ -53,7 +49,7 @@ var updatedCustomerUser = new CustomerUser()
 var restoredCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(selectedCustomerUserId).Patch(updatedCustomerUser);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: CustomerUserRestore.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CustomerUserRestore.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -65,7 +61,7 @@ var restoredCustomerUserInfo = partnerOperations.Customers.ById(selectedCustomer
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 
-Utilize os seguintes parâmetros de consulta para especificar o id do cliente e o id do utilizador.
+Utilize os seguintes parâmetros de consulta para especificar o ID do cliente e o ID do utilizador.
 
 | Nome                   | Tipo     | Necessário | Descrição                                                                                                              |
 |------------------------|----------|----------|--------------------------------------------------------------------------------------------------------------------------|

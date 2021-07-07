@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: sourishdeb
 ms.author: sodeb
-ms.openlocfilehash: f56c3de8dd227f573921e5b969c2217c2f743a21
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 7698d85df3341ae4cbff0377bd0a1bb47cd36740
+ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769289"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111906440"
 ---
 # <a name="get-a-collection-of-invoices"></a>Obter uma coleção de faturas
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como recuperar uma coleção das faturas do parceiro.
 
@@ -75,10 +70,10 @@ while (invoicesEnumerator.HasValue)
 }
 ```
 
-Para obter um exemplo ligeiramente diferente, consulte **sample**: [Console test app](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetPagedInvoices.cs
+Para obter um exemplo ligeiramente diferente, consulte **sample**: [Console test app](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetPagedInvoices.cs
 
 > [!NOTE] 
-> A mesma API é utilizada para todas as compras comerciais modernas, bem como licenças de 145p e Office. O tamanho e a compensação são considerados apenas para faturas antigas. Para todas as compras comerciais modernas, o pagesize & offset será ignorado.
+> A mesma API é usada para todas as compras comerciais modernas, bem como licenças de 145p e Office. O tamanho e a compensação são considerados apenas para faturas antigas. Para todas as compras comerciais modernas, o pagesize & offset será ignorado.
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -94,8 +89,8 @@ Utilize os seguintes parâmetros de consulta ao criar o pedido.
 
 | Nome   | Tipo | Necessário | Descrição                                                                            |
 |--------|------|----------|----------------------------------------------------------------------------------------|
-| size   | int  | Não       | O número de recursos de fatura para devolver na resposta. Este parâmetro é opcional. |
-| offset | int  | Não       | O índice baseado em zero da primeira fatura a devolver.                                   |
+| size   | int  | No       | O número de recursos de fatura para devolver na resposta. Este parâmetro é opcional. |
+| offset | int  | No       | O índice baseado em zero da primeira fatura a devolver.                                   |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -103,7 +98,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

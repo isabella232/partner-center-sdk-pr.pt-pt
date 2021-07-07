@@ -4,21 +4,16 @@ description: Como obter toda a informação de pesquisa analítica.
 ms.date: 06/27/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 967f8d0ed2d276e0f68a047204b64d83dc69da95
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: e789a013b01fb63a38c72f4fe94864ecf21f7e4b
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768756"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760169"
 ---
 # <a name="get-all-search-analytics-information"></a>Obter todas as informações de análise de pesquisas
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter toda a informação de pesquisa analítica para os seus clientes.
 
@@ -36,7 +31,7 @@ Como obter toda a informação de pesquisa analítica para os seus clientes.
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 
-|    Parâmetro     |  Tipo  |                                                                                                                   Descrição                                                                                                                    |
+|    Parâmetro     |  Tipo  |                                                                                                                   Description                                                                                                                    |
 |------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |      filter      | string |                                                                     Devolve dados correspondentes à condição do filtro. </br> **Exemplo:**</br> `.../search?filter=field eq 'value'`                                                                     |
 |     groupby      | string |                                         Suporta termos e datas. Lógica de curto-circuito para limitar o número de baldes. </br> **Exemplo:**</br> `.../search?groupby=termField1,dateField1,termField2`                                         |

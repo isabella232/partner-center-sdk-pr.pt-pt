@@ -4,18 +4,14 @@ description: Como eliminar uma conta de utilizador existente para um cliente.
 ms.date: 06/20/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 77fc1a1c7264779ca549be8d52798e90c91138bb
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: c45646da43b8926f911942374de5da07f318c526
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769380"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973065"
 ---
 # <a name="delete-a-user-account-for-a-customer"></a>Eliminar uma conta de utilizador para um cliente
-
-**Aplica-se a:**
-
-- Partner Center
 
 Este artigo explica como eliminar uma conta de utilizador existente para um cliente.
 
@@ -29,9 +25,9 @@ Este artigo explica como eliminar uma conta de utilizador existente para um clie
 
 ## <a name="deleting-a-user-account"></a>Apagar uma conta de utilizador
 
-Quando elimina uma conta de utilizador, o estado do utilizador está definido para **inativar** durante trinta dias. Após trinta dias, a conta de utilizador e os seus dados associados são purgados e tornados irrecuperáveis.
+Quando elimina uma conta de utilizador, o estado do utilizador está definido para **inativo** durante 30 dias. Após 330 dias, a conta de utilizador e os seus dados associados são purgados e tornados irrecuperáveis.
 
-Pode [restaurar uma conta de utilizador eliminada para um cliente](restore-a-user-for-a-customer.md) se a conta inativa estiver dentro da janela de trinta dias. No entanto, quando restaura uma conta que foi eliminada e marcada como inativa, a conta deixou de ser devolvida como membro da coleção de utilizadores (por exemplo, quando [obtém uma lista de todas as contas de utilizador de um cliente).](get-a-list-of-all-user-accounts-for-a-customer.md)
+Pode [restaurar uma conta de utilizador eliminada para um cliente](restore-a-user-for-a-customer.md) se a conta inativa estiver dentro da janela de 30 dias. No entanto, quando restaura uma conta que foi eliminada e marcada como inativa, a conta deixou de ser devolvida como membro da coleção de utilizadores (por exemplo, quando [obtém uma lista de todas as contas de utilizador de um cliente).](get-a-list-of-all-user-accounts-for-a-customer.md)
 
 ## <a name="c"></a>C\#
 
@@ -51,7 +47,7 @@ Para eliminar uma conta de utilizador do cliente existente:
 partnerOperations.Customers.ById(selectedCustomerId).Users.ById(customerUserIdToDelete).Delete();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: DeleteCustomerUser.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: DeleteCustomerUser.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

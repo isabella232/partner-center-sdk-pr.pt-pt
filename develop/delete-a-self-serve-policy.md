@@ -4,20 +4,16 @@ description: Como apagar uma política de autosserviço.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 3450145d6daf2ffca5e2886245e592406cb0886d
-ms.sourcegitcommit: 01e75175077611da92175c777a440a594fb05797
+ms.openlocfilehash: 063cf98d4c78e82622e486427baeb1a5721715e5
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "97770224"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973099"
 ---
 # <a name="delete-a-selfservepolicy"></a>Excluir uma AutoServePolicy
 
-**Aplica-se a:**
-
-- Partner Center
-
-Este tópico explica como atualizar uma política de autosserviço.
+Este artigo explica como atualizar uma política de autosserviço.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -45,7 +41,7 @@ partnerOperations.SelfServePolicies.ById(policyId).Delete();
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **DeleteSelfServePolicies.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -62,12 +58,12 @@ Utilize os seguintes parâmetros de trajetória para obter o produto especificad
 
 | Nome                       | Tipo         | Necessário | Descrição                                                     |
 |----------------------------|--------------|----------|-----------------------------------------------------------------|
-| **SelfServePolicy-id**     | **cadeia**   | Sim      | Uma corda que identifica a política de autosserviço.                 |
+| **SelfServePolicy-id**     | **string**   | Yes      | Uma corda que identifica a política de autosserviço.                 |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
 - É necessária uma identificação de pedido e uma identificação de correlação.
-- Consulte [os cabeçalhos REST do Partner Center](headers.md) para obter mais informações.
+- Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).
 
 ### <a name="request-body"></a>Corpo do pedido
 

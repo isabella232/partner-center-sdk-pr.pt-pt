@@ -4,19 +4,16 @@ description: Recursos relacionados com a implementação do dispositivo Partner 
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a464cdad3979c305df16a3bdc9133ce70a7ac688
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: c85f0bd6a633ac18aa8e56e5a89bfc5c8f0398cc
+ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768785"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111906514"
 ---
 # <a name="device-deployment-resources"></a>Recursos de implantação de dispositivos
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
@@ -24,7 +21,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **ConfiguraçãoApolicia** fornece informações sobre uma política de configuração.
 
-| Propriedade             | Tipo                                                           | Descrição                                                        |
+| Propriedade             | Tipo                                                           | Description                                                        |
 |----------------------|----------------------------------------------|--------------------------------------------------------------------------------------|
 | ID                   | string                                       | Uma cadeia formatada por GUID que identifica a política.                                  |
 | name                 | string                                       | O nome amigável para a apólice.                                                    |
@@ -40,7 +37,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **O dispositivo** fornece informações sobre um dispositivo.
 
-| Propriedade            | Tipo                                                           | Descrição                                                              |
+| Propriedade            | Tipo                                                           | Description                                                              |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------|
 | ID                  | string                                                         | Uma corda formatada pelo GUID que identifica o dispositivo.                      |
 | serialNumber        | string                                                         | O número de série está exclusivamente associado ao dispositivo.                   |
@@ -57,7 +54,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **BatchUploadDetails** descreve o estado de um carregamento de informações sobre cada dispositivo numa lista de dispositivos.
 
-| Propriedade        | Tipo     | Descrição                                                                  |
+| Propriedade        | Tipo     | Description                                                                  |
 |-----------------|----------|------------------------------------------------------------------------------|
 | batchTrackingId | string   | Uma cadeia formatada guid que está associada ao lote de dispositivos carregados. |
 | status          | string   | O estado do carregamento do lote: "desconhecido", "em fila", "processamento", "terminado", "terminado \_ com \_ erros". |
@@ -70,7 +67,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **DeviceUploadDetails** descreve o estado de um upload de informações sobre um dispositivo.
 
-| Propriedade         | Tipo                    | Descrição                                 |
+| Propriedade         | Tipo                    | Description                                 |
 |------------------|-------------------------|---------------------------------------------|
 | deviceId         | string                  | Uma cadeia formatada guid que está associada ao dispositivo. |
 | serialNumber     | string                  | O número de série está exclusivamente associado ao dispositivo. |
@@ -84,7 +81,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **O DeviceBatch** representa uma coleção de dispositivos.
 
-| Propriedade     | Tipo                                                           | Descrição                                                           |
+| Propriedade     | Tipo                                                           | Description                                                           |
 |--------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | ID           | string                                                         | Uma cadeia formatada guid que está associada ao lote de dispositivos. |
 | criado Por    | string                                                         | O nome do inquilino que criou a coleção.                   |
@@ -97,7 +94,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **DeviceBatchCreationRequest** fornece as informações necessárias para criar um lote de dispositivos e povoa-o com dispositivos.
 
-| Propriedade     | Tipo                                                           | Descrição                                                           |
+| Propriedade     | Tipo                                                           | Description                                                           |
 |--------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | batchId      | string                                                         | Uma cadeia formatada guid que está associada ao lote de dispositivos. |
 | dispositivos      | matriz de objetos do [dispositivo](#device)                             | Cada objeto especifica um dispositivo. São aceites as seguintes combinações de campos para identificar um dispositivo: hardwareHash + produtoKey, hardwareHash + serialNumber, hardwareHash + productKey + serialNumber, hardwareHash only, productKey only, serialNumber + oemManufacturerName + modelName. |
@@ -107,7 +104,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **DevicePolicyUpdateRequest** fornece as informações necessárias para atualizar uma lista de dispositivos com uma política.
 
-| Propriedade     | Tipo                                                           | Descrição                                                           |
+| Propriedade     | Tipo                                                           | Description                                                           |
 |--------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | dispositivos      | matriz de objetos do [dispositivo](#device)                             | Cada objeto especifica um dispositivo. São necessárias as seguintes propriedades: Id, Políticas. |
 | atributos   | [RecursosTributos](utility-resources.md#resourceattributes)  | Os atributos dos metadados.                                              |

@@ -1,25 +1,21 @@
 ---
-title: Obtenha todos os registos mensais de utilização de uma subscrição.
+title: Obter todos os registos de utilização mensal de uma subscrição
 description: Pode utilizar a coleção de recursos AzureResourceMonthlyUsageRecord para obter uma lista de serviços dentro da subscrição de um cliente e as suas informações de utilização cotadas associadas.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 1dd09d4976c9626e088cda02ce36669dd7121a99
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: ee4bd413eec7d5a2dddbe3803df8839589ab7504
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769734"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760288"
 ---
-# <a name="get-all-monthly-usage-records-for-a-subscription"></a>Obtenha todos os registos mensais de utilização de uma subscrição.
+# <a name="get-all-monthly-usage-records-for-a-subscription"></a>Obter todos os registos de utilização mensal de uma subscrição
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode utilizar a coleção de recursos [**AzureResourceMonthlyUsageRecord**](/dotnet/api/microsoft.store.partnercenter.models.usage.azureresourcemonthlyusagerecord) para obter uma lista de serviços dentro da subscrição de um cliente e as suas informações de utilização cotadas associadas.
 
@@ -31,7 +27,7 @@ Pode utilizar a coleção de recursos [**AzureResourceMonthlyUsageRecord**](/dot
 
 - Um identificador de assinatura.
 
-*Esta API suporta apenas subscrições do Microsoft Azure (MS-AZR-0145P). Se estiver a utilizar um plano Azure, consulte [obter dados de utilização para subscrição por contador.](get-a-customer-subscription-meter-usage-records.md)*
+*Esta API suporta apenas Microsoft Azure subscrições (MS-AZR-0145P). Se estiver a utilizar um plano Azure, consulte [obter dados de utilização para subscrição por contador.](get-a-customer-subscription-meter-usage-records.md)*
 
 ## <a name="c"></a>C\#
 
@@ -39,7 +35,7 @@ Para obter as informações de utilização de recursos de uma subscrição:
 
 1. Utilize a sua coleção **IAggregatePartner.Customers** para ligar para o método **ById().**
 
-2. Ligue para a propriedade **Subscrições,** bem como **UsageRecords,** em seguida, a propriedade **Recursos.**
+2. Ligue para a propriedade **Subscrições,** e **UsageRecords,** em seguida, a propriedade **Recursos.**
 3. Ligue para os **métodos Get()** ou **GetAsync().**
 
 ``` csharp
@@ -53,7 +49,7 @@ var usageRecords = partnerOperations.Customers.ById(selectedCustomerId).Subscrip
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSample**
+- Project: **PartnerSDK.FeatureSample**
 - Classe: **SubscriptionResourceUsageRecords.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO

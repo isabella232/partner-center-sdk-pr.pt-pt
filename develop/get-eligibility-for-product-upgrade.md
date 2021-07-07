@@ -1,25 +1,21 @@
 ---
 title: Verifique a elegibilidade de um cliente para a atualização de um plano Azure
-description: Pode utilizar o recurso ProductUpgradeRequest para devolver um recurso de melhoria de produtos para determinar se um cliente é elegível para atualizar a partir de uma subscrição do Microsoft Azure (MS-AZR-0145P) para um plano Azure.
+description: Pode utilizar o recurso ProductUpgradeRequest para devolver um recurso de melhoria de produtos para determinar se um cliente é elegível para atualizar a partir de uma subscrição de Microsoft Azure (MS-AZR-0145P) para um plano Azure.
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 568ed3f4cff7d9cd520e608d43cb89bb78e00ccc
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 34a20611c7d92042b5432c5ffb3ba4702d77e0c2
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768725"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446263"
 ---
 # <a name="check-a-customers-eligibility-for-upgrading-to-an-azure-plan"></a>Verifique a elegibilidade de um cliente para a atualização de um plano Azure
 
-**Aplica-se a:**
-
-- Partner Center
-
-Pode utilizar o recurso [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) para verificar se um cliente é elegível para atualizar para um plano Azure a partir de uma subscrição microsoft Azure (MS-AZR-0145P) Este método devolve um recurso [**de edição do Produto**](product-upgrade-resources.md#productupgradeseligibility) Com a elegibilidade do produto para upgrade do cliente.
+Pode utilizar o recurso [**ProductUpgradeRequest**](product-upgrade-resources.md#productupgraderequest) para verificar se um cliente é elegível para atualizar para um plano Azure a partir de uma subscrição de Microsoft Azure (MS-AZR-0145P) Este método devolve um recurso [**de edição do Produto**](product-upgrade-resources.md#productupgradeseligibility) Com a elegibilidade do produto para upgrade do cliente.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

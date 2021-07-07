@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 43086a32fa0dbbdecf65aac167c687f26fc4c2c6
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: fe8af76d1e1456754dec79291ec0853fb253d108
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768743"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446297"
 ---
 # <a name="get-a-customers-subscriptions-transfer-eligibility"></a>Obter a elegibilidade de transferência de subscrições de um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter uma coleção de subscrições de um cliente que são elegíveis/inelegíveis para transferência.
 
@@ -41,8 +37,8 @@ Esta tabela lista o parâmetro de consulta necessário para obter todas as subsc
 
 | Nome               | Tipo   | Necessário | Descrição                                           |
 |--------------------|--------|----------|-------------------------------------------------------|
-| cliente-inquilino-id | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
-| tipo de transferência      | string | Sim      | O tipo de transferência que se destina.                |
+| cliente-inquilino-id | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| tipo de transferência      | string | Yes      | O tipo de transferência que se destina.                |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

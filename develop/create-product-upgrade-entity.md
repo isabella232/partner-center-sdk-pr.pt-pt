@@ -4,18 +4,14 @@ description: Pode utilizar o recurso ProductUpgradeRequest para criar uma entida
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 45830033d93e0906eafc169cf04b997e2ff7c3d8
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 4e346b7f5294a8847047c85115d8c80f34eaca84
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768815"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973421"
 ---
 # <a name="create-a-product-upgrade-entity-for-a-customer"></a>Criar uma entidade de atualização de produtos para um cliente
-
-**Aplica-se a:**
-
-- Partner Center
 
 Pode criar uma entidade de upgrade de produtos para atualizar um cliente para uma determinada família de produtos (por exemplo, plano Azure) utilizando o recurso **ProductUpgradeRequest.**
 
@@ -37,7 +33,7 @@ Para atualizar um cliente para o plano Azure:
 
 3. Ligue para o método **Criar** e passe no objeto **ProductUpgradesRequest,** que irá devolver uma corda **de cabeçalho de localização.**
 
-4. Extrair o **id de atualização** da cadeia do cabeçalho de localização que pode ser usada para [consultar o estado de atualização](get-product-upgrade-status.md).
+4. Extrair o **id de atualização** da cadeia de cabeçalho de localização que pode ser usada para [consultar o estado de atualização](get-product-upgrade-status.md).
 
 ```csharp
 // IAggregatePartner partnerOperations;

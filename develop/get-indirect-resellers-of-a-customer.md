@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: d69abf9530548f110820ca04fefb698e0e37556c
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 8697c40c22d5c19979c066b8d3a1de733e211f71
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769691"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446246"
 ---
 # <a name="get-indirect-resellers-of-a-customer"></a>Obter revendedores indiretos de um cliente
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter uma lista dos revendedores indiretos que têm uma relação com um cliente especificado.
 
@@ -38,7 +34,7 @@ Para recuperar uma lista de revendedores indiretos com quem o cliente especifica
  var indirectResellers = partnerOperations.Customers[customerId].Relationships.Get();
 ```
 
-**Amostra**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetIndirectResellersOfCustomer.cs
+**Amostra**: [App de teste de consola](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetIndirectResellersOfCustomer.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -54,7 +50,7 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada GUID que identifica o cliente. |
+| id cliente | string | Yes      | Uma cadeia formatada GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

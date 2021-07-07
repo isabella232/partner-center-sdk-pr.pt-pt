@@ -4,18 +4,14 @@ description: Como remover um utilizador de uma função de diretório dentro de 
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6253e86f3733bbf2b9c593c5ca3f3e2fccce7c2c
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 36dc742c4f713131b4996d7dc945b6dd008a3ef5
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769649"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445651"
 ---
 # <a name="remove-a-customer-user-from-a-role"></a>Remover um utilizador cliente de uma função
-
-**Aplica-se a**
-
-- Partner Center
 
 Como remover um utilizador de uma função de diretório dentro de uma conta de cliente.
 
@@ -38,7 +34,7 @@ Para remover um utilizador de uma função de diretório, selecione o cliente co
 partnerOperations.Customers.ById(selectedCustomerId).DirectoryRoles.ById(selectedRoleId).UserMembers.ById(selectedUserMemberId).Delete();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: RemoveCustomerUserMemberFromDirectoryRole.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: RemoveCustomerUserMemberFromDirectoryRole.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

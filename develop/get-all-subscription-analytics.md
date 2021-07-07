@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: f32fb99ad52939ae8e9de26276588d3022f18fbc
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: e1f16c92569a02bc51c96a85ecb642fbeb76a9a7
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768755"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760254"
 ---
 # <a name="get-all-subscription-analytics-information"></a>Obter todas as informações de análise de subscrições
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo descreve como obter todas as informações de análise de subscrição para os seus clientes.
 
@@ -40,7 +35,7 @@ Este artigo descreve como obter todas as informações de análise de subscriç�
 
 O quadro que se segue enumera os parâmetros opcionais e as suas descrições:
 
-| Parâmetro | Tipo |  Descrição |
+| Parâmetro | Tipo |  Description |
 |-----------|------|--------------|
 | top | int | O número de filas de dados a devolver no pedido. Se o valor não for especificado, o valor máximo e o valor predefinido são `10000` . Se houver mais linhas na consulta, o corpo de resposta inclui um próximo link que pode usar para solicitar a próxima página de dados. |
 | saltar | int | O número de filas para saltar na consulta. Utilize este parâmetro para páginar através de grandes conjuntos de dados. Por exemplo, `top=10000` e `skip=0` recupera as primeiras 10000 linhas de dados, `top=10000` e recupera as `skip=10000` próximas 10000 linhas de dados. |

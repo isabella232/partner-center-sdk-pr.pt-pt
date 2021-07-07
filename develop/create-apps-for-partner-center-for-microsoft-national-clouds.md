@@ -7,27 +7,24 @@ MS-HAID:
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 887cb71c752ac5d9c61398536711545c19cc7600
-ms.sourcegitcommit: 4c253abb24140a6e00b0aea8e79a08823ea5a623
+ms.openlocfilehash: 93d46a17bc26e9586e5e773bdf934653a571367f
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "97770144"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111973456"
 ---
 # <a name="register-app-details-for-partner-center-for-microsoft-national-cloud-through-the-azure-portal"></a>Registar detalhes da aplicação para Partner Center para a Microsoft National Cloud através do portal Azure
 
-**Aplica-se a:**
-
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center for Microsoft Cloud Germany | Centro de Parceiros para Microsoft Cloud for US Government
 
 Os desenvolvedores devem registar detalhes sobre a sua aplicação com Azure AD através do portal Azure. Isto ajuda a garantir que apenas as aplicações especificadas são capazes de se conectar aos dados do parceiro e do cliente.
 
-Para partner center for Microsoft Cloud for US Government, você deve atualmente gerir aplicações através do PowerShell. Para obter mais informações, consulte a documentação de referência da [Azure PowerShell](/powershell/module/Azuread/#applications).
+Para o Partner Center for Microsoft Cloud for US Government, atualmente tem de gerir aplicações através do PowerShell. Para mais informações, consulte a [documentação de referência Azure PowerShell.](/powershell/module/Azuread/#applications)
 
 [!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
 
-Esteja ciente dos seguintes requisitos adicionais quando criar uma aplicação para Partner Center para Microsoft Cloud Germany ou Partner Center for Microsoft Cloud para o Governo dos EUA.
+Esteja ciente dos seguintes requisitos adicionais quando criar uma aplicação para Partner Center para Microsoft Cloud Germany ou Partner Center for Microsoft Cloud for US Government.
 
 ## <a name="web-apps"></a>Web Apps
 
@@ -37,17 +34,17 @@ Para aplicações web, utilize os seguintes procedimentos para registar o seu ID
 
 1. Navegue para o [portal Azure - Página de registos de aplicações](https://go.microsoft.com/fwlink/?linkid=2083908) para registar a sua aplicação. Inicie sessão no portal do Azure com uma conta profissional ou escolar ou uma conta pessoal da Microsoft.
 
-2. Selecione **Novo registo**. Para obter mais informações, consulte [Quickstart: Registe uma aplicação com a plataforma de identidade microsoft](/azure/active-directory/develop/quickstart-register-app).
+2. Selecione **Novo registo**. Para mais informações, consulte [Quickstart: Registe uma aplicação com o plataforma de identidades da Microsoft](/azure/active-directory/develop/quickstart-register-app).
 
 ### <a name="configure-api-access-permissions-for-web-app"></a>Configure permissões de acesso da API para aplicação web
 
-1. Escolha a sua aplicação. Aceda às **Definições** da aplicação Web.
+1. Escolha a sua aplicação. Vá a **Definições** da aplicação Web.
 
 2. Na secção **de Acesso API,** escolha **permissões necessárias**
 
-3. Para permissões de diretório ativo do Windows Azure:
+3. Para Windows permissões de diretório Azure Ative:
 
-    1. Escolha **permissões do Windows Azure Ative Directory**.
+    1. Escolha **permissões Windows Azure Ative Directory.**
 
     2. Nas **permissões de Aplicações,** selecione Ler dados do diretório.
 
@@ -65,14 +62,14 @@ Para aplicações web, utilize os seguintes procedimentos para registar o seu ID
 
 Deve ter os seguintes detalhes da configuração da aplicação web:
 
-- ID da Aplicação
+- ID da aplicação
 - Segredo da aplicação
 
 ### <a name="register-the-web-app-in-partner-center"></a>Registe a aplicação Web no Partner Center
 
-1. Faça login em [https://partnercenter.microsoft.com](https://partnercenter.microsoft.com) .
+1. Inicie sessão em [https://partnercenter.microsoft.com](https://partnercenter.microsoft.com).
 
-2. Escolha **o Dashboard,** escolha **as Definições de Conta** e, em seguida, escolha a **Gestão de Aplicações.**
+2. Escolha **o Dashboard,** escolha **Definições Conta** e escolha a **Gestão de Aplicações.**
 
 3. Na secção **Aplicação Web,** escolha **registar a aplicação existente.**
 
@@ -91,15 +88,15 @@ As aplicações nativas não precisam de ser registadas no Partner Center. Mas e
 
 1. Navegue para o [portal Azure - Página de registos de aplicações](https://go.microsoft.com/fwlink/?linkid=2083908) para registar a sua aplicação. Inicie sessão no portal do Azure com uma conta profissional ou escolar ou uma conta pessoal da Microsoft.
 
-2. Selecione **Novo registo**. Para obter mais informações, consulte [Quickstart: Registe uma aplicação com a plataforma de identidade microsoft](/azure/active-directory/develop/quickstart-register-app).
+2. Selecione **Novo registo**. Para mais informações, consulte [Quickstart: Registe uma aplicação com o plataforma de identidades da Microsoft](/azure/active-directory/develop/quickstart-register-app).
 
 ### <a name="configure-api-access-permissions-for-native-app"></a>Configure permissões de acesso da API para app nativa
 
-1. Escolha a sua aplicação. Ir para **Definições**.
+1. Escolha a sua aplicação. Vai para **Definições.**
 
 2. No Acesso API, escolha **permissões necessárias.**
 
-3. Escolha **permissões do Windows Azure Ative Directory**. Nas **permissões delegadas,** selecione estas permissões:
+3. Escolha **permissões Windows Azure Ative Directory.** Nas **permissões delegadas,** selecione estas permissões:
 
     - **Iniciar sessão e ler o perfil de utilizador**
     - **Ler os dados do diretório**
@@ -127,4 +124,4 @@ As aplicações nativas não precisam de ser registadas no Partner Center. Mas e
 >[!IMPORTANT]
 > Note o ID da aplicação nas propriedades da sua aplicação.
 
-Não precisa de registar aplicações nativas no Partner Center, no entanto a aplicação nativa deve ser administrada. Note o ID da aplicação da sua aplicação nativa.
+Não precisa de registar aplicações nativas no Partner Center, no entanto a aplicação nativa deve ser aprovada por administração. Note o ID da aplicação da sua aplicação nativa.

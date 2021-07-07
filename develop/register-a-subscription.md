@@ -4,22 +4,18 @@ description: Registe uma subscrição existente de modo a que possa encomendar r
 ms.date: 07/27/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9a96bb350f22430c9fd7a1759e336cc9f3ca1939
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: d26a7c77f60e6ef817cde80b9e97c88bd8bdc786
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769650"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446620"
 ---
 # <a name="register-a-subscription"></a>Registar uma subscrição
 
-**Aplica-se a**
-
-- Partner Center
-
 Registe uma [Subscrição](subscription-resources.md) existente de modo a que possa encomendar reservas Azure.
 
-Para adquirir uma reserva Azure deve ter pelo menos uma subscrição CSP Azure existente. Este método permite-lhe registar a subscrição CSP Azure existente, permitindo-lhe a compra de reservas Azure.
+Para adquirir uma reserva Azure, você deve ter pelo menos uma subscrição CSP Azure existente. Este método permite-lhe registar a subscrição CSP Azure existente, permitindo-lhe a compra de reservas Azure.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -58,8 +54,8 @@ Utilize os seguintes parâmetros de percurso para identificar o cliente e a subs
 
 | Nome                    | Tipo       | Necessário | Descrição                                                   |
 |-------------------------|------------|----------|---------------------------------------------------------------|
-| id cliente             | string     | Sim      | Uma cadeia formatada GUID que identifica o cliente.         |
-| id de subscrição         | string     | Sim      | Uma cadeia formatada GUID que identifica a subscrição.     |
+| id cliente             | string     | Yes      | Uma cadeia formatada GUID que identifica o cliente.         |
+| id de subscrição         | string     | Yes      | Uma cadeia formatada GUID que identifica a subscrição.     |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

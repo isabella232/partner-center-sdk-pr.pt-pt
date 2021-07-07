@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: e4219f544a74bb3f34ec3aefe08cf18eed77fd42
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: e05248b16b803529258de806c25b117f3104ad2a
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769686"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446331"
 ---
 # <a name="get-customers-of-an-indirect-reseller"></a>Obter clientes de um revendedor indireto
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter uma lista dos clientes de um revendedor indireto.
 
@@ -70,7 +66,7 @@ while (customersEnumerator.HasValue)
 }
 ```
 
-**Amostra**: [Console test app](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetCustomersOfIndirectReseller.cs
+**Amostra**: [Aplicativo de teste de consola](console-test-app.md)**Project**: Partner Center SDK Samples **Class**: GetCustomersOfIndirectReseller.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -86,8 +82,8 @@ Utilize os seguintes parâmetros de consulta para criar o pedido.
 
 | Nome   | Tipo   | Necessário | Descrição                                                                                                                                                                                                                                                                                   |
 |--------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| size   | int    | Não       | O número de resultados a apresentar ao mesmo tempo. Este parâmetro é opcional.                                                                                                                                                                                                                |
-| filter | filter | Sim      | A consulta que filtra a procura. Para recuperar os clientes de um revendedor indireto especificado, deve inserir o identificador de revendedor indireto e incluir e codificar a seguinte cadeia: {"Field":"IndirectReseller","Valor":"{{indirect reseller identificador}","Operador":"começa \_ com"}. |
+| size   | int    | No       | O número de resultados a apresentar ao mesmo tempo. Este parâmetro é opcional.                                                                                                                                                                                                                |
+| filter | filter | Yes      | A consulta que filtra a procura. Para recuperar os clientes de um revendedor indireto especificado, deve inserir o identificador de revendedor indireto e incluir e codificar a seguinte cadeia: {"Field":"IndirectReseller","Valor":"{{indirect reseller identificador}","Operador":"começa \_ com"}. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

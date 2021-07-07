@@ -6,22 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: vinayks-ms
 ms.author: vinayks
-ms.openlocfilehash: bd0f38103e6b6f93ab5da386042b00801b683ccd
-ms.sourcegitcommit: 1aeaa12705a5945b8aab6bca254fedebd9c8bc4e
+ms.openlocfilehash: da35dadd4e13247e923259a1cf3a67852f4b9e00
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "110244608"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111445906"
 ---
 # <a name="csp-indirect-provider-sandbox-capabilities-for-creating-indirect-reseller-accounts"></a>Capacidades de caixa de areia do fornecedor CSP indireto para criar contas de revendedores indiretos 
 
-**Aplica-se a**
-
-- Partner Center
-
-**Funções adequadas**
-
-- Fornecedor indireto
+**Funções adequadas**: Prestador indireto
 
 Os Fornecedores Indiretos CSP podem criar uma conta de Areia De Revendedor Indireto CSP através da sua própria conta De sandbox Tier 2 no portal Partner Center.
 
@@ -33,7 +27,7 @@ Credenciais de caixa de areia Partner Center Indirete Provider (Nível 2). O cen
 
 ## <a name="sandbox-indirect-provider--create-sandbox-indirect-reseller-using-the-partner-center-user-interface"></a>Sandbox Indireto Provider – Criar Revendedor Indireto Sandbox utilizando a interface de utilizador do Partner Center 
 
- Esta é uma funcionalidade única da Sandbox que permite aos Fornecedores Indiretos da Sandbox a capacidade de criar a conta Sandbox Indirect Reseller através do portal Partner Center.
+ Esta é uma funcionalidade apenas para Sandbox que permite aos Fornecedores Indiretos da Sandbox a capacidade de criar uma conta de Revendedor Indireto Sandbox através do portal Partner Center.
 
 Os seguintes cenários são o que os fornecedores indiretos podem fazer para revendedores indiretos em Sandbox através da interface de utilizador do Partner Center: 
 
@@ -46,13 +40,11 @@ Os seguintes cenários são o que os fornecedores indiretos podem fazer para rev
  
 1. Os Fornecedores Indiretos CSP podem eliminar uma conta de Sandbox de Revendedor Indireto CSP através da sua própria conta De sandbox Tier 2 no portal Partner Center.
 
-    a.  Quando o Sandbox Indirect Provider elimina a relação com o Revendedor Indireto Sandbox.
+    a.  Quando o Sandbox Indirect Provider eliminar a relação com o Revendedor Indireto Sandbox, verifique se o Revendedor Indireto tem alguma outra relação com outros fornecedores. Em caso afirmativo, apenas a relação com esse fornecedor indireto específico será removida.
 
-    b.  Verifique se o Revendedor Indireto tem alguma outra relação com outros fornecedores. Em caso afirmativo, apenas a relação com esse fornecedor indireto específico será removida.
+    c. Se esta for a única relação para o Revendedor Indireto, então o Revendedor Indireto será eliminado.
 
-    c. Se essa é a única relação para o IR, então o IR será apagado.
-
-1. O CSP Indirect Provider pode eliminar um Revendedor Indireto CSP.
+1. Os Fornecedores Indiretos CSP podem eliminar um Revendedor Indireto CSP.
 
     a. Esta é uma funcionalidade apenas para Sandbox que permite aos Fornecedores Indiretos da Sandbox a capacidade de eliminar revendedores indiretos sandbox.
      
@@ -62,13 +54,13 @@ Os seguintes cenários são o que os fornecedores indiretos podem fazer para rev
 
     1. Elimine todos os clientes do Revendedor Indireto.
 
-1. Limite de 5 Revendedores Indiretos sandbox permitidos por Sandbox Indirect Provider. Uma vez eliminado o revendedor Sandbox Indirect, a quota será reposta.
+1. Limite de cinco Revendedores Indiretos Sandbox permitidos por Sandbox Indirect Provider. Uma vez eliminado o revendedor Sandbox Indirect, a quota será reposta.
 
 ### <a name="pre-requisites"></a>Pré-requisitos
 
-- Limite de 5 Revendedores Indiretos sandbox permitidos por Sandbox Indirect Provider. 
+- Limite de cinco Revendedores Indiretos Sandbox permitidos por Sandbox Indirect Provider. 
 
-- O mesmo ID MPN pode ser usado para criar várias contas de Sandbox de Revendedor Indireto se o país MPN ID e o país de Sandbox de Revendedor Indireto forem os mesmos. Se tiver um ID MPN de teste disponível, pode usá-lo, ou pode obter uma lista de IDs MPN através do nosso [canal Yammer.]( https://www.yammer.com/cloudpartnercommunity/#/files/929991598080 ) Se não tiver acesso a Yammer, o Yammer pedir-lhe-á para solicitar acesso.
+- O mesmo ID MPN pode ser usado para criar várias contas de Sandbox de Revendedor Indireto se o país MPN ID e o país de Sandbox de Revendedor Indireto forem os mesmos. Se tiver um ID MPN de teste disponível, pode usá-lo, ou pode obter uma lista de IDs MPN através do nosso [canal Yammer]( https://www.yammer.com/cloudpartnercommunity/#/files/929991598080 ). Se não tiver acesso a Yammer, Yammer lhe pedirá acesso.
  
 - Apenas 75 clientes são permitidos por Sandbox Indireto Fornecedor
 
@@ -78,7 +70,7 @@ Os seguintes cenários são o que os fornecedores indiretos podem fazer para rev
 
 2. Navegue para Revendedores Indiretos a partir do menu esquerdo. 
 
-3. Clique no botão "Adicionar Reseller Sandbox". 
+3. Selecione o botão **Add Reseller Sandbox.** 
 
 4. Preencha o formulário de inscrição de conta. É autoexplicativo, mas lembre-se que está a criar uma conta Sandbox para um Revendedor Indireto. Esta conta não será submetida a verificação e será ativada assim que terminar a inscrição na conta.  
 
@@ -112,7 +104,7 @@ Uma conta de Sandbox de Revendedor Indireto CSP existente associada à sua próp
 
 2. Navegue para Revendedores Indiretos a partir do menu esquerdo. 
 
-3. Clique em Eliminar O Link **de Caixa de Areia de Revendedor** ao lado da conta de Vendar Indireto que pretende eliminar. A conta Descovendor Indireto Sandbox será permanentemente eliminada e não pode ser recuperada. 
+3. Selecione o link **'Delete Reseller Sandbox'** ao lado da conta Descoventer a caixa de areia indireta que pretende eliminar. A conta Descovendor Indireto Sandbox será permanentemente eliminada e não pode ser recuperada. 
 
 ## <a name="api-references"></a>Referências de API
 

@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 0ffe6d1a236a8a07e1ff71163e7639ef1f3437e1
-ms.sourcegitcommit: bbdb5f7c9ddd42c2fc4eaadbb67d61aeeae805ca
+ms.openlocfilehash: 5047743afdef02033d9494e3d8c16c9ab96b3fe9
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105030594"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446654"
 ---
 # <a name="update-a-customers-qualification-via-synchronous-validation"></a>Atualizar a qualificação de um cliente através de validação sincronizada
-
-**Aplica-se a**
-
-- Partner Center
 
 Saiba como atualizar as qualificações de um cliente de forma sincronizada através das APIs do Partner Center. Para aprender a fazê-lo assíncronos, consulte [a atualização da qualificação de um cliente através de validação assíncronosa.](update-customer-qualification-asynchronous.md)
 
@@ -39,7 +35,7 @@ Para atualizar a qualificação de um cliente para "Educação", ligue **para [U
 var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.Update(CustomerQualification.Education);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: CustomerQualificationOperations.cs
 
 Para atualizar a qualificação de um cliente para **o GovernmentCommunityCloud** num cliente existente sem habilitação, o parceiro é obrigado a incluir o Código de [**Validação**](utility-resources.md#validationcode)do cliente.
 
@@ -65,7 +61,7 @@ Utilize o seguinte parâmetro de consulta para atualizar a qualificação.
 | Nome                   | Tipo | Necessário | Descrição                                                                                                                                            |
 |------------------------|------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **cliente-inquilino-id** | GUID | Yes      | O valor é um design **de cliente-inquilino-inquilino** formatado guid que permite ao revendedor filtrar os resultados de um dado cliente que pertence ao revendedor. |
-| **validaçãoDesco**     | int  | No       | Só era necessário para a Nuvem Comunitária do Governo.                                                                                                            |
+| **validaçãoDesco**     | int  | No       | Só era necessário para Nuvem da Comunidade Governamental.                                                                                                            |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

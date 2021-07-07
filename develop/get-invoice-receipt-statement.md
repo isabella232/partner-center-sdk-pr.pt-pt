@@ -4,18 +4,14 @@ description: Recupera uma declaração de recibo de fatura usando o ID da fatura
 ms.date: 02/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 96cef11d6778de2d9bf28e466d88a39f9415727d
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: dcac4c8f0b881409dcad3560eefb82d4bb5e877a
+ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768713"
+ms.lasthandoff: 06/04/2021
+ms.locfileid: "111446134"
 ---
 # <a name="get-invoice-receipt-statement"></a>Obter declaração do recibo da fatura
-
-**Aplica-se a**
-
-- Partner Center
 
 Recupera uma declaração de recibo de fatura usando o ID da fatura e o ID do recibo.
 
@@ -39,7 +35,7 @@ Para obter uma declaração de recibo de fatura por ID, a começar pelo Partner 
 var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Receipts.ById(selectedReceipt).Documents.Statement.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: GetInvoiceReceiptStatement.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceReceiptStatement.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -55,8 +51,8 @@ Utilize o seguinte parâmetro de consulta para obter a declaração de recibo de
 
 | Nome       | Tipo   | Necessário | Descrição                                                                                    |
 |------------|--------|-----------------------------------------------------------------------------------------------------------|
-| fatura id | string | Sim      | O valor é um id de fatura que permite ao revendedor filtrar os resultados de uma determinada fatura. |
-| recibo id | string | Sim      | O valor é um recibo-id que permite ao revendedor filtrar os recibos de uma determinada fatura. |
+| fatura id | string | Yes      | O valor é um id de fatura que permite ao revendedor filtrar os resultados de uma determinada fatura. |
+| recibo id | string | Yes      | O valor é um recibo-id que permite ao revendedor filtrar os recibos de uma determinada fatura. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -64,7 +60,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 
