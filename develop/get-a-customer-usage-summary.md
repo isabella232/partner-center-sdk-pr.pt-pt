@@ -4,20 +4,16 @@ description: Pode utilizar o recurso CustomerUsageSummary para obter o uso de um
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 0c918434367a3514e6a6ad6034b4897c33f51025
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 88c69637c94b9263ede6924cf2dd09513aa00f70
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769128"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874623"
 ---
 # <a name="get-a-usage-summary-for-all-of-a-customers-subscriptions"></a>Obtenha um resumo de utilização para todas as subscrições de um cliente
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode utilizar o recurso **CustomerUsageSummary** para obter o uso de um serviço ou recurso Azure específico durante o período de faturação atual.
 
@@ -45,7 +41,7 @@ Para obter um resumo de utilização para todas as subscrições de um cliente:
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **GetCustomerUsageSummary.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -90,11 +86,11 @@ Se for bem sucedido, este método devolve um recurso **CustomerUsageSummary** no
 
 Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, o tipo de erro e parâmetros adicionais. Para obter uma lista completa, consulte [códigos de erro](error-codes.md).
 
-### <a name="response-example-for-microsoft-azure-ms-azr-0145p-subscription"></a>Exemplo de resposta para a subscrição do Microsoft Azure (MS-AZR-0145P)
+### <a name="response-example-for-microsoft-azure-ms-azr-0145p-subscription"></a>Exemplo de resposta para subscrição Microsoft Azure (MS-AZR-0145P)
 
 Neste exemplo, o cliente comprou uma oferta **de 145P Azure PayG.**
 
-*Para clientes com subscrições Microsoft Azure (MS-AZR-0145P), não haverá alteração na resposta da API.*
+*Para clientes com assinaturas Microsoft Azure (MS-AZR-0145P), não haverá alteração da resposta da API.*
 
 ```http
 HTTP/1.1 200 OK

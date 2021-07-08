@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 05aad095c6cb8eaee4cbf7ce976ca1b4b7a408c4
-ms.sourcegitcommit: f72173df911aee3ab29b008637190b4d85ffebfe
+ms.openlocfilehash: e699355f07dda3941eafed32f5f635d94000abd1
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/06/2021
-ms.locfileid: "106500061"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874283"
 ---
 # <a name="get-a-list-of-offer-categories-by-market"></a>Obter uma lista de categorias de ofertas por mercado
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo descreve como obter uma coleção que contenha todas as categorias de oferta num determinado país/região e localidade.
 
@@ -45,7 +40,7 @@ ResourceCollection<OfferCategory> offerCategoryResults = partnerOperations.With(
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSample**
+- Project: **PartnerSDK.FeatureSample**
 - Classe: **partnerSDK.FeatureSample**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO

@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: ea239aa008a5b7c33740e9c4697c3795908415cd
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 1258727ecbe7c5cc332624577fa8a355e28e3717
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769446"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874215"
 ---
 # <a name="get-a-list-of-products-by-country"></a>Obter uma lista de produtos (por país)
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Você pode usar os seguintes métodos para obter uma coleção de produtos disponíveis em um determinado país.
 
@@ -113,10 +108,10 @@ Utilize os seguintes parâmetros de percurso e consulta para obter uma lista de 
 
 | Nome                   | Tipo     | Necessário | Descrição                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
-| país                | string   | Sim      | O ID do país/região.                                                  |
-| targetView             | string   | Sim      | Identifica a visão do catálogo. Os valores suportados são: <br/><br/>**Azure,** que inclui todos os itens Azure<br/><br/>**AzureReservations**, que inclui todos os itens de reserva Azure<br/><br/>**AzureReservationsVM,** que inclui todos os itens de reserva de máquina virtual (VM)<br/><br/>**AzureReservationsSQL,** que inclui todos os itens de reserva SQL<br/><br/>**AzureReservationsCosmosDb,** que inclui todos os itens de reserva da base de dados cosmos<br/><br/>**MicrosoftAzure**, que inclui itens para subscrições microsoft Azure **(MS-AZR-0145P**) e planos Azure<br/><br/>**OnlineServices**, que inclui todos os itens de serviço on-line (incluindo produtos de mercado comercial)<br/><br/>**Software**, que inclui todos os itens de software<br/><br/>**SoftwareSUSELinux,** que inclui todos os itens SUSE Linux de software<br/><br/>**SoftwarePerpetual,** que inclui todos os itens de software perpétuos<br/><br/>**SoftwareSubscriptions**, que inclui todos os itens de subscrição de software    |
+| país                | string   | Yes      | O ID do país/região.                                                  |
+| targetView             | string   | Yes      | Identifica a visão do catálogo. Os valores suportados são: <br/><br/>**Azure,** que inclui todos os itens Azure<br/><br/>**AzureReservations**, que inclui todos os itens de reserva Azure<br/><br/>**AzureReservationsVM,** que inclui todos os itens de reserva de máquina virtual (VM)<br/><br/>**AzureReservationsSQL,** que inclui todos os itens de reserva SQL<br/><br/>**AzureReservationsCosmosDb,** que inclui todos os itens de reserva da base de dados cosmos<br/><br/>**MicrosoftAzure**, que inclui itens para subscrições Microsoft Azure **(MS-AZR-0145P)** e planos Azure<br/><br/>**OnlineServices**, que inclui todos os itens de serviço on-line (incluindo produtos de mercado comercial)<br/><br/>**Software**, que inclui todos os itens de software<br/><br/>**SoftwareSUSELinux,** que inclui todos os itens SUSE Linux de software<br/><br/>**SoftwarePerpetual,** que inclui todos os itens de software perpétuos<br/><br/>**SoftwareSubscriptions**, que inclui todos os itens de subscrição de software    |
 | targetSegment          | cadeia (de carateres)   | No       | Identifica o segmento alvo. A vista para diferentes públicos-alvo. Os valores suportados são: <br/><br/>**comercial**<br/>**educação**<br/>**governo**<br/>**sem fins lucrativos**  |
-| reservationScope | cadeia (de carateres)   | No | Ao consultar uma lista de produtos para Reservas Azure, especifique `reservationScope=AzurePlan` para obter uma lista de produtos que são aplicáveis aos planos Azure. Exclua este parâmetro para obter uma lista de produtos para reservas Azure, que são aplicáveis às subscrições do Microsoft Azure **(MS-AZR-0145P).**  |
+| reservationScope | cadeia (de carateres)   | No | Ao consultar uma lista de produtos para Reservas Azure, especifique `reservationScope=AzurePlan` para obter uma lista de produtos que são aplicáveis aos planos Azure. Exclua este parâmetro para obter uma lista de produtos para reservas Azure, que são aplicáveis a Microsoft Azure **(MS-AZR-0145P)** subscrições.  |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -130,7 +125,7 @@ Nenhum.
 
 #### <a name="products-by-country"></a>Produtos por país
 
-Siga este exemplo para obter uma lista de produtos por país para subscrições microsoft Azure (MS-AZR-0145P) e planos Azure.
+Siga este exemplo para obter uma lista de produtos por país para assinaturas Microsoft Azure (MS-AZR-0145P) e planos Azure.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=MicrosoftAzure HTTP/1.1
@@ -152,9 +147,9 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-#### <a name="azure-vm-reservations-for-microsoft-azure-ms-azr-0145p-subscriptions"></a>Reservas Azure VM para subscrições microsoft Azure (MS-AZR-0145P)
+#### <a name="azure-vm-reservations-for-microsoft-azure-ms-azr-0145p-subscriptions"></a>Reservas Azure VM para subscrições Microsoft Azure (MS-AZR-0145P)
 
-Siga este exemplo para obter uma lista de produtos por país para reservas Azure VM que são aplicáveis às subscrições do Microsoft Azure (MS-AZR-0145P).
+Siga este exemplo para obter uma lista de produtos por país para reservas Azure VM que são aplicáveis às assinaturas Microsoft Azure (MS-AZR-0145P).
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=AzureReservationsVM HTTP/1.1
@@ -174,7 +169,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                                               |
+| Código de Estado HTTP     | Código de erro   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Não é permitido o acesso ao objetivo solicitado.                                                     |
 | 403                  | 400036       | Não é permitido o acesso ao targetView solicitado.                                                        |

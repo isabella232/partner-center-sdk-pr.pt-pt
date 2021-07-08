@@ -6,24 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 55f63311e7bb1857fdc6c4b3d68446674542ba98
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 3668a5e510effb533cade311f52513b9a81d40af
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769439"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760543"
 ---
 # <a name="get-confirmation-of-customer-acceptance-of-microsoft-customer-agreement"></a>Obter confirmação da aceitação do cliente do Contrato de Cliente Microsoft
 
-**Aplica-se a:**
+**Aplica-se a**: Centro de Parceiros
 
-- Partner Center
+**Não se aplica a:** Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-O recurso **Do Acordo** é atualmente suportado pelo Partner Center apenas na nuvem pública da *Microsoft.* Este recurso não se aplica a:
-
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+O recurso **Do Acordo** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft.
 
 Este artigo explica como pode obter confirmação da aceitação de um cliente do Microsoft Customer Agreement.
 
@@ -78,8 +74,8 @@ Pode utilizar os seguintes parâmetros URI com o seu pedido:
 
 | Nome             | Tipo | Necessário | Descrição                                                                               |
 |------------------|------|----------|-------------------------------------------------------------------------------------------|
-| cliente-inquilino-id | GUID | Sim | O valor é um **CustomerTenantId** formatado guid que lhe permite especificar um cliente. |
-| tipo de acordo | cadeia (de carateres) | No | Este parâmetro devolve todos os metadados do acordo. Utilize este parâmetro para estender a resposta de consulta ao tipo de acordo específico. Os valores suportados são: <br/><br/> **MicrosoftCloudAgreement** que apenas inclui metadados de acordo do tipo *MicrosoftCloudAgreement*.<br/><br/> **MicrosoftCustomerAgreement** que só inclui metadados de acordo do tipo *MicrosoftCustomerAgreement*.<br/><br/> **\*** que devolve todos os metadados do acordo. (Não utilize **\*** a menos que o seu código tenha a lógica necessária para lidar com tipos de acordo inesperados.)<br/><br/> **Nota:** Se o parâmetro URI não for especificado, a consulta predefine o **MicrosoftCloudAgreement** para retrocompatibilidade. A Microsoft pode introduzir metadados de acordo com novos tipos de acordo a qualquer momento.  |
+| cliente-inquilino-id | GUID | Yes | O valor é um **CustomerTenantId** formatado guid que lhe permite especificar um cliente. |
+| tipo de acordo | cadeia (de carateres) | No | Este parâmetro devolve todos os metadados do acordo. Utilize este parâmetro para estender a resposta de consulta ao tipo de acordo específico. Os valores suportados são: <br/><br/> **MicrosoftCloudAgreement** que apenas inclui metadados de acordo do tipo *MicrosoftCloudAgreement*.<br/><br/> **MicrosoftCustomerAgreement** que só inclui metadados de acordo do tipo *MicrosoftCustomerAgreement*.<br/><br/> **\**_ que devolve todos os metadados do acordo. (Não use _* \* *_ a menos que o seu código tenha a lógica necessária para lidar com tipos de acordo inesperados.) <br/> <br/> _* Nota:** Se o parâmetro URI não for especificado, a consulta predefine o **MicrosoftCloudAgreement** para retrocompatibilidade. A Microsoft pode introduzir metadados de acordo com novos tipos de acordo a qualquer momento.  |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

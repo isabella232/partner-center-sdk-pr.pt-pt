@@ -4,18 +4,14 @@ description: Saiba como atribuir licenças a um utilizador do cliente através d
 ms.date: 10/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6eb0b953b9157e48074415bb3207e2946cfb2ab4
-ms.sourcegitcommit: d1104d5c27f8fb3908a87532f80c432f0147ef5d
+ms.openlocfilehash: 88ce0f185b0b043c4a7862b7f9808fb8805d40b9
+ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "97770009"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111974374"
 ---
 # <a name="assign-licenses-to-a-user-via-partner-center-apis"></a>Atribuir licenças a um utilizador através de APIs do Partner Center
-
-**Aplica-se a:**
-
-- Partner Center
 
 Como atribuir licenças a um utilizador cliente.
 
@@ -110,7 +106,7 @@ updateLicense.LicensesToAssign = licenseList;
 var assignLicense = partnerOperations.Customers.ById(selectedCustomerId).Users.ById(selectedCustomerUserId).LicenseUpdates.Create(updateLicense);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: CustomerUserAssignLicenses.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CustomerUserAssignLicenses.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -126,8 +122,8 @@ Utilize os seguintes parâmetros de percurso para identificar o cliente e o util
 
 | Nome        | Tipo   | Necessário | Descrição                                       |
 |-------------|--------|----------|---------------------------------------------------|
-| id cliente | string | Sim      | Um ID formatado GUID que identifica o cliente. |
-| user-id     | string | Sim      | Um ID formatado GUID que identifica o utilizador.     |
+| id cliente | string | Yes      | Um ID formatado GUID que identifica o cliente. |
+| user-id     | string | Yes      | Um ID formatado GUID que identifica o utilizador.     |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

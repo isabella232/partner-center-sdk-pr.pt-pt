@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: d7d0a10c571dc073bd49e82084f3b7ece7234daf
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 280da155122ed9efd99838d7819fb34f8f7ec52c
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769116"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874368"
 ---
 # <a name="get-a-list-of-azure-entitlements-for-a-subscription"></a>Obter uma lista de elegibilidade do Azure para uma subscrição
-
-**Aplica-se a:**
-
-- Partner Center
 
 Você pode usar o [recurso de direito Azure](subscription-resources.md#azureentitlement) **(AzureEntitlement**) para obter uma coleção de recursos que pertencem a uma subscrição.
 

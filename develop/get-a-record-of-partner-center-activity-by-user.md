@@ -4,20 +4,16 @@ description: Como recuperar um registo de operações, como realizado por um uti
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 2f37eae8bb96c1c1e7008e8c566b085e25d8807d
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: aec933d4b681d99080619505792bde56bdd25580
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769530"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873976"
 ---
 # <a name="get-a-record-of-partner-center-activity"></a>Obter um registo da atividade do Centro de Parceiros
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo descreve como recuperar um registo de operações que foi realizado por um utilizador ou aplicação de um parceiro durante um período de tempo.
 
@@ -77,7 +73,7 @@ while (auditRecordEnumerator.HasValue)
 }
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Pasta**: Auditoria
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Pasta de **amostras** do Centro Parceiro SDK : Auditoria
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -97,8 +93,8 @@ Utilize os seguintes parâmetros de consulta ao criar o pedido.
 
 | Nome      | Tipo   | Necessário | Descrição                                                                                                                                                                                                                |
 |-----------|--------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| startDate | date   | Não       | A data de início no formato y-mm-dd. Se nenhuma for fornecida, o resultado definido será de incumprimento de 30 dias antes da data do pedido. Este parâmetro é opcional quando um filtro é fornecido.                                          |
-| endDate   | date   | Não       | A data final em formato y-mm-dd. Este parâmetro é opcional quando um filtro é fornecido. Quando a data de fim é omitida ou definida para nula, o pedido devolve a janela max ou utiliza hoje como data de fim, o que for menor. |
+| startDate | data   | No       | A data de início no formato yyy-mm-dd. Se nenhuma for fornecida, o resultado definido será de incumprimento de 30 dias antes da data do pedido. Este parâmetro é opcional quando um filtro é fornecido.                                          |
+| endDate   | data   | No       | A data final em formato yyy-mm-dd. Este parâmetro é opcional quando um filtro é fornecido. Quando a data de fim é omitida ou definida para nula, o pedido devolve a janela max ou utiliza hoje como data de fim, o que for menor. |
 | filter    | cadeia (de carateres) | No       | O filtro a aplicar. Este parâmetro deve ser uma corda codificada. Este parâmetro é opcional quando a data de início ou a data de fim são fornecidas.                                                                                              |
 
 ### <a name="filter-syntax"></a>Sintaxe de filtro
@@ -120,7 +116,7 @@ A tabela a seguir descreve os pares de valor-chave necessários:
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
-- Consulte [os cabeçalhos Parter Center REST](headers.md) para obter mais informações.
+- Para mais informações, consulte [os cabeçalhos Parter Center REST](headers.md).
 
 ### <a name="request-body"></a>Corpo do pedido
 

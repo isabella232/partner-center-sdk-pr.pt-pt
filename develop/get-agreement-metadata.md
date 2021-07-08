@@ -6,24 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: c6a404eb38c4c31d3e69bb598872b932d8985529
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 2588327e72a13de75eb9e02675edbd535491adc4
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769260"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760798"
 ---
 # <a name="get-agreement-metadata-for-microsoft-cloud-agreement"></a>Obter metadados de contrato para o Contrato da Microsoft Cloud
 
-**Aplica-se a**
+**Aplica-se a**: Centro de Parceiros
 
-- Partner Center
+**Não se aplica a:** Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-> [!NOTE]
-> O recurso **AgreementMetaData** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft. Não é aplicável a:
-> - Centro de Parceiros operado pela 21Vianet
-> - Centro de Parceiros para Microsoft Cloud Germany
-> - Centro de Parceiros do Microsoft Cloud for US Government
+O recurso **AgreementMetaData** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -31,7 +27,7 @@ ms.locfileid: "97769260"
 
 - Se estiver a utilizar o Partner Center Java SDK, é necessária a versão 1.8 ou mais recente.
 
-- Credenciais descritas na [autenticação do Partner Center](./partner-center-authentication.md). Este cenário suporta app + autenticação do utilizador..
+- Credenciais descritas na [autenticação do Partner Center](./partner-center-authentication.md). Este cenário suporta a app + a autenticação do utilizador.
 
 ## <a name="net-version-114-or-newer"></a>.NET (versão 1.14 ou mais recente)
 
@@ -107,7 +103,7 @@ Get-PartnerAgreementDetail | Where-Object {$_.AgreementType -eq 'MicrosoftCloudA
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
-Para recuperar os metadados do acordo para o Microsoft Cloud Agreement, crie primeiro um pedido DE REST para recuperar a recolha **AgreementMetaData.** Em seguida, procure o item na coleção que corresponde ao Microsoft Cloud Agreement.
+Para recuperar os metadados do acordo para o Microsoft Cloud Agreement, crie primeiro um pedido DE REST para recuperar a recolha **AgreementMetaData.** Em seguida, procure o item na coleção que corresponda ao Microsoft Cloud Agreement.
 
 ### <a name="request-syntax"></a>Solicitar sintaxe
 

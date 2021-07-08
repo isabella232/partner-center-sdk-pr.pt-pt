@@ -4,21 +4,16 @@ description: O Partner Center SDK inclui uma API gerida e uma API REST para os p
 ms.date: 09/29/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9c2af1e11dbda19489a27e37c7f3de8ede90fd1c
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: b5d05f26d63574ef876519091dc1c33c05f36e25
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769056"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548758"
 ---
 # <a name="get-started"></a>Introdução
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 O Partner Center SDK inclui uma API gerida e uma API REST para os parceiros usarem para gerir dados de clientes, subscrição e encomenda.
 
@@ -50,14 +45,14 @@ Para obter dicas e sugestões sobre testes e depurações, incluindo mais inform
 Para configurar a sua autenticação AZure AD para que possa utilizar as APIs do Centro Parceiro, consulte a [autenticação do Partner Center](partner-center-authentication.md).
 
 > [!IMPORTANT]
-> A Microsoft está a introduzir um quadro seguro e escalável para autenticar parceiros de soluções de nuvem (CSP) e fornecedores de painéis de controlo (CPV) através da arquitetura de autenticação multi-factor (MFA) do Microsoft Azure.
+> A Microsoft está a introduzir um quadro seguro e escalável para autenticar parceiros de soluções de nuvem (CSP) e fornecedores de painéis de controlo (CPV) através da arquitetura de autenticação de vários fatores Microsoft Azure (MFA).
 O Partner Center utiliza o Azure AD para autenticação e para utilizar as APIs do Centro De Parceiros deve configurar corretamente as suas definições de autenticação.
 >
 > Para obter mais informações, consulte [Ativar o modelo de aplicação seguro.](enable-secure-app-model.md)
 
 ## <a name="get-help"></a>Obter ajuda
 
-Os parceiros podem obter apoio no [grupo Partner Center SDK Yammer](https://go.microsoft.com/fwlink/p/?LinkID=717360). Para obter uma ajuda mais personalizada, os desenvolvedores podem usar os seus benefícios de suporte MPN ou Premier Support.
+Os parceiros podem obter apoio no [grupo de Yammer do Partner Center SDK](https://go.microsoft.com/fwlink/p/?LinkID=717360). Para obter uma ajuda mais personalizada, os desenvolvedores podem usar os seus benefícios de suporte MPN ou Premier Support.
 
 ## <a name="join-the-partner-center-api-and-sdk-early-adopter-program"></a>Aderir ao Programa Early Adopter da API e SDK do Centro de Parceiros
 

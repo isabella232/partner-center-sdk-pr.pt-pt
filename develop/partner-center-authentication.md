@@ -4,21 +4,16 @@ description: O Partner Center utiliza o Azure AD para autenticação e para util
 ms.date: 11/13/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-csp
-ms.openlocfilehash: 46ef9c6bc151c368281e943b7d24ebc07e34b66d
-ms.sourcegitcommit: 64c498d3571f2287305968890578bc7396779621
+ms.openlocfilehash: e54feba7ea727bb7f7eff8de76dcdf28c8a453ee
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97770288"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548078"
 ---
 # <a name="partner-center-authentication"></a>Partner Center authentication (Autenticação do Centro de Parceiros)
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 O Centro de Parceiros utiliza o Azure Active Directory para autenticação. Ao interagir com o módulo do PowerShell, o SDK ou a API do Centro de Parceiros, tem de configurar corretamente uma aplicação do Azure Active Directory e, em seguida, pedir um token de acesso. Os tokens de acesso obtidos apenas através de app ou app + autenticação do utilizador podem ser utilizados com o Centro de Parceiros. No entanto, há dois itens importantes que precisam de ser considerados
 
@@ -30,13 +25,13 @@ O Centro de Parceiros utiliza o Azure Active Directory para autenticação. Ao i
 
 1. Para começar, tem de se certificar de que tem uma conta principal do Partner Center e uma conta de parceiro de integração. Para obter mais informações, consulte [configurar contas do Partner Center para acesso a API.](set-up-api-access-in-partner-center.md) Tome nota do ID e Secret da App Azure AAD (o segredo do cliente é necessário para a identificação apenas da App) tanto para a sua conta primária como para a sua conta de areia de integração.
 
-2. Inscreva-se no Azure AD a partir do portal Azure. Nas **permissões a outras aplicações,** descreva permissões para **o Windows Azure Ative Directory** para **Permissões Delegadas**, e selecione **tanto Aceda ao diretório como utilizador inscrito** e faça o **sessão e leia o perfil do utilizador.**
+2. Inscreva-se no Azure AD a partir do portal Azure. Nas **permissões a outras aplicações,** descreva permissões para **Windows Azure Ative Directory** a **Permissões Delegadas**, e selecione **tanto o Access the directy como utilizador inscrito** e iniciar **sessão e ler o perfil do utilizador.**
 
-3. No portal Azure, **adicione a aplicação**. Procure por "Microsoft Partner Center", que é a aplicação Microsoft Partner Center. Desa estatudo as **permissões delegadas** para aceder à **API do Centro de Parceiros de Acesso**. Se estiver a utilizar o Partner Center para o Microsoft Cloud Germany ou o Partner Center para o Microsoft Cloud para o Governo dos EUA, este passo é obrigatório. Se estiver a utilizar o exemplo global do Partner Center, este passo é opcional. Os Parceiros CSP podem usar a funcionalidade de Gestão de Aplicações no portal Partner Center para contornar este passo para o Exemplo global do Partner Center.
+3. No portal Azure, **adicione a aplicação**. Procure por "Microsoft Partner Center", que é a aplicação Microsoft Partner Center. Desa estatudo as **permissões delegadas** para aceder à **API do Centro de Parceiros de Acesso**. Se estiver a utilizar o Partner Center para o Microsoft Cloud Germany ou o Partner Center para Microsoft Cloud for US Government, este passo é obrigatório. Se estiver a utilizar o exemplo global do Partner Center, este passo é opcional. Os Parceiros CSP podem usar a funcionalidade de Gestão de Aplicações no portal Partner Center para contornar este passo para o Exemplo global do Partner Center.
 
 ## <a name="app-only-authentication"></a>Autenticação apenas para aplicativos
 
-Se quiser utilizar a autenticação apenas para aplicações para aceder ao módulo Partner Center REST API, .NET API, Java API ou PowerShell, então pode fazê-lo aproveitando as seguintes instruções.
+Se quiser utilizar a autenticação apenas para aplicações para aceder ao módulo Partner Center REST API, .NET API, Java API ou PowerShell, então pode fazê-lo utilizando as seguintes instruções.
 
 ## <a name="net-app-only-authentication"></a>.NET (autenticação apenas para aplicações)
 
@@ -102,7 +97,7 @@ Content-Length: 1406
 
 ## <a name="app--user-authentication"></a>App + Autenticação do utilizador
 
-Historicamente, a [concessão de credenciais de senha do proprietário de recursos](https://tools.ietf.org/html/rfc6749#section-4.3) tem sido usada para solicitar um token de acesso para uso com o módulo Partner Center REST API, .NET API, Java API ou PowerShell. Este método foi utilizado para solicitar um token de acesso do Azure Ative Directory utilizando um identificador de clientes e credenciais de utilizador. No entanto, esta abordagem deixará de funcionar porque o Partner Center requer autenticação de vários fatores, quando se utiliza a app + autenticação do utilizador. Para cumprir este requisito, a Microsoft introduziu um quadro seguro e escalável para autenticar parceiros do Cloud Solution Provider (CSP) e fornecedores de painéis de controlo (CPV) utilizando a autenticação de vários fatores. Este quadro é conhecido como o Modelo de Aplicação Segura, e é composto por um processo de consentimento e um pedido de acesso a um token usando um token de atualização.
+Historicamente, a [concessão de credenciais de senha do proprietário](https://tools.ietf.org/html/rfc6749#section-4.3) de recursos tem sido usada para solicitar um token de acesso para uso com o módulo Partner Center REST API, .NET API, Java API ou PowerShell. Este método foi utilizado para solicitar um sinal de acesso a Azure Ative Directory utilizando um identificador de clientes e credenciais de utilizador. No entanto, esta abordagem deixará de funcionar porque o Partner Center requer autenticação de vários fatores, quando se utiliza a app + autenticação do utilizador. Para cumprir este requisito, a Microsoft introduziu uma estrutura segura e escalável para autenticar parceiros Fornecedor de Soluções em Nuvem (CSP) e fornecedores de painéis de controlo (CPV) utilizando a autenticação de vários fatores. Este quadro é conhecido como o Modelo de Aplicação Segura, e é composto por um processo de consentimento e um pedido de acesso a um token usando um token de atualização.
 
 ### <a name="partner-consent"></a>Consentimento do parceiro
 
@@ -159,11 +154,11 @@ O projeto de amostra [de consentimento do parceiro](https://github.com/Microsoft
 4. Crie uma aplicação AD Azure que esteja configurada para o Partner Center. Execute as seguintes ações para completar este passo.
 
     - Navegue para a funcionalidade de gestão de [aplicações](https://partner.microsoft.com/pcv/apiintegration/appmanagement) do Painel de Instrumentos do Centro de Parceiros
-    - Clique *em Adicionar nova aplicação web* para criar uma nova aplicação AD Azure.
+    - *Selecione Adicionar uma nova aplicação web* para criar uma nova aplicação AD Azure.
 
     Certifique-se de documentar o ID da *app,**ID da conta*** e valores *chave* porque serão usados nos degraus abaixo.
 
-5. Clone o repositório [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) utilizando o Visual Studio ou o seguinte comando.
+5. Clone o repositório [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) utilizando Visual Studio ou o seguinte comando.
 
     ```bash
     git clone https://github.com/Microsoft/Partner-Center-DotNet-Samples.git
@@ -248,7 +243,7 @@ O projeto de amostra [de consentimento do parceiro](https://github.com/Microsoft
 4. Crie uma aplicação AD Azure que esteja configurada para o Partner Center. Execute o seguinte para completar este passo.
 
     - Navegue para a funcionalidade de gestão de [aplicações](https://partner.microsoft.com/pcv/apiintegration/appmanagement) do Painel de Instrumentos do Centro de Parceiros
-    - Clique *em Adicionar nova aplicação web* para criar uma nova aplicação AD Azure.
+    - *Selecione Adicionar uma nova aplicação web* para criar uma nova aplicação AD Azure.
 
     Certifique-se de documentar o ID da *app,**ID da conta*** e valores *chave* porque serão usados nos degraus abaixo.
 
@@ -298,11 +293,11 @@ O projeto de amostra [de consentimento do parceiro](https://github.com/Microsoft
 
 8. Quando executar este projeto de amostra, irá pedir-lhe autenticação. Após autenticação com sucesso, é solicitado um token de acesso à Azure AD. A informação devolvida do Azure AD inclui um token de atualização que é armazenado no caso configurado de Azure Key Vault.
 
-## <a name="cloud-solution-provider-authentication"></a>Autenticação do Fornecedor de Soluções de Nuvem
+## <a name="cloud-solution-provider-authentication"></a>autenticação Fornecedor de Soluções em Nuvem
 
-Os parceiros do Cloud Solution Provider podem utilizar o token de atualização obtido através do processo de consentimento do [parceiro.](#partner-consent)
+Fornecedor de Soluções em Nuvem parceiros podem usar o token de atualização obtido através do processo de consentimento do [parceiro.](#partner-consent)
 
-### <a name="samples-for-cloud-solution-provider-authentication"></a>Amostras para autenticação do Fornecedor de Solução Cloud
+### <a name="samples-for-cloud-solution-provider-authentication"></a>Amostras para autenticação Fornecedor de Soluções em Nuvem
 
 Para ajudar os parceiros a entender como realizar cada operação necessária, desenvolvemos as seguintes amostras. Ao implementar a solução adequada no seu ambiente, é importante que desenvolva uma solução que seja uma reclamação com os seus padrões de codificação e políticas de segurança.
 
@@ -310,7 +305,7 @@ Para ajudar os parceiros a entender como realizar cada operação necessária, d
 
 1. Se ainda não o fez, execute o processo de consentimento do [parceiro](#partner-consent).
 
-2. Clone o repositório [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) usando o Visual Studio ou o seguinte comando
+2. Clone o repositório [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) utilizando Visual Studio ou o seguinte comando
 
     ```bash
     git clone https://github.com/Microsoft/Partner-Center-DotNet-Samples.git
@@ -342,7 +337,7 @@ Para ajudar os parceiros a entender como realizar cada operação necessária, d
     <add key="ida:KeyVaultClientSecret" value="" />
     ```
 
-5. Desaprove os valores adequados para as variáveis **PartnerId** e **CustomerId** encontradas no ficheiro [Program.cs.](https://github.com/Microsoft/Partner-Center-DotNet-Samples/blob/master/secure-app-model/keyvault/CSPApplication/Program.cs)
+5. Desaprove os valores adequados para as variáveis **PartnerId** e **CustomerId** encontradas no ficheiro [.cs Programa.](https://github.com/Microsoft/Partner-Center-DotNet-Samples/blob/master/secure-app-model/keyvault/CSPApplication/Program.cs)
 
     ```csharp
     // The following properties indicate which partner and customer context the calls are going to be made.
@@ -350,13 +345,13 @@ Para ajudar os parceiros a entender como realizar cada operação necessária, d
     string CustomerId = "<Customer tenant id>";
     ```
 
-6. Ao executar este projeto de amostra, obtém o token de atualização obtido durante o processo de consentimento do parceiro. Em seguida, solicita um sinal de acesso para interagir com o Partner Center SDK em nome do parceiro. Por último, solicita um token de acesso para interagir com o Microsoft Graph em nome do cliente especificado.
+6. Ao executar este projeto de amostra, obtém o token de atualização obtido durante o processo de consentimento do parceiro. Em seguida, solicita um sinal de acesso para interagir com o Partner Center SDK em nome do parceiro. Por último, solicita um token de acesso para interagir com a Microsoft Graph em nome do cliente especificado.
 
 ## <a name="java-csp-authentication"></a>Java (autenticação CSP)
 
 1. Se ainda não o fez, execute o processo de consentimento do [parceiro.](#partner-consent)
 
-2. Clone o repositório [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) usando o Visual Studio ou o seguinte comando
+2. Clone o repositório [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) utilizando Visual Studio ou o seguinte comando
 
     ```bash
     git clone https://github.com/Microsoft/Partner-Center-Java-Samples.git
@@ -378,7 +373,7 @@ Para ajudar os parceiros a entender como realizar cada operação necessária, d
 
 5. Ao executar este projeto de amostra, obtém o token de atualização obtido durante o processo de consentimento do parceiro. Em seguida, solicita um sinal de acesso para interagir com o Partner Center SDK em nome do parceiro.
 
-6. Opcional - descompromete as chamadas da função *RunAzureTask* e *RunGraphTask* se quiser ver como interagir com o Azure Resource Manager e o Microsoft Graph em nome do cliente.
+6. Opcional - descompromete as chamadas da função *RunAzureTask* e *RunGraphTask* se quiser ver como interagir com o Azure Resource Manager e a Microsoft Graph em nome do cliente.
 
 ## <a name="control-panel-provider-authentication"></a>Autenticação do Provedor do Painel de Controlo
 
@@ -390,12 +385,12 @@ Para ajudar os fornecedores de painéis de controlo a entender como realizar cad
 
 ## <a name="net-cpv-authentication"></a>.NET (autenticação cpv)
 
-1. Desenvolver e implementar um processo para os parceiros do Cloud Solution Provider fornecerem o consentimento adequado. Para obter mais informações um exemplo, consulte [o consentimento do parceiro.](#partner-consent)
+1. Desenvolver e implementar um processo para Fornecedor de Soluções em Nuvem parceiros fornecer o consentimento adequado. Para obter mais informações um exemplo, consulte [o consentimento do parceiro.](#partner-consent)
 
     > [!IMPORTANT]
-    > As credenciais de utilizador de um parceiro Cloud Solution Provider não devem ser armazenadas. O token de atualização obtido através do processo de consentimento do parceiro deve ser armazenado e usado para solicitar fichas de acesso para interagir com qualquer API da Microsoft.
+    > As credenciais de utilizador de um parceiro Fornecedor de Soluções em Nuvem não devem ser armazenadas. O token de atualização obtido através do processo de consentimento do parceiro deve ser armazenado e usado para solicitar fichas de acesso para interagir com qualquer API da Microsoft.
 
-2. Clone o repositório [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) usando o Visual Studio ou o seguinte comando
+2. Clone o repositório [Partner-Center-DotNet-Samples](https://github.com/Microsoft/Partner-Center-DotNet-Samples) utilizando Visual Studio ou o seguinte comando
 
     ```bash
     git clone https://github.com/Microsoft/Partner-Center-DotNet-Samples.git
@@ -428,7 +423,7 @@ Para ajudar os fornecedores de painéis de controlo a entender como realizar cad
     <add key="ida:KeyVaultClientSecret" value="" />
     ```
 
-5. Desaprove os valores adequados para as variáveis **PartnerId** e **CustomerId** encontradas no ficheiro [Program.cs.](https://github.com/Microsoft/Partner-Center-DotNet-Samples/blob/master/secure-app-model/keyvault/CPVApplication/Program.cs)
+5. Desaprove os valores adequados para as variáveis **PartnerId** e **CustomerId** encontradas no ficheiro [.cs Programa.](https://github.com/Microsoft/Partner-Center-DotNet-Samples/blob/master/secure-app-model/keyvault/CPVApplication/Program.cs)
 
     ```csharp
     // The following properties indicate which partner and customer context the calls are going to be made.
@@ -436,7 +431,7 @@ Para ajudar os fornecedores de painéis de controlo a entender como realizar cad
     string CustomerId = "<Customer tenant id>";
     ```
 
-6. Ao executar este projeto de amostra, obtém o token de atualização para o parceiro especificado. Em seguida, solicita um token de acesso para aceder ao Partner Center e ao Azure AD Graph em nome do parceiro. A próxima tarefa que executa é a supressão e criação de autorizações para o inquilino do cliente. Uma vez que não existe qualquer relação entre o fornecedor do painel de controlo e o cliente, estas permissões precisam de ser adicionadas usando a API do Partner Center. O exemplo que se segue mostra como fazê-lo.
+6. Ao executar este projeto de amostra, obtém o token de atualização para o parceiro especificado. Em seguida, solicita um token de acesso para o Centro de Parceiros e Azure AD Graph em nome do parceiro. A próxima tarefa que executa é a supressão e criação de autorizações para o inquilino do cliente. Uma vez que não existe qualquer relação entre o fornecedor do painel de controlo e o cliente, estas permissões precisam de ser adicionadas usando a API do Partner Center. O exemplo que se segue mostra como fazê-lo.
 
     ```csharp
     JObject contents = new JObject
@@ -470,14 +465,14 @@ Para ajudar os fornecedores de painéis de controlo a entender como realizar cad
         contents.ToString());
     ```
 
-Após estas permissões terem sido estabelecidas, a amostra executa operações utilizando o Azure AD Graph em nome do cliente.
+Após estas permissões terem sido estabelecidas, a amostra executa operações utilizando a Azure AD Graph em nome do cliente.
 
 ## <a name="java-cpv-authentication"></a>Java (autenticação cpv)
 
-1. Desenvolver e implementar um processo para os parceiros do Cloud Solution Provider fornecerem o consentimento adequado. Para mais informações e um exemplo, consulte o consentimento do [parceiro.](#partner-consent)
+1. Desenvolver e implementar um processo para Fornecedor de Soluções em Nuvem parceiros fornecer o consentimento adequado. Para mais informações e um exemplo, consulte o consentimento do [parceiro.](#partner-consent)
 
     > [!IMPORTANT]
-    > As credenciais de utilizador de um parceiro Cloud Solution Provider não devem ser armazenadas. O token de atualização obtido através do processo de consentimento do parceiro deve ser armazenado e usado para solicitar fichas de acesso para interagir com qualquer API da Microsoft.
+    > As credenciais de utilizador de um parceiro Fornecedor de Soluções em Nuvem não devem ser armazenadas. O token de atualização obtido através do processo de consentimento do parceiro deve ser armazenado e usado para solicitar fichas de acesso para interagir com qualquer API da Microsoft.
 
 2. Clone o repositório [Partner-Center-Java-Samples](https://github.com/Microsoft/Partner-Center-Java-Samples) usando o seguinte comando
 
@@ -547,4 +542,4 @@ Após estas permissões terem sido estabelecidas, a amostra executa operações 
         consent);
     ```
 
-Descompromete as chamadas da função *RunAzureTask* e *RunGraphTask* se quiser ver como interagir com o Azure Resource Manager e o Microsoft Graph em nome do cliente.
+Descompromete as chamadas da função *RunAzureTask* e *RunGraphTask* se quiser ver como interagir com o Azure Resource Manager e a Microsoft Graph em nome do cliente.

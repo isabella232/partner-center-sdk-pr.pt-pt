@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: b97a4ce85b5edd9de1301a577988f8c54096ebeb
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: b29c005e74ad8a4da547a888b78e4599e74ebd02
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769122"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874538"
 ---
 # <a name="get-a-list-of-availabilities-for-a-sku-by-country"></a>Obter uma lista de disponibilidade para um SKU (por país)
-
-**Aplica-se a:**
-
-- Partner Center
 
 Este artigo descreve como obter uma coleção de disponibilidades em um determinado país para um produto especificado e SKU.
 
@@ -80,11 +76,11 @@ Use os seguintes parâmetros de caminho e consulta para obter uma lista de dispo
 
 | Nome                   | Tipo     | Necessário | Descrição                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-| id produto             | string   | Sim      | Uma corda que identifica o produto.                           |
-| sku-id                 | string   | Sim      | Uma corda que identifica o SKU.                               |
-| código de país           | string   | Sim      | Uma identificação país/região.                                            |
+| id produto             | string   | Yes      | Uma corda que identifica o produto.                           |
+| sku-id                 | string   | Yes      | Uma corda que identifica o SKU.                               |
+| código de país           | string   | Yes      | Uma identificação país/região.                                            |
 | segmento-alvo         | cadeia (de carateres)   | No       | Uma corda que identifica o segmento alvo utilizado para a filtragem. |
-| reservationScope | cadeia (de carateres)   | No | Ao consultar uma lista de disponibilidades para um SKU de Reserva Azure, especifique `reservationScope=AzurePlan` para obter uma lista de disponibilidades aplicáveis ao AzurePlan. Exclua este parâmetro para obter uma lista de disponibilidades aplicáveis às subscrições do Microsoft Azure (MS-AZR-0145P).  |
+| reservationScope | cadeia (de carateres)   | No | Ao consultar uma lista de disponibilidades para um SKU de Reserva Azure, especifique `reservationScope=AzurePlan` para obter uma lista de disponibilidades que sejam aplicáveis ao AzurePlan. Exclua este parâmetro para obter uma lista de disponibilidades aplicáveis às assinaturas Microsoft Azure (MS-AZR-0145P).  |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -120,9 +116,9 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
-#### <a name="availabilities-for-vm-reservations-for-microsoft-azure-ms-azr-0145p-subscriptions"></a>Disponibilidades para reservas VM para subscrições microsoft Azure (MS-AZR-0145P)
+#### <a name="availabilities-for-vm-reservations-for-microsoft-azure-ms-azr-0145p-subscriptions"></a>Disponibilidades para reservas VM para subscrições de Microsoft Azure (MS-AZR-0145P)
 
-Siga este exemplo para obter uma lista de disponibilidades por país para reservas Azure VM que são aplicáveis às subscrições do Microsoft Azure (MS-AZR-0145P).
+Siga este exemplo para obter uma lista de disponibilidades por país para reservas Azure VM que são aplicáveis a Microsoft Azure (MS-AZR-0145P) subscrições.
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/productsDZH318Z0BQ3Q/skus/0001/availabilities?country=US&targetView=AzureAzureReservationsVM HTTP/1.1
@@ -142,7 +138,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                                               |
+| Código de Estado HTTP     | Código de erro   | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Não é permitido o acesso ao **objetivo solicitado.**                                                     |
 

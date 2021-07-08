@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 56b9c80021cace03976d410b2a6cd4c0eee18398
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 011a92500d0c7ed44f86030febd1ea83be2c6474
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769553"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111873960"
 ---
 # <a name="get-a-list-of-subscriptions-by-order"></a>Obter uma lista de subscrições por encomenda
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém uma coleção de recursos de [Subscrição](subscription-resources.md) que correspondem a uma determinada encomenda.
 
@@ -44,7 +39,7 @@ Para obter uma lista de subscrições por encomenda, use a sua coleção **IAggr
 ResourceCollection<Subscription> customerSubscriptions = partnerOperations.Customers.ById(selectedCustomerId).Subscriptions.ByOrder(orderID).Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: SubscriptionsByOrder.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: SubscriptionsByOrder.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

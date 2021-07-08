@@ -4,21 +4,16 @@ description: Saiba mais sobre os cabeçalhos de pedido HTTP REST e cabeçalhos d
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9f506c8c610c2584912c24453288d0f3578b84e3
-ms.sourcegitcommit: 8a5c37376a29e29fe0002a980082d4acc6b91131
+ms.openlocfilehash: 3f09ab5808a9751f02e451da2027f6b35877390b
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "97769955"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548469"
 ---
 # <a name="partner-center-rest-and-response-headers-supported-by-the-partner-center-rest-api"></a>Parceiro Centro REST e cabeçalhos de resposta apoiados pelo Centro Parceiro REST API 
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Os seguintes cabeçalhos de pedido e resposta HTTP são suportados pela API do Centro Parceiro REST. Nem todas as chamadas da API aceitam todos os cabeçalhos.
 
@@ -26,7 +21,7 @@ Os seguintes cabeçalhos de pedido e resposta HTTP são suportados pela API do C
 
 Os seguintes cabeçalhos de pedido HTTP são suportados pela API do Centro Parceiro REST.
 
-| Cabeçalho                       | Descrição                                                                                                                                                                                                                                                                            | Tipo de Valor |
+| Cabeçalho                       | Description                                                                                                                                                                                                                                                                            | Tipo de Valor |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
 | Authorization:               | Obrigatório. O sinal de autorização na ficha do Bearer &lt; &gt; .                                                                                                                                                                                                                    | string     |
 | Aceitar:                      | Especifica o tipo de pedido e resposta, "aplicação/json".                                                                                                                                                                                                                           | string     |
@@ -41,7 +36,7 @@ Os seguintes cabeçalhos de pedido HTTP são suportados pela API do Centro Parce
 
 Os seguintes cabeçalhos de resposta HTTP podem ser devolvidos pela API do Centro Parceiro REST.
 
-| Cabeçalho            | Descrição                                                                                                                                                                                                                                 | Tipo de Valor |
+| Cabeçalho            | Description                                                                                                                                                                                                                                 | Tipo de Valor |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
 | Aceitar:           | Especifica o tipo de pedido e resposta, "aplicação/json".                                                                                                                                                                                | string     |
 | MS-RequestId:     | Um identificador único para a chamada, usado para garantir a potência de id. Se houver um tempo limite, a chamada de novo deve incluir o mesmo valor. Ao receber uma resposta (sucesso ou falha de negócio), o valor deve ser reposto para a próxima chamada. | GUID       |

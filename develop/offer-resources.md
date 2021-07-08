@@ -4,27 +4,22 @@ description: Descreve um produto listado no catálogo de revendedores que podem 
 ms.date: 03/15/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 45af02705d2a03c7586ba6bf3a5537c3e4eec3c7
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 704e5580f2cdf84fc82b627e3b2ca165b81a3af5
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768851"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548112"
 ---
 # <a name="offer-resources"></a>Oferecer recursos
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Descreve um produto listado no catálogo de revendedores que podem oferecer aos seus clientes.
 
 ## <a name="offer"></a>Oferta
 
-| Propriedade                    | Tipo                      | Descrição                                                                                                                                                                |
+| Propriedade                    | Tipo                      | Description                                                                                                                                                                |
 |-----------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                          | string                    | O identificador da oferta.                                                                                           |
 | name                        | string                    | O nome da oferta.                                                                                                 |
@@ -37,7 +32,7 @@ Descreve um produto listado no catálogo de revendedores que podem oferecer aos 
 | país                     | string                    | O país/região onde a oferta se aplica.                                                                    |
 | categoria                    | [OfertaCategoria](#offercategory)           | A categoria da oferta.                                                                   |
 | limiteUOfMeasure          | string                    | Um valor que indica o tipo de limitação de compra. Valores possíveis incluem:<br/> "Nenhuma" - Não existem restrições ao número de subscrições com base na oferta adquirida.<br/> "Simultâneo" - O número de subscrições que podem existir no cliente inquilino num dado momento, isto inclui subscrições que estão ativas ou canceladas. Este valor aplica-se principalmente às ofertas de pequenas empresas onde as contagens de licença são inferiores a 300. As assinaturas desreserionadas não contam.<br/> "LifeTime" - O número de subscrições que podem existir para o resto da vida do cliente inquilino. Este valor é mais aplicável aos Ensaios. As assinaturas desreserionadas não contam.      |
-| limit                       | int                       | A quantidade de subscrições que podem ser adquiridas desta oferta com base no limite Deseuro.                |
+| limit                       | int                       | O número de subscrições que podem ser adquiridas desta oferta com base no limite Deseuro.                |
 | pré-requisitosOffers          | string                    | As ofertas pré-requisitos.                                                                                        |
 | isAddOn                     | boolean                   | Um valor que indica se este caso é um adutivo.                                                           |
 | hasAddOns                   | boolean                   | Um valor que indique se esta oferta tem algum adôntões.                                                           |
@@ -60,7 +55,7 @@ Descreve um produto listado no catálogo de revendedores que podem oferecer aos 
 
 Descreve a categorização de uma oferta. Isto inclui o grau ou prioridade desta categoria de oferta em comparação com outros da mesma linha de produtos.
 
-| Propriedade   | Tipo                                                           | Descrição                                                                                                                                                                |
+| Propriedade   | Tipo                                                           | Description                                                                                                                                                                |
 |------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID         | string                                                         | O identificador de categoria.                                                                                                                                                   |
 | name       | string                                                         | O nome da categoria.                                                                                                                                                         |
@@ -74,7 +69,7 @@ Descreve a categorização de uma oferta. Isto inclui o grau ou prioridade desta
 
 Contém links para aprender mais informações sobre a oferta.
 
-| Propriedade  | Tipo | Descrição                 |
+| Propriedade  | Tipo | Description                 |
 |-----------|------|-----------------------------|
 | aprender Mais | Ligação | A ligação "aprender mais".      |
 | self      | Ligação | O auto-URI                |
@@ -85,8 +80,8 @@ Contém links para aprender mais informações sobre a oferta.
 
 Um produto ou serviço que pode ter mais do que uma oferta associada a ele, cada um com diferentes conjuntos de funcionalidades e direcionados para diferentes necessidades do cliente.
 
-| Propriedade | Tipo   | Descrição              |
+| Propriedade | Tipo   | Description              |
 |----------|--------|--------------------------|
 | Id       | string | O identificador de categoria. |
-| Nome     | string | O nome da categoria.       |
+| Name     | string | O nome da categoria.       |
 | Unidade     | string | A unidade de produtos.        |

@@ -6,18 +6,16 @@ ms.subservice: partnercenter-sdk
 ms.date: 05/29/2020
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: f82d163b704323c81e2948b78eb9b9d1a14ddc52
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 9b8848c2a4531dd6609f86aae6876cec436eeea9
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769020"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760526"
 ---
 # <a name="get-mfa-adoption-status"></a>Obtenha o estado de adoção do MFA
 
-Aplica-se a:
-
-- API do Centro de Parceiros
+**Aplica-se a**: Partner Center API
 
 Este artigo explica como obter o estatuto de autenticação multi-factor (MFA) para cada parceiro dentro de um inquilino.
 
@@ -35,7 +33,7 @@ Este artigo explica como obter o estatuto de autenticação multi-factor (MFA) p
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
-- Consulte [os cabeçalhos REST do Partner Center](headers.md) para obter mais informações.
+- Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).
 
 ### <a name="request-body"></a>Corpo do pedido
 

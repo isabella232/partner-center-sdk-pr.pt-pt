@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 9ee22712b323c7439a192ed2e5af8d5e7eaf92a3
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: e3b0ab8007d3affa6912479b960f6dae3bc0bd28
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769265"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760339"
 ---
 # <a name="get-add-ons-for-an-offer-id"></a>Obter suplementos para um ID de oferta
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter os addons para uma oferta de identificação.
 
@@ -42,7 +37,7 @@ Para obter os addons para uma oferta por ID, ligue primeiro para o método [**IA
 var offerAddOns = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).AddOns.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetOffer.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetOffer.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -59,7 +54,7 @@ Utilize os seguintes parâmetros para fornecer o ID da oferta e o código do pa�
 | Nome         | Tipo       | Necessário | Descrição                       |
 |--------------|------------|----------|-----------------------------------|
 | **oferta id** | **guid**   | Y        | Um GUID que identifica a oferta. |
-| **país**  | **cadeia** | Y        | O código do país (por `US` exemplo).       |
+| **país**  | **string** | Y        | O código do país (por `US` exemplo).       |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

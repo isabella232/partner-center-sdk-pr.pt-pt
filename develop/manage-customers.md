@@ -1,26 +1,21 @@
 ---
 title: Gerir clientes
-description: Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para gerir programaticamente as contas dos clientes.
+description: Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parceiros podem usar o Centro de Parceiros para gerir programaticamente as contas dos clientes.
 ms.date: 02/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: fa1a032735037b1b3a543d21bf4c868b52c13017
-ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
+ms.openlocfilehash: 00c0e51dfd6970bd28db2ce88e6b9be15175a76c
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104711955"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548214"
 ---
 # <a name="manage-customers"></a>Gerir clientes
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para gerir programaticamente as contas dos clientes.
+Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parceiros podem usar o Partner Center para gerir programaticamente as contas dos clientes.
 
 ## <a name="create-a-customer"></a>Criar um cliente
 

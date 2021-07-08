@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 7ea62c64e57f32bd33c1319ddc7ca07b20113017
-ms.sourcegitcommit: 8a5c37376a29e29fe0002a980082d4acc6b91131
+ms.openlocfilehash: 715ec7dda252cf096b2ec2bd1745d8afee7c8310
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "97769944"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547857"
 ---
 # <a name="different-partner-center-rest-url-end-points-for-use-in-certain-countries-or-regions"></a>Diferentes pontos finais DE URL do Centro Parceiro PARA utilização em determinados países ou regiões
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 O Partner Center está disponível em diferentes países e regiões em todo o mundo. Algumas versões do Partner Center podem necessitar de diferentes pontos finais para as suas apps funcionarem corretamente.
 

@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: d486eed96586eb2577577eac44fa9e866479e825
-ms.sourcegitcommit: 9bc35836b389fdf083b278128a2e9ec994919f1c
+ms.openlocfilehash: b3a64cc6aa4b19199490dafcf15eedde12b1330a
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102532843"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547806"
 ---
 # <a name="partner-center-supported-languages-and-locales"></a>Regiões e idiomas suportados pelo Centro de Parceiros
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Algumas APIs do Centro de Parceiros requerem um valor que indique um local, país ou região. Por exemplo, o [cabeçalho](headers.md) do Partner Center REST X-Locale requer um valor frequentemente no formato "language-country" ("en-US" indica "Inglês - Estados Unidos").
 

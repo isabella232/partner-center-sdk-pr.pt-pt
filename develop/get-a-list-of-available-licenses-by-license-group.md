@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 5092bc73107231d602c1465c8d157cdf5499c913
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: de59dfccf723c8f2411d9dadc51beb88688d5b02
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769554"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874521"
 ---
 # <a name="get-a-list-of-available-licenses-by-license-group"></a>Obter uma lista de licenças disponíveis por grupo de licenças
-
-**Aplica-se a**
-
-- Partner Center
 
 Como obter uma lista de licenças para os grupos de licença especificados disponíveis para os utilizadores do cliente especificado.
 
@@ -66,8 +62,8 @@ Utilize os seguintes parâmetros de percurso e consulta para identificar o clien
 
 | Nome            | Tipo   | Necessário | Descrição                                                                                                                                                                                                                                                           |
 |-----------------|--------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id cliente     | string | Sim      | Uma cadeia formatada GUID que identifica o cliente.                                                                                                                                                                                                                 |
-| licenseGroupIds | cadeia (de carateres) | No       | Um valor enum que indica o grupo de licenças das licenças atribuídas. Valores válidos: Grupo1, Grupo 1 - Este grupo tem todos os produtos cuja licença pode ser gerida no Diretório Ativo Azure (AAD). Grupo2 - Este grupo tem apenas licenças de produtos Minecraft. |
+| id cliente     | string | Yes      | Uma cadeia formatada GUID que identifica o cliente.                                                                                                                                                                                                                 |
+| licenseGroupIds | cadeia (de carateres) | No       | Um valor enum que indica o grupo de licenças das licenças atribuídas. Valores válidos: Grupo1, Grupo 1 - Este grupo tem todos os produtos cuja licença pode ser gerida no Azure Ative Directory (AAD). Grupo2 - Este grupo tem apenas Minecraft licenças de produtos. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

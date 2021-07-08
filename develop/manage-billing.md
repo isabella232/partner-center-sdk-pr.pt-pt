@@ -1,28 +1,23 @@
 ---
 title: Gerir faturação
-description: Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para visualizar e gerir programaticamente as suas faturas, e ver o progresso dos seus clientes contra um orçamento de gastos da Azure.
+description: Esta secção descreve as formas como os parceiros Fornecedor de Soluções em Nuvem podem usar o Partner Center para visualizar e gerir programaticamente as suas faturas, e ver o progresso dos seus clientes contra um orçamento de gastos da Azure.
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: sourishdeb
 ms.author: sodeb
-ms.openlocfilehash: 4d5995ea2abb5968c5ca459b8412b12dfdbbc47b
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: eaf6a426d0702130f31f08a4a30ccdfa00810270
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769493"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548367"
 ---
 # <a name="manage-billing"></a>Gerir faturação
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para visualizar e gerir programaticamente as suas faturas, e ver o progresso dos seus clientes contra um orçamento de gastos da Azure.
+Esta secção descreve as formas como os parceiros Fornecedor de Soluções em Nuvem podem usar o Partner Center para visualizar e gerir programaticamente as suas faturas, e ver o progresso dos seus clientes contra um orçamento de gastos da Azure.
 
 **Ciclo de Faturação:**
 - [Alterar o ciclo de faturação](change-the-billing-cycle.md)

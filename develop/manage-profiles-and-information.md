@@ -1,28 +1,23 @@
 ---
 title: Gerir contas e perfis
-description: Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para gerir programaticamente as suas contas e perfis de utilizador.
+description: Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parceiros podem usar o Centro de Parceiros para gerir programaticamente as suas contas e perfis de utilizador.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: parthpandyaMSFT
 ms.author: parthp
-ms.openlocfilehash: 802e6c48a9ee6d5fffdbac54a55f8cbe366283cb
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: ce0770568d9532e6bfa8f3092d479e5d0a2597ea
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769469"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548146"
 ---
 # <a name="manage-accounts-and-profiles"></a>Gerir contas e perfis
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para gerir programaticamente as suas contas e perfis de utilizador.
+Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parceiros podem usar o Partner Center para gerir programaticamente as suas contas e perfis de utilizador.
 
 - [Obtenha perfil de negócio legal](get-legal-business-profile.md)
 - [Obter um perfil de organização](get-an-organization-profile.md)

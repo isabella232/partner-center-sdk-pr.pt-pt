@@ -1,25 +1,21 @@
 ---
 title: Gerir encomendas
-description: Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para gerir programaticamente as encomendas e subscrições dos clientes.
+description: Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parceiros podem usar o Centro de Parceiros para gerir programaticamente as encomendas e subscrições dos clientes.
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b3df171ecf0e86cb07372deec420244af56f05d1
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 390baa87c96706e60582811774b74fcf11567058
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769482"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548163"
 ---
 # <a name="manage-orders"></a>Gerir encomendas
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Esta secção descreve as formas como os parceiros do Cloud Solution Provider podem usar o Partner Center para gerir programaticamente as encomendas e subscrições dos clientes.
+Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parceiros podem usar o Partner Center para gerir programaticamente as encomendas e subscrições dos clientes.
 
 ## <a name="purchase-azure-reserved-vm-instances"></a>Comprar Azure Reservado VM Instances
 

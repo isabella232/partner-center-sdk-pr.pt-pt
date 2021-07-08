@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 3a004f6f8f8de8cd398d82c300793e4f196efaaa
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 6f4fd821879545db4e781fe3202c8ee11f167615
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769109"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874249"
 ---
 # <a name="get-a-list-of-offers-for-a-market"></a>Obter uma lista de ofertas para um mercado
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Recebe uma coleção que contém todas as ofertas para um mercado específico.
 
@@ -38,7 +33,7 @@ Para obter uma lista de ofertas num dado mercado, use a sua coleção **IAggrega
 ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: Offers.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: Ofertas.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -54,7 +49,7 @@ Esta tabela lista os parâmetros de consulta necessários para obter as ofertas.
 
 | Nome           | Tipo       | Necessário | Descrição            |
 |----------------|------------|----------|------------------------|
-| **país id** | **cadeia** | Y        | O ID do país/região. |
+| **país id** | **string** | Y        | O ID do país/região. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

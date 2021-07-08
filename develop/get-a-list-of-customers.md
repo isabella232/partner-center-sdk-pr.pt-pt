@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 2dd8469458809ab38b6d6081adc91d6d1184d2d0
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 840c9d1a61451763d37a19639f99b12f1deb7521
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769631"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874351"
 ---
 # <a name="get-a-list-of-customers"></a>Obter uma lista de clientes
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo descreve como obter uma coleção de recursos que representa todos os clientes de um parceiro.
 
@@ -53,7 +48,7 @@ var customersEnumerator = scopedPartnerOperations.Enumerators.Customers.Create(c
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **CustomerPaging.cs**
 
 ## <a name="java"></a>Java

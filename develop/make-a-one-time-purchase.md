@@ -4,19 +4,16 @@ description: Como fazer uma compra única de software e produtos de reserva, tai
 ms.date: 10/09/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 17a5f5c1e845ba36a94d7ce909df30e0146ba448
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 1ca2d5b7ad6ba1196d74a8cdb748ab808192d569
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768900"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548384"
 ---
 # <a name="make-a-one-time-purchase"></a>Fazer uma compra única
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud for US Government
 
 Como fazer uma compra única de software e produtos de reserva, tais como subscrições de software, software perpétuo e Azure Reserved Virtual Machine (VM) Instances, usando a API do Partner Center.
 

@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 2098544e8607eabc4d25d90dcd7cad41510778a9
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 36d1c74e12ae680facef1414ce35ac2d6fb5322c
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769494"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547840"
 ---
 # <a name="partner-center-samples"></a>Exemplos do Centro de Parceiros
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Para ajudá-lo a levantar-se e a correr rapidamente com as APIs do Partner Center, fornecemos um programa de amostragem, cortes de código geridos C# e pedidos e respostas de amostras REST.
 
@@ -34,4 +29,4 @@ Para ajudá-lo a levantar-se e a correr rapidamente com as APIs do Partner Cente
 | Exemplos REST                                                  | Para pedidos de amostra e respostas que mostram como usar a API do Partner Center REST para gerir contas de clientes, obter análises, fazer encomendas, gerir faturamentos e subscrições, fornecer suporte e gerir contas e perfis, ver [Cenários](scenarios.md).                                                                                                       |
 | [Aplicação de teste da consola](console-test-app.md)                       | Esta aplicação encontra-se disponível em C# e Java, fornece código e algum tratamento de erros para todos os cenários listados na secção de cenários.                                                                        |
 | [Loja Web para clientes CSP](csp-customer-web-storefront.md) | Este site mostra uma loja online funcionando que os seus clientes poderiam usar para comprar subscrições de produtos Microsoft. Pode criar facilmente um website para a sua empresa com o [Guia De Arranque Rápido do Construtor de Lojas de Clientes CSP.](csp-customer-storefront-builder-quick-start-guide-.md)                                                              |
-| Site da loja                                                | Esta aplicação mostra como construir uma loja web com base no catálogo de ofertas disponíveis para os parceiros cloud Solution Provider. Os clientes podem criar uma conta de loja e encomendar subscrições de software através do seu site.<br/><br/>                  **Obtenha o código:**<br/> [Descarregue o código de amostra](https://go.microsoft.com/fwlink/p/?LinkId=746683)<br/><br/>                                            **O que configurar antes do lançamento:**<br/><br/> - Autenticação: ID da aplicação & segredo<br/> - Marca: logotipo e nome da empresa<br/> - Mensagem de boas-vindas<br/> - Ofertas, incluindo descrições e preços. A aplicação assume que os preços da lista incluem quaisquer impostos aplicáveis. Em alternativa, pode adicionar lógica adicional para calcular o imposto durante o check-out.<br/> - Informações de pagamento: forneça as suas próprias opções de cartão de crédito, PayPal ou outros tipos de pagamento. Antes de configurar esta peça, leia o guia [Sem pagamento, fraude ou uso indevido](/partner-center/non-payment-fraud-misuse). |
+| Site da loja                                                | Esta aplicação mostra como construir uma loja web com base no catálogo de ofertas disponíveis para Fornecedor de Soluções em Nuvem parceiros. Os clientes podem criar uma conta de loja e encomendar subscrições de software através do seu site.<br/><br/>                  **Obtenha o código:**<br/> [Descarregue o código de amostra](https://go.microsoft.com/fwlink/p/?LinkId=746683)<br/><br/>                                            **O que configurar antes do lançamento:**<br/><br/> - Autenticação: ID da aplicação & segredo<br/> - Marca: logotipo e nome da empresa<br/> - Mensagem de boas-vindas<br/> - Ofertas, incluindo descrições e preços. A aplicação assume que os preços da lista incluem quaisquer impostos aplicáveis. Em alternativa, pode adicionar lógica adicional para calcular o imposto durante o check-out.<br/> - Informações de pagamento: forneça as suas próprias opções de cartão de crédito, PayPal ou outros tipos de pagamento. Antes de configurar esta peça, leia o guia [Não pagamento, fraude ou uso indevido](/partner-center/non-payment-fraud-misuse). |

@@ -4,21 +4,16 @@ description: Partner Center Analytics documentação pública da API.
 ms.date: 06/11/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4b14ee929f3020079f409be8817e077673d3219f
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 03d7d252a415524c6573c1bf62b8b9c1518a1b9f
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768846"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548095"
 ---
 # <a name="partner-center-analytics---resources"></a>Análise do Centro de Parceiros – Recursos
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 A API Analytics permite-lhe aceder programaticamente aos dados que estão a ser apresentados na Experiência do Utilizador.
 
@@ -38,7 +33,7 @@ Este cenário devolve a sua informação de análise numa coleção de recursos 
 
 Representa todos os dados analíticos para a utilização do Azure.
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 |----------|------|-------------|
 | CustomerTenantId | string | O identificador do cliente. |
 | nome do cliente | string | O nome do cliente. |
@@ -66,7 +61,7 @@ Este cenário devolve a sua informação de análise numa coleção de recursos 
 
 Representa todos os dados analíticos para revendedores indiretos.
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 |----------|------|-------------|
 | partnerTenantId | string | A Identificação do Inquilino do parceiro para o qual pretende recuperar dados de revendedores indiretos. |
 | ID | string | ID do revendedor indireto. |
@@ -98,7 +93,7 @@ Todos estes cenários devolvem a sua informação de análise numa coleção de 
 
 Representa todos os dados analíticos para uma subscrição.
 
-|         Propriedade          |              Tipo              |                                                                      Descrição                                                                       |
+|         Propriedade          |              Tipo              |                                                                      Description                                                                       |
 |---------------------------|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     customerTenantId      |             string             |                                              Uma cadeia formatada pelo GUID que identifica o inquilino do cliente.                                              |
 |       nome do cliente        |             string             |                                                               O nome do cliente.                                                                |
@@ -108,7 +103,7 @@ Representa todos os dados analíticos para uma subscrição.
 |        produtoName        |             string             |                                                                O nome do produto.                                                                |
 |     Tipo de subscrição      |             string             |       O tipo de assinatura. **Nota:** Este campo é sensível a casos. Os valores suportados são: "Office", "Azure", "Microsoft365", "Dynamics", "EMS".       |
 |     autoRenewEnabled      |            boolean             |                                         Um valor que indica se a subscrição é renovada automaticamente.                                          |
-|         partnerId         |             string             | A identificação do MPN. Para um revendedor direto, este parâmetro será o ID MPN do parceiro. Para um revendedor indireto, este parâmetro será o ID MPN do revendedor indireto. |
+|         partnerId         |             string             | O ID da Microsoft Partner Network (MPN). Para um revendedor direto, este parâmetro será o ID MPN do parceiro. Para um revendedor indireto, este parâmetro será o ID MPN do revendedor indireto. |
 |       nome amigável        |             string             |                                                             O nome da assinatura.                                                              |
 |        nome parceiro        |             string             |                                              Nome do parceiro para quem a assinatura foi comprada                                               |
 |       provedorName        |             string             |            Quando a transação de subscrição é para o revendedor indireto, o nome do fornecedor é o fornecedor indireto que comprou a subscrição.             |
@@ -120,7 +115,7 @@ Representa todos os dados analíticos para uma subscrição.
 |       trialEndDate        | cadeia no formato de hora de data UTC |                                  A data em que termina o período experimental para a subscrição termina. O valor por defeito é nulo.                                  |
 |       lastUsageDate       | cadeia no formato de hora de data UTC |                                        A data em que a assinatura foi usada pela última vez. O valor por defeito é nulo.                                        |
 |     deprovisionedDate     | cadeia no formato de hora de data UTC |                                      A data em que a subscrição foi desprovisionada. O valor por defeito é nulo.                                      |
-|      último Aniversário deRenewal      | cadeia no formato de hora de data UTC |                                       A data em que a subscrição foi renovada pela última vez O valor por defeito é nulo.                                       |
+|      último Aniversário deRenewal      | cadeia no formato de hora de data UTC |                                       A data em que a subscrição foi renovada pela última vez. O valor por defeito é nulo.                                       |
 |       licençaCount        |             número             |                                                             O número total de licenças.                                                              |
 |     subscriçãoCount     |             número             |                        O número de assinaturas. Nota: Este valor só aparecerá na resposta a uma consulta de agregação.                         |
 
@@ -139,7 +134,7 @@ Este cenário devolve a sua informação de análise numa coleção de recursos 
 
 Representa todos os dados analíticos para uma pesquisa.
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 |----------|------|-------------|
 | nome da empresa | string | O nome da empresa de faturação. |
 | contatoButtonClicked | Booleano | Indica se o botão de contacto foi clicado. |
@@ -175,7 +170,7 @@ Este cenário devolve a sua informação de análise numa coleção de recursos 
 
 Representa todos os dados analíticos para uma referência.
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 |----------|------|-------------|
 | ID | string | O identificador do cliente.  |
 | status | string | Indica se a referência levou a um cliente.  |

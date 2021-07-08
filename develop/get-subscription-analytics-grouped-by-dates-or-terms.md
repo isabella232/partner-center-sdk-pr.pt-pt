@@ -4,21 +4,16 @@ description: Como obter informações de análise de subscrição agrupadas por 
 ms.date: 06/27/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4a9946027fa89f5a93fff5eede86e36a6be5b721
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 8192a9863d53ec8697a7341cd38c69200614bd4a
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769050"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548724"
 ---
 # <a name="get-subscription-analytics-grouped-by-dates-or-terms"></a>Obter análise de subscrição agrupada por datas ou termos
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter informações de análise de subscrição para os seus clientes agrupados por datas ou termos.
 
@@ -40,7 +35,7 @@ Utilize os seguintes parâmetros de caminho necessários para identificar a sua 
 
 | Nome | Tipo | Necessário | Descrição |
 |------|------|----------|-------------|
-| groupby_queries | pares de cordas e dataTime | Sim | Os termos e datas para filtrar o resultado. |
+| groupby_queries | pares de cordas e dataTime | Yes | Os termos e datas para filtrar o resultado. |
 
 ### <a name="groupby-syntax"></a>Sintaxe GroupBy
 
@@ -54,7 +49,7 @@ Um exemplo não codificado é o seguinte:
 
 A tabela seguinte mostra uma lista dos campos suportados para grupo por.
 
-| Campo | Tipo | Descrição |
+| Campo | Tipo | Description |
 |-------|------|-------------|
 | customerTenantId | string | Uma cadeia formatada pelo GUID que identifica o inquilino do cliente. |
 | nome do cliente | string | O nome do cliente. |
@@ -82,7 +77,7 @@ A tabela seguinte mostra uma lista dos campos suportados para grupo por.
 
 A tabela que se segue lista os campos de filtro opcionais e as suas descrições:
 
-| Campo | Tipo |  Descrição |
+| Campo | Tipo |  Description |
 |-------|------|--------------|
 | top | int | O número de filas de dados a devolver no pedido. Se o valor não for especificado, o valor máximo e o valor predefinido são 10000. Se houver mais linhas na consulta, o corpo de resposta inclui um próximo link que pode usar para solicitar a próxima página de dados. |
 | saltar | int | O número de filas para saltar na consulta. Utilize este parâmetro para páginar através de grandes conjuntos de dados. Por exemplo, top=10000 e skip=0 recupera as primeiras 10000 linhas de dados, top=10000 e skip=10000 recupera as próximas 10000 linhas de dados. |

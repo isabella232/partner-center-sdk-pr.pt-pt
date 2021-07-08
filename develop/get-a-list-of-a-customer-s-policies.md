@@ -6,19 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 16886b1adca393ed2967f2a4fe74a379bef1c1c7
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: bf6ace0d2425e28d80c4f2310878c2d2a9e2a876
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769338"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874589"
 ---
 # <a name="get-a-list-of-a-customers-policies"></a>Obter uma lista de políticas de um cliente
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Este artigo descreve como recuperar uma coleção das políticas de configuração do cliente especificado.
 
@@ -47,7 +44,7 @@ var configPolicies = partnerOperations.Customers.ById(selectedCustomerId).Config
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **Partner Center SDK Samples**
+- Project: **Amostras SDK do Centro Parceiro**
 - Classe: **GetAllConfigurationPolicies.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -64,7 +61,7 @@ Utilize o seguinte parâmetro de caminho ao criar o pedido:
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| id cliente | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -72,7 +69,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

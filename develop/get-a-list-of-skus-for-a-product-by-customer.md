@@ -7,21 +7,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 6b9c9bcd52798006d7f686405f059192a722c7e8
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: b76526d97ba9027897fc88954ba45186d58aefb8
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769097"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874164"
 ---
 # <a name="get-a-list-of-skus-for-a-product-by-customer"></a>Obtenha uma lista de SKUs para um produto (por cliente)
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém uma coleção de SKUs para um determinado produto que está disponível para um cliente existente.
 
@@ -45,8 +40,8 @@ Obtém uma coleção de SKUs para um determinado produto que está disponível p
 
 | Nome               | Tipo | Necessário | Descrição                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| cliente-inquilino-id | GUID | Sim | O valor é um **cliente-id-inquilino-inquilino-id,** que é um identificador que lhe permite especificar um cliente. |
-| id produto | string | Sim | Uma corda que identifica o produto. |
+| cliente-inquilino-id | GUID | Yes | O valor é um **cliente-id-inquilino-inquilino-id,** que é um identificador que lhe permite especificar um cliente. |
+| id produto | string | Yes | Uma corda que identifica o produto. |
 
 ### <a name="request-header"></a>Cabeçalho do pedido
 
@@ -74,7 +69,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP | Código de erro | Descrição |
+| Código de Estado HTTP | Código de erro | Description |
 |------------------|------------|-------------|
 | 404 | 400013 | O produto-mãe não foi encontrado. |
 

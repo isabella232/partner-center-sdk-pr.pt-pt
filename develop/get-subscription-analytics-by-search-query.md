@@ -4,21 +4,16 @@ description: Como obter informações de análise de subscrição filtradas por 
 ms.date: 05/10/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c1046ea3c7e813eedae4890eebf6356337c80ede
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 8df777b9a88206f8b22579f0f445c54d80f7cd64
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769055"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548741"
 ---
 # <a name="get-subscription-analytics-information-filtered-by-a-search-query"></a>Obter informações de análise de subscrições filtradas por uma consulta de pesquisa
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter informações de análise de subscrição para os seus clientes filtrados por uma consulta de pesquisa.
 
@@ -40,7 +35,7 @@ Utilize o seguinte parâmetro de caminho necessário para identificar a sua orga
 
 | Nome | Tipo | Necessário | Descrição |
 |------|------|----------|-------------|
-| filter_string | string | Sim | O filtro para aplicar à análise da subscrição. Consulte as secções de sintaxe do filtro e filtrar as secções para a sintaxe, campos e operadores utilizarem neste parâmetro. |
+| filter_string | string | Yes | O filtro para aplicar à análise da subscrição. Consulte as secções de sintaxe do filtro e filtrar as secções para a sintaxe, campos e operadores utilizarem neste parâmetro. |
 
 ### <a name="filter-syntax"></a>Sintaxe de filtro
 
@@ -66,7 +61,7 @@ autoRenewEnabled eq true and customerMarket eq 'US'
 
 A tabela a seguir mostra uma lista dos campos suportados e dos operadores de apoio para o parâmetro do filtro. Os valores das cordas devem estar rodeados de citações únicas.
 
-| Parâmetro | Operadores apoiados | Descrição |
+| Parâmetro | Operadores apoiados | Description |
 |-----------|---------------------|-------------|
 | autoRenewEnabled | `eq`, `ne` | Um valor que indica se a subscrição é renovada automaticamente. |
 | compromissoEndDate | `eq`, `ne`, `gt`, `lt`, `ge`, `le`  | A data em que a subscrição termina. |

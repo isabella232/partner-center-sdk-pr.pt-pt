@@ -4,20 +4,16 @@ description: Obtém os serviços geridos para um cliente. Por outras palavras, o
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4764fce6a80035ea4b9dcc6677a3da28fc863eb7
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 1cf7e7b62113bd96b00fdc2301e4e7ac4f5d4243
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769800"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548452"
 ---
 # <a name="get-the-managed-services-for-a-customer-by-id"></a>Obter os serviços geridos para um cliente por ID
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém os serviços geridos para um cliente. Por outras palavras, obtenha links para todas as subscrições do cliente para as quais tenha delegado privilégios de administração. Pode utilizar estes links para fornecer pedidos de assistência e serviço de ficheiros com a Microsoft.
 
@@ -38,7 +34,7 @@ Para apresentar uma lista de todos os serviços geridos para um cliente, utilize
 ResourceCollection<ManagedService> managedServices = partnerOperations.Customers.ById(selectedCustomerId).ManagedServices.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerCenterSDK.FeaturesSamples **Class**: CustomerManagedServices.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerCenterSDK.FeaturesSamples **Class**: CustomerManagedServices.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

@@ -4,27 +4,22 @@ description: Vários recursos relacionados com a fatura estão disponíveis atra
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8977b3b649cd930bb517965572d0efe51d6985a0
-ms.sourcegitcommit: 4ec053c56fd210b174fe657aa7b86faf4e2b5a7c
+ms.openlocfilehash: b07b7ad14c136eac988eeb12391c24a6cf996b39
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "105730217"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548434"
 ---
 # <a name="invoice-resources"></a>Recursos de fatura
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Os seguintes recursos relacionados com a fatura estão disponíveis através das APIs do Partner Center.
 
 ## <a name="invoice"></a>Fatura
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 | -------- | ---- | ----------- |
 | ID | string | O identificador de fatura. |
 | faturaDate | cadeia no formato de data-hora UTC | A data em que a fatura foi gerada. |
@@ -47,7 +42,7 @@ Os seguintes recursos relacionados com a fatura estão disponíveis através das
 
 Uma fatura contém uma coleção de itens faturados, e cada item é representado por um recurso FaturaDetail.
 
-| Propriedade            | Tipo                                                           | Descrição                                                                       |
+| Propriedade            | Tipo                                                           | Description                                                                       |
 |---------------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | faturaLineItemType | string                                                         | O tipo de detalhe da fatura: "nenhum", \_ \_ "itens de linha de utilização", "itens de linha de \_ faturação". \_ |
 | faturaçãoProvider     | string                                                         | O fornecedor de faturação: "nenhum", "escritório", "azul" ou "mercado de \_ dados \_ azure".         |
@@ -58,7 +53,7 @@ Uma fatura contém uma coleção de itens faturados, e cada item é representado
 
 Cada carga individual dentro de uma fatura é representada como um InvoiceLineItem.
 
-| Propriedade            | Tipo                                                           | Descrição                                                                          |
+| Propriedade            | Tipo                                                           | Description                                                                          |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | faturaLineItemType | string                                                         | O tipo de rubrica de fatura: "nenhum", \_ \_ "itens de linha de utilização", "itens de linha de \_ faturação". \_ |
 | faturaçãoProvider     | string                                                         | O fornecedor de faturação: "nenhum", "escritório", "azul" ou "mercado de \_ dados \_ azure".            |
@@ -68,7 +63,7 @@ Cada carga individual dentro de uma fatura é representada como um InvoiceLineIt
 
 Descreve um resumo do saldo e os encargos totais de uma fatura.
 
-| Propriedade                 | Tipo                                                           | Descrição                                                           |
+| Propriedade                 | Tipo                                                           | Description                                                           |
 |--------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | balanceAmonte            | número                                                         | O saldo da fatura. Este é o montante total de contas não pagas. |
 | currencyCode             | string                                                         | Um código que indica a moeda utilizada para o valor do saldo.       |
@@ -86,7 +81,7 @@ Descreve um resumo do saldo e os encargos totais de uma fatura.
 
 Represente um resumo dos detalhes individuais para um tipo de fatura (por exemplo, recorrente, uma \_ vez).
 
-| Propriedade            | Tipo                                                           | Descrição                                                                          |
+| Propriedade            | Tipo                                                           | Description                                                                          |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | faturaType         | string                                                         | O tipo de fatura: "recorrente", "uma \_ vez".                                       |
 | resumo             | [Objeto de faturaSummary](#invoicesummary)                       | O resumo da fatura por tipo de fatura.                                         |
@@ -95,7 +90,7 @@ Represente um resumo dos detalhes individuais para um tipo de fatura (por exempl
 
 Represente uma coleção do tipo [FaturaSummary](#invoicesummary) que contenha os detalhes individuais de um tipo de fatura por moeda.
 
-| Propriedade            | Tipo                                                           | Descrição                                                                          |
+| Propriedade            | Tipo                                                           | Description                                                                          |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | collectionOfSummary | matriz de [objetos de faturaSummary](#invoicesummary)             | O resumo da fatura por tipo de fatura por moeda.                            |
 
@@ -103,7 +98,7 @@ Represente uma coleção do tipo [FaturaSummary](#invoicesummary) que contenha o
 
 Representa um item de linha de faturação para subscrições licenciadas.
 
-| Propriedade                 | Tipo                                                           | Descrição                                                           |
+| Propriedade                 | Tipo                                                           | Description                                                           |
 |--------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | quantidade                   | string                                                         | Recebe ou define o valor total. Quantidade total = preço unitário * quantidade.  |
 | atributos               | string                                                         | Obtém os atributos.                                                  |
@@ -141,7 +136,7 @@ Representa um item de linha de faturação para subscrições licenciadas.
 
 Representa um item de linha de faturação para subscrições baseadas em uso.
 
-| Propriedade                 | Tipo                                                           | Descrição                                                           |
+| Propriedade                 | Tipo                                                           | Description                                                           |
 |--------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | atributos               | string                                                         | Obtém os atributos.                                                  |
 | billingCycleType         | string                                                         | Recebe ou define o tipo de ciclo de faturação.                                  |
@@ -188,7 +183,7 @@ Representa um item de linha de faturação para subscrições baseadas em uso.
 
 Representa as operações disponíveis numa declaração de fatura em aplicação/pdf.
 
-| Propriedade                 | Tipo                                                           | Descrição                                                           |
+| Propriedade                 | Tipo                                                           | Description                                                           |
 |--------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | httpResponseMessage      | objeto                                                         | ByteArrayContent com conteúdoType = aplicação/pdf.                  |
 
@@ -196,7 +191,7 @@ Representa as operações disponíveis numa declaração de fatura em aplicaçã
 
 Representa um item de linha de faturação para subscrições licenciadas.
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 | --- | --- | --- |
 | PartnerId | string | Recebe ou define a identificação do inquilino sócio. |
 | CustomerId | string | Recebe ou define a identificação do inquilino do cliente. |
@@ -246,7 +241,7 @@ Representa um item de linha de faturação para subscrições licenciadas.
 
 Representa itens de linha de reconciliação não faturados para uso avaliado diário.
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Tipo | Description |
 | --- | --- | --- |
 | PartnerId | string | Recebe ou define a identificação do inquilino sócio. |
 | PartnerName | string | Recebe ou define o nome do parceiro. |
@@ -280,7 +275,7 @@ Representa itens de linha de reconciliação não faturados para uso avaliado di
 | Etiquetas | string | Recebe ou define as etiquetas adicionadas ao cliente. |
 | AdditionalInfo | string | Obtém ou define os metadados específicos do serviço. Por exemplo, um tipo de imagem de uma máquina virtual. |
 | ServiceInfo1 | string | Obtém ou define metadados internos do Serviço Azure. |
-| ServiceInfo2 | string | Obtém ou define informações de serviço, por exemplo, um tipo de imagem para uma máquina virtual e o nome ISP para ExpressRoute. |
+| ServiceInfo2 | string | Obtém ou define informações de serviço, por exemplo, um tipo de imagem para uma máquina virtual e nome ISP para ExpressRoute. |
 | CustomerCountry | string | Recebe ou define o país do cliente. |
 | MpnId | string | Obtém ou define o ID MPN associado a este item de linha. |
 | RevendedorMpnId | string | Obtém ou define o ID MPN do parceiro de nível 2 associado a este item de linha. |

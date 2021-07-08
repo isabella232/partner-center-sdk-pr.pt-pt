@@ -4,20 +4,16 @@ description: Descreve recursos relacionados com licenças.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 681f53ec73122a4861e6f1a2f96560336481a068
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: 27d44f89ac89f365e77e073c425ca45ab3638c68
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769487"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548401"
 ---
 # <a name="license-resources"></a>Recursos de licença
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Descreve recursos relacionados com licenças.
 
@@ -28,7 +24,7 @@ Descreve uma licença de utilizador.
 >[!NOTE]
 >Sem apoio no Partner Center operado pela 21Vianet.
 
-| Propriedade     | Tipo                                                           | Descrição                                                    |
+| Propriedade     | Tipo                                                           | Description                                                    |
 |--------------|----------------------------------------------------------------|----------------------------------------------------------------|
 | planos de serviço | matriz de recursos Do Plano de Serviço                                 | A recolha de planos de serviço que correspondem à licença |
 | produtoSKU   | ProductSku                                                     | O sku do produto que corresponde à licença.        |
@@ -38,7 +34,7 @@ Descreve uma licença de utilizador.
 
 Fornece informações usadas para atribuir ou remover licenças de um utilizador.
 
-| Propriedade         | Tipo                                                           | Descrição                                               |
+| Propriedade         | Tipo                                                           | Description                                               |
 |------------------|----------------------------------------------------------------|-----------------------------------------------------------|
 | licensestoAssign | matriz de objetos                                               | Conjunto de [objetos de assinatura de licença.](#licenseassignment) |
 | licençasToRemove | matriz de cadeias (de carateres)                                               | O produto identificadores SKU das licenças para remover.    |
@@ -49,7 +45,7 @@ Fornece informações usadas para atribuir ou remover licenças de um utilizador
 
 Fornece informações necessárias para uma operação de atualização de licença.
 
-| Propriedade      | Tipo             | Descrição                                                                |
+| Propriedade      | Tipo             | Description                                                                |
 |---------------|------------------|----------------------------------------------------------------------------|
 | Planos excluídos | matriz de cadeias (de carateres) | Os identificadores do plano de serviço devem ser excluídos da disponibilidade para o utilizador. |
 | skuId         | string           | O identificador SKU do produto para a licença.                                |
@@ -58,7 +54,7 @@ Fornece informações necessárias para uma operação de atualização de licen
 
 Contém informações de aviso que ocorreram durante uma operação de atualização da licença.
 
-| Propriedade     | Tipo             | Descrição                                         |
+| Propriedade     | Tipo             | Description                                         |
 |--------------|------------------|-----------------------------------------------------|
 | code         | string           | O código de aviso.                                   |
 | message      | string           | A mensagem de aviso.                                |
@@ -68,19 +64,19 @@ Contém informações de aviso que ocorreram durante uma operação de atualiza�
 
 Descreve detalhes do produto.
 
-| Propriedade       | Tipo             | Descrição                                         |
+| Propriedade       | Tipo             | Description                                         |
 |----------------|------------------|-----------------------------------------------------|
 | ID             | string           | O identificador de produto.                             |
 | name           | string           | O identificador principal do utilizador.                      |
-| skuPartNumber  | string           | O nome de número de peça SKU para o produto. Por exemplo, para o Plano E3 do Office 365, este valor é `EnterprisePack` . Esta propriedade pode ser usada no lugar do id se o id não estiver disponível.                |
+| skuPartNumber  | string           | O nome de número de peça SKU para o produto. Por exemplo, para Office 365 Plano E3, este valor é `EnterprisePack` . Esta propriedade pode ser usada no lugar de ID se o ID não estiver disponível.                |
 | targetType     | string           | O tipo alvo do produto. Esta propriedade identifica se o produto é aplicável a um `User` ou um `Tenant` .                                                                    |
-| licenseGroupId | string           | Identifica através de um identificador de grupo a autoridade ou serviço que gere a licença de produtoSku. Os produtos são segregados em grupos de licenças para uma melhor gestão.<br/><br/>                                                                                     `group1` - Todos os produtos cujas licenças podem ser geridas pela Azure Ative Directory (AAD).<br/><br/>                                            `group2` - Licenças de produtos Minecraft.                                         |
+| licenseGroupId | string           | Identifica através de um identificador de grupo a autoridade ou serviço que gere a licença de produtoSku. Os produtos são segregados em grupos de licenças para uma melhor gestão.<br/><br/>                                                                                     `group1`- Todos os produtos cujas licenças podem ser geridas por Azure Ative Directory (AAD).<br/><br/>                                            `group2`- Minecraft licenças de produtos.                                         |
 
 ## <a name="serviceplan"></a>Plano de Serviços
 
 Identifica um serviço implantável dentro de um produto SKU. Um produto pode ter muitos planos de serviço.
 
-| Propriedade         | Tipo   | Descrição                                                                                                       |
+| Propriedade         | Tipo   | Description                                                                                                       |
 |------------------|--------|-------------------------------------------------------------------------------------------------------------------|
 | ID               | string | O identificador do plano de serviço.                                                                                      |
 | displayName      | string | O nome de exibição localizado para o plano de serviço.                                                                  |
@@ -92,7 +88,7 @@ Identifica um serviço implantável dentro de um produto SKU. Um produto pode te
 
 Descreve um produto subscrito propriedade de um inquilino.
 
-| Propriedade         | Tipo                                                           | Descrição                                                                                       |
+| Propriedade         | Tipo                                                           | Description                                                                                       |
 |------------------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | unidades disponíveis   | número inteiro                                                        | O número de unidades disponíveis para atribuição. Este valor é calculado como unidades totais - unidades consumidas. |
 | unidades ativas      | número inteiro                                                        | O número de unidades ativas para a atribuição.                                                        |

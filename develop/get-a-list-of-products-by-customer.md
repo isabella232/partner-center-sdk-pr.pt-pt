@@ -7,21 +7,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 98a099c458535123f675c6452db950b087b9f387
-ms.sourcegitcommit: d53d300dc7fb01aeb4ef85bf2e3a6b80f868dc57
+ms.openlocfilehash: a7cb2430aa93beb89e4d1f9b8c89a016d66624ca
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "97769451"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874198"
 ---
 # <a name="get-a-list-of-products-by-customer"></a>Obter uma lista de produtos (por cliente)
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode utilizar os seguintes métodos para obter uma coleção de produtos para um cliente existente.
 
@@ -43,8 +38,8 @@ Pode utilizar os seguintes métodos para obter uma coleção de produtos para um
 
 | Nome               | Tipo | Necessário | Descrição                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| **cliente-inquilino-id** | GUID | Sim | O valor é um **cliente-id-inquilino-inquilino-id,** que é um identificador que lhe permite especificar um cliente. |
-| **targetView** | string | Sim | Identifica a visão do catálogo. Os valores suportados são: <br/><br/>**Azure,** que inclui todos os itens Azure<br/><br/>**AzureReservations**, que inclui todos os itens de reserva Azure<br/><br/>**AzureReservationsVM,** que inclui todos os itens de reserva de máquina virtual (VM)<br/><br/>**AzureReservationsSQL,** que inclui todos os itens de reserva SQL<br/><br/>**AzureReservationsCosmosDb,** que inclui todos os itens de reserva da base de dados cosmos<br/><br/>**MicrosoftAzure**, que inclui itens para subscrições microsoft Azure **(MS-AZR-0145P**) e planos Azure<br/><br/>**OnlineServices**, que inclui todos os itens de serviço on-line, incluindo produtos de marketplace comercial<br/><br/>**Software**, que inclui todos os itens de software<br/><br/>**SoftwareSUSELinux,** que inclui todos os itens SUSE Linux de software<br/><br/>**SoftwarePerpetual,** que inclui todos os itens de software perpétuos<br/><br/>**SoftwareSubscriptions**, que inclui todos os itens de subscrição de software  |
+| **cliente-inquilino-id** | GUID | Yes | O valor é um **cliente-id-inquilino-inquilino-id,** que é um identificador que lhe permite especificar um cliente. |
+| **targetView** | string | Yes | Identifica a visão do catálogo. Os valores suportados são: <br/><br/>**Azure,** que inclui todos os itens Azure<br/><br/>**AzureReservations**, que inclui todos os itens de reserva Azure<br/><br/>**AzureReservationsVM,** que inclui todos os itens de reserva de máquina virtual (VM)<br/><br/>**AzureReservationsSQL,** que inclui todos os itens de reserva SQL<br/><br/>**AzureReservationsCosmosDb,** que inclui todos os itens de reserva da base de dados cosmos<br/><br/>**MicrosoftAzure**, que inclui itens para subscrições Microsoft Azure **(MS-AZR-0145P)** e planos Azure<br/><br/>**OnlineServices**, que inclui todos os itens de serviço on-line, incluindo produtos de marketplace comercial<br/><br/>**Software**, que inclui todos os itens de software<br/><br/>**SoftwareSUSELinux,** que inclui todos os itens SUSE Linux de software<br/><br/>**SoftwarePerpetual,** que inclui todos os itens de software perpétuos<br/><br/>**SoftwareSubscriptions**, que inclui todos os itens de subscrição de software  |
 
 ### <a name="request-header"></a>Cabeçalho do pedido
 
@@ -56,7 +51,7 @@ Nenhum.
 
 ### <a name="request-example"></a>Exemplo de pedido
 
-Pedido de uma lista de produtos à base de uso da Azure disponíveis para um determinado cliente. Os produtos para os planos Microsoft Azure (MS-AZR-0145P) e Azure serão devolvidos para clientes em nuvem pública:
+Pedido de uma lista de produtos à base de uso da Azure disponíveis para um determinado cliente. Os produtos para Microsoft Azure (MS-AZR-0145P) e planos Azure serão devolvidos para clientes em nuvem pública:
 
 ```http
 GET https://api.partnercenter.microsoft.com/v1/customers/65543400-f8b0-4783-8530-6d35ab8c6801/products?targetView=MicrosoftAzure HTTP/1.1
@@ -74,7 +69,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP | Código de erro   | Descrição                     |
+| Código de Estado HTTP | Código de erro   | Description                     |
 |------------------|--------------|---------------------------------|
 | 403 | 400036 | Não é permitido o acesso ao targetView solicitado. |
 

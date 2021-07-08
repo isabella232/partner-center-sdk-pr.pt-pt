@@ -6,19 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 36fe3b97612adfd26c1b498f31b90f743bf774cb
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 28af1f568f755ba4c50cfac21529d6c677656c8e
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769548"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874266"
 ---
 # <a name="get-a-list-of-devices-for-the-specified-batch-and-customer"></a>Obter uma lista de dispositivos para o lote e cliente especificados
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Este artigo descreve como recuperar uma coleção de dispositivos num lote de dispositivo especificado para um cliente especificado. Cada recurso do dispositivo contém detalhes sobre o dispositivo.
 
@@ -54,7 +51,7 @@ var devices =
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **Partner Center SDK Samples**
+- Project: **Amostras SDK do Centro Parceiro**
 - Classe: **GetDevices.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -71,8 +68,8 @@ Utilize os seguintes parâmetros de trajetória ao criar o pedido.
 
 | Nome           | Tipo   | Necessário | Descrição                                           |
 |----------------|--------|----------|-------------------------------------------------------|
-| id cliente    | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente. |
-| devicebatch-id | string | Sim      | Um identificador de cordas que identifica o lote do dispositivo. |
+| id cliente    | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente. |
+| devicebatch-id | string | Yes      | Um identificador de cordas que identifica o lote do dispositivo. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -80,7 +77,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

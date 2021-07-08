@@ -6,18 +6,14 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 8aca626597e9ec903ebecca7d55577ba636c518e
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 769a4307dc3cebdc7ebbdcf51d9f2b67a9f4b7c2
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769032"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874028"
 ---
 # <a name="get-a-product-by-id"></a>Obter um produto por ID
-
-**Aplica-se a**
-
-- Partner Center
 
 Obtém o recurso de produto especificado usando um ID do produto.
 
@@ -73,8 +69,8 @@ Utilize os seguintes parâmetros de trajetória para obter o produto especificad
 
 | Nome                   | Tipo     | Necessário | Descrição                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-| id produto             | string   | Sim      | Uma corda que identifica o produto.                           |
-| país                | string   | Sim      | Uma identificação país/região.                                            |
+| id produto             | string   | Yes      | Uma corda que identifica o produto.                           |
+| país                | string   | Yes      | Uma identificação país/região.                                            |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -104,7 +100,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP     | Código de erro   | Descrição                                                                |
+| Código de Estado HTTP     | Código de erro   | Description                                                                |
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 404                  | 400013       | O produto não foi encontrado.                                                     |
 

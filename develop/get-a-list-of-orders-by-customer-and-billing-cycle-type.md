@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 43fe08b0791851f915e2b39a25394db5ffd022ca
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: c52a556887dba065c4ccd1a82d6223624d0ad1f2
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769536"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874232"
 ---
 # <a name="get-a-list-of-orders-by-customer-and-billing-cycle-type"></a>Obter uma lista de encomendas por cliente e tipo de ciclo de faturação
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém uma coleção de recursos da Encomenda que correspondem a um determinado cliente e tipo de ciclo de faturação. Há um atraso de até 15 minutos entre o momento em que uma encomenda é submetida e quando aparecerá numa recolha de encomendas de um cliente.
 
@@ -61,7 +56,7 @@ Esta tabela lista os parâmetros de consulta necessários para obter uma recolha
 
 | Nome                   | Tipo     | Necessário | Descrição                                               |
 |------------------------|----------|----------|-----------------------------------------------------------|
-| cliente-inquilino-id     | string   | Sim      | Uma cadeia formatada GUID correspondente ao cliente.    |
+| cliente-inquilino-id     | string   | Yes      | Uma cadeia formatada GUID correspondente ao cliente.    |
 | tipo de ciclo de faturação     | cadeia (de carateres)   | No       | Uma cadeia correspondente ao tipo de ciclo de faturação.         |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido

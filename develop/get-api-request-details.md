@@ -6,18 +6,16 @@ ms.subservice: partnercenter-sdk
 ms.date: 05/29/2020
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 43b1e3d4a6220ac8adba8eed0389395113072288
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 9a367f912669114969f8792a5afcc7020af1112e
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768750"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760509"
 ---
 # <a name="get-app-and-user-api-requests"></a>Obtenha pedidos de App e API do utilizador
 
-Aplica-se a:
-
-- API do Centro de Parceiros
+**Aplica-se a**: Partner Center API
 
 Este artigo explica como obter uma lista de todos os pedidos de utilizador de um cliente parceiro dentro de um inquilino usando APIs REST.
 
@@ -38,7 +36,7 @@ Este artigo explica como obter uma lista de todos os pedidos de utilizador de um
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
-- Consulte [os cabeçalhos REST do Partner Center](headers.md) para obter mais informações.
+- Para obter mais informações, consulte [os cabeçalhos Partner Center REST](headers.md).
 
 ### <a name="request-body"></a>Corpo do pedido
 

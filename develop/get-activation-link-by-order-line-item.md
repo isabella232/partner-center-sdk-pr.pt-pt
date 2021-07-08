@@ -6,25 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: c0e84888870571cf6bd21306f527863f2aa7ee85
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: aa02a5a5b4a281b96e32ee6d239cc440cf8af4ec
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769266"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760781"
 ---
 # <a name="get-activation-link-by-order-line-item"></a>Obter ligação de ativação por item de linha da encomenda
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém um link de ativação de subscrição de mercado comercial pelo número de item da linha de encomenda.
 
-No painel de instrumentos Partner Center, pode fazer esta operação selecionando uma **Subscrição Específica** sob **Subscrição** na página principal ou selecionando o link **do site do 'Ir para** o site' do Editor ao lado da subscrição para ativar na página de **Subscrições.**
+No painel de instrumentos Do Centro de Parceiros, pode fazer esta operação selecionando uma **Subscrição Específica** sob **Subscrição** na página principal ou selecionando o link **do site do Publisher** ao lado da subscrição para ativar na página **de Subscrições.**
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

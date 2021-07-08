@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 4d71cd138421704d94a55a9fe21e074d92638815
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: e8f23e90cbb5afb45e519e2c58fd0d3b9ea2de6a
+ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769727"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111760305"
 ---
 # <a name="get-all-of-a-customers-orders"></a>Obter todas as encomendas de um cliente
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Recebe uma coleção de todas as encomendas para um cliente especificado. Há um atraso de até 15 minutos entre o momento em que uma encomenda é submetida e quando aparecerá numa recolha de encomendas de um cliente.
 
@@ -45,7 +40,7 @@ Para obter uma coleção de todas as encomendas de um cliente:
 var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSamples **Class**: GetOrders.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSamples **Class**: GetOrders.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -61,7 +56,7 @@ Utilize o seguinte parâmetro de consulta para obter todas as encomendas.
 
 | Nome                   | Tipo     | Necessário | Descrição                                               |
 |------------------------|----------|----------|-----------------------------------------------------------|
-| cliente-inquilino-id     | string   | Sim      | Uma cadeia formatada GUID correspondente ao cliente.    |
+| cliente-inquilino-id     | string   | Yes      | Uma cadeia formatada GUID correspondente ao cliente.    |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

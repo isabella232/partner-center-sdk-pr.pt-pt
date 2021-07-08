@@ -1,24 +1,21 @@
 ---
 title: Comprar reservas do Azure
-description: Pode adquirir reservas Azure para um cliente que utilize a API do Partner Center através da subscrição existente do Microsoft Azure (MS-AZR-0145P) ou do plano Azure.
+description: Pode adquirir reservas Azure para um cliente que utilize a API do Partner Center através da subscrição de Microsoft Azure existente (PLANO MS-AZR-0145P) ou plano Azure.
 ms.date: 11/01/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4c09f65ae5105a74be41a7ec45824e3889217a1c
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 0b9ce4a808ac12c32bd67888fc92808baeb0e575
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768983"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111547772"
 ---
 # <a name="purchase-azure-reservations"></a>Comprar reservas do Azure
 
-**Aplica-se a:**
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Para adquirir uma reserva Azure para um cliente que utilize a API do Partner Center, deve ter uma subscrição do Microsoft Azure **(MS-AZR-0145P)** ou um plano Azure para eles.
+Para adquirir uma reserva Azure para um cliente que utilize a API do Partner Center, deve ter uma subscrição de Microsoft Azure existente **(MS-AZR-0145P)** ou plano Azure para eles.
 
 > [!NOTE]
 > As reservas Azure não estão disponíveis nos seguintes mercados:
@@ -72,13 +69,13 @@ Para adquirir uma reserva Azure para um cliente que utilize a API do Partner Cen
 
 - Um ID de subscrição para uma subscrição ativa da CSP Azure ou um plano Azure.
 
-## <a name="how-to-purchase-microsoft-azure-reservations"></a>Como comprar reservas do Microsoft Azure
+## <a name="how-to-purchase-microsoft-azure-reservations"></a>Como comprar reservas de Microsoft Azure
 
 Uma vez identificada a subscrição ativa da CSP Azure a que pretende adicionar uma reserva Azure, utilize os seguintes passos para a adquirir:
 
 1. [Habilitação](#enablement) - Registe uma subscrição ativa da CSP Azure para permitir a compra de reservas Azure.
 
-2. [Discovery](#discovery) - Encontre e selecione os produtos de reserva Azure e SKUs que pretende comprar e verificar a sua disponibilidade.
+2. [Discovery](#discovery) - Encontre e selecione os produtos de reserva Azure e Unidades de Armazenamento (SKUs) que pretende comprar e verificar a sua disponibilidade.
 
 3. [Submissão de encomenda](#order-submission) - Crie um carrinho de compras com os itens na sua encomenda e envie-o.
 
@@ -91,9 +88,9 @@ Depois de ter adquirido reservas do Azure, os seguintes cenários mostram-lhe co
 
 ## <a name="enablement"></a>Enablement
 
-Ativação significa associar uma subscrição existente do Microsoft Azure **(MS-AZR-0145P)** a uma Instância VM Reservada Azure, registando a subscrição de modo a que seja ativada para reservas Azure. O registo é um pré-requisito para a compra de Azure Reserved VM Instances.
+Habilitação significa associar uma subscrição de Microsoft Azure existente **(MS-AZR-0145P)** a uma Instância VM Reservada Azure, registando a subscrição de modo a que seja ativada para reservas Azure. O registo é um pré-requisito para a compra de Azure Reserved VM Instances.
 
-É necessária uma subscrição devido ao seguinte:
+É necessária uma subscrição para suportar as seguintes tarefas:
 
 1. Para verificar se o cliente é elegível para implantar recursos e, portanto, comprar Azure Reserved VM Instances em uma região ou não.
 
@@ -104,7 +101,7 @@ Uma vez identificada a subscrição ativa a que pretende adicionar a reserva Azu
 Após o registo da sua subscrição, deverá confirmar que o processo de registo está concluído verificando o estado de registo. Para isso, consulte [o estado de registo de assinatura .](get-subscription-registration-status.md)
 
 > [!NOTE]
-> Ao comprar a reserva Microsoft Azure para um cliente com um plano Azure, deve registar primeiro o plano Azure. Semelhante a uma subscrição do Microsoft Azure **(MS-AZR-0145P),** um plano Azure é representado por um recurso [de subscrição](subscription-resources.md) do Partner Center. Assim, pode utilizar o mesmo Registo de um método [de subscrição](register-a-subscription.md) para registar um plano Azure.
+> Ao comprar Microsoft Azure reserva para um cliente com um plano Azure, deve registar primeiro o plano Azure. Semelhante a uma subscrição de Microsoft Azure **(MS-AZR-0145P),** um plano Azure é representado por um recurso [de subscrição](subscription-resources.md) do Partner Center. Assim, pode utilizar o mesmo Registo de um método [de subscrição](register-a-subscription.md) para registar um plano Azure.
 
 ## <a name="discovery"></a>Deteção
 
@@ -112,7 +109,7 @@ Uma vez que a subscrição esteja ativada para a compra de reservas Azure, está
 
 - [Produto](product-resources.md#product) - Uma construção de agrupamento para bens ou serviços puriáveis. Um produto por si só não é um item purivel.
 
-- [SKU](product-resources.md#sku) - Uma unidade de armazenamento de stock (SKU) em baixo de um produto. Estes representam as diferentes formas do produto.
+- [SKU](product-resources.md#sku) - Um SKU purável sob um produto. Estes representam as diferentes formas do produto.
 
 - [Disponibilidade](product-resources.md#availability) - Uma configuração na qual um SKU está disponível para compra (como país, moeda e segmento da indústria).
 
@@ -135,11 +132,11 @@ Antes de comprar uma reserva Azure, complete os seguintes passos:
    - [Obtenha uma disponibilidade usando o ID de disponibilidade](get-an-availability-by-id.md)
 
 > [!IMPORTANT]
-> Cada produto de reserva microsoft Azure tem diferentes disponibilidades para a subscrição do Microsoft **Azure (MS-AZR-0145P)** e plano Azure. Para [obter uma lista de produtos (por país)](get-a-list-of-products.md), ou obter uma lista de [SKUs para um produto (por país)](get-a-list-of-skus-for-a-product.md), ou [obter uma lista de disponibilidades para um SKU (por país)](get-a-list-of-availabilities-for-a-sku.md) que são aplicáveis apenas ao plano Azure, especifique o parâmetro "reservationScope=AzurePlan".
+> Cada Microsoft Azure produto de reserva tem diferentes disponibilidades para Microsoft Azure subscrição **(MS-AZR-0145P)** e plano Azure. Para [obter uma lista de produtos (por país)](get-a-list-of-products.md), ou obter uma lista de [SKUs para um produto (por país)](get-a-list-of-skus-for-a-product.md), ou [obter uma lista de disponibilidades para um SKU (por país)](get-a-list-of-availabilities-for-a-sku.md) que são aplicáveis apenas ao plano Azure, especifique o parâmetro "reservationScope=AzurePlan".
 
 ## <a name="order-submission"></a>Submissão de encomendas
 
-Para submeter a sua encomenda de reserva Azure, faça o seguinte:
+Para submeter a sua encomenda de reserva Azure, faça as seguintes tarefas:
 
 1. Crie um carrinho para guardar a coleção de itens de catálogo que pretende comprar. Quando cria um [Carrinho,](cart-resources.md)os [itens](cart-resources.md#cartlineitem) da linha do carrinho são automaticamente agrupados com base no que pode ser comprado juntos na mesma [Ordem](order-resources.md).
 

@@ -7,21 +7,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 5f4067916fea911963182954eed77f4e230e79d6
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: b237bbd17a6108bbcb4e23529cf476a6b8306f68
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769127"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874555"
 ---
 # <a name="get-a-list-of-availabilities-for-a-sku-by-customer"></a>Obter uma lista de disponibilidade para um SKU (por cliente)
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode utilizar os seguintes métodos para obter uma coleção de disponibilidades para um produto especificado e sKU disponível para um determinado cliente.
 
@@ -47,9 +42,9 @@ Pode utilizar os seguintes métodos para obter uma coleção de disponibilidades
 
 | Nome               | Tipo | Necessário | Descrição                                                                                 |
 |--------------------|------|----------|---------------------------------------------------------------------------------------------|
-| cliente-inquilino-id | GUID | Sim | O valor é um **cliente-id-inquilino-inquilino-id,** que é um identificador que lhe permite especificar um cliente. |
-| id produto | string | Sim | Uma corda que identifica o produto. |
-| sku-id | string | Sim | Uma corda que identifica o SKU. |
+| cliente-inquilino-id | GUID | Yes | O valor é um **cliente-id-inquilino-inquilino-id,** que é um identificador que lhe permite especificar um cliente. |
+| id produto | string | Yes | Uma corda que identifica o produto. |
+| sku-id | string | Yes | Uma corda que identifica o SKU. |
 
 ### <a name="request-header"></a>Cabeçalho do pedido
 
@@ -77,7 +72,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Este método devolve os seguintes códigos de erro:
 
-| Código de Estado HTTP | Código de erro | Descrição |
+| Código de Estado HTTP | Código de erro | Description |
 |------------------|------------|-------------|
 | 404 | 400013 | O produto-mãe não foi encontrado. |
 

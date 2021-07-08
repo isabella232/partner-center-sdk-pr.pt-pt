@@ -4,21 +4,16 @@ description: Como obter o estado de provisão de subscrição para uma subscriç
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 38544aa380ba0a6a8804ae45f7d8ae7cb431d3ba
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: f8797fa494cd77f11a1179d6406ca021f0d7788c
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769842"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548707"
 ---
 # <a name="get-subscription-provisioning-status"></a>Obter o estado de aprovisionamento da subscrição
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter o estado de provisão de subscrição para uma subscrição de cliente.
 
@@ -59,8 +54,8 @@ Utilize os seguintes parâmetros de percurso para identificar o cliente e a subs
 
 | Nome            | Tipo   | Necessário | Descrição                                               |
 |-----------------|--------|----------|-----------------------------------------------------------|
-| id cliente     | string | Sim      | Uma cadeia formatada GUID que identifica o cliente.     |
-| id de subscrição | string | Sim      | Uma cadeia formatada GUID que identifica a subscrição. |
+| id cliente     | string | Yes      | Uma cadeia formatada GUID que identifica o cliente.     |
+| id de subscrição | string | Yes      | Uma cadeia formatada GUID que identifica a subscrição. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -117,4 +112,4 @@ Date: Thu, 20 Apr 2017 19:23:39 GMT
 
 - Durante uma atribuição de alteração de licença, o campo de estado no [SubscriptionProvisioningStatus](subscription-resources.md#subscriptionprovisioningstatus) está definido para "pendente".
 
-- O campo de estado é atualizado a cada quinze minutos.
+- O campo de estado é atualizado a cada 15 minutos.

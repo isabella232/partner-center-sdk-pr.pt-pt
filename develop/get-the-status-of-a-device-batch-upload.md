@@ -4,19 +4,16 @@ description: Como obter o estado de um carregamento de lote de dispositivo para 
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: fb887ba257d6fbe68f95ae4b59d701ac4c934860
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: fd8726af41fe4399797f39a0790cf962fde64acc
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769794"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548486"
 ---
 # <a name="get-the-status-of-a-device-batch-upload"></a>Obter o estado de um carregamento de lotes de dispositivos
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
+**Aplica-se a**: Partner Center | Centro de Parceiros para Microsoft Cloud Germany
 
 Como obter o estado de um carregamento de lote de dispositivo para um cliente especificado.
 
@@ -41,7 +38,7 @@ var status =
     partnerOperations.Customers.ById(selectedCustomerId).BatchUploadStatus.ById(selectedTrackingId).Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetBatchUploadStatus.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetBatchUploadStatus.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -57,8 +54,8 @@ Utilize os seguintes parâmetros de trajetória ao criar o pedido.
 
 | Nome             | Tipo   | Necessário | Descrição                                                                                                                                                                    |
 |------------------|--------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| id cliente      | string | Sim      | Uma cadeia formatada pelo GUID que identifica o cliente.                                                                                                                          |
-| batchtracking-id | string | Sim      | Um identificador formatado guid que é usado para recuperar o estado de upload do lote do dispositivo. Este ID é devolvido no cabeçalho localização quando o lote do dispositivo é submetido com sucesso. |
+| id cliente      | string | Yes      | Uma cadeia formatada pelo GUID que identifica o cliente.                                                                                                                          |
+| batchtracking-id | string | Yes      | Um identificador formatado guid que é usado para recuperar o estado de upload do lote do dispositivo. Este ID é devolvido no cabeçalho localização quando o lote do dispositivo é submetido com sucesso. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -66,7 +63,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

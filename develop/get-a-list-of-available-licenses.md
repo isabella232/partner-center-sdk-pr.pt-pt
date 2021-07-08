@@ -6,22 +6,18 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: f675e5b96b2f2040d662c0dc7f1e06625f267689
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 02a6fccc2cf7f3f4dc929b96ec0f17e0f4a31b06
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769547"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874504"
 ---
 # <a name="get-a-list-of-available-licenses"></a>Obter uma lista de licenças disponíveis
 
-**Aplica-se a:**
-
-- Partner Center
-
 Este artigo descreve como obter uma lista de licenças disponíveis para os utilizadores do cliente especificado.
 
-Os seguintes exemplos devolvem licenças disponíveis do **grupo1,** o grupo de licenças padrão que representa licenças geridas pela Azure Ative Directory (Azure AD). Para obter licenças disponíveis para um grupo de licenças especificado, consulte [obter uma lista de licenças disponíveis por grupo de licenças.](get-a-list-of-available-licenses-by-license-group.md)
+Os exemplos seguintes devolvem licenças disponíveis do **grupo1,** o grupo de licenças padrão que representa licenças geridas por Azure Ative Directory (Azure AD). Para obter licenças disponíveis para um grupo de licenças especificado, consulte [obter uma lista de licenças disponíveis por grupo de licenças.](get-a-list-of-available-licenses-by-license-group.md)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -49,8 +45,8 @@ var customerUserSubscribedSkus = partnerOperations.Customers.ById(selectedCustom
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **Partner Center SDK Samples**
-- Classe: **GetCustomerSubscribedSkus.cs**
+- Project: **Amostras SDK do Centro Parceiro**
+- Classe: **GetCustomerSubsubskus.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -66,7 +62,7 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome        | Tipo   | Necessário | Descrição                                           |
 |-------------|--------|----------|-------------------------------------------------------|
-| id cliente | string | Sim      | Uma cadeia formatada GUID que identifica o cliente. |
+| id cliente | string | Yes      | Uma cadeia formatada GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
