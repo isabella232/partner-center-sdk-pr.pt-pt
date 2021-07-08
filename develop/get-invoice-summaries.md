@@ -6,23 +6,18 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 82cd669117db72e1819d941f48f8ea69b2eddaec
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: fb6ff839c56c7b0b77a9904abf05d95ca0500b00
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97768714"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111549115"
 ---
 # <a name="get-invoice-summaries"></a>Obter resumos de faturas
 
-**Aplica-se a:**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Pode utilizar as **FaturaSummaries** para recuperar um resumo da fatura que mostra o saldo e os encargos totais de encargos recorrentes e pontuais. O recurso **FaturaSummaries** contém um resumo da fatura para cada tipo de moeda.
+Pode utilizar as **FaturaSummaries** para recuperar um resumo da fatura que mostre o saldo e os encargos totais de encargos recorrentes e pontuais. O recurso **FaturaSummaries** contém um resumo da fatura para cada tipo de moeda.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -52,7 +47,7 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummaries[0].Bal
 Para obter mais informações, consulte o seguinte código de exemplo:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSample**
+- Project: **PartnerSDK.FeatureSample**
 - Classe: **GetInvoiceSummaries.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO

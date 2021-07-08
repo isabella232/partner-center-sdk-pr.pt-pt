@@ -6,26 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 267e3aa63a94c5045977ad566eb5061df3b59882
-ms.sourcegitcommit: bbdb5f7c9ddd42c2fc4eaadbb67d61aeeae805ca
+ms.openlocfilehash: a17775614b4eb328514b2b32b4cac1e513019cff
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105030569"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111549183"
 ---
 # <a name="get-the-status-of-a-customers-direct-signing-direct-acceptance-of-microsoft-customer-agreement"></a>Obtenha o estado da assinatura direta de um cliente (aceitação direta) do Microsoft Customer Agreement
 
-**Aplica-se a:**
+**Aplica-se a**: Centro de Parceiros
 
-- Partner Center
+**Não se aplica a:** Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 O recurso **DirectSignedCustomerAgreementStatus** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft.
-
-Este recurso não é *aplicável* a:
-
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
 
 Este artigo explica como pode recuperar o estado da aceitação direta de um cliente do Microsoft Customer Agreement.
 
@@ -45,7 +39,7 @@ Para recuperar o estado da aceitação direta de um cliente do Microsoft Custome
 var customerDirectSigningStatus = partnerOperations.Customers.ById(selectedCustomerId).Agreements.GetDirectSignedCustomerAgreementStatus();
 ```
 
-**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Projeto**: Classe SdkSamples : GetDirectSignedCustomerAgreementStatus.cs
+**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Project**: **Classe** SdkSamples : GetDirectSignedCustomerAgreementStatus.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

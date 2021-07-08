@@ -4,22 +4,18 @@ description: Pode utilizar a coleção de recursos CustomerMonthlyUsageRecord pa
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: da829a6de3690a9b1117ce9dfa58fbe381cafd81
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 6b3fb0e1989336810f2afcc2a5bfc3a1d2849b7f
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769158"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874895"
 ---
 # <a name="get-usage-records-for-all-customers"></a>Obtenha registos de utilização para todos os clientes
 
-**Aplica-se a:**
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Os parceiros podem utilizar a coleção de recursos **CustomerMonthlyUsageRecord** para obter registos de utilização para todos os seus clientes. Este recurso representa registos de utilização para todos os clientes. Isto inclui os clientes com uma subscrição do Microsoft Azure (MS-AZR-0145P) ou um plano Azure.
+Os parceiros podem utilizar a coleção de recursos **CustomerMonthlyUsageRecord** para obter registos de utilização para todos os seus clientes. Este recurso representa registos de utilização para todos os clientes. Isto inclui os clientes com uma subscrição de Microsoft Azure (MS-AZR-0145P) ou um plano Azure.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -43,7 +39,7 @@ Para obter todos os registos de utilização de todos os clientes que adquiriram
 Por exemplo, consulte a seguinte amostra:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **GetCustomerUsageRecords.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO

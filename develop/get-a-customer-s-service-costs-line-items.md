@@ -4,18 +4,14 @@ description: Obtém itens de linha de custo de serviço do cliente para o perío
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c2034eaf11342493797688b44b634b8e9598e2e4
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 1bc2914d7c8d41c6d806131444fdc241aa1feb90
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769367"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874946"
 ---
 # <a name="get-a-customers-service-costs-line-items"></a>Obter itens de linha dos custos de serviços de um cliente
-
-**Aplica-se a:**
-
-- Partner Center
 
 Obtém itens de linha de custo de serviço do cliente para o período de faturação especificado.
 
@@ -60,8 +56,8 @@ Utilize os seguintes parâmetros de trajeto para identificar o cliente e o perí
 
 | Nome           | Tipo   | Necessário | Descrição                                                                                                                      |
 |----------------|--------|----------|----------------------------------------------------------------------------------------------------------------------------------|
-| id cliente    | guid   | Sim      | Um ID de cliente formatado GUID que identifica o cliente.                                                                       |
-| período de faturação | string | Sim      | Um indicador que representa o período de faturação. O único valor suportado é o MostRecent. O caso da corda não importa. |
+| id cliente    | guid   | Yes      | Um ID de cliente formatado GUID que identifica o cliente.                                                                       |
+| período de faturação | string | Yes      | Um indicador que representa o período de faturação. O único valor suportado é o MostRecent. O caso da corda não importa. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -88,7 +84,7 @@ Host: api.partnercenter.microsoft.com
 Se for bem sucedido, o organismo de resposta contém um recurso [ServiceCostLineItem](service-costs-resources.md) que fornece informações sobre os custos de serviço.
 
 > [!IMPORTANT]
-> As seguintes propriedades *aplicam-se apenas aos* itens da linha de custos de serviço em que o produto é uma *compra única*: **produtoId**, **produtoName,** **skuId,** **skuName,** **availabilityId,** **publisherId,** **publisherName,** **termAndBillingCycle,** **discountDetails**. Estas propriedades *não se aplicam a* itens de linha de serviço onde o produto é uma compra *recorrente.* Por exemplo, estas propriedades *não se aplicam* ao Office 365 e Azure baseados em subscrições.
+> As seguintes propriedades *aplicam-se apenas aos* itens da linha de custos de serviço em que o produto é uma *compra única*: **produtoId**, **produtoName,** **skuId,** **skuName,** **availabilityId,** **publisherId,** **publisherName,** **termAndBillingCycle,** **discountDetails**. Estas propriedades *não se aplicam a* itens de linha de serviço onde o produto é uma compra *recorrente.* Por exemplo, estas propriedades *não se aplicam* a Office 365 e Azure baseados em subscrições.
 
 ### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 

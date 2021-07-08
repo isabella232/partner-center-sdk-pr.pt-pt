@@ -1,25 +1,21 @@
 ---
 title: Obter preços do Microsoft Azure Partner Shared Services
-description: Como obter um Cartão Azure Rate com preços para os Serviços Partilhados do Microsoft Azure Partner.
+description: Como obter um Cartão Azure Rate com preços para Microsoft Azure Serviços Partilhados de Parceiros.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: cd396c35b6b89de4d0f092ba4da738a2ed0ac633
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 0008d7474f7e57bbbd765afdf2487ee279848ac3
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769907"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548809"
 ---
 # <a name="get-prices-for-microsoft-azure-partner-shared-services"></a>Obter preços do Microsoft Azure Partner Shared Services
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Como obter um [Cartão Azure Rate](azure-rate-card-resources.md) com preços para os Serviços Partilhados do Microsoft Azure Partner.
+Como obter um [Cartão Azure Rate](azure-rate-card-resources.md) com preços para Microsoft Azure Serviços Partilhados de Parceiros.
 
 Os preços diferem por mercado e por moeda, e esta API tem em conta a localização. Por padrão, a API utiliza as definições de perfil do seu parceiro no Partner Center e no seu idioma do navegador, e essas definições são personalizáveis. A consciência da localização é especialmente relevante se você gerir vendas em vários mercados a partir de um único escritório centralizado.
 

@@ -4,21 +4,17 @@ description: Obtenha o formato de endereço esperado com base no código iso par
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c755a38c11ed9803edb7777a0f661c1fbc5a6107
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: d5233d059ea6e71c28df36b2242659c28c5dd857
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769007"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111549047"
 ---
 # <a name="get-address-formatting-rules-by-market"></a>Obter regras de formatação de endereços por mercado
 
-**Aplica-se a**
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
 
 Obtenha o formato de endereço esperado com base no código iso para o mercado.
 
@@ -38,7 +34,7 @@ Obtenha o formato de endereço esperado com base no código iso para o mercado.
 
 | Nome           | Tipo       | Necessário | Descrição                         |
 |----------------|------------|----------|-------------------------------------|
-| **isocode-id** | **cadeia** | Y        | O código de dois caracteres iso country. |
+| **isocode-id** | **string** | Y        | O código de dois caracteres iso country. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

@@ -6,25 +6,20 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 aauthor: khakiali
 ms.author: alikhaki
-ms.openlocfilehash: d91f70cbd8bc9b8622b8d41ab9e601e2aee2cfab
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 1b1a8cbacb667e579bcd218a29c3f553afce26c2
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769859"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111549268"
 ---
 # <a name="get-confirmation-of-customer-acceptance-of-microsoft-cloud-agreement"></a>Obter confirmação da aceitação do cliente do Contrato da Microsoft Cloud
 
-**Aplica-se a**
+**Aplica-se a**: Centro de Parceiros
 
-- Partner Center
+**Não se aplica a:** Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
-> [!NOTE]
-> O recurso **Do Acordo** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft. Não é aplicável a:
->
-> - Centro de Parceiros operado pela 21Vianet
-> - Centro de Parceiros para Microsoft Cloud Germany
-> - Centro de Parceiros do Microsoft Cloud for US Government
+O recurso **Do Acordo** é atualmente suportado pelo Partner Center apenas na nuvem pública da Microsoft.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -32,7 +27,7 @@ ms.locfileid: "97769859"
 
 - Se estiver a utilizar o Partner Center Java SDK, é necessária a versão 1.8 ou mais recente.
 
-- Credenciais descritas na [autenticação do Partner Center](./partner-center-authentication.md). Este cenário suporta apenas a app + autenticação do utilizador.
+- Credenciais descritas na [autenticação do Partner Center](./partner-center-authentication.md). Este cenário apenas suporta app + autenticação do utilizador.
 
 - Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 

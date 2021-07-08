@@ -4,20 +4,16 @@ description: Pode utilizar o recurso SubscriptionUsageSummary para obter um resu
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 30334b6f08829eccf0693b566c11f94cb3ece976
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 362e72e1b54a62a114564d4dc48a082bcdeea012
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769139"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874674"
 ---
 # <a name="get-usage-summary-for-customers-subscription"></a>Obtenha resumo de utilização para a subscrição do cliente
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode utilizar o recurso **SubscriptionUsageSummary** para obter um resumo de utilização de subscrição para um cliente. Este recurso representa o resumo de utilização da subscrição de um serviço ou recurso Azure específico durante o período de faturação atual.
 
@@ -35,7 +31,7 @@ Para obter um resumo de utilização de subscrição para a subscrição de um c
 
 1. Utilize a sua coleção **IAggregatePartner.Customers** para ligar para o método **ById().**
 
-2. Em seguida, ligue para a propriedade Subscrições, bem como a propriedade **UsageSummary.** Termine chamando os métodos Get() ou GetAsync().
+2. Em seguida, ligue para a propriedade Subscrições e para a propriedade **UsageSummary.** Termine chamando os métodos Get() ou GetAsync().
 
     ``` csharp
     // IAggregatePartner partnerOperations;
@@ -48,7 +44,7 @@ Para obter um resumo de utilização de subscrição para a subscrição de um c
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **GetSubscriptionUsageSummary.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -94,11 +90,11 @@ Se for bem sucedido, este método devolve um **recurso SubscriptionUsageSummary*
 
 Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, o tipo de erro e parâmetros adicionais. Para obter uma lista completa, consulte [códigos de erro](error-codes.md).
 
-### <a name="response-example-for-microsoft-azure-ms-azr-0145p-subscriptions"></a>Exemplo de resposta para subscrições microsoft Azure (MS-AZR-0145P)
+### <a name="response-example-for-microsoft-azure-ms-azr-0145p-subscriptions"></a>Exemplo de resposta para subscrições Microsoft Azure (MS-AZR-0145P)
 
 Neste exemplo, o cliente comprou uma oferta **de 145P Azure PayG.**
 
-*Para clientes com subscrições Microsoft Azure (MS-AZR-0145P), não haverá alteração na resposta da API.*
+*Para clientes com assinaturas Microsoft Azure (MS-AZR-0145P), não haverá alteração da resposta da API.*
 
 ```http
 HTTP/1.1 200 OK

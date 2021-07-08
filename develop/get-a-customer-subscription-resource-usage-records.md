@@ -4,24 +4,20 @@ description: Pode utilizar o recurso ResourceUsageRecord para obter os registos 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e815430730dd7182380e9efd1fea80f9e84d2ce7
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 50edb9de1d09363b242c080a76c683732f05a5de
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769140"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874844"
 ---
 # <a name="get-usage-data-for-subscription-by-resource"></a>Obter dados de utilização da subscrição por recurso
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo descreve como obter o recurso **ResourceUsageRecord.** Este recurso representa um total agregado para o mês para os recursos individuais aprovisionados no seu plano Azure. Pode utilizar este recurso para obter os registos de utilização de recursos de um cliente para serviços ou recursos específicos da Azure durante o período de faturação atual. Esta API devolve dados que não estavam disponíveis anteriormente através das APIs de gastos da Azure.
 
-*Esta rota não suporta subscrições do Microsoft Azure (MS-AZR-0145P).*
+*Esta rota não suporta Microsoft Azure subscrições (MS-AZR-0145P).*
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -37,7 +33,7 @@ Para obter registos de utilização de recursos de um cliente para um serviço o
 
 1. Utilize a sua coleção **IAggregatePartner.Customers** para ligar para o método **ById().**
 
-2. Ligue para a propriedade Subscrições, bem como **UsageRecords,** em seguida, a propriedade **Recursos.** Termine chamando os métodos Get() ou GetAsync().
+2. Ligue para a propriedade de Subscrições e **UsageRecords,** e depois para a propriedade **Recursos.** Termine chamando os métodos Get() ou GetAsync().
 
     ``` csharp
     // IAggregatePartner partnerOperations;
@@ -50,7 +46,7 @@ Para obter registos de utilização de recursos de um cliente para um serviço o
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **GetSubscriptionUsageRecordsByResource.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -68,7 +64,7 @@ Esta tabela lista os parâmetros de consulta necessários para obter as informa�
 | Nome                   | Tipo     | Necessário | Descrição                               |
 |------------------------|----------|----------|-------------------------------------------|
 | **cliente-inquilino-id** | **guid** | Y        | Um GUID correspondente ao cliente.     |
-| **id de subscrição**    | **guid** | Y        | Um GUID correspondente ao identificador de um recurso de [subscrição](subscription-resources.md#subscription)partner Center, que representa uma subscrição do Microsoft Azure (MS-AZR-0145P) ou um plano Azure. *Para os recursos de subscrição do plano Azure, forneça o **id de plano** como **id de subscrição** nesta rota.* |
+| **id de subscrição**    | **guid** | Y        | Um GUID correspondente ao identificador de um recurso de [subscrição](subscription-resources.md#subscription)do Partner Center, que representa uma subscrição Microsoft Azure (MS-AZR-0145P) ou um plano Azure. *Para os recursos de subscrição do plano Azure, forneça o **id de plano** como **id de subscrição** nesta rota.* |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: aad9524dbe2c9edbbd7c1d50da7a448f6872fcb9
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: 663b8509d8704f9c443796d9fbcf72fb9c5b7fb2
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769374"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874963"
 ---
 # <a name="get-a-list-of-customers-filtered-by-a-search-field"></a>Obter uma lista de clientes filtrados por um campo de pesquisa
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Recebe uma coleção de recursos do [Cliente](customer-resources.md#customer) que combinam com um filtro. Pode configurar opcionalmente o tamanho da página. Pode filtrar pelo nome da empresa, domínio, revendedor indireto ou fornecedor de solução de nuvem indireta (CSP).
 
@@ -57,7 +52,7 @@ var myQuery = QueryFactory.Instance.BuildSimpleQuery(fieldFilter);
 var customers = partnerOperations.Customers.Query(myQuery);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: FilterCustomers.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: FilterCustomers.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -73,8 +68,8 @@ Utilize os seguintes parâmetros de consulta.
 
 | Nome   | Tipo   | Necessário | Descrição                                                                    |
 |--------|--------|----------|--------------------------------------------------------------------------------|
-| size   | int    | Não       | O número de resultados a apresentar ao mesmo tempo. Este parâmetro é opcional. |
-| filter | filter | Sim      | O filtro para aplicar aos clientes. Isto deve ser uma corda codificada.              |
+| size   | int    | No       | O número de resultados a apresentar ao mesmo tempo. Este parâmetro é opcional. |
+| filter | filter | Yes      | O filtro para aplicar aos clientes. Isto deve ser uma corda codificada.              |
 
 ### <a name="filter-syntax"></a>Sintaxe do filtro
 

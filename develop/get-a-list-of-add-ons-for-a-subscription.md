@@ -6,21 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 4e62ad22cf30c34dedfeb628003c695e33b78758
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: c627f595333a295048b02ec4326dcdc279d07b51
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769337"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874640"
 ---
 # <a name="get-a-list-of-add-ons-for-a-subscription"></a>Obter uma lista de suplementos para uma subscrição
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Este artigo descreve como obter uma coleção de addons que um cliente escolheu adicionar ao seu recurso **[de Subscrição.](subscription-resources.md)**
 
@@ -54,8 +49,8 @@ var subscriptionDetails = partnerOperations.Customers.ById(selectedCustomerId).S
 Por exemplo, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSample**
-- Classe: **SubscriptionAddons.cs**
+- Project: **PartnerSDK.FeatureSample**
+- Classe: **AssinaturaAddons.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 

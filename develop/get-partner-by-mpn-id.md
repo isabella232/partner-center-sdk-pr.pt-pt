@@ -4,21 +4,16 @@ description: Saiba como verificar o identificador da Microsoft Partner Network (
 ms.date: 09/29/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6ef7bcb35274a6bcbaddbe0553ca0cb4dc1b2f9c
-ms.sourcegitcommit: 8a5c37376a29e29fe0002a980082d4acc6b91131
+ms.openlocfilehash: 6bd51850c7bc5a099a34f9c028a58e247c2600a3
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "97769938"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548826"
 ---
 # <a name="verify-a-partner-mpn-id-via-c-or-the-partner-center-rest-api"></a>Verifique um parceiro MPN ID via C \# ou o Partner Center REST API
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como verificar o identificador da Microsoft Partner Network (MPN ID) de um parceiro.
 
@@ -41,7 +36,7 @@ Para verificar o ID MPN de um parceiro, primeiro recupere uma interface para ope
 var partnerProfile = partnerOperations.Profiles.MpnProfile.Get(partnerMpnId);
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: VerifyPartnerMpnId.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: CheckPartnerMpnId.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -57,7 +52,7 @@ Forneça o seguinte parâmetro de consulta para identificar o parceiro. Se omiti
 
 | Nome   | Tipo | Necessário | Descrição                                                 |
 |--------|------|----------|-------------------------------------------------------------|
-| mpn-id | int  | Não       | Um ID da Rede de Parceiros da Microsoft que identifica o parceiro. |
+| mpn-id | int  | No       | Um ID da Rede de Parceiros da Microsoft que identifica o parceiro. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

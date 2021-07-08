@@ -4,24 +4,20 @@ description: Como obter um Cartão Azure Rate com preços em tempo real para uma
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 0716f0428b13604105b435a2ce8287a8b4609fea
-ms.sourcegitcommit: 64c498d3571f2287305968890578bc7396779621
+ms.openlocfilehash: 4f66ab19ef3723fbaa27acff941cf48683a7c25c
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97770295"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548792"
 ---
 # <a name="get-prices-for-microsoft-azure"></a>Obter preços do Microsoft Azure
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Como obter um [Cartão Azure Rate](azure-rate-card-resources.md) com preços em tempo real para uma oferta Azure. Os preços do Azure são bastante dinâmicos e mudam frequentemente.
 
-Para acompanhar o uso e ajudar a prever a sua fatura mensal e as contas para clientes individuais, pode combinar esta consulta do Azure Rate Card para obter preços para o Microsoft Azure com um pedido para [obter os registos de utilização de um cliente para o Azure.](get-a-customer-s-utilization-record-for-azure.md)
+Para acompanhar o uso e ajudar a prever a sua fatura mensal e as faturas para clientes individuais, pode combinar esta consulta do Cartão Azure Rate para obter preços para Microsoft Azure com um pedido de [obter os registos de utilização de um cliente para o Azure](get-a-customer-s-utilization-record-for-azure.md).
 
 Os preços diferem por mercado e por moeda, e esta API tem em conta a localização. Por padrão, a API utiliza as definições de perfil do seu parceiro no Partner Center e no seu idioma do navegador, e essas definições são personalizáveis. A consciência da localização é especialmente relevante se você gerir vendas em vários mercados a partir de um único escritório centralizado. Para obter mais informações, consulte [os parâmetros URI.](#uri-parameters)
 
@@ -35,7 +31,7 @@ Para obter o Cartão Azure Rate, ligue para o método [**IAzureRateCard.Get**](/
 var azureRateCard = partner.RateCards.Azure.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: Partner Center SDK Samples **Class**: GetAzureRateCard.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: Partner Center SDK Samples **Class**: GetAzureRateCard.cs
 
 ## <a name="java"></a>Java
 

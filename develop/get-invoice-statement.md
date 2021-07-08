@@ -6,23 +6,16 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 42e5201919eea5644da463dfe2584c8d55002083
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: f0324916eb2efd9244530a53b1d7bb4abc0c8e6e
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769014"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111549132"
 ---
 # <a name="get-invoice-statement"></a>Obter declaração da fatura
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
-
-Recupera uma declaração de fatura utilizando o ID da fatura.
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -41,7 +34,7 @@ Para obter uma declaração de fatura por ID, use a sua recolha **IPartner.Fatur
 var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).Documents.Statement.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**: PartnerSDK.FeatureSample **Class**: GetInvoiceStatement.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**: PartnerSDK.FeatureSample **Class**: GetInvoiceStatement.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -57,7 +50,7 @@ Utilize o seguinte parâmetro de consulta para obter a declaração de fatura.
 
 | Nome       | Tipo       | Necessário | Descrição                                                                                        |
 |------------|------------|----------|----------------------------------------------------------------------------------------------------|
-| fatura id | string     | Sim      | O valor é um id de fatura que permite ao revendedor filtrar os resultados de uma determinada fatura. |
+| fatura id | string     | Yes      | O valor é um id de fatura que permite ao revendedor filtrar os resultados de uma determinada fatura. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -65,7 +58,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

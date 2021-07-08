@@ -4,20 +4,16 @@ description: Pode utilizar a API de utilização Azure para obter os registos de
 ms.date: 04/19/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 23c8d18462081c6d6c95c1d969f269cbb3f8754b
-ms.sourcegitcommit: abefe11421edc421491f14b257b2408b4f29b669
+ms.openlocfilehash: 7024bc65976a9b43a62b66c529d271519181ab23
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/20/2021
-ms.locfileid: "107745597"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874929"
 ---
 # <a name="get-a-customers-utilization-records-for-azure"></a>Obter os registos de utilização de um cliente do Azure
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode obter os registos de utilização da subscrição Azure de um cliente por um período de tempo especificado utilizando a API de utilização Azure.
 
@@ -29,7 +25,7 @@ Pode obter os registos de utilização da subscrição Azure de um cliente por u
 
 - Um identificador de assinatura.
 
-Esta API devolve o consumo diário e de hora a hora por um período de tempo arbitrário. No entanto, *esta API não é apoiada para planos Azure.* Se tiver um plano Azure, consulte os artigos [Obtenha itens de linha de consumo não faturados](get-invoice-unbilled-consumption-lineitems.md) e [obtenha itens de linha de consumo faturados.](get-invoice-billed-consumption-lineitems.md) Estes artigos descrevem como obter o consumo avaliado a um nível diário por metro por recurso. Este consumo de taxa é equivalente aos dados diários de cereais fornecidos pela API de utilização do Azure. Terá de usar o identificador de fatura para recuperar dados de utilização faturados. Ou, você pode usar períodos atuais e anteriores para obter estimativas de utilização não faturadas. *Os dados de cereais de hora a hora e os filtros de gama de datas arbitrárias não são atualmente suportados para os recursos de subscrição do plano Azure.*
+Esta API devolve o consumo diário e de hora a hora por um período de tempo arbitrário. No entanto, *esta API não é apoiada para planos Azure.* Se tiver um plano Azure, consulte os artigos [Obtenha itens de linha de consumo sem faturação](get-invoice-unbilled-consumption-lineitems.md) e [obtenha itens de linha de consumo faturados.](get-invoice-billed-consumption-lineitems.md) Estes artigos descrevem como obter o consumo avaliado a um nível diário por metro por recurso. Este consumo de taxa é equivalente aos dados diários de cereais fornecidos pela API de utilização do Azure. Terá de usar o identificador de fatura para recuperar dados de utilização faturados. Ou, pode usar períodos atuais e anteriores para obter estimativas de utilização não bicos. *Os dados de cereais de hora a hora e os filtros de gama de datas arbitrárias não são atualmente suportados para os recursos de subscrição do plano Azure.*
 
 ## <a name="azure-utilization-api"></a>API de utilização de Azure
 
@@ -39,7 +35,7 @@ Por exemplo, o sistema de faturação pega nos mesmos dados de utilização e ap
 
 Esta API REST é paged. Se a carga útil de resposta for maior do que uma única página, deve seguir o próximo link para obter a próxima página dos registos de utilização.
 
-### <a name="scenario--partner-a-has-transferred-billing-ownership-of-azure-legacy-subscription-145p-to-partner-b"></a>Cenário : O parceiro A transferiu a propriedade da faturação da Azure Legacy Subscription (145P) para o Parceiro B
+### <a name="scenario-partner-a-has-transferred-billing-ownership-of-azure-legacy-subscription-145p-to-partner-b"></a>Cenário: O parceiro A transferiu a propriedade da faturação da Azure Legacy Subscription (145P) para o Parceiro B
 
 Se um parceiro transferir a propriedade de uma subscrição de legado Azure para outro parceiro, quando o novo parceiro chama API de Utilização para subscrição transferida, eles têm de usar o ID de subscrição de comércio (que aparece na sua conta partner Center) em vez do ID do Direito Azure. O ID do Direito Azure só aparece para o Parceiro B quando são Admin em nome de (AOBO) para o portal Azure do Cliente. 
 
@@ -56,7 +52,7 @@ Para obter os Registos de Utilização Azure:
 3. Obtenha um enumerador de registo de utilização Azure para percorrer as páginas de utilização. Este passo é necessário, porque a recolha de recursos é paged.
 
 - **Amostra**: [App de teste de consola](console-test-app.md)
-- **Projeto**: Partner Center SDK Samples
+- **Project**: Amostras SDK do Centro Parceiro
 - **Classe**: GetAzureSubscriptionUtilization.cs
 
 ```csharp
@@ -162,7 +158,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Nenhum
+Nenhuma
 
 ### <a name="request-example"></a>Exemplo de pedido
 

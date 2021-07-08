@@ -4,20 +4,16 @@ description: Pode utilizar a recolha de recursos MeterUsageRecord para obter reg
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: df981eae8d2caee2dcb7f36696725ec011ead75b
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 0bd6143c80059bd140a4c4332ab4ec19c54d99f1
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769146"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874861"
 ---
 # <a name="get-usage-data-for-subscription-by-meter"></a>Obter dados de utilização da subscrição por medidor
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode utilizar a recolha de recursos **MeterUsageRecord** para obter registos de utilização de medidores de um cliente para serviços ou recursos específicos da Azure durante o período de faturação em curso. Esta recolha de recursos representa um total agregado para cada metro para o ciclo de faturação atual, em todo o seu plano Azure.
 
@@ -29,7 +25,7 @@ Pode utilizar a recolha de recursos **MeterUsageRecord** para obter registos de 
 
 - Um ID de assinatura
 
-*Esta nova rota é equivalente a `subscriptions/{subscription-id}/usagerecords/resources` , que continuará a funcionar apenas para as subscrições do Microsoft Azure (MS-AZR-0145P).* Esta nova rota irá suportar tanto as subscrições do Microsoft Azure (MS-AZR-0145P) como os planos Azure. Para obter esta informação para o seu plano Azure, você precisa mudar para esta nova rota. Além das propriedades mencionadas nas secções seguintes, a resposta é a mesma da rota antiga.
+*Esta nova rota é equivalente a `subscriptions/{subscription-id}/usagerecords/resources` , que continuará a funcionar apenas para Microsoft Azure (MS-AZR-0145P) assinaturas.* Esta nova rota apoiará as assinaturas Microsoft Azure (MS-AZR-0145P) e os planos Azure. Para obter esta informação para o seu plano Azure, você precisa mudar para esta nova rota. Além das propriedades mencionadas nas secções seguintes, a resposta é a mesma da rota antiga.
 
 ## <a name="c"></a>C\#
 
@@ -50,7 +46,7 @@ Para obter registos de utilização de medidores de um cliente para um serviço 
 Por exemplo, consulte a seguinte amostra:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **PartnerSDK.FeatureSamples**
+- Project: **PartnerSDK.FeatureSamples**
 - Classe: **GetSubscriptionUsageRecordsByMeter.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -68,7 +64,7 @@ Esta tabela lista os parâmetros de consulta necessários para obter as informa�
 | Nome                   | Tipo     | Necessário | Descrição                               |
 |------------------------|----------|----------|-------------------------------------------|
 | **cliente-inquilino-id** | **guid** | Y        | Um GUID correspondente ao cliente.     |
-| **id de subscrição**    | **guid** | Y        | Um GUID correspondente ao identificador de um recurso de [subscrição](subscription-resources.md#subscription)partner Center, que representa uma subscrição do Microsoft Azure (MS-AZR-0145P) ou um plano Azure. *Para os recursos de subscrição do plano Azure, forneça o **id de plano** como **id de subscrição** nesta rota.* |
+| **id de subscrição**    | **guid** | Y        | Um GUID correspondente ao identificador de um recurso de [subscrição](subscription-resources.md#subscription)do Partner Center, que representa uma subscrição Microsoft Azure (MS-AZR-0145P) ou um plano Azure. *Para os recursos de subscrição do plano Azure, forneça o **id de plano** como **id de subscrição** nesta rota.* |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -96,11 +92,11 @@ Se for bem sucedido, este método devolve um recurso **PagedResourceCollection \
 
 Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, o tipo de erro e parâmetros adicionais. Para obter uma lista completa, consulte [códigos de erro](error-codes.md).
 
-### <a name="response-example-for-microsoft-azure-ms-azr-0145p-subscriptions"></a>Exemplo de resposta para subscrições microsoft Azure (MS-AZR-0145P)
+### <a name="response-example-for-microsoft-azure-ms-azr-0145p-subscriptions"></a>Exemplo de resposta para subscrições Microsoft Azure (MS-AZR-0145P)
 
 Neste exemplo, o cliente comprou **145P Azure PayG**.
 
-*Para clientes com uma subscrição Microsoft Azure (MS-AZR-0145P), não haverá alteração na resposta da API.*
+*Para clientes com uma subscrição de Microsoft Azure (MS-AZR-0145P), não haverá alteração na resposta da API.*
 
 ```http
 HTTP/1.1 200 OK

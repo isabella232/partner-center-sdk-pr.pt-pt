@@ -4,20 +4,16 @@ description: Pode utilizar um orçamento de gastos (o objeto SpendBudget) para a
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8be9ceaab6b7546de8eacba1e52e8766719e5125
-ms.sourcegitcommit: 58801b7a09c19ce57617ec4181a008a673b725f0
+ms.openlocfilehash: b55f59fff7e5d7865811ecab3e901848126d31f7
+ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "97769344"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111874878"
 ---
 # <a name="get-a-customers-usage-spending-budget"></a>Obtenha o orçamento de gastos de uso de um cliente
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Pode atualizar o orçamento de gastos (o objeto **SpendBudget)** no resumo de utilização do [cliente (o recurso **CustomerUsageSummary)**](customer-usage-resources.md#customerusagesummary).
 

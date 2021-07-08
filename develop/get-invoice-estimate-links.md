@@ -7,21 +7,16 @@ ms.subservice: partnercenter-sdk
 ms.assetid: ''
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 10801cdb1f9d4f50a1f8fc86c2d0eaf8610ed68c
-ms.sourcegitcommit: cfedd76e573c5616cf006f826f4e27f08281f7b4
+ms.openlocfilehash: 719becd3fac5605c4ad48ab86d483ba7903d65d8
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "97769019"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111549149"
 ---
 # <a name="get-invoice-estimate-links"></a>Obter ligações de estimativa da fatura
 
-**Aplica-se a:**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Você pode obter links de estimativa para ajudar a consultar detalhes para itens de linha de reconciliação não faturados.
 
@@ -49,7 +44,7 @@ var estimateLinks = scopedPartnerOperations.Invoices.Estimates.Links.ByCurrency(
 Para um exemplo semelhante, consulte o seguinte:
 
 - Amostra: [App de teste de consola](console-test-app.md)
-- Projeto: **Partner Center SDK Samples**
+- Project: **Amostras SDK do Centro Parceiro**
 - Classe: **GetEstimatesLinks.cs**
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -66,7 +61,7 @@ Utilize o seguinte URI e parâmetro de consulta ao criar o pedido.
 
 | Nome                   | Tipo   | Necessário | Descrição                                                       |
 |------------------------|--------|----------|-------------------------------------------------------------------|
-| currencyCode           | string | Sim      | O código cambial para os itens de linha não bico.                    |
+| currencyCode           | string | Yes      | O código cambial para os itens de linha não bico.                    |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -79,7 +74,7 @@ Nenhum.
 ### <a name="request-example"></a>Exemplo de pedido
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/invoices/estimates/links?currencycode=usd HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/invoices/estimates/links?currencycode=usd HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 1234ecb8-37af-45f4-a1a1-358de3ca2b9e

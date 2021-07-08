@@ -4,21 +4,16 @@ description: Obtém um objeto que representa o perfil de MPN do parceiro.
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f8f3e74462da05de0be47964beb34228650b1f53
-ms.sourcegitcommit: 30d1b9d48453c7697a2f42ee09138e507dcf9f2d
+ms.openlocfilehash: 38c12a9a9755b9838b7742d9f38c5cbd52b81210
+ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "97769913"
+ms.lasthandoff: 06/06/2021
+ms.locfileid: "111548860"
 ---
 # <a name="get-microsoft-partner-network-profile"></a>Obter perfil do Microsoft Partner Network
 
-**Aplica-se a**
-
-- Partner Center
-- Centro de Parceiros operado pela 21Vianet
-- Centro de Parceiros para Microsoft Cloud Germany
-- Centro de Parceiros do Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
 
 Obtém um objeto que representa o perfil de MPN do parceiro.
 
@@ -36,7 +31,7 @@ Para obter um perfil de rede de parceiros, use a sua coleção **IAggregatePartn
 var mpnProfile = partnerOperations.Profiles.MpnProfile.Get();
 ```
 
-**Amostra**: [App de teste de consola](console-test-app.md). **Projeto**:P artnerCenterSDK.FeaturesSamples **Class**: GetMPNProfile.cs
+**Amostra**: [App de teste de consola](console-test-app.md). **Project**:P artnerCenterSDK.FeaturesSamples **Class**: GetMPNProfile.cs
 
 ## <a name="java"></a>Java
 
