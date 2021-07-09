@@ -4,12 +4,12 @@ description: Descreve recursos relacionados com o direito.
 ms.date: 01/28/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a5ddf5dcd1189f686c5d41c05d7c66abc46605cc
-ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
+ms.openlocfilehash: 929004fff804675218e267bb928b432f7b1209bf
+ms.sourcegitcommit: 84a6f701190f46d2adcf6edcaeaafa32d58fbaba
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111906355"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "113510113"
 ---
 # <a name="entitlement-resources"></a>Recursos de direito
 
@@ -98,7 +98,7 @@ Representa a entidade devolvida após a invocação do elo de artefacto Azure Re
 |   Propriedade   |           Tipo           |                          Description                          |
 |--------------|--------------------------|---------------------------------------------------------------|
 |     tipo     |          string          |                     O tipo de artefacto.                     |
-| reservas | IEnumerable<Reservation> | Indica o identificador de recurso Azure ou de pedido de reserva. |
+| reservas | `IEnumerable<Reservation>` | Indica o identificador de recurso Azure ou de pedido de reserva. |
 
 ## <a name="reservation"></a>Reserva
 
@@ -151,7 +151,7 @@ Representa uma reserva individual de máquina virtual.
 |   reservationId   |             string             |                                         A identificação da reserva.                                         |
 |     telescópioType     |             string             |                     O tipo de âmbito associado à reserva de máquina virtual.                     |
 |    displayName    |             string             |                                    O nome de exibição da reserva.                                    |
-|   appliedScopes   |      IEnumerable<string>       | A lista de âmbitos aplicados associados à reserva. (Disponível apenas quando o âmbitoType não é partilhado.) |
+|   appliedScopes   |      `IEnumerable<string>`       | A lista de âmbitos aplicados associados à reserva. (Disponível apenas quando o âmbitoType não é partilhado.) |
 |     quantidade      |              int               |                             O número de máquinas virtuais na reserva.                             |
 |  expiraçãoDateTime   | cadeia no formato de data-hora UTC |                                    A data de validade da reserva.                                     |
 | efetivaMenteDa hora | cadeia no formato de data-hora UTC |                                   A data efetiva da reserva.                                   |

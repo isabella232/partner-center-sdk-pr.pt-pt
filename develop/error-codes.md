@@ -4,12 +4,12 @@ description: Descrição dos códigos de erro e respostas de sucesso das APIs do
 ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 977b17997b56bea7342be0ec2cc48c3c32a0209a
-ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
+ms.openlocfilehash: 6137b4a512e0fa0da3221467d60295e1fbd67e7e
+ms.sourcegitcommit: 84a6f701190f46d2adcf6edcaeaafa32d58fbaba
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111906480"
+ms.lasthandoff: 07/08/2021
+ms.locfileid: "113510130"
 ---
 # <a name="partner-center-rest-error-codes"></a>Partner Center REST error codes (Códigos de erro REST do Centro de Parceiros)
 
@@ -148,7 +148,7 @@ Seguem-se os códigos de erro devolvidos pelas APIs:
 | Conflito            | 409             | 800060     | A sua ordem está em andamento. Verifique o histórico de encomendas recentes em poucos minutos                                                                                                                                                                                                                                                                                                                                                                                                      |
 | BadRequest          | 400             | 800061     | A ordem não pode ser cancelada                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | BadRequest          | 400             | 800062     | Você não é elegível para esta transação                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| BadRequest          | 400             | 800063     | Esta ordem {0} não pode ser cancelada. Utilizar PATCH /clientes/ {1} /subscrições/ <subscriptionId> para suspender subscrições                                                                                                                                                                                                                                                                                                                                                                             |
+| BadRequest          | 400             | 800063     | Esta ordem {0} não pode ser cancelada. Utilizar PATCH /clientes/ {1} /subscrições/ \<subscriptionId\> para suspender subscrições                                                                                                                                                                                                                                                                                                                                                                             |
 | Conflito            | 409             | 800064     | O carrinho {0} está a ser processado por outro pedido.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | BadRequest          | 400             | 800065     | Não é possível verificar um carrinho já {0} enviado.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Proibido           | 403             | 800066     | O número desejado de subscrições excedeu o número máximo de subscrições permitidas por cliente                                                                                                                                                                                                                                                                                                                                                                                            |
