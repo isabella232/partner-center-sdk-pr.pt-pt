@@ -4,12 +4,12 @@ description: Como validar um endereço utilizando a API de validação de endere
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 14d45977f3af6e8bba1b7cb7f969aa7c5bb671da
-ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
+ms.openlocfilehash: 2eeca91b0e5a507dac6df4ecf61a56aed2d2d921
+ms.sourcegitcommit: 51237e7e98d71a7e0590b4d6a4034b6409542126
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111529890"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113572085"
 ---
 # <a name="validate-an-address"></a>Validar um endereço
 
@@ -28,7 +28,7 @@ Credenciais descritas na [autenticação do Partner Center](partner-center-authe
 Para validar um endereço, primeiro instantaneamente um novo objeto **Address** e povoá-lo com o endereço para validar. Em seguida, recupere uma interface para **operações de Validações** a partir da propriedade **IAggregatePartner.Validations,** e ligue para o método **IsAddressValid** com o objeto de endereço.
 
 ```csharp
-// IAggregatePartner partnerOperations;
+IAggregatePartner partnerOperations;
 
 // Create an address to validate.
 Address address = new Address()
@@ -41,81 +41,39 @@ Address address = new Address()
 };
 
 // Validate the address.
-bool result = partnerOperations.Validations.IsAddressValid(address);
+AddressValidationResponse result = partnerOperations.Validations.IsAddressValid(address);
 
-// If the address is valid, the result should equal true.
-Console.WriteLine("Result: " + result.ToString());
+// If the request completes successfully, you can inspect the response object.
 
-// The following is an example that causes address validation to fail.
-try
+// See the status of the validation.
+Console.WriteLine($"Status: {addressValidationResult.Status}");
+
+// See the validation message returned.
+Console.WriteLine($"Validation Message Returned: {addressValidationResult.ValidationMessage ?? "No message returned."}");
+
+// See the original address submitted for validation.
+Console.WriteLine($"Original Address:\n{this.DisplayAddress(addressValidationResult.OriginalAddress)}");
+
+// See the suggested addresses returned by the API, if any exist.
+Console.WriteLine($"Suggested Addresses Returned: {addressValidationResult.SuggestedAddresses?.Count ?? "None."}");
+
+if (addressValidationResult.SuggestedAddresses != null && addressValidationResult.SuggestedAddresses.Any())
 {
-    // Change to an invalid postal code for this address.
-    address.PostalCode = "98007";
-
-    // Validate the address.
-    result = partnerOperations.Validations.IsAddressValid(address);
-
-    Console.WriteLine("ERROR: The code should have thrown an exception - BadRequest(400).");
+    addressValidationResult.SuggestedAddresses.ForEach(a => Console.WriteLine(this.DisplayAddress(a)));
 }
-catch (PartnerException exception)
+
+// Helper method to pretty-print an Address object.
+private string DisplayAddress(Address address)
 {
-    if (exception.ErrorCategory == PartnerErrorCategory.BadInput)
+    StringBuilder sb = new StringBuilder();
+
+    foreach (var property in address.GetType().GetProperties())
     {
-        Console.WriteLine(exception.ErrorCategory.ToString());
-        Console.WriteLine("Exception:");
-        Console.WriteLine("Message: {0}", exception.Message);
+        sb.AppendLine($"{property.Name}: {property.GetValue(address) ?? "None to Display."}");
     }
-    else
-    {
-        throw;
-    }
+
+    return sb.ToString();
 }
-```
-
-## <a name="java"></a>Java
-
-Para validar um endereço, primeiro instantaneamente um novo objeto **Address** e povoá-lo com o endereço para validar. Em seguida, recupere uma interface para operações de **Validações** a partir da função **IAggregatePartner.getValidations** e ligue para o método **isAddressValid** com o objeto de endereço.
-
-[!INCLUDE [Partner Center Java SDK support details](../includes/java-sdk-support.md)]
-
-```java
-// IAggregatePartner partnerOperations;
-
-// Create an address to validate.
-Address address = new Address();
-
-address.setAddressLine1("One Microsoft Way");
-address.setCity("Redmond");
-address.setState("WA");
-address.setCountry("US");
-address.setPostalCode("98052");
-
-try
-{
-    // Validate the address
-    Boolean validationResult = partnerOperations.getValidations().isAddressValid(address);
-
-    System.out.println(validationResult ? "The address is valid." : "Invalid address");
-}
-catch (Exception exception)
-{
-    System.out.println("Address is invalid");
-
-    if (! StringHelper.isNullOrWhiteSpace(exception.getMessage()))
-    {
-        System.out.println(exception.getMessage());
-    }
-}
-```
-
-## <a name="powershell"></a>PowerShell
-
-[!INCLUDE [Partner Center PowerShell module support details](../includes/powershell-module-support.md)]
-
-Para validar um endereço, execute o [**Test-PartnerAddress**](https://github.com/Microsoft/Partner-Center-PowerShell/blob/master/docs/help/Test-PartnerAddress.md) com os parâmetros de endereço povoados.
-
-```powershell
-Test-PartnerAddress -AddressLine1 '700 Bellevue Way NE' -City 'Bellevue' -Country 'US' -PostalCode '98004' -State 'WA'
 ```
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
@@ -143,21 +101,58 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido.
 | código postal   | string | Y        | O código postal.                                           |
 | país      | string | Y        | O código de campo ISO alpha-2 de dois caracteres.                |
 
+### <a name="response-details"></a>Detalhes da resposta
+
+A resposta devolverá uma das seguintes mensagens de estado:
+
+| Estado     | Descrição |    Número de endereços sugeridos devolvidos |
+|-------|---------------|-------------------|
+|Envio verificado | O endereço é verificado e pode ser enviado para. | Único |
+|Verificado | O endereço está verificado. | Único |
+|Interação necessária | O endereço sugerido foi alterado significativamente e precisa de confirmação do utilizador. | Único |
+|Parcial de rua | A rua dada no endereço é parcial e precisa de mais informações. | Múltiplos — máximo de três |
+|Instalações parciais | As instalações dadas (número de edifício, número de suite, entre outras) são parciais e precisam de mais informações. | Múltiplos — máximo de três |
+|Vários | Existem vários campos que são parciais no endereço (potencialmente também incluindo a parcial da rua e as instalações parciais). | Múltiplos — máximo de três |
+|Nenhuma | O endereço está incorreto. | Nenhuma |
+|Não validado | O endereço não pôde ser enviado através do processo de validação. | Nenhuma |
+
 ### <a name="request-example"></a>Exemplo de pedido
 
 ```http
+# "VerifiedShippable" Request Example
+
 POST https://api.partnercenter.microsoft.com/v1/validations/address HTTP/1.1
+Accept: application/json
 Content-Type: application/json
 Authorization: Bearer <token>
-Accept: application/json
-MS-RequestId: 0b30452a-8be2-4b8b-b25b-2d4850f4345f
-MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c
-X-Locale: en-US
+MS-CorrelationId: 29624f3c-90cb-4d34-a7e9-bd2de6d35218
+MS-RequestId: eb55c2b8-6f4b-4b44-9557-f76df624b8c0
 Host: api.partnercenter.microsoft.com
-Content-Length: 129
+Content-Length: 137
+X-Locale: en-US
 
 {
-    "AddressLine1": "One Microsoft Way",
+    "AddressLine1": "1 Microsoft Way",
+    "City": "Redmond",
+    "State": "WA",
+    "PostalCode": "98052",
+    "Country": "US"
+}
+
+# "StreetPartial" Request Example
+
+POST https://api.partnercenter.microsoft.com/v1/validations/address HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer <token>
+MS-CorrelationId: 2c95c9bc-fdfb-4c6a-84f4-57c9b0826b43
+MS-RequestId: ee6cf74c-3ab5-48d6-9269-4a4b75bd59dc
+Host: api.partnercenter.microsoft.com
+Content-Length: 135
+X-Locale: en-US
+
+{
+    "AddressLine1": "Microsoft Way",
     "City": "Redmond",
     "State": "WA",
     "PostalCode": "98052",
@@ -167,42 +162,71 @@ Content-Length: 129
 
 ## <a name="rest-response"></a>Resposta do REST
 
-Se for bem sucedido, o método devolve um código de estado 200, como demonstrado na Resposta - exemplo de validação bem sucedido mostrado abaixo.
-
-Se o pedido falhar, o método devolve um código de estado 400, como demonstrado na Resposta - exemplo falhado de validação apresentado abaixo. O corpo de resposta contém uma carga útil JSON com informações adicionais sobre o erro.
+Se for bem sucedido, o método devolve um objeto **AddressValidationResponse** no organismo de resposta, com um código de estado **HTTP 200.** Apresentamos um exemplo abaixo.
 
 ### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 
 Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](error-codes.md).
 
-### <a name="response---validation-succeeded-example"></a>Resposta - validação sucedeu exemplo
+### <a name="response-example"></a>Exemplo de resposta
 
 ```http
+# "VerifiedShippable" Response Example
+
 HTTP/1.1 200 OK
-Content-Length: 0
-MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c
-MS-RequestId: 0b30452a-8be2-4b8b-b25b-2d4850f4345f
-MS-CV: IqhjoWVyq0Kl81dO.0
-MS-ServerId: 030011719
-Date: Mon, 13 Mar 2017 23:56:12 GMT
-```
-
-### <a name="response---validation-failed-example"></a>Resposta - exemplo falhado de validação
-
-```http
-HTTP/1.1 400 Bad Request
-Content-Length: 418
+Date: Mon, 17 May 2021 23:19:19 GMT
 Content-Type: application/json; charset=utf-8
-MS-CorrelationId: 8a853a1a-b0e6-4cb0-ae87-d6dd32ac3a0c
-MS-RequestId: 0b30452a-8be2-4b8b-b25b-2d4850f4345f
-MS-CV: pdlItMyvtkmGHDWt.0
-MS-ServerId: 101112012
-Date: Tue, 14 Mar 2017 01:57:55 GMT
-
+MS-CorrelationId: 29624f3c-90cb-4d34-a7e9-bd2de6d35218
+MS-RequestId: eb55c2b8-6f4b-4b44-9557-f76df624b8c0
+X-Locale: en-US
+ 
 {
-    "code": 2007,
-    "description": "{\"code\":\"60071\",\"reason\":\"ZipCityInvalid - Details: Field - &#39;City&#39; is corrected from OldValue: &#39;Redmond&#39; to NewValue: &#39;BELLEVUE&#39;.\",\"corrected_address\":{\"country\":\"US\",\"region\":\"WA\",\"city\":\"BELLEVUE\",\"address_line1\":\"One Microsoft Way\",\"postal_code\":\"98007\"},\"object_type\":\"AddressValidation\",\"resource_status\":\"Active\"}",
-    "data": [],
-    "source": "PartnerFD"
+    "originalAddress": {
+        "country": "US",
+        "city": "Redmond",
+        "state": "WA",
+        "addressLine1": "1 Microsoft Way",
+        "postalCode": "98052"
+    },
+    "suggestedAddresses": [
+        {
+            "country": "US",
+            "city": "Redmond",
+            "state": "WA",
+            "addressLine1": "1 Microsoft Way",
+            "postalCode": "98052-8300"
+        }
+    ],
+    "status": "VerifiedShippable"
+}
+
+# "StreetPartial" Response Example
+
+HTTP/1.1 200 OK
+Date: Mon, 17 May 2021 23:34:08 GMT
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 2c95c9bc-fdfb-4c6a-84f4-57c9b0826b43
+MS-RequestId: ee6cf74c-3ab5-48d6-9269-4a4b75bd59dc
+X-Locale: en-US
+ 
+{
+    "originalAddress": {
+        "country": "US",
+        "city": "Redmond",
+        "state": "WA",
+        "addressLine1": "Microsoft Way",
+        "postalCode": "98052"
+    },
+    "suggestedAddresses": [
+        {
+            "country": "US",
+            "city": "Redmond",
+            "state": "WA",
+            "addressLine1": "1 Microsoft Way",
+            "postalCode": "98052-6399"
+        }
+    ],
+    "status": "StreetPartial",
+    "validationMessage": "Address field invalid for property: 'Region', 'PostalCode', 'City'"
 }
 ```

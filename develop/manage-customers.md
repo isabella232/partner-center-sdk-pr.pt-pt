@@ -4,12 +4,12 @@ description: Esta secção descreve as formas como os Fornecedor de Soluções e
 ms.date: 02/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 00c0e51dfd6970bd28db2ce88e6b9be15175a76c
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 9f9b8629406a8d66c8ea820205abf73a2fb0cc02
+ms.sourcegitcommit: 51237e7e98d71a7e0590b4d6a4034b6409542126
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548214"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113571983"
 ---
 # <a name="manage-customers"></a>Gerir clientes
 
@@ -48,8 +48,8 @@ Esta secção descreve as formas como os Fornecedor de Soluções em Nuvem parce
 - [Obter o estado de assinatura direta (aceitação direta) do Contrato de Cliente Microsoft](get-direct-sign-status-of-customer-agreement.md)
 - [Confirmar aceitação do cliente do Contrato de Cliente Microsoft](confirm-customer-consent-customer-agreement.md)
 - [Obter os códigos de validação de um parceiro](get-a-partner-s-validation-codes.md)
-- [Obter a qualificação de um cliente](./get-customer-qualification-synchronous.md)
-- [Atualizar a qualificação de um cliente](./update-customer-qualification-synchronous.md)
+- [Obtenha as qualificações de um cliente](./get-customer-qualification-asynchronous.md)
+- [Atualizar as qualificações de um cliente](./update-customer-qualification-asynchronous.md)
 
 ## <a name="manage-user-accounts-and-assign-licenses"></a>Gerir contas de utilizador e atribuir licenças
 

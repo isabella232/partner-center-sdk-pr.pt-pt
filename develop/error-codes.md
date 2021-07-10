@@ -4,12 +4,12 @@ description: Descrição dos códigos de erro e respostas de sucesso das APIs do
 ms.date: 11/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6137b4a512e0fa0da3221467d60295e1fbd67e7e
-ms.sourcegitcommit: 84a6f701190f46d2adcf6edcaeaafa32d58fbaba
+ms.openlocfilehash: 59857311fe7867f1553fa1d6a7748d87f56a5b16
+ms.sourcegitcommit: 51237e7e98d71a7e0590b4d6a4034b6409542126
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "113510130"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113572119"
 ---
 # <a name="partner-center-rest-error-codes"></a>Partner Center REST error codes (Códigos de erro REST do Centro de Parceiros)
 
@@ -31,6 +31,7 @@ Os seguintes códigos de estado **4xx** e **5xx** indicam um erro:
 - 404: Não encontrado
 - 405: Método não permitido
 - 406: Inaceitável
+- 408: Pedido de tempo limite
 - 409: Conflito, código de erro
 - 412: Pré-condição falhou
 - 429: Demasiados pedidos

@@ -5,12 +5,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.topic: reference
 ms.date: 12/15/2020
-ms.openlocfilehash: b2c2cac36a8bd1bec7aa5bf6e5d1aa73b4779535
-ms.sourcegitcommit: 717e483a6eec23607b4e31ddfaa3e2691f3043e6
+ms.openlocfilehash: d4f7f034a36a26b6219086ca952b189f7a313ef7
+ms.sourcegitcommit: 51237e7e98d71a7e0590b4d6a4034b6409542126
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104711853"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113572000"
 ---
 # <a name="december-2020-changes-to-partner-center-rest-apis"></a>Alterações de dezembro de 2020 para Parceiro Centro REST APIs
 
@@ -24,8 +24,8 @@ Consulte aqui as alterações às APIs do Partner Center REST.
 
 Atualmente, a API do Partner Center dispõe de qualificações GET e PUT para verificar a elegibilidade dos clientes da Educação. Não haverá alterações na API de Qualificação GET. No entanto, adicionámos um caso de retorno à API de Qualificação PUT.
 
-- GET - não muda. [Artigo atual da API](./get-customer-qualification-synchronous.md)
-- PUT - o caso de devolução será adicionado. [Artigo atual da API](./update-customer-qualification-synchronous.md)
+- GET - não muda.
+- PUT - o caso de devolução será adicionado.
 
 Estas APIs serão reformadas no final de fevereiro de 2021, para serem substituídas por novas APIs, conforme descrito abaixo.
 

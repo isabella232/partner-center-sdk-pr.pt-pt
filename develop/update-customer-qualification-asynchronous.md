@@ -5,12 +5,12 @@ ms.date: 03/23/2021
 ms.service: partner-dashboard
 author: JoeyBytes
 ms.author: jobiesel
-ms.openlocfilehash: 7606eeaac4df158ec0fad6ffd4e565bb250f448e
-ms.sourcegitcommit: bbdb5f7c9ddd42c2fc4eaadbb67d61aeeae805ca
+ms.openlocfilehash: d7dd3593894ce91ddc7b96d604b80153d41d3a67
+ms.sourcegitcommit: 51237e7e98d71a7e0590b4d6a4034b6409542126
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "105030611"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113572102"
 ---
 # <a name="update-a-customers-qualifications-asynchronously"></a>Atualizar as qualificações de um cliente assíncroneamente
 
@@ -29,11 +29,12 @@ Um parceiro pode atualizar as qualificações de um cliente assíncroneamente pa
 Para criar a qualificação de um cliente para "Educação", primeiro criar um objeto que represente o tipo de qualificação. Em seguida, ligue para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o identificador de clientes. Em seguida, use a propriedade [**Qualification**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) para recuperar uma interface [**ICustomerQualification.**](/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) Finalmente, ligue `CreateQualifications()` ou com o objeto do tipo de `CreateQualificationsAsync()` qualificação como parâmetro de entrada.
 
 ``` csharp
-var qualificationType = { Qualification = "education" };
+var qualificationToCreate = "education";    // can also be "StateOwnedEntity" or "GovernmentCommunityCloud". See GCC example below.
+var qualificationType = { Qualification = qualificationToCreate };
 var eduCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.CreateQualifications(qualificationType);
 ```
 
-**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Projeto**: Classe SdkSamples : CreateCustomerQualification.cs
+**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Project**: **Classe** SdkSamples : CreateCustomerQualification.cs
 
 Para atualizar a qualificação de um cliente para **o GovernmentCommunityCloud** num cliente existente sem habilitação, o parceiro também é obrigado a incluir o Código de [**Validação**](utility-resources.md#validationcode)do cliente. Primeiro, criar um objeto que represente o tipo de qualificação. Em seguida, ligue para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o identificador de clientes. Em seguida, use a propriedade [**Qualification**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.qualification) para recuperar uma interface [**ICustomerQualification.**](/dotnet/api/microsoft.store.partnercenter.qualification.icustomerqualification) Finalmente, ligue `CreateQualifications()` ou com o objeto tipo de `CreateQualificationsAsync()` qualificação e o código de validação como parâmetros de entrada.
 
@@ -43,7 +44,7 @@ var qualificationType = { Qualification = "GovernmentCommunityCloud" };
 var gccCustomerQualification = partnerOperations.Customers.ById(existingCustomer.Id).Qualification.CreateQualifications(qualificationType, gccValidation);
 ```
 
-**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Projeto**: Classe SdkSamples : CreateCustomerQualificationWithGCC.cs
+**Amostra**: [App de amostra de consola](https://github.com/microsoft/Partner-Center-DotNet-Samples). **Project**: **Classe** SdkSamples : CreateCustomerQualificationWithGCC.cs
 
 ## <a name="rest-request"></a>Pedido de DESCANSO
 
@@ -60,7 +61,7 @@ Utilize o seguinte parâmetro de consulta para atualizar a qualificação.
 | Nome                   | Tipo | Necessário | Descrição                                                                                                                                            |
 |------------------------|------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **cliente-inquilino-id** | GUID | Yes      | O valor é um design **de cliente-inquilino-inquilino** formatado guid que permite ao revendedor filtrar os resultados de um dado cliente que pertence ao revendedor. |
-| **validaçãoDesco**     | int  | No       | Só era necessário para a Nuvem Comunitária do Governo.                                                                                                            |
+| **validaçãoDesco**     | int  | No       | Só era necessário para Nuvem da Comunidade Governamental.                                                                                                            |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
