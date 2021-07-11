@@ -406,6 +406,8 @@
           href: update-a-cart.md
         - name: Atualizar a renovação automática de uma subscrição de marketplace comercial
           href: update-autorenew-for-an-azure-marketplace-subscription.md
+    - name: Gerir pagamentos
+      href: manage-payouts.md
     - name: Fornecer suporte
       href: provide-support.md
       items:
