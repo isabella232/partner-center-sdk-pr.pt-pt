@@ -1,15 +1,15 @@
 ---
 title: Validar um endereço
 description: Como validar um endereço utilizando a API de validação de endereços.
-ms.date: 09/17/2019
+ms.date: 05/17/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 2eeca91b0e5a507dac6df4ecf61a56aed2d2d921
-ms.sourcegitcommit: 51237e7e98d71a7e0590b4d6a4034b6409542126
+ms.openlocfilehash: 30f5cd526ab038dce400e79822d89b8086ba3799
+ms.sourcegitcommit: 41bf9dca55f4c96d382b327a75b2d2418edfc9bc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113572085"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113655623"
 ---
 # <a name="validate-an-address"></a>Validar um endereço
 
