@@ -4,12 +4,12 @@ description: Configurar contas para o desenvolvimento contra o Partner Center SD
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 2c564baa9b626ff6ce21f9bcc517902d7cf99244
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: db7d9bba34abadc907910c68c4a5583ed1f530f4
+ms.sourcegitcommit: de1e68545d37d7fa1862788f7fa8c84a9c4f2795
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547432"
+ms.lasthandoff: 07/16/2021
+ms.locfileid: "114282097"
 ---
 # <a name="set-up-api-access-in-partner-center"></a>Set up API access in Partner Center (Configurar o acesso da API no Centro de Parceiros)
 
@@ -48,7 +48,7 @@ Esta secção descreve como configurar uma conta principal do Parceiro e uma con
 
 1. Inscreva-se no Partner Dashboard com uma conta de administração global (a sua conta principal de Parceiro.)
 
-2. A partir do menu **Definições** (ícone de engrenagem), escolha **as definições de Parceiro**.
+2. A partir do menu **Definições** (ícone de engrenagem), escolha **as definições de Conta**.
 
 3. Escolha **o separador caixa de areia integração.**
 
@@ -69,7 +69,7 @@ Quando a sua conta estiver configurada, tem de ativar o acesso à API para poder
 
 1. Inscreva-se no Partner Dashboard utilizando uma conta de administração global.
 
-2. A partir do menu **Definições** (ícone de engrenagem), selecione **as definições de Parceiro**.
+2. A partir do menu **Definições** (ícone de engrenagem), selecione **definições de Conta**.
 
 3. Na página **de definições** de Conta, escolha **a gestão da App.**
 
@@ -87,7 +87,7 @@ Pode escrever código e código de teste na caixa de areia de integração. Voc�
 
 | Nome do item | Localização do item |
 | --------- | ------------- |
-| ID de aplicativo / ID do cliente | A partir do menu **Definições** (ícone de engrenagem), selecione **as definições de Parceiro**. Na página **de definições de Conta,** selecione **Gestão de Aplicações.** O ID da aplicação/ID do cliente está listado como **iD da aplicação registada.** |
+| ID de aplicativo / ID do cliente | A partir do menu **Definições** (ícone de engrenagem), selecione **definições de Conta**. Na página **de definições de Conta,** selecione **Gestão de Aplicações.** O ID da aplicação/ID do cliente está listado como **iD da aplicação registada.** |
 | Chave | Se criou uma aplicação web na secção [Enable API,](#enable-api-access)esta é a chave que guardou no passo 5. |
 | Domínio | O domínio para a caixa de areia de integração. |
 

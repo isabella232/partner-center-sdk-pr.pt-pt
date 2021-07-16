@@ -4,12 +4,12 @@ description: Você pode obter uma coleção de detalhes de item de linha de cons
 ms.date: 01/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 1b7dba3333aaec8df73f0e8147b0bbbc78b9b184
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: f7c74bedfd6412fc5954ed2ddc1388936e418fa3
+ms.sourcegitcommit: 722992eea6f8ea366dc088e5dd1ee63c17d56f61
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111446151"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114224773"
 ---
 # <a name="get-invoice-unbilled-commercial-consumption-line-items"></a>Obter faturas sem fatura de produtos de linha de consumo comercial
 
@@ -23,8 +23,6 @@ Pode utilizar os seguintes métodos para obter uma recolha de detalhes de linha 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.
-
-- Um identificador de fatura. Isto identifica a fatura para a recuperação dos itens de linha.
 
 ## <a name="c"></a>C\#
 
