@@ -1,15 +1,15 @@
 ---
 title: Partner Center REST error codes (Códigos de erro REST do Centro de Parceiros)
 description: Descrição dos códigos de erro e respostas de sucesso das APIs do Partner Center.
-ms.date: 11/13/2020
+ms.date: 07/21/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 59857311fe7867f1553fa1d6a7748d87f56a5b16
-ms.sourcegitcommit: 51237e7e98d71a7e0590b4d6a4034b6409542126
+ms.openlocfilehash: 0cf57bc4b8b9f77f668aa7f4157e9fa0bb6a2706
+ms.sourcegitcommit: 1fce45e6cafbc4c228042523ae28aac651a73757
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113572119"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114483046"
 ---
 # <a name="partner-center-rest-error-codes"></a>Partner Center REST error codes (Códigos de erro REST do Centro de Parceiros)
 
@@ -47,7 +47,7 @@ Qualquer resposta com um código de estado **4xx** ou **5xx** inclui uma mensage
 
 A seguinte tabela e amostra de código descreve o esquema de uma resposta de erro:
 
-| Nome        | Tipo   | Description                                                                                                                                            |
+| Nome        | Tipo   | Descrição                                                                                                                                            |
 |-------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | code        | string | Sempre voltava. Indica o tipo de erro que ocorreu. Sem ser nulo.                                                                                  |
 | descrição | string | Sempre voltava. Descreve o erro em detalhe e fornece informações de depurativas. Não-nulo, não vazio. O comprimento máximo é de 1024 caracteres. |
@@ -70,8 +70,9 @@ WWW-Authenticate: OAuth realm=urn:cpsvc:cpid:{some cid}
 
 Seguem-se os códigos de erro devolvidos pelas APIs:
 
-| Estado HTTP         | Código de Erro HTTP | Código de erro | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Estado HTTP         | Código de Erro HTTP | Código de erro | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------------|-----------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| OK | 200 | 400072 | Este artigo não está disponível. [Saiba mais](https://go.microsoft.com/fwlink/p/?linkid=2164140) |
 | Não ÉDopliizado      | 501             | 0          | Exceção não definida                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Não autorizado        | 401             | 400        | Acesso negado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | NotFound            | 404             | 1000       | Não encontrado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -84,8 +85,8 @@ Seguem-se os códigos de erro devolvidos pelas APIs:
 | BadRequest          | 400             | 3.000       | Propriedade inválida                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Proibido           | 403             | 20002      | O ID do parceiro {0} não tem qualquer relação comercial com a identificação do {1} cliente.                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | NotFound            | 404             | 20003      | Assinatura com ID {0} não encontrada.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| BadRequest          | 400             | 27007      | Código de promoção inválido                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| BadRequest          | 400             | 60000      | A migração da licença de cliente falhou                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| BadRequest          | 400             | 27007      | Código de promoção inválido                                       |
+| BadRequest          | 400             | 60000      | A migração da licença de cliente falhou                       |
 | NotFound            | 404             | 60002      | ID do objeto do utilizador não é encontrado                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | NotFound            | 404             | 60003      | Inquilino não encontrado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | BadRequest          | 400             | 2001       | A quantidade de subscrição não pode ser aumentada ou diminuída enquanto a subscrição está suspensa                                                                                                                                                                                                                                                                                                                                                                                                     |

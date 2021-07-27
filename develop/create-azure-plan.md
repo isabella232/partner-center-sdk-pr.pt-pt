@@ -1,21 +1,21 @@
 ---
 title: Criar um plano Azure
 description: Os desenvolvedores podem comprar, criar e gerir planos Azure programáticamente usando APIs do Partner Center.
-ms.date: 01/02/2020
+ms.date: 07/21/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: mowrim
 ms.author: mowrim
-ms.openlocfilehash: f329b6a3f9a61522a9fad1f0ead021563c393118
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: b77b067c7eb150ab1ad9904915e87c3fc55c104a
+ms.sourcegitcommit: 1fce45e6cafbc4c228042523ae28aac651a73757
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973414"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "114483063"
 ---
 # <a name="create-an-azure-plan"></a>Criar um plano Azure
 
-Você pode comprar, criar e gerir um plano Azure usando as APIs do Partner Center. O processo é semelhante à criação de uma subscrição de Microsoft Azure (MS-AZR-0145P). Tem de [obter o item do catálogo para o plano Azure,](#get-the-catalog-item-for-azure-plan)em seguida, criar e enviar uma [encomenda](#create-and-submit-an-order).
+Você pode comprar, criar e gerir um plano Azure usando as APIs do Partner Center. O processo é semelhante à criação de uma subscrição de Microsoft Azure[(MS-AZR-0145P).](https://go.microsoft.com/fwlink/p/?linkid=2164140) Tem de [obter o item do catálogo para o plano Azure,](#get-the-catalog-item-for-azure-plan)em seguida, criar e enviar uma [encomenda](#create-and-submit-an-order).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
