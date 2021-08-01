@@ -4,12 +4,12 @@ description: Um parceiro coloca um pedido num carrinho quando um cliente quer co
 ms.date: 08/26/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 08085dde1b43f20b6f6bf707120dd87c48816aba
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: ebe6e628d5bb3b66186d5c4f428f69e46415892b
+ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974153"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115009156"
 ---
 # <a name="cart-resources"></a>Recursos de carrinhos
 
@@ -21,7 +21,7 @@ Um parceiro coloca uma encomenda quando um cliente quer comprar uma subscrição
 
 Descreve um carrinho.
 
-| Propriedade              | Tipo             | Description                                                                                            |
+| Propriedade              | Tipo             | Descrição                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
 | ID                    | string           | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                               |
 | criaçãoTimeStamp     | DateTime         | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.      |
@@ -35,7 +35,7 @@ Descreve um carrinho.
 
 Representa um item contido num carrinho.
 
-| Propriedade             | Tipo                             | Description                                                                                                                                           |
+| Propriedade             | Tipo                             | Descrição                                                                                                                                           |
 |----------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                   | string                           | Um identificador único para um item de linha de carrinho. Aplicado após a criação bem sucedida do carrinho.                                                                   |
 | catalogItemId        | string                           | O identificador de artigos de catálogo.                                                                                                                          |
@@ -50,6 +50,7 @@ Representa um item contido num carrinho.
 | addonItems           | Lista de **objetos CartLineItem** | Uma coleção de itens de linha de carrinho para addons. Estes itens serão adquiridos para a subscrição base que resulta da compra do item da linha do carrinho de raiz. |
 | erro                | Objeto                           | Aplicado após o carrinho é criado se ocorrer um erro.                                                                                                    |
 | renovaTo             | Matriz de objetos                 | Uma variedade de [recursos Renovados.](#renewsto)                                                                            |
+| AttestationAccepted             | bool                 | Indica acordo para oferecer ou sku condições. Requerido apenas para ofertas ou skus onde a SkuAttestationProperties ou OfferAttestationProperties aplicam Attestation é Verdadeira.                                                                            |
 
 ## <a name="renewsto"></a>RenovarTo
 
@@ -67,16 +68,37 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Representa um erro que ocorre após a criação de um carrinho.
 
-| Propriedade         | Tipo                                   | Description                                                                                   |
+| Propriedade         | Tipo                                   | Descrição                                                                                   |
 |------------------|----------------------------------------|-----------------------------------------------------------------------------------------------|
-| errorCode        | [Códigos de erro do Centro de Parceiros](error-codes.md) | O tipo de erro do carrinho.                                                                       |
+| errorCode        | [CareErrorCode](#carterrorcode) | O tipo de erro do carrinho.                                                                       |
 | erroDescrição | string                                 | A descrição do erro, incluindo quaisquer notas sobre valores suportados, valores predefinidos ou limites. |
+
+
+## <a name="carterrorcode"></a>CartErrorCode
+
+Tipos de erros no carrinho.
+
+| Name                             | CódigoDoErro   | Descrição
+|----------------------------------|-------------|-----------------------------------------------------------------------------------------------|
+| MoedaSNotSupportada           | 10000   | A moeda não é suportada para um mercado dado  |
+| CatalogItemIdIsNotValid          | 10001   | O id do artigo do catálogo não é válido  |
+| QuotaNot Disponível                | 10002   | Não há quota suficiente disponível  |
+| Inventário Não Disponível            | 10003   | O inventário não está disponível para oferta selecionada  |
+| ParticipantesIsNotSupportedForPartner  | 10004   | Definir participantes não é suportado para Parceiro  |
+| UnableToProcessCartLineItem      | 10006   | Não é possível processar o item da linha do carrinho.  |
+| SubscriçãoIsNotValid           | 10007   | A subscrição não é válida.  |
+| SubscriçãoNotEnabledForRI    | 10008   | A subscrição não está ativada para a compra de RI.  |
+| SandboxLimitExceed             | 10009   | O limite da caixa de areia foi ultrapassado.  |
+| Inválido                     | 10010   | A entrada genérica não é válida.  |
+| SubscriçãoNotRegista        | 10011   | A subscrição não é válida.  |
+| AttestationNotAccepted           | 10012   | O Attestation não foi aceite.  |
+| Desconhecido                          | 0   | Valor predefinido   |
 
 ## <a name="cartcheckoutresult"></a>CartCheckoutResult
 
 Representa o resultado de um check-out de carrinho.
 
-| Propriedade    | Tipo                                              | Description                     |
+| Propriedade    | Tipo                                              | Descrição                     |
 |-------------|---------------------------------------------------|---------------------------------|
 | encomendas      | Lista de objetos [da Ordem.](order-resources.md#order)         | A coleção de ordens.       |
 | orderErrors | Lista de objetos [OrderError.](#ordererror) | A recolha de erros de ordem. |
@@ -85,7 +107,7 @@ Representa o resultado de um check-out de carrinho.
 
 Representa um erro que ocorre durante um check-out do carrinho quando uma encomenda é criada.
 
-| Propriedade     | Tipo   | Description                                     |
+| Propriedade     | Tipo   | Descrição                                     |
 |--------------|--------|-------------------------------------------------|
 | orderGroupId | string | O grupo de pedidos identificação da ordem com o erro. |
 | code         | int    | O código de erro.                                 |

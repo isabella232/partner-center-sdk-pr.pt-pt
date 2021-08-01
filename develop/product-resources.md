@@ -4,12 +4,12 @@ description: Recursos que representam bens ou serviços puráveis. Inclui recurs
 ms.date: 04/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 1d536cb78c070bd06f4ab9434e066e51fb4c008c
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: 2e68df1f6955fb7feb9770377621c2d649b74e4a
+ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445889"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115009125"
 ---
 # <a name="products-resources"></a>Recursos de produtos
 
@@ -19,7 +19,7 @@ Recursos que representam bens ou serviços puráveis. Inclui recursos para descr
 
 Representa um bem ou serviço purivel. Um produto por si só não é um item purivel.
 
-| Propriedade           | Tipo                          | Description                                                              |
+| Propriedade           | Tipo                          | Descrição                                                              |
 |--------------------|-------------------------------|--------------------------------------------------------------------------|
 | ID                 | string                        | A identificação deste produto.                                                 |
 | título              | string                        | O título do produto.                                                       |
@@ -33,7 +33,7 @@ Representa um bem ou serviço purivel. Um produto por si só não é um item pur
 
 Representa o tipo de produto.
 
-| Propriedade        | Tipo                          | Description                                                                          |
+| Propriedade        | Tipo                          | Descrição                                                                          |
 |-----------------|-------------------------------|--------------------------------------------------------------------------------------|
 | ID              | string                        | O tipo de identificador.                                                                 |
 | displayName     | string                        | O nome de exibição deste tipo.                                                      |
@@ -43,7 +43,7 @@ Representa o tipo de produto.
 
 Contém uma lista de links para um [Produto.](#product)
 
-| Propriedade        | Tipo                                                          | Description                                          |
+| Propriedade        | Tipo                                                          | Descrição                                          |
 |-----------------|---------------------------------------------------------------|------------------------------------------------------|
 | skus            | [Ligação](utility-resources.md#link)                             | A ligação para o acesso aos SKUs subjacentes.          |
 | ligações           | [RecursosLinks](utility-resources.md#resourcelinks)           | As ligações de recursos contidas neste recurso.   |
@@ -52,7 +52,7 @@ Contém uma lista de links para um [Produto.](#product)
 
 Representa uma unidade de armazenamento de stock (SKU) em um produto. Estes representam as diferentes formas do produto.
 
-| Propriedade               | Tipo             | Description                                                                           |
+| Propriedade               | Tipo             | Descrição                                                                           |
 |------------------------|------------------|---------------------------------------------------------------------------------------|
 | ID                     | string           | A identificação deste SKU. Este ID é único apenas no contexto do seu produto-mãe. |
 | título                  | string           | O título do SKU.                                                                 |
@@ -67,12 +67,13 @@ Representa uma unidade de armazenamento de stock (SKU) em um produto. Estes repr
 | provisionamentoVariables  | matriz de cadeias (de carateres) | A lista de variáveis que devem ser fornecidas no contexto de provisionamento de um item da [linha do carrinho](cart-resources.md#cartlineitem) na compra deste item. Os valores suportados são:<br/> Âmbito - O âmbito para uma compra de reserva Azure: "Single", "Shared".<br/> "SubscriptionId" - O ID da subscrição Azure que seria usado para uma compra de reserva Azure.<br/> "Duração" - A duração da reserva Azure: "1Year", "3Year".  |
 | dynamicAttributes      | pares chave/valor  | O dicionário de propriedades dinâmicas que se aplicam a este item. As propriedades deste dicionário são dinâmicas e podem mudar sem aviso prévio. Não deve criar fortes dependências de chaves específicas existentes no valor deste imóvel.    |
 | ligações                  | [RecursosLinks](utility-resources.md#resourcelinks) | As ligações de recursos contidas no SKU.                   |
+| AttestationProperties                  | [AttestationProperties](#attestationproperties) | As propriedades do atestado para um SKU.                   |
 
 ## <a name="availability"></a>Disponibilidade
 
 Representa uma configuração em que um SKU está disponível para compra (como país, moeda e segmento da indústria).
 
-| Propriedade        | Tipo                        | Description                                                                         |
+| Propriedade        | Tipo                        | Descrição                                                                         |
 |-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
 | ID              | string                        | O ID para esta disponibilidade. Este ID é único apenas no contexto do seu [produto-mãe](#product) e [SKU.](#sku) **Nota** Esta identificação pode mudar com o tempo. Só deve confiar neste valor num curto espaço de tempo após a sua recuperação.  |
 | productId       | string                        | O ID do [produto](#product) que contém esta disponibilidade.           |
@@ -92,7 +93,7 @@ Representa uma configuração em que um SKU está disponível para compra (como 
 
 Representa um termo para o qual a disponibilidade pode ser adquirida.
 
-| Propriedade              | Tipo                                        | Description                                                                         |
+| Propriedade              | Tipo                                        | Descrição                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | duration              | string                                      | Uma representação ISO 8601 da duração do termo. Os valores suportados atuais são P1M (1 mês), P1Y (1 ano) e P3Y (3 anos). |
 | descrição           | string                                      | A descrição do termo.           |
@@ -101,7 +102,7 @@ Representa um termo para o qual a disponibilidade pode ser adquirida.
 
 Representa um pedido de verificação do inventário contra certos itens de catálogo.
 
-| Propriedade         | Tipo                                                | Description                                                                                 |
+| Propriedade         | Tipo                                                | Descrição                                                                                 |
 |------------------|-----------------------------------------------------|---------------------------------------------------------------------------------------------|
 | targetItems      | matriz de [InventoryItem](#inventoryitem)            | A lista de itens de catálogo que o cheque de inventário irá avaliar.                           |
 | inventárioContexto | pares chave/valor                                     | O dicionário de valores de contexto necessários para a realização do(s) verificação de inventário. Cada [SKU](#sku) dos produtos definirá quais os valores (se houver) necessários para realizar esta operação.  |
@@ -111,7 +112,7 @@ Representa um pedido de verificação do inventário contra certos itens de cat�
 
 Representa um único item numa operação de verificação de inventário. Este recurso é utilizado para especificar os itens-alvo num pedido de entrada e é também utilizado para representar os resultados da operação de verificação de inventário.
 
-| Propriedade         | Tipo                                                              | Description                                                                      |
+| Propriedade         | Tipo                                                              | Descrição                                                                      |
 |------------------|-------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | productId        | string                                                            | (Obrigatório) A identificação do [produto.](#product)                            |
 | skuId            | string                                                            | A identificação do [SKU.](#sku) Ao utilizar este recurso como entrada para um pedido de inventário, este valor é opcional. Se este valor não for fornecido, todos os SKUs ao abrigo do produto serão considerados como itens-alvo da operação de verificação de inventário.      |
@@ -122,7 +123,7 @@ Representa um único item numa operação de verificação de inventário. Este 
 
 Representa os detalhes de uma restrição de inventário. Isto só é aplicável para os resultados da verificação de inventário, não para pedidos de entrada.
 
-| Propriedade         | Tipo                  | Description                                                                                 |
+| Propriedade         | Tipo                  | Descrição                                                                                 |
 |------------------|-----------------------|---------------------------------------------------------------------------------------------|
 | reasonCode       | string                | O código que identifica o motivo da restrição.                                    |
 | descrição      | string                | A descrição da restrição de inventário.                                               |
@@ -132,10 +133,19 @@ Representa os detalhes de uma restrição de inventário. Isto só é aplicável
 
 Um [Enum/dotnet/api/system.enum) com valores que indicam um tipo de ciclo de faturação.
 
-| Valor              | Posição     | Description                                                                                |
+| Valor              | Posição     | Descrição                                                                                |
 |--------------------|--------------|--------------------------------------------------------------------------------------------|
 | Desconhecido            | 0            | Inicializador Enum.                                                                          |
 | Mensalmente            | 1            | Indica que o parceiro será cobrado mensalmente.                                        |
 | Anuais             | 2            | Indica que o parceiro será cobrado anualmente.                                       |
 | Nenhuma               | 3            | Indica que o parceiro não será carregado. Este valor pode ser utilizado para itens de ensaio.    |
 | OneTime            | 4            | Indica que o parceiro será carregado uma vez.                                       |
+
+## <a name="attestationproperties"></a>AttestationProperties
+
+Representa um tipo de atestado e se for necessário para compra.
+
+| Propriedade              | Tipo                                        | Descrição                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| attestationType              | string                                      | Indica o tipo de atestado. Para Windows 365 o valor é o Windows365. Windows texto de atestado 365 é "Entendo que cada pessoa que usa Windows 365 Negócios com Windows Hybrid Benefit também precisa de ter uma cópia válida de Windows 10/11 Pro instalada no seu dispositivo de trabalho primário." |
+| impor Attestation           | boolean                                      | Indica se o atestado é necessário para compra.           |

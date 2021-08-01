@@ -4,12 +4,12 @@ description: Descreve um produto listado no catálogo de revendedores que podem 
 ms.date: 03/15/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 704e5580f2cdf84fc82b627e3b2ca165b81a3af5
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 9a7a0dd2dccc59536797c3ce533d9d8829a04f96
+ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548112"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115009227"
 ---
 # <a name="offer-resources"></a>Oferecer recursos
 
@@ -19,7 +19,7 @@ Descreve um produto listado no catálogo de revendedores que podem oferecer aos 
 
 ## <a name="offer"></a>Oferta
 
-| Propriedade                    | Tipo                      | Description                                                                                                                                                                |
+| Propriedade                    | Tipo                      | Descrição                                                                                                                                                                |
 |-----------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                          | string                    | O identificador da oferta.                                                                                           |
 | name                        | string                    | O nome da oferta.                                                                                                 |
@@ -50,12 +50,13 @@ Descreve um produto listado no catálogo de revendedores que podem oferecer aos 
 | unitType                    | string                    | O tipo da unidade.                                                                                      |
 | ligações                       | [OfferLinks](#offerlinks)               | A ligação "saiba mais".                                                                    |
 | atributos                  | [RecursosTributos](utility-resources.md#resourceattributes) | Os metadados atribuem correspondentes à oferta.                         |
+| AttestationProperties       | [AttestationProperties](#attestationproperties) | As propriedades do atestado para um SKU.                   |
 
 ## <a name="offercategory"></a>OfertaCategoria
 
 Descreve a categorização de uma oferta. Isto inclui o grau ou prioridade desta categoria de oferta em comparação com outros da mesma linha de produtos.
 
-| Propriedade   | Tipo                                                           | Description                                                                                                                                                                |
+| Propriedade   | Tipo                                                           | Descrição                                                                                                                                                                |
 |------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID         | string                                                         | O identificador de categoria.                                                                                                                                                   |
 | name       | string                                                         | O nome da categoria.                                                                                                                                                         |
@@ -69,7 +70,7 @@ Descreve a categorização de uma oferta. Isto inclui o grau ou prioridade desta
 
 Contém links para aprender mais informações sobre a oferta.
 
-| Propriedade  | Tipo | Description                 |
+| Propriedade  | Tipo | Descrição                 |
 |-----------|------|-----------------------------|
 | aprender Mais | Ligação | A ligação "aprender mais".      |
 | self      | Ligação | O auto-URI                |
@@ -80,8 +81,18 @@ Contém links para aprender mais informações sobre a oferta.
 
 Um produto ou serviço que pode ter mais do que uma oferta associada a ele, cada um com diferentes conjuntos de funcionalidades e direcionados para diferentes necessidades do cliente.
 
-| Propriedade | Tipo   | Description              |
+| Propriedade | Tipo   | Descrição              |
 |----------|--------|--------------------------|
 | Id       | string | O identificador de categoria. |
 | Name     | string | O nome da categoria.       |
 | Unidade     | string | A unidade de produtos.        |
+
+## <a name="attestationproperties"></a>AttestationProperties
+
+Representa um tipo de atestado e se for necessário para compra.
+
+| Propriedade              | Tipo                                        | Descrição                                                                         |
+|-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| attestationType              | string                                      | Indica o tipo de atestado. Para Windows 365 o valor é o Windows365. Windows texto de atestado 365 é "Entendo que cada pessoa que usa Windows 365 Negócios com Windows Hybrid Benefit também precisa de ter uma cópia válida de Windows 10/11 Pro instalada no seu dispositivo de trabalho primário." |
+| impor Attestation           | boolean                                      | Indica se o atestado é necessário para compra.           |
+

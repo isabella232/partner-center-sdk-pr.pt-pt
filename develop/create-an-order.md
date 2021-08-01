@@ -4,12 +4,12 @@ description: Saiba como usar as APIs do Partner Center para criar uma encomenda 
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c3a86a99f43bdeec5e4c560ab59e1924b76c0636
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: a2a980634e3887780c9d6dbd4fa3271956978884
+ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973554"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115009155"
 ---
 # <a name="create-an-order-for-a-customer-using-partner-center-apis"></a>Criar uma encomenda para um cliente que utilize APIs do Partner Center
 
@@ -85,7 +85,7 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome        | Tipo   | Necessário | Descrição                                                |
 |-------------|--------|----------|------------------------------------------------------------|
-| id cliente | string | Yes      | Um id de cliente formatado GUID que identifica o cliente. |
+| id cliente | string | Sim      | Um id de cliente formatado GUID que identifica o cliente. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -102,12 +102,12 @@ Esta tabela descreve as propriedades da [Ordem](order-resources.md) no organismo
 | ID                   | cadeia (de carateres)                      | No                              | Um identificador de ordem que é fornecido após a criação bem sucedida da ordem.   |
 | referênciaStomerId  | cadeia (de carateres)                      | No                              | O identificador de clientes. |
 | billingCycle         | cadeia (de carateres)                      | No                              | Indica a frequência com que o parceiro é faturado para esta encomenda. Os valores suportados são os nomes dos membros encontrados no [BillingCycleType](product-resources.md#billingcycletype). O padrão é "Mensal" ou "OneTime" na criação da ordem. Este campo é aplicado após a criação bem sucedida da ordem. |
-| lineitems            | matriz de recursos [OrderLineItem](order-resources.md#orderlineitem) | Yes      | Uma lista itemada das ofertas que o cliente está a comprar, incluindo a quantidade.        |
+| lineitems            | matriz de recursos [OrderLineItem](order-resources.md#orderlineitem) | Sim      | Uma lista itemada das ofertas que o cliente está a comprar, incluindo a quantidade.        |
 | currencyCode         | cadeia (de carateres)                      | No                              | Só para ler. A moeda utilizada na eção da encomenda. Aplicado após a criação bem sucedida da ordem.           |
-| criaçãoDate         | datetime                    | No                              | Só para ler. A data em que a encomenda foi criada, em formato de data-hora. Aplicado após a criação bem sucedida da ordem.                                   |
+| criaçãoDate         | datetime                    | Não                              | Só para ler. A data em que a encomenda foi criada, em formato de data-hora. Aplicado após a criação bem sucedida da ordem.                                   |
 | status               | cadeia (de carateres)                      | No                              | Só para ler. O estado da ordem.  Os valores suportados são os nomes dos membros encontrados no [OrderStatus](order-resources.md#orderstatus).        |
-| ligações                | [Pedidos](utility-resources.md#resourcelinks)              | No                              | Os links de recursos correspondentes à Ordem. |
-| atributos           | [RecursosTributos](utility-resources.md#resourceattributes) | No                              | Os metadados atribuem correspondentes à Ordem. |
+| ligações                | [Pedidos](utility-resources.md#resourcelinks)              | Não                              | Os links de recursos correspondentes à Ordem. |
+| atributos           | [RecursosTributos](utility-resources.md#resourceattributes) | Não                              | Os metadados atribuem correspondentes à Ordem. |
 
 #### <a name="orderlineitem"></a>OrderLineItem
 
@@ -118,17 +118,18 @@ Esta tabela descreve as propriedades [orderLineItem](order-resources.md#orderlin
 
 | Nome                 | Tipo   | Necessário | Descrição                                                                                                                                                                                                                                |
 |----------------------|--------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| lineItemNumber       | int    | Yes      | Cada item de linha da coleção obtém um número de linha único, contando de 0 a 1.                                                                                                                                                 |
-| offerId              | string | Yes      | O identificador da oferta.                                                                                                                                                                                                                      |
+| lineItemNumber       | int    | Sim      | Cada item de linha da coleção obtém um número de linha único, contando de 0 a 1.                                                                                                                                                 |
+| offerId              | string | Sim      | O identificador da oferta.                                                                                                                                                                                                                      |
 | subscriptionId       | cadeia (de carateres) | No       | O identificador de assinatura.                                                                                                                                                                                                               |
 | parentSubscriptionId | cadeia (de carateres) | No       | Opcional. A identificação da subscrição dos pais numa oferta de complemento. Aplica-se apenas ao PATCH.                                                                                                                                                     |
 | nome amigável         | cadeia (de carateres) | No       | Opcional. O nome amigável para a subscrição definida pelo parceiro para ajudar a desambiguar.                                                                                                                                              |
-| quantidade             | int    | Yes      | O número de licenças para uma assinatura baseada em licença.                                                                                                                                                                                   |
+| quantidade             | int    | Sim      | O número de licenças para uma assinatura baseada em licença.                                                                                                                                                                                   |
 | partnerIdOnRecord    | cadeia (de carateres) | No       | Quando um fornecedor indireto estoende uma encomenda em nome de um revendedor indireto, povoe este campo apenas com o ID MPN do **revendedor indireto** (nunca o ID do fornecedor indireto). Isto garante uma contabilização adequada dos incentivos. |
-| provisionamentoContexto  | Cadeia de<do dicionário,> de cordas                | No       |  Informação necessária para o provisionamento de alguns itens no catálogo. A propriedade de ProvisioningVariables num SKU indica quais propriedades são necessárias para itens específicos no catálogo.                  |
-| ligações                | [OrderLineItemLinks](order-resources.md#orderlineitemlinks) | No       |  Só para ler. As ligações de recursos correspondentes ao item da linha Encomenda.  |
-| atributos           | [RecursosTributos](utility-resources.md#resourceattributes) | No       | Os metadados atribuem correspondentes ao OrderLineItem. |
-| renovaTo             | Matriz de objetos                          | No    |Uma variedade de [recursos Renovados.](order-resources.md#renewsto)                                                                            |
+| provisionamentoContexto  | Cadeia de<do dicionário,> de cordas                | Não       |  Informação necessária para o provisionamento de alguns itens no catálogo. A propriedade de ProvisioningVariables num SKU indica quais propriedades são necessárias para itens específicos no catálogo.                  |
+| ligações                | [OrderLineItemLinks](order-resources.md#orderlineitemlinks) | Não       |  Só para ler. As ligações de recursos correspondentes ao item da linha Encomenda.  |
+| atributos           | [RecursosTributos](utility-resources.md#resourceattributes) | Não       | Os metadados atribuem correspondentes ao OrderLineItem. |
+| renovaTo             | Matriz de objetos                          | Não    |Uma variedade de [recursos Renovados.](order-resources.md#renewsto)                                                                            |
+| AttestationAccepted             | bool                 | Não   |  Indica acordo para oferecer ou sku condições. Requerido apenas para ofertas ou skus onde a SkuAttestationProperties ou OfferAttestationProperties aplicam Attestation é Verdadeira.          |
 
 ##### <a name="renewsto"></a>RenovarTo
 

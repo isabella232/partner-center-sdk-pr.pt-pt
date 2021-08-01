@@ -4,12 +4,12 @@ description: Um parceiro coloca uma encomenda quando um cliente quer comprar uma
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c993317f288568dd687c3b52bf47e4520fcd18c6
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 128c9e041cacc1c15f6187c4d99690d5c5fa4183
+ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548061"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115009174"
 ---
 # <a name="order-resources"></a>Recursos de encomenda
 
@@ -24,7 +24,7 @@ Um parceiro coloca uma encomenda quando um cliente quer comprar uma subscrição
 
 Descreve a ordem de um parceiro.
 
-| Propriedade           | Tipo                                               | Description                                                 |
+| Propriedade           | Tipo                                               | Descrição                                                 |
 |--------------------|----------------------------------------------------|-------------------------------------------------------------|
 | ID                 | string                                             | Um identificador de ordem que é fornecido após a criação bem sucedida da ordem.                                   |
 | alternateId        | string                                             | Um identificador amigável para a ordem.                                                                          |
@@ -43,7 +43,7 @@ Descreve a ordem de um parceiro.
 
 Uma encomenda contém uma lista de ofertas itemizada, e cada item é representado como um OrderLineItem.
 
-| Propriedade             | Tipo                                      | Description                                                                                                                                                                                                                                |
+| Propriedade             | Tipo                                      | Descrição                                                                                                                                                                                                                                |
 |----------------------|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | lineItemNumber       | int                                       | Cada item de linha da coleção obtém um número de linha único, contando de 0 a 1.                                                                                                                                                 |
 | offerId              | string                                    | A identificação da oferta.                                                                                                                                                                                                                       |
@@ -57,6 +57,7 @@ Uma encomenda contém uma lista de ofertas itemizada, e cada item é representad
 | provisionamentoContexto  | Cadeia de<do dicionário,> de cordas            | Informação necessária para o provisionamento de alguns itens no catálogo. A propriedade de ProvisioningVariables num SKU indica quais propriedades são necessárias para itens específicos no catálogo.                                                                                                                                               |
 | ligações                | [OrderLineItemLinks](#orderlineitemlinks) | Só para ler. As ligações de recursos correspondentes ao item da linha de encomenda.                                                                                                                                                                                |
 | renovaTo             | [RenovarTo](#renewsto)                         |Detalhes da duração do prazo de renovação.                                                                           |
+| AttestationAccepted             | bool                 | Indica acordo para oferecer ou sku condições. Requerido apenas para ofertas ou skus onde a SkuAttestationProperties ou OfferAttestationProperties aplicam Attestation é Verdadeira.                                                                            |
 
 ## <a name="renewsto"></a>RenovarTo
 
@@ -70,7 +71,7 @@ Representa os detalhes da duração do prazo de renovação.
 
 Representa as ligações de recursos correspondentes à ordem.
 
-| Propriedade           | Tipo                                         | Description                                                                   |
+| Propriedade           | Tipo                                         | Descrição                                                                   |
 |--------------------|----------------------------------------------|-------------------------------------------------------------------------------|
 | provisionamentoStatus | [Ligação](utility-resources.md#link)            | Quando povoado, a ligação para recuperar o estado de provisionamento da encomenda.       |
 | self               | [Ligação](utility-resources.md#link)            | O link para recuperar o recurso da encomenda.                                      |
@@ -79,7 +80,7 @@ Representa as ligações de recursos correspondentes à ordem.
 
 Representa a subscrição completa associada à encomenda.
 
-| Propriedade           | Tipo                                         | Description                                                                          |
+| Propriedade           | Tipo                                         | Descrição                                                                          |
 |--------------------|----------------------------------------------|--------------------------------------------------------------------------------------|
 | provisionamentoStatus | [Ligação](utility-resources.md#link)            | Quando povoado, o link para recuperar o estado de [provisionamento](#orderlineitemprovisioningstatus) do item da linha.       |
 | sku                | [Ligação](utility-resources.md#link)            | O link para recuperar informações do SKU para o item do catálogo comprado.                    |
@@ -90,7 +91,7 @@ Representa a subscrição completa associada à encomenda.
 
 Um [Enum/dotnet/api/system.enum) com valores que indicam o estado da ordem.
 
-| Valor              | Posição     | Description                                     |
+| Valor              | Posição     | Descrição                                     |
 |--------------------|--------------|-------------------------------------------------|
 | desconhecido            | 0            | Inicializador Enum.                               |
 | concluído          | 1            | Indica que a encomenda está completa.          |
@@ -101,7 +102,7 @@ Um [Enum/dotnet/api/system.enum) com valores que indicam o estado da ordem.
 
 Representa o estatuto de provisionamento de um [OrderLineItem](#orderlineitem).
 
-| Propriedade                        | Tipo                                | Description                                                                                |
+| Propriedade                        | Tipo                                | Descrição                                                                                |
 |------------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------|
 | lineItemNumber                  | int                                 | O número único da linha do item da linha de encomenda. Os valores variam de 0 a 1.             |
 | status                          | string                              | O estado de provisionamento do item da linha de encomenda. Os valores incluem:</br>**Cumprido**: O cumprimento da encomenda é concluído com sucesso e o utilizador poderá utilizar as reservas</br>**Não cumprido:** Não cumprido devido ao cancelamento</br>**PrefulfillmentSSe:** O seu pedido ainda está a ser processado, o cumprimento ainda não está completo |
@@ -111,7 +112,7 @@ Representa o estatuto de provisionamento de um [OrderLineItem](#orderlineitem).
 
 Representa o estatuto de provisionamento por quantidade.
 
-| Propriedade                           | Tipo                                         | Description                                          |
+| Propriedade                           | Tipo                                         | Descrição                                          |
 |------------------------------------|----------------------------------------------|------------------------------------------------------|
 | quantidade                           | int                                          | O número de itens.                                 |
 | status                             | string                                       | O estado do número de artigos.                   |

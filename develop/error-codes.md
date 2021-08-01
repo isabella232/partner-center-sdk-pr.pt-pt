@@ -4,12 +4,12 @@ description: Descrição dos códigos de erro e respostas de sucesso das APIs do
 ms.date: 07/21/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 0cf57bc4b8b9f77f668aa7f4157e9fa0bb6a2706
-ms.sourcegitcommit: 1fce45e6cafbc4c228042523ae28aac651a73757
+ms.openlocfilehash: 6eb7db6a719c116c11daf1300cf2e706cc0a4243
+ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114483046"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115009210"
 ---
 # <a name="partner-center-rest-error-codes"></a>Partner Center REST error codes (Códigos de erro REST do Centro de Parceiros)
 
@@ -237,6 +237,7 @@ Seguem-se os códigos de erro devolvidos pelas APIs:
 | BadRequest          | 400             | 900148     | A criação de transferências falhou devido aos detalhes do parceiro de origem combinados com o parceiro de pedido                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Proibido           | 403             | 900149     | {0} o estado do programa não está ativo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Proibido           | 403             | 900150     | A função fornecida não tem o direito de realizar a operação solicitada                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| BadRequest          | 400             | 900203     | CatalogItemId: {0} requer aceitação de atestado.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | BadRequest          | 400             | 600049     | Falta informação sobre o registo da organização. Este erro é cometido se a empresa/organização do cliente estiver localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia (BY), Hungria(HU), Cazaquistão (KZ), Quirguistão(KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uzbequistão(UZ), Ucrânia(UA), mas organizaçãoRegistrationNumber não é aprovada.                                                                                                                          |
 | BadRequest          | 400             | 600050     | As informações de identificação de registo da organização são inválidas e devem ser do formato `{0}` . Este erro é lançado se a organizaçãoRegistrationNumber que é passada não for válida para o país localizado pela empresa do cliente. {0} terá o formato de expressão regular esperado do erro. Por exemplo: As informações de ID de registo da organização são inválidas e devem ser do formato `^(\\d{7}|\\d{10})$`                                                                                         |
 | BadRequest          | 400             | 600051     | O número de telefone do cliente desapareceu. Este erro é lançado se a empresa/organização do cliente estiver localizada nos seguintes países: Arménia(AM), Azerbaijão(AZ), Bielorrússia (BY), Hungria(HU), Cazaquistão (KZ), Quirguistão (KG), Moldávia (MD), Rússia(RU), Tajiquistão(TJ), Uzbequistão(UZ), Ucrânia(UA) mas billingProfile.defaultAd.phoneNumber não é aprovado.                                                                                                                                 |
