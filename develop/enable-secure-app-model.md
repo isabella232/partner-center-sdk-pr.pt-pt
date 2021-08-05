@@ -3,15 +3,15 @@ title: Ativar o modelo de aplicação seguro
 description: Proteja o centro de parceiros e as aplicações do painel de controlo.
 ms.date: 01/20/2020
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partnercenter-sdk
 author: aarzh-AaronZhang
 ms.author: v-aarzh
-ms.openlocfilehash: 19a1c39576a4f897df2d1205e3501839f6580831
-ms.sourcegitcommit: e0077b2724d128ab20cb05696e5e5b1cde8e5214
+ms.openlocfilehash: 36a81c7b235c68e49bb425b5bd0d4615882f88ef
+ms.sourcegitcommit: 07b9a11f5c615ed1e716081392032cea2124bd98
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "113481672"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "115104215"
 ---
 # <a name="enabling-the-secure-application-model-framework"></a>Enabling the Secure Application Model framework (Ativar a arquitetura do Modelo de Aplicação Segura)
 

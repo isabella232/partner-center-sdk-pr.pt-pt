@@ -4,12 +4,12 @@ description: Descrição dos códigos de erro e respostas de sucesso das APIs do
 ms.date: 07/21/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6eb7db6a719c116c11daf1300cf2e706cc0a4243
-ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
+ms.openlocfilehash: 54407cde26b800eab708e1c2ca3cbff0f1605e11
+ms.sourcegitcommit: 07b9a11f5c615ed1e716081392032cea2124bd98
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2021
-ms.locfileid: "115009210"
+ms.lasthandoff: 08/04/2021
+ms.locfileid: "115104181"
 ---
 # <a name="partner-center-rest-error-codes"></a>Partner Center REST error codes (Códigos de erro REST do Centro de Parceiros)
 
@@ -47,7 +47,7 @@ Qualquer resposta com um código de estado **4xx** ou **5xx** inclui uma mensage
 
 A seguinte tabela e amostra de código descreve o esquema de uma resposta de erro:
 
-| Nome        | Tipo   | Descrição                                                                                                                                            |
+| Nome        | Tipo   | Description                                                                                                                                            |
 |-------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | code        | string | Sempre voltava. Indica o tipo de erro que ocorreu. Sem ser nulo.                                                                                  |
 | descrição | string | Sempre voltava. Descreve o erro em detalhe e fornece informações de depurativas. Não-nulo, não vazio. O comprimento máximo é de 1024 caracteres. |
@@ -70,7 +70,7 @@ WWW-Authenticate: OAuth realm=urn:cpsvc:cpid:{some cid}
 
 Seguem-se os códigos de erro devolvidos pelas APIs:
 
-| Estado HTTP         | Código de Erro HTTP | Código de erro | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Estado HTTP         | Código de Erro HTTP | Código de erro | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------------|-----------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | OK | 200 | 400072 | Este artigo não está disponível. [Saiba mais](https://go.microsoft.com/fwlink/p/?linkid=2164140) |
 | Não ÉDopliizado      | 501             | 0          | Exceção não definida                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -215,7 +215,7 @@ Seguem-se os códigos de erro devolvidos pelas APIs:
 | BadRequest          | 400             | 900126     | Não é possível analisar o enum: {0} Para mais informações, visite {1}                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | BadRequest          | 400             | 900127     | Esta operação não é apoiada neste ambiente                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | BadRequest          | 400             | 900128     | Um plano Azure é necessário para comprar uma assinatura SaaS com um plano de faturação medido                                                                                                                                                                                                                                                                                                                                                                                                            |
-| BadRequest          | 400             | 900129     | O ID do plano Azure especificado não foi encontrado ou não existem assinaturas ativas do Azure ao abrigo do mesmo. Um Plano Azure com subscrições ativas é necessário para comprar um produto SaaS com um plano de faturação medido                                                                                                                                                                                                                                                                                      |
+| BadRequest          | 400             | 900129     | O ID do plano Azure especificado não foi encontrado ou não existem assinaturas ativas do Azure ao abrigo do mesmo. Um plano Azure com subscrição ativa é necessário para comprar um produto SaaS com um plano de faturação medido                                                                                                                                                                                                                                                                                      |
 | Proibido           | 403             | 900130     | Uma ou mais subscrições da Azure foram compradas recentemente, estas subscrições não podem ser transitadas neste momento. Por favor, tente de novo mais tarde.                                                                                                                                                                                                                                                                                                                                                         |
 | BadRequest          | 400             | 900131     | Este pedido de transferência não pode ser iniciado uma vez que o cliente tem subscrições legadoS Azure                                                                                                                                                                                                                                                                                                                                                                                                         |
 | BadRequest          | 400             | 900132     | Este pedido de transferência não pode ser iniciado uma vez que o plano Azure não está ativo, por favor, ative o plano Azure                                                                                                                                                                                                                                                                                                                                                                                          |
