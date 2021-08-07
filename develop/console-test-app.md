@@ -4,12 +4,12 @@ description: Esta aplicação de teste de consola fornece código de amostra par
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b35167104deeede50107d59fca6112c10dc7b4bf
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 53a014608303e432be251de0845857547170a5464a1952bb4fde9ff7beb8ae95
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974034"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991961"
 ---
 # <a name="console-test-app"></a>Aplicação de teste da consola
 

@@ -4,12 +4,12 @@ description: Como obter licenças de parceiros de informação agregada para inc
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 2464242fc6dc4e7464511eac5d4197630e22fac0
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: b62128a3565854add78fc8e680fdfab9af45c2c41583155c759ae179fbe7bced
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445989"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989717"
 ---
 # <a name="get-partner-licenses-deployment-information"></a>Obter informações de implementação de licenças do parceiro
 
@@ -38,7 +38,7 @@ var partnerLicensesDeploymentAnalytics = partnerOperations.Analytics.Licenses.De
 
 | Método  | URI do pedido                                                                           |
 |---------|---------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/licenses/deployment HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/licenses/deployment HTTP/1.1 |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

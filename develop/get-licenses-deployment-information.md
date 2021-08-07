@@ -4,12 +4,12 @@ description: Como obter informações de implementação para licenças Office e
 ms.date: 10/25/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9eb0dc655affb2216b11635e58e00ed6464d6792
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: c47ab4f839c102c7a7bcab0169bf13955ab49beb97c48800e882598714347e67
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445668"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990720"
 ---
 # <a name="get-licenses-deployment-information"></a>Obter informações de implementação de licenças
 
@@ -25,7 +25,7 @@ Credenciais descritas na [autenticação do Partner Center](partner-center-authe
 
 | Método  | URI do pedido                                                                                     |
 |---------|-------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/commercial/deployment/license/ HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/analytics/commercial/deployment/license/ HTTP/1.1 |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

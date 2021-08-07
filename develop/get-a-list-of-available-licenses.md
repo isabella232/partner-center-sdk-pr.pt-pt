@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 02a6fccc2cf7f3f4dc929b96ec0f17e0f4a31b06
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: bce47adb87111edb998b8dff029f39547f21d8e0a0464a96de7f0c9aa5d4a69d
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874504"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991162"
 ---
 # <a name="get-a-list-of-available-licenses"></a>Obter uma lista de licenças disponíveis
 
@@ -54,7 +54,7 @@ Por exemplo, consulte o seguinte:
 
 | Método  | URI do pedido                                                                                    |
 |---------|------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subsskus HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subsskus HTTP/1.1 |
 
 #### <a name="uri-parameter"></a>Parâmetro URI
 

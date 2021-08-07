@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 074d7ba65c7aab91687a67f50e871cee913fc2bb
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 7ad763dd6d586a58b73d0a3abb2b2fc399a0f35e7b842f5d1dd2e4c5006c3b30
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111873841"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989751"
 ---
 # <a name="get-a-self-serve-policy-by-id"></a>Obtenha uma política de autosserviço por ID
 
@@ -31,7 +31,7 @@ Obtém a política de autosserviço especificada utilizando o seu ID.
 
 | Método  | URI do pedido                                                                   |
 |---------|-------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/SelfServePolicy/{id} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/SelfServePolicy/{id} HTTP/1.1 |
 
 **Parâmetro URI**
 
@@ -41,11 +41,11 @@ Utilize os seguintes parâmetros de trajetória para obter o produto especificad
 |----------------------------|--------------|----------|-----------------------------------------------------------------|
 | **SelfServePolicy-id**     | **string**   | Yes      | Uma corda que identifica a política de autosserviço.                 |
 
-**Pedido de cabeçalhos**
+**Cabeçalhos do pedido**
 
 - Para obter mais informações, consulte [Headers](headers.md).
 
-**Corpo de pedido**
+**Corpo do pedido**
 
 Nenhum.
 

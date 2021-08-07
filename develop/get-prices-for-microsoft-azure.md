@@ -4,12 +4,12 @@ description: Como obter um Cartão Azure Rate com preços em tempo real para uma
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4f66ab19ef3723fbaa27acff941cf48683a7c25c
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 8b69e9e3d8e6e4c4e447b308c890c4c054e6a1e5221bb523a5caca041d1ea115
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548792"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989114"
 ---
 # <a name="get-prices-for-microsoft-azure"></a>Obter preços do Microsoft Azure
 
@@ -61,7 +61,7 @@ Get-PartnerAzureRateCard
 
 | Método  | URI do pedido                                                        |
 |---------|--------------------------------------------------------------------|
-| **Obter** | *{baseURL}*/v1/ratecards/azure?currency={currency}&região={região} |
+| **GET** | *{baseURL}*/v1/ratecards/azure?currency={currency}&região={região} |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

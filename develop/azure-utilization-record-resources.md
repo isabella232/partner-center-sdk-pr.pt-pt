@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 868381fcb29eb1391efcdf79154f7b998e3032e5
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: eb905dd41d5ab177a29bc1bd949c5eb865e4614e204250709d91f1a31304b267
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974306"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992284"
 ---
 # <a name="azure-utilization-record-resources"></a>Recursos recorde de utilização do Azure
 
@@ -49,7 +49,7 @@ Descreve as propriedades de um Recurso Azure.
 | Propriedade    | Tipo   | Necessário | Descrição                                                                         |
 |-------------|--------|----------|-------------------------------------------------------------------------------------|
 | ID          | string | Yes      | Identificador único do recurso Azure. Também conhecido como recursoID ou recurso GUID. |
-| name        | cadeia (de carateres) | No       | Nome amigável do recurso que está a ser consumido. Esta propriedade é opcional.            |
+| name        | string | No       | Nome amigável do recurso que está a ser consumido. Esta propriedade é opcional.            |
 | categoria    | cadeia (de carateres) | No       | A categoria do recurso consumido. Esta propriedade é opcional.                   |
 | subcategoria | cadeia (de carateres) | No       | A subcategoria do recurso consumido. Esta propriedade é opcional.               |
 | region      | cadeia (de carateres) | No       | A região do recurso consumido. Esta propriedade é opcional.                     |

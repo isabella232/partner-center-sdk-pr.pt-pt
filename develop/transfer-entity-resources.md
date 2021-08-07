@@ -4,12 +4,12 @@ description: Um parceiro cria uma transferência quando um cliente quer que a su
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 544b9682bb0e1428fad088c818a62492198897b2
-ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
+ms.openlocfilehash: 3103c0e9f8e6850336d663a5a38274ce7391e30edd433d08f44071de31b5fc5e
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111530145"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990210"
 ---
 # <a name="transferentity-resources"></a>Recursos da Entidade de Transferência
 
@@ -19,7 +19,7 @@ Um parceiro cria uma transferência quando um cliente quer que a sua subscriçã
 
 Descreve uma Entidade de Transferência.
 
-| Propriedade              | Tipo             | Description                                                                                            |
+| Propriedade              | Tipo             | Descrição                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
 | ID                    | string           | Um identificador de entidade de transferência que é fornecido após a criação bem sucedida da Entidade de Transferência.                               |
 | createdTime           | DateTime         | A data em que a Entidade de Transferência foi criada, em formato de data-hora. Aplicada após a criação bem sucedida da Entidade de Transferência.      |
@@ -39,7 +39,7 @@ Descreve uma Entidade de Transferência.
 
 Representa um item contido numa Entidade de Transferência.
 
-| Propriedade             | Tipo                             | Description                                                                                             |
+| Propriedade             | Tipo                             | Descrição                                                                                             |
 |----------------------|----------------------------------|---------------------------------------------------------------------------------------------------------|
 | ID                   | string                           | Um identificador único para um item de linha de transferência. Aplicada após a criação bem sucedida da Entidade de Transferência.   |
 | subscriptionId       | string                           | O identificador de assinatura.                                                                            |

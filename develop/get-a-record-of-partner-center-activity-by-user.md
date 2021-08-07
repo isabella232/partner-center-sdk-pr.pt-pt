@@ -4,12 +4,12 @@ description: Como recuperar um registo de operações, como realizado por um uti
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: aec933d4b681d99080619505792bde56bdd25580
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 5d965fc226d326998212ef0f027160d50f69d5e84360c8a9d09c27a76c63310d
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111873976"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991077"
 ---
 # <a name="get-a-record-of-partner-center-activity"></a>Obter um registo da atividade do Centro de Parceiros
 
@@ -81,11 +81,11 @@ while (auditRecordEnumerator.HasValue)
 
 | Método  | URI do pedido                                                                                                                                                                                    |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate} HTTP/1.1                                                                                                     |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate} HTTP/1.1                                                                                   |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filtro={"Field":"CompanyName","Value":"{searchSubstring}","Operador":"substring"} HTTP/1.1 |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filtro={"Field":"CustomerId","Value":"{customerId}","Operador":"igual"} HTTP/1.1          |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filtro={"Field":"ResourceType","Value":"{resourceType}","Operador":"igual"} HTTP/1.1      |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate} HTTP/1.1                                                                                                     |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate} HTTP/1.1                                                                                   |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filtro={"Field":"CompanyName","Value":"{searchSubstring}","Operador":"substring"} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filtro={"Field":"CustomerId","Value":"{customerId}","Operador":"igual"} HTTP/1.1          |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/auditrecords?startDate={startDate}&endDate={endDate}&filtro={"Field":"ResourceType","Value":"{resourceType}","Operador":"igual"} HTTP/1.1      |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 
@@ -111,7 +111,7 @@ A tabela a seguir descreve os pares de valor-chave necessários:
 | Chave                 | Valor                             |
 |:--------------------|:----------------------------------|
 | Campo               | O campo para filtrar. Os valores suportados podem ser encontrados na [sintaxe request](get-a-record-of-partner-center-activity-by-user.md#rest-request).                                         |
-| Valor               | O valor a filtrar. O caso do valor é ignorado. Os seguintes parâmetros de valor são suportados como mostrado na [sintaxe de pedido:](get-a-record-of-partner-center-activity-by-user.md#rest-request)<br/><br/>                                                                *searchSubstring* - Substitua-se pelo nome da empresa. Pode introduzir um sub-adupe para corresponder a parte do nome da empresa (por exemplo, `bri` `Fabrikam, Inc` corresponderá).<br/>**Exemplo:**`"Value":"bri"`<br/><br/>                                                                *customerId* - Substitua por uma cadeia formatada GUID que represente o identificador do cliente.<br/>**Exemplo:**`"Value":"0c39d6d5-c70d-4c55-bc02-f620844f3fd1"`<br/><br/>                                                                                        *resourceType* - Substitua-o pelo tipo de recurso para o qual recuperar registos de auditoria (por exemplo, Assinatura). Os tipos de recursos disponíveis são definidos no [ResourceType](/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype).<br/>**Exemplo:**`"Value":"Subscription"`                                 |
+| Valor               | O valor a filtrar. O caso do valor é ignorado. Os seguintes parâmetros de valor são suportados como mostrado na [sintaxe de pedido:](get-a-record-of-partner-center-activity-by-user.md#rest-request)<br/><br/>                                                                *searchSubstring* - Substitua-se pelo nome da empresa. Pode introduzir um sub-adupe para corresponder a parte do nome da empresa (por exemplo, `bri` `Fabrikam, Inc` corresponderá).<br/>**Exemplo:** `"Value":"bri"`<br/><br/>                                                                *customerId* - Substitua por uma cadeia formatada GUID que represente o identificador do cliente.<br/>**Exemplo:** `"Value":"0c39d6d5-c70d-4c55-bc02-f620844f3fd1"`<br/><br/>                                                                                        *resourceType* - Substitua-o pelo tipo de recurso para o qual recuperar registos de auditoria (por exemplo, Assinatura). Os tipos de recursos disponíveis são definidos no [ResourceType](/dotnet/api/microsoft.store.partnercenter.models.auditing.resourcetype).<br/>**Exemplo:** `"Value":"Subscription"`                                 |
 | Operador          | O operador a candidatar-se. Os operadores apoiados podem ser encontrados na [sintaxe request](get-a-record-of-partner-center-activity-by-user.md#rest-request).   |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido

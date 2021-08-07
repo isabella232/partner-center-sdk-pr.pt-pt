@@ -4,12 +4,12 @@ description: Pode utilizar a API AgreementStatus para verificar se um revendedor
 ms.date: 07/24/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f83acc61624a72354c390905b1250bc021dd39aa
-ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
+ms.openlocfilehash: 517c99356a4b623b5b46bc3d33f2355cd569f97326e7d9596cff551329d10da7
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111529839"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989853"
 ---
 # <a name="verify-an-indirect-resellers-microsoft-partner-agreement-signing-status"></a>Verifique o estado de assinatura do Acordo de Parceiro da Microsoft de um revendedor indireto
 
@@ -49,7 +49,7 @@ var agreementSignatureStatusByTenantId = partnerOperations.Compliance.AgreementS
 
 | Método | URI do pedido |
 | ------ | ----------- |
-| **Obter** | *[{baseURL}](partner-center-rest-urls.md)*/v1/compliance/{ProgramName}/agreementstatus?mpnId={MpnId}}&inquilinoId={TenantId} |
+| **GET** | *[{baseURL}](partner-center-rest-urls.md)*/v1/compliance/{ProgramName}/agreementstatus?mpnId={MpnId}}&inquilinoId={TenantId} |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

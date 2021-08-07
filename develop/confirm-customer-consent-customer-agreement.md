@@ -4,12 +4,12 @@ description: Saiba como confirmar a aceitação do Cliente do Microsoft Customer
 ms.date: 02/08/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 002508109191ede53cd06f25efc38286647fd67c
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 374a9670f5d4c05209e5cec07afe766bcf57f255f9266138b7aaf0e85f90f0ed
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974017"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991927"
 ---
 # <a name="confirm-customer-acceptance-of-the-microsoft-customer-agreement-using-partner-center-apis"></a>Confirme a aceitação do cliente do Acordo de Cliente da Microsoft utilizando APIs do Partner Center
 

@@ -4,12 +4,12 @@ description: Saiba como verificar um pedido de um cliente num carrinho usando AP
 ms.date: 09/17/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9ee06797602b22a1f8257c94880a2d81e2280f2e
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 3b36a6930b6a643c23d60150a1f772534b17ce758425a1d3129ca2f9d829b4ba
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974051"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991978"
 ---
 # <a name="checkout-an-order-for-a-customer-in-a-cart"></a>Check-out um pedido para um cliente em um carrinho
 
@@ -70,7 +70,7 @@ Submit-PartnerCustomerCart -CartId $cartId -CustomerId $customerId
 
 | Método   | URI do pedido                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/carts/{cart-id}/checkout HTTP/1.1     |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/carts/{cart-id}/checkout HTTP/1.1     |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

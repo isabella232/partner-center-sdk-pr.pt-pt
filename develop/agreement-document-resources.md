@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: aarzh-AaronZhang
 ms.author: v-aarzh
-ms.openlocfilehash: 1a81da4f75594f241669db831125bd437872561c
-ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
+ms.openlocfilehash: eddde1e8072c6aeeee814b52f46c7648d870b6ba63c09b20e4270b17f8386383
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112025671"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991111"
 ---
 # <a name="agreement-document-resources-supported-by-partner-center-in-the-microsoft-public-cloud"></a>Recursos documentais do acordo apoiados pelo Partner Center na nuvem pública da Microsoft
 

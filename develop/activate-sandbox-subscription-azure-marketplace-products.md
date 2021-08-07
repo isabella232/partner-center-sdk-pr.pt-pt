@@ -4,12 +4,12 @@ description: Saiba como usar as APIs do C/# e do Partner Center REST para ativar
 ms.date: 09/10/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b32c3e87462f58218771fc5da7da56ed177489cb
-ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
+ms.openlocfilehash: 1ea581695e4328f02d08486c91b7b90a78e75a50985279d78cc54ef8b35fa715
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112025705"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990499"
 ---
 # <a name="activate-a-sandbox-subscription-for-commercial-marketplace-saas-products-to-enable-billing"></a>Ativar uma subscrição de sandbox para produtos SaaS de marketplace comercial para permitir faturação
 
@@ -48,7 +48,7 @@ Utilize os seguintes passos para ativar uma subscrição de produtos SaaS de mar
 
 | Método     | URI do pedido                                                                            |
 |------------|----------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscrição-id}/ativar HTTP/1.1 |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscrição-id}/ativar HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

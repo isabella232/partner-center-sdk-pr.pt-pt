@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 513a9607b9194c36253630c91de9622325317c3a
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: ed4b8be5171493f83aefef08253c748a7bfd90dc5f2b1e325e5ceba78e36bdc2
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973762"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991808"
 ---
 # <a name="create-a-cart-with-add-ons-to-a-customer-order"></a>Criar um carrinho com suplementos a uma encomenda de clientes
 
@@ -117,7 +117,7 @@ var createdCart = partnerOperations.Customers.ById(selectedCustomerId).Carts.Cre
 
 | Método   | URI do pedido                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/carts HTTP/1.1                        |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/carts HTTP/1.1                        |
 
 #### <a name="uri-parameter"></a>Parâmetro URI
 
@@ -137,7 +137,7 @@ Esta tabela descreve as propriedades do [Carrinho](cart-resources.md) no corpo d
 
 | Propriedade              | Tipo             | Necessário        | Descrição |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
-| ID                    | cadeia (de carateres)           | No              | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                                  |
+| ID                    | string           | No              | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                                  |
 | criaçãoTimeStamp     | DateTime         | No              | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.         |
 | últimampadatimestamp de Tempos | DateTime         | No              | A data em que o carrinho foi atualizado pela última vez, em formato de data-hora. Aplicado após a criação bem sucedida do carrinho.    |
 | expiraçãoTimeStamp   | DateTime         | No              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
@@ -146,7 +146,7 @@ Esta tabela descreve as propriedades do [Carrinho](cart-resources.md) no corpo d
 
 Esta tabela descreve as propriedades [do CartLineItem](cart-resources.md#cartlineitem) no corpo de pedido.
 
-| Propriedade             | Tipo                             | Description                                                                                                                                           |
+| Propriedade             | Tipo                             | Descrição                                                                                                                                           |
 |----------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                   | string                           | Um identificador único para um item de linha de carrinho. Aplicado após a criação bem sucedida do carrinho.                                                                   |
 | catalogId            | string                           | O identificador de artigos de catálogo.                                                                                                                          |

@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: de59dfccf723c8f2411d9dadc51beb88688d5b02
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: fb2beecef8ad4821ad251ee6d532b6b280bd49e110f7e6dde3f39dfe2693d8f5
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874521"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991179"
 ---
 # <a name="get-a-list-of-available-licenses-by-license-group"></a>Obter uma lista de licenças disponíveis por grupo de licenças
 
@@ -52,9 +52,9 @@ var customerUserBothAadAndSfbSubscribedSkus = partnerOperations.Customers.ById(s
 
 | Método  | URI do pedido                                                                                                                                  |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subskus?licenseGroupIds=Group1 HTTP/1.1                        |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subskus?licenseGroupIds=Group2 HTTP/1.1                        |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subskus?licenseGroupIds=Group1 HTTP/1.1                        |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subskus?licenseGroupIds=Group2 HTTP/1.1                        |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/subscribedskus?licenseGroupIds=Group1&licenseGroupIds=Group2 HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

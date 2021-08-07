@@ -4,12 +4,12 @@ description: Como validar um endereço utilizando a API de validação de endere
 ms.date: 05/17/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 30f5cd526ab038dce400e79822d89b8086ba3799
-ms.sourcegitcommit: 41bf9dca55f4c96d382b327a75b2d2418edfc9bc
+ms.openlocfilehash: 0d3c27a763887e89e1116dbaf605db349369036c38378011dcca3fa07732a738
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "113655623"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989242"
 ---
 # <a name="validate-an-address"></a>Validar um endereço
 
@@ -82,7 +82,7 @@ private string DisplayAddress(Address address)
 
 | Método   | URI do pedido                                                                 |
 |----------|-----------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/validações/endereço HTTP/1.1 |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/validações/endereço HTTP/1.1 |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

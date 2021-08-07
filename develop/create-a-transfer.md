@@ -4,12 +4,12 @@ description: Como criar uma transferência de subscrições para um cliente.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d459a0a96912ab27f312bc73af16af2d4fdb518c
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 8414bbcfa0940742339eeba24b3b6a16ddfb6e3424670a4c064cbd995ba50851
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973711"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991587"
 ---
 # <a name="create-a-transfer"></a>Criar uma transferência
 
@@ -25,7 +25,7 @@ ms.locfileid: "111973711"
 
 | Método   | URI do pedido                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/transfers HTTP/1.1                    |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/transfers HTTP/1.1                    |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 
@@ -45,7 +45,7 @@ Esta tabela descreve as propriedades da [Entidade transferina](transfer-entity-r
 
 | Propriedade              | Tipo          | Necessário  | Descrição                                                                                |
 |-----------------------|---------------|-----------|--------------------------------------------------------------------------------------------|
-| ID                    | cadeia (de carateres)        | No    | Um identificador de entidade de transferência que é fornecido após a criação bem sucedida da Entidade de Transferência.                               |
+| ID                    | string        | No    | Um identificador de entidade de transferência que é fornecido após a criação bem sucedida da Entidade de Transferência.                               |
 | createdTime           | DateTime      | No    | A data em que a Entidade de Transferência foi criada, em formato de data-hora. Aplicada após a criação bem sucedida da Entidade de Transferência.      |
 | última Hora DaModified      | DateTime      | No    | A data em que a Entidade de Transferência foi atualizada pela última vez, em formato de data-hora. Aplicada após a criação bem sucedida da Entidade de Transferência. |
 | últimoModifiedUser      | cadeia (de carateres)        | No    | O utilizador que atualizou pela última vez a Entidade de Transferência. Aplicada após a criação bem sucedida da Entidade de Transferência.                          |
@@ -63,7 +63,7 @@ Esta tabela descreve as propriedades [transferLineItem](transfer-entity-resource
 
 |      Propriedade       |            Tipo             | Necessário | Descrição                                                                                     |
 |---------------------|-----------------------------|----------|-------------------------------------------------------------------------------------------------|
-| ID                   | cadeia (de carateres)                     | No       | Um identificador único para um item de linha de transferência. Aplicada após a criação bem sucedida da Entidade de Transferência.|
+| ID                   | string                     | No       | Um identificador único para um item de linha de transferência. Aplicada após a criação bem sucedida da Entidade de Transferência.|
 | subscriptionId       | string                     | Yes      | O identificador de assinatura.                                                                         |
 | quantidade             | int                        | No       | O número de licenças ou instâncias.                                                                 |
 | billingCycle         | Objeto                     | No       | O tipo de ciclo de faturação definido para o período atual.                                                |

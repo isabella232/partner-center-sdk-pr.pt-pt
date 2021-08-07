@@ -4,12 +4,12 @@ description: Pode utilizar um orçamento de gastos (o objeto SpendBudget) para a
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b55f59fff7e5d7865811ecab3e901848126d31f7
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 89d06fa535e0a3c86e910e3052715471c9cb53e5abaf9f2fe4b4efffb37e389d
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874878"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992896"
 ---
 # <a name="get-a-customers-usage-spending-budget"></a>Obtenha o orçamento de gastos de uso de um cliente
 
@@ -53,7 +53,7 @@ var usageBudget = partnerOperations.Customers.ById(selectedCustomerId).UsageBudg
 
 | Método    | URI do pedido                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/usagebudget HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/usagebudget HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

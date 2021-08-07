@@ -4,12 +4,12 @@ description: Pode utilizar o recurso CustomerUsageSummary para obter o uso de um
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 88c69637c94b9263ede6924cf2dd09513aa00f70
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 668176c772ac89cf87189aa00514119340b28963e3abb6ada1717e52536f436b
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874623"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992624"
 ---
 # <a name="get-a-usage-summary-for-all-of-a-customers-subscriptions"></a>Obtenha um resumo de utilização para todas as subscrições de um cliente
 
@@ -50,7 +50,7 @@ Por exemplo, consulte o seguinte:
 
 | Método  | URI do pedido                                                                                         |
 |---------|-----------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/usagesummary HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/usagesummary HTTP/1.1 |
 
 #### <a name="uri-parameter"></a>Parâmetro URI
 

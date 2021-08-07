@@ -4,12 +4,12 @@ description: Saiba como atribuir licenças a um utilizador do cliente através d
 ms.date: 10/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 88ce0f185b0b043c4a7862b7f9808fb8805d40b9
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 8263f7f274e453603305324cc7ac6e8b25820561ade3136b873c65ffa21e94fc
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974374"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989071"
 ---
 # <a name="assign-licenses-to-a-user-via-partner-center-apis"></a>Atribuir licenças a um utilizador através de APIs do Partner Center
 
@@ -114,7 +114,7 @@ var assignLicense = partnerOperations.Customers.ById(selectedCustomerId).Users.B
 
 | Método   | URI do pedido                                                                                                    |
 |----------|----------------------------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/users/{user-id}/licenseupdates HTTP/1.1 |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/users/{user-id}/licenseupdates HTTP/1.1 |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

@@ -4,12 +4,12 @@ description: Recupera uma declaração de recibo de fatura usando o ID da fatura
 ms.date: 02/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: dcac4c8f0b881409dcad3560eefb82d4bb5e877a
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: ed47eadb377a94363b46cbc5508e5377cee005007698df9077d085705c7b9d08
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111446134"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990737"
 ---
 # <a name="get-invoice-receipt-statement"></a>Obter declaração do recibo da fatura
 
@@ -43,7 +43,7 @@ var invoiceStatement = scopedPartnerOperations.Invoices.ById(selectedInvoiceId).
 
 | Método  | URI do pedido                                                                                                            |
 |---------|------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/recibos/{recibo-id}/documentos/declaração HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/recibos/{recibo-id}/documentos/declaração HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

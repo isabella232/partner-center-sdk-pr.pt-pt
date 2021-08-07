@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: e05248b16b803529258de806c25b117f3104ad2a
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: e0b3a45c8cf63334ac53e673fbe88734d3692dfca00c5fe8458695cc28c34f64
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111446331"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990516"
 ---
 # <a name="get-customers-of-an-indirect-reseller"></a>Obter clientes de um revendedor indireto
 
@@ -74,7 +74,7 @@ while (customersEnumerator.HasValue)
 
 | Método  | URI do pedido                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes?size={size}?filter={{filter} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes?size={size}?filter={{filter} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

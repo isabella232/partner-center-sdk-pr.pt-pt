@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: d23c162b5eddd0fbe91b11faafa5c4debfb7a4a8
-ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
+ms.openlocfilehash: 1f5c0ae7693a8ac2a2919c385dc1b8837a9171ed8cc422bba79bb892f9fe837a
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2021
-ms.locfileid: "115009193"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991842"
 ---
 # <a name="create-a-cart-with-a-customer-order"></a>Criar um carrinho com uma encomenda de cliente
 
@@ -203,7 +203,7 @@ New-PartnerCustomerCart -CustomerId $customerId -LineItems $lineItem
 
 | Método   | URI do pedido                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/carts HTTP/1.1                        |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/carts HTTP/1.1                        |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 
@@ -211,7 +211,7 @@ Utilize o seguinte parâmetro de percurso para identificar o cliente.
 
 | Nome            | Tipo     | Necessário | Descrição                                                            |
 |-----------------|----------|----------|------------------------------------------------------------------------|
-| **id cliente** | string   | Sim      | Um id de cliente formatado GUID que identifica o cliente.             |
+| **id cliente** | string   | Yes      | Um id de cliente formatado GUID que identifica o cliente.             |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -223,29 +223,29 @@ Esta tabela descreve as propriedades do [Carrinho](cart-resources.md) no corpo d
 
 | Propriedade              | Tipo             | Necessário        | Descrição |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
-| ID                    | cadeia (de carateres)           | No              | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                                  |
-| criaçãoTimeStamp     | DateTime         | Não              | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.         |
-| últimampadatimestamp de Tempos | DateTime         | Não              | A data em que o carrinho foi atualizado pela última vez, em formato de data-hora. Aplicado após a criação bem sucedida do carrinho.    |
-| expiraçãoTimeStamp   | DateTime         | Não              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
+| ID                    | string           | No              | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                                  |
+| criaçãoTimeStamp     | DateTime         | No              | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.         |
+| últimampadatimestamp de Tempos | DateTime         | No              | A data em que o carrinho foi atualizado pela última vez, em formato de data-hora. Aplicado após a criação bem sucedida do carrinho.    |
+| expiraçãoTimeStamp   | DateTime         | No              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
 | últimoModifiedUser      | cadeia (de carateres)           | No              | O utilizador que atualizou pela última vez o carrinho. Aplicado após a criação bem sucedida do carrinho.                             |
-| lineitems             | Matriz de objetos | Sim             | Uma matriz de recursos [CartLineItem.](cart-resources.md#cartlineitem)                                     |
+| lineitems             | Matriz de objetos | Yes             | Uma matriz de recursos [CartLineItem.](cart-resources.md#cartlineitem)                                     |
 
 Esta tabela descreve as propriedades [do CartLineItem](cart-resources.md#cartlineitem) no corpo de pedido.
 
 |      Propriedade       |            Tipo             | Necessário |                                                                                         Descrição                                                                                         |
 |---------------------|-----------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         ID          |           cadeia (de carateres)            |    No    |                                                     Um identificador único para um item de linha de carrinho. Aplicado após a criação bem sucedida do carrinho.                                                     |
-|      catalogId      |           string            |   Sim    |                                                                                O identificador de artigos de catálogo.                                                                                 |
+|         ID          |           string            |    No    |                                                     Um identificador único para um item de linha de carrinho. Aplicado após a criação bem sucedida do carrinho.                                                     |
+|      catalogId      |           string            |   Yes    |                                                                                O identificador de artigos de catálogo.                                                                                 |
 |    nome amigável     |           cadeia (de carateres)            |    No    |                                                    Opcional. O nome amigável para o item definido pelo parceiro para ajudar a desambiguar.                                                    |
-|      quantidade       |             int             |   Sim    |                                                                            O número de licenças ou instâncias.                                                                             |
+|      quantidade       |             int             |   Yes    |                                                                            O número de licenças ou instâncias.                                                                             |
 |    currencyCode     |           cadeia (de carateres)            |    No    |                                                                                     O código da moeda.                                                                                      |
-|    billingCycle     |           Objeto            |   Sim    |                                                                    O tipo de ciclo de faturação definido para o período atual.                                                                    |
-|    participantes     | Lista de pares de cordas de objeto |    Não    |                                                                Uma coleção de PartnerId on Record (MPNID) na compra.                                                                 |
-| provisionamentoContexto | Cadeia de<do dicionário,> de cordas  |    Não    | Informação necessária para o provisionamento de alguns itens no catálogo. A propriedade de ProvisioningVariables num SKU indica quais propriedades são necessárias para itens específicos no catálogo. |
+|    billingCycle     |           Objeto            |   Yes    |                                                                    O tipo de ciclo de faturação definido para o período atual.                                                                    |
+|    participantes     | Lista de pares de cordas de objeto |    No    |                                                                Uma coleção de PartnerId on Record (MPNID) na compra.                                                                 |
+| provisionamentoContexto | Cadeia de<do dicionário,> de cordas  |    No    | Informação necessária para o provisionamento de alguns itens no catálogo. A propriedade de ProvisioningVariables num SKU indica quais propriedades são necessárias para itens específicos no catálogo. |
 |     orderGroup      |           cadeia (de carateres)            |    No    |                                                                   Um grupo para indicar quais os itens que podem ser colocados juntos.                                                                   |
-|        erro        |           Objeto            |    Não    |                                                                     Aplicado após o carrinho é criado se houver um erro.                                                                      |
-|     renovaTo        | Matriz de objetos            |    Não    |                                                    Uma variedade de [recursos Renovados.](cart-resources.md#renewsto)                                                                            |
-|     AttestationAccepted        | Booleano            |    Não    |                                                   Indica acordo para oferecer ou sku condições. Requerido apenas para ofertas ou skus onde a SkuAttestationProperties ou OfferAttestationProperties aplicam Attestation é Verdadeira.                                                                             |
+|        erro        |           Objeto            |    No    |                                                                     Aplicado após o carrinho é criado se houver um erro.                                                                      |
+|     renovaTo        | Matriz de objetos            |    No    |                                                    Uma variedade de [recursos Renovados.](cart-resources.md#renewsto)                                                                            |
+|     AttestationAccepted        | Booleano            |    No    |                                                   Indica acordo para oferecer ou sku condições. Requerido apenas para ofertas ou skus onde a SkuAttestationProperties ou OfferAttestationProperties aplicam Attestation é Verdadeira.                                                                             |
 
 Esta tabela descreve as propriedades [Renovações](cart-resources.md#renewsto) No corpo de pedido.
 

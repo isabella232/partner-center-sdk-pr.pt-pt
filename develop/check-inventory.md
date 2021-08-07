@@ -4,12 +4,12 @@ description: Saiba como usar as APIs do Partner Center para verificar o inventá
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b982dbd7e5e10d454ef87a1e750546ea50eb8438
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: de931c7dd89f94b6be8fdaf0ad79c8faee268267c35a2c0f8e38d36b97842f3f
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974085"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992114"
 ---
 # <a name="check-the-inventory-of-catalog-items-using-partner-center-apis"></a>Verifique o inventário de itens de catálogo usando APIs do Partner Center
 
@@ -56,7 +56,7 @@ var inventoryResults = partnerOperations.Extensions.Product.ByCountry(countryCod
 
 | Método   | URI do pedido                                                                                                                              |
 |----------|------------------------------------------------------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/extensions/product/checkInventory?country={country-code} HTTP/1.1                        |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/extensions/product/checkInventory?country={country-code} HTTP/1.1                        |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

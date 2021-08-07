@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: e1f16c92569a02bc51c96a85ecb642fbeb76a9a7
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 5c93f36491851be11c700388201443f2e951122e4129786abc3e064091605b8d
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760254"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992607"
 ---
 # <a name="get-all-subscription-analytics-information"></a>Obter todas as informações de análise de subscrições
 
@@ -29,7 +29,7 @@ Este artigo descreve como obter todas as informações de análise de subscriç�
 
 | Método | URI do pedido |
 |--------|-------------|
-| **Obter** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/subscrições HTTP/1.1 |
+| **GET** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/subscrições HTTP/1.1 |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

@@ -1,18 +1,18 @@
 ---
-title: Criar Revendedor Indireto na Caixa de Areia
+title: Criar revendedor indireto no Sandbox
 description: Fornece informações aos fornecedores indiretos da Sandbox sobre a ativação de testes de ponta a ponta utilizando APIs.
 ms.date: 5/24/2021
 ms.author: vijvala
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 93e26792b66e447a0047bd550f4302c7fca4e87b
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 970b7ba49f6bb4b842f0f7d96e689856b0362c03949e14c9cf5a0e205573277b
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973439"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991451"
 ---
-# <a name="create-indirect-reseller-in-sandbox"></a>Criar Revendedor Indireto na Caixa de Areia
+# <a name="create-indirect-reseller-in-sandbox"></a>Criar revendedor indireto no Sandbox
 
 **Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para Microsoft Cloud Germany
 
@@ -59,7 +59,7 @@ Esta funcionalidade só está disponível na Sandbox e dá aos Fornecedores Indi
 
 | **Método** | **URI do pedido**                                                        |
 |------------|------------------------------------------------------------------------|
-| **Publicar**   | [*{baseURL}*](partner-center-rest-urls.md)/v1//sandboxIndirectReseller |
+| **PUBLICAR**   | [*{baseURL}*](partner-center-rest-urls.md)/v1//sandboxIndirectReseller |
 
 #### <a name="request-headers"></a>Cabeçalhos do pedido
 

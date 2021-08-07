@@ -4,12 +4,12 @@ description: Como obter informações de análise de subscrição agrupadas por 
 ms.date: 06/27/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8192a9863d53ec8697a7341cd38c69200614bd4a
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 66336d3e5573598eb4810853ad2704bc8d2c76680292a4f5b4a3da9bb50936b8
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548724"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989683"
 ---
 # <a name="get-subscription-analytics-grouped-by-dates-or-terms"></a>Obter análise de subscrição agrupada por datas ou termos
 
@@ -27,7 +27,7 @@ Como obter informações de análise de subscrição para os seus clientes agrup
 
 | Método | URI do pedido |
 |--------|-------------|
-| **Obter** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions?groupby={groupby_queries} |
+| **GET** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/subscriptions?groupby={groupby_queries} |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

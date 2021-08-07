@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: e8f23e90cbb5afb45e519e2c58fd0d3b9ea2de6a
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: ac7059ca6c7190f8c96482b12f999b924bb98593b5260b42d6ef2ccf64f9e5fe
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760305"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990975"
 ---
 # <a name="get-all-of-a-customers-orders"></a>Obter todas as encomendas de um cliente
 
@@ -48,7 +48,7 @@ var orders = partnerOperations.Customers.ById(selectedCustomerId).Orders.Get();
 
 | Método  | URI do pedido                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/encomendas HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/encomendas HTTP/1.1  |
 
 #### <a name="uri-parameter"></a>Parâmetro URI
 

@@ -4,12 +4,12 @@ description: Como carregar uma lista de informações sobre dispositivos para cr
 ms.date: 08/08/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 285af12034562262c99b2aa3b139e948b0fdd462
-ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
+ms.openlocfilehash: 104c240ef9a1afefd36fbb558e79ac30a3a66920b802fdc9c6b65023a038af8c
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111529737"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990380"
 ---
 # <a name="upload-a-list-of-devices-to-create-a-new-batch-for-the-specified-customer"></a>Carregar uma lista de dispositivos para criar um novo lote para o cliente especificado
 
@@ -77,7 +77,7 @@ var trackingLocation =
 
 | Método   | URI do pedido                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/deviceBatches HTTP/1.1 |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/deviceBatches HTTP/1.1 |
 
 #### <a name="uri-parameter"></a>Parâmetro URI
 

@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 840c9d1a61451763d37a19639f99b12f1deb7521
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 7a834521405110ea50e9eed6590ed514fb90927b9c5a27251c7cf992e0c2a9d4
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874351"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990346"
 ---
 # <a name="get-a-list-of-customers"></a>Obter uma lista de clientes
 
@@ -99,7 +99,7 @@ Get-PartnerCustomer
 
 | Método  | URI do pedido                                                                   |
 |---------|-------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes?size={size} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes?size={size} HTTP/1.1 |
 
 #### <a name="uri-parameter"></a>Parâmetro URI
 

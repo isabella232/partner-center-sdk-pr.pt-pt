@@ -4,12 +4,12 @@ description: Como atualizar um pedido para um cliente em um carrinho.
 ms.date: 10/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8954d4dad39f9b1a1b9a2f213e0231f01856fcd2
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: 79dcd58e5a967aad9160777805102683087becc74c655b2de990cd1bfd4ef3c8
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111446688"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990159"
 ---
 # <a name="update-a-cart"></a>Atualizar um carrinho
 
@@ -68,7 +68,7 @@ Esta tabela descreve as propriedades do [Carrinho](cart-resources.md) no corpo d
 
 | Propriedade              | Tipo             | Necessário        | Descrição                                                                                               |
 |-----------------------|------------------|-----------------|-----------------------------------------------------------------------------------------------------------|
-| ID                    | cadeia (de carateres)           | No              | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                                  |
+| ID                    | string           | No              | Um identificador de carrinhos que é fornecido após a criação bem sucedida do carrinho.                                  |
 | criaçãoTimeStamp     | DateTime         | No              | A data em que o carrinho foi criado, em formato de data- hora. Aplicado após a criação bem sucedida do carrinho.        |
 | últimampadatimestamp de Tempos | DateTime         | No              | A data em que o carrinho foi atualizado pela última vez, em formato de data-hora. Aplicado após a criação bem sucedida do carrinho.    |
 | expiraçãoTimeStamp   | DateTime         | No              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
@@ -79,7 +79,7 @@ Esta tabela descreve as propriedades [do CartLineItem](cart-resources.md#cartlin
 
 | Propriedade             | Tipo                        | Necessário     | Descrição                                                                                        |
 |----------------------|-----------------------------|--------------|----------------------------------------------------------------------------------------------------|
-| ID                   | cadeia (de carateres)                      | No           | Um identificador único para um item de linha de carrinho. Aplicado após a criação bem sucedida do carrinho.                |
+| ID                   | string                      | No           | Um identificador único para um item de linha de carrinho. Aplicado após a criação bem sucedida do carrinho.                |
 | catalogId            | string                      | Yes          | O identificador de artigos de catálogo.                                                                       |
 | nome amigável         | cadeia (de carateres)                      | No           | Opcional. O nome amigável para o item definido pelo parceiro para ajudar a desambiguar.              |
 | quantidade             | int                         | Yes          | O número de licenças ou instâncias.     |

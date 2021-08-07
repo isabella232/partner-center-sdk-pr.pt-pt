@@ -4,12 +4,12 @@ description: Saiba como utilizar a API do Partner Center REST para aceitar uma t
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 762f2106d6173e352bec11936c96bc3a9c9f89cb
-ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
+ms.openlocfilehash: c56979e407e472b6ea1a50b3acec675f0cd8831eb1d398e02e81518286b5a250
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112025756"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990567"
 ---
 # <a name="accept-a-transfer-of-subscriptions-for-a-customer-using-partner-center-rest-apis"></a>Aceitar uma transferência de subscrições para um cliente usando As APIs do Partner Center REST
 
@@ -29,7 +29,7 @@ Este artigo abrange como utilizar a API REST no Partner Center para aceitar a tr
 
 | Método   | URI do pedido                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/transfers/{transfer-id}/aceitar HTTP/1.1                    |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/transfers/{transfer-id}/aceitar HTTP/1.1                    |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

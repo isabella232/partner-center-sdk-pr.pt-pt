@@ -4,12 +4,12 @@ description: Os desenvolvedores podem criar e gerir uma subscrição de produtos
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: ae2e4b0a1ffa2e63e68864887093673e32079d9f
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 7e7a4b96f509ae99cd4933963c04b0f660d7d76410ee86c31256c62b290f122f
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973371"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991383"
 ---
 # <a name="create-a-subscription-for-commercial-marketplace-products"></a>Criar uma subscrição para produtos de mercado comercial
 

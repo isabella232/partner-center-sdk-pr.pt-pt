@@ -4,12 +4,12 @@ description: Pode utilizar o recurso SubscriptionUsageSummary para obter um resu
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 362e72e1b54a62a114564d4dc48a082bcdeea012
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: df7757807256fee8326969011f4d038c981c07362ee354ef929e592a7931a728
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874674"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992777"
 ---
 # <a name="get-usage-summary-for-customers-subscription"></a>Obtenha resumo de utilização para a subscrição do cliente
 
@@ -53,7 +53,7 @@ Por exemplo, consulte o seguinte:
 
 | Método  | URI do pedido                                                                                                                        |
 |---------|------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscrição-id}/usagesummary HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscrição-id}/usagesummary HTTP/1.1 |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

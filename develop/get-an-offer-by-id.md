@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: brentserbus
 ms.author: brserbus
-ms.openlocfilehash: f759cbdeefb4f550c41b41de40e9979e72e4ddeb
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: a57f3715a7c2738e74fc406ed834981b208fb0ab14a228db8756f5c4b1e32281
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760645"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990856"
 ---
 # <a name="get-an-offer-by-id"></a>Obter oferta por ID
 
@@ -74,7 +74,7 @@ Get-PartnerOffer -Country $countryCode -OfferId $offerId
 
 | Método  | URI do pedido                                                                                    |
 |---------|------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}?country={country-id} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}?country={country-id} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

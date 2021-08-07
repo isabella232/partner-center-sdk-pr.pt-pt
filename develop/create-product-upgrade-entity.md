@@ -4,12 +4,12 @@ description: Pode utilizar o recurso ProductUpgradeRequest para criar uma entida
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 4e346b7f5294a8847047c85115d8c80f34eaca84
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 7515bbce2914142e052349a1bbb4de20416d0931ac886fe9264cc4d3b8c1f734
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973421"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991468"
 ---
 # <a name="create-a-product-upgrade-entity-for-a-customer"></a>Criar uma entidade de atualização de produtos para um cliente
 
@@ -60,7 +60,7 @@ var upgradeId = Regex.Split(productUpgradeLocationHeader, "/")[1];
 
 | Método   | URI do pedido                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productupgrades HTTP/1.1 |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productupgrades HTTP/1.1 |
 
 #### <a name="request-headers"></a>Cabeçalhos do pedido
 

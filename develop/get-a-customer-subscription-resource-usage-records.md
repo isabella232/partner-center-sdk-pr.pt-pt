@@ -4,12 +4,12 @@ description: Pode utilizar o recurso ResourceUsageRecord para obter os registos 
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 50edb9de1d09363b242c080a76c683732f05a5de
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 81c8fcb868f7d4d50e23d69579138a6c03e9ea4ae93058d141a029c103489dcb
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874844"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992845"
 ---
 # <a name="get-usage-data-for-subscription-by-resource"></a>Obter dados de utilização da subscrição por recurso
 
@@ -55,7 +55,7 @@ Por exemplo, consulte o seguinte:
 
 | Método  | URI do pedido                                                                                                           |
 |---------|-----------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscrição-id}/resourceusagerecords HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscrição-id}/resourceusagerecords HTTP/1.1 |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

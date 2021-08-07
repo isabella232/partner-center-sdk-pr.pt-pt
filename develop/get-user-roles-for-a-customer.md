@@ -4,12 +4,12 @@ description: Obtenha uma lista de todas as funções/permissões anexadas a uma 
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8f58e8b7eae5bb47265bb1ac83fcdcd160f735d2
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: b139ee69ae5148896b1a438b061907e022175f318956667cebb91ead15b863f6
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445923"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989343"
 ---
 # <a name="get-user-roles-for-a-customer"></a>Obter funções de utilizador para um cliente
 
@@ -52,9 +52,9 @@ var userMembers = partnerOperations.Customers.ById(selectedCustomerId).Directory
 
 | Método  | URI do pedido                                                                                                           |
 |---------|-----------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/users/{user-id}/diretórios HTTP/1.1 |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/diretórios HTTP/1.1                 |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directyroles/{role-ID}/usermembers    |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/users/{user-id}/diretórios HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/diretórios HTTP/1.1                 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/directyroles/{role-ID}/usermembers    |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

@@ -4,12 +4,12 @@ description: Notas de lançamento para a versão mais recente do Partner Center 
 ms.date: 07/07/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c1532d48c00550f5eb437ed0164d6a1f7bb340dd
-ms.sourcegitcommit: 53c94db33b09c30e762b842c4275b2b531dba932
+ms.openlocfilehash: 6fc6182638cb2cc5457bdfada37b928c88e1ca786e401f7eb8d5309a0abd9310
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113522639"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991229"
 ---
 # <a name="net-sdk-release-notes"></a>.NET SDK notas de lançamento
 

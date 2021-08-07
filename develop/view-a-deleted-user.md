@@ -4,12 +4,12 @@ description: Obtém uma lista de recursos do CustomerUser eliminados para um cli
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f4fec958a9a6bb580d35de1cf3007e1db3b2b650
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: 2f7e94d5e360075378e1895e586690597baaf66237f0b93bb526baee0c5d84ae
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445311"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989819"
 ---
 # <a name="view-deleted-users-for-a-customer"></a>Ver utilizadores eliminados para um cliente
 
@@ -51,7 +51,7 @@ var customerUsers = partnerOperations.Customers.ById(selectedCustomerId).Users.Q
 
 | Método  | URI do pedido                                                                                                       |
 |---------|-------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users?size={size}&filtro={{filter} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-id}/users?size={size}&filtro={{filter} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

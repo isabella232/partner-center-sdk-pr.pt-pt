@@ -4,12 +4,12 @@ description: Saiba como utilizar as APIs do Partner Center para criar uma encome
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6253ba2289ea1f58e7d8eaa960d7d0daaa887f0d
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: ba46b151e423df27f1378ac8441a23702e47746911b4e05e370bbf0aa7b53233
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973553"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991553"
 ---
 # <a name="create-an-order-for-a-customer-of-an-indirect-reseller"></a>Criar uma encomenda para um cliente de um revendedor indireto
 
@@ -85,7 +85,7 @@ var createdOrder = partnerOperations.Customers.ById(customerId).Orders.Create(or
 
 | Método   | URI do pedido                                                                            |
 |----------|----------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/encomendas HTTP/1.1 |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/encomendas HTTP/1.1 |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 
@@ -107,7 +107,7 @@ Esta tabela descreve as propriedades da **Ordem** no organismo de pedido.
 
 | Nome | Tipo | Necessário | Descrição |
 | ---- | ---- | -------- | ----------- |
-| ID | cadeia (de carateres) | No | Um identificador de ordem que é fornecido após a criação bem sucedida da ordem. |
+| ID | string | No | Um identificador de ordem que é fornecido após a criação bem sucedida da ordem. |
 | referênciaStomerId | string | Yes | O identificador de clientes. |
 | billingCycle | cadeia (de carateres) | No | A frequência com que o parceiro é cobrado por esta ordem. O padrão é &quot; mensal e é aplicado após a &quot; criação bem sucedida da ordem. Os valores suportados são os nomes dos membros encontrados no [**BillingCycleType**](/dotnet/api/microsoft.store.partnercenter.models.offers.billingcycletype). Nota: a funcionalidade anual de faturação ainda não está disponível em geral. O apoio à faturação anual está para breve. |
 | lineitems | matriz de objetos | Yes | Uma série de recursos [**orderLineItem.**](#orderlineitem) |

@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: Kim-Davis
 ms.author: kimnich
-ms.openlocfilehash: 7deda4098ceb9eb4e1ee75056c53c754618bf3e2
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 8fded9cc9d540fa1f7f3fcb38620c26b85c1c6032ef0176e9bd043943a425f65
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760611"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992726"
 ---
 # <a name="get-all-referrals-analytics-information"></a>Obter todas as informações de análise de referências
 
@@ -29,7 +29,7 @@ Como obter todas as informações de análise de referências para os seus clien
 
 | Método  | URI do pedido |
 |---------|-------------|
-| **Obter** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/referrals HTTP/1.1 |
+| **GET** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/referrals HTTP/1.1 |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

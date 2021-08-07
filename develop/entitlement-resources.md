@@ -4,12 +4,12 @@ description: Descreve recursos relacionados com o direito.
 ms.date: 01/28/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 929004fff804675218e267bb928b432f7b1209bf
-ms.sourcegitcommit: 84a6f701190f46d2adcf6edcaeaafa32d58fbaba
+ms.openlocfilehash: 9582bb0d886078062ae14d0461accb8e0179bed2e33e9a264cc1da8b06383706
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "113510113"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989156"
 ---
 # <a name="entitlement-resources"></a>Recursos de direito
 
@@ -35,7 +35,7 @@ Este recurso representa os produtos a que o cliente tem o direito de utilizar de
 
 A referência da ordem de um direito.
 
-| Propriedade | Tipo | Description |
+| Propriedade | Tipo | Descrição |
 |----------|------|-------------|
 | ID | string | A identificação da ordem referenciada. |
 | lineItemId | string | A identificação do item da linha de encomenda referenciada. |
@@ -95,7 +95,7 @@ O artefacto associado a um direito de Instância Reservada Azure. Herda da class
 
 Representa a entidade devolvida após a invocação do elo de artefacto Azure Reserved Instance.
 
-|   Propriedade   |           Tipo           |                          Description                          |
+|   Propriedade   |           Tipo           |                          Descrição                          |
 |--------------|--------------------------|---------------------------------------------------------------|
 |     tipo     |          string          |                     O tipo de artefacto.                     |
 | reservas | `IEnumerable<Reservation>` | Indica o identificador de recurso Azure ou de pedido de reserva. |
@@ -134,7 +134,7 @@ O artefacto associado a um direito de instância virtual reservada do Azure. Her
 
 Representa a entidade devolvida após a invocação do link de artefactos Azure Reserved Virtual Machine Instance.
 
-| Propriedade                    | Tipo                                                                 | Description           |
+| Propriedade                    | Tipo                                                                 | Descrição           |
 |-----------------------------|----------------------------------------------------------------------|-----------------------|
 | tipo                        | [ArtefactoType](#artifacttype)                                        | O tipo de artefacto. |
 | virtualMachineReservações  | IEnumerable<[VirtualMachineReservation](#virtualmachinereservation)> | Indica o identificador de recurso Azure ou de pedido de reserva. |

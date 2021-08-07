@@ -4,12 +4,12 @@ description: Saiba como usar as APIs do Partner Center para obter uma lista de l
 ms.date: 05/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a51fc4493e2476107206b03be66004d030e2aa47
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 0743c8eb4059a05e4a98ddb95d95659c22ad00976e5a2f867b93d5e0296371bb
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974068"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992063"
 ---
 # <a name="get-licenses-assigned-to-a-user-within-a-customer-account"></a>Obtenha licenças atribuídas a um utilizador dentro de uma conta de cliente
 
@@ -43,7 +43,7 @@ var customerUserAssignedLicenses = partnerOperations.Customers.ById(selectedCust
 
 | Método  | URI do pedido                                                                                              |
 |---------|----------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/users/{user-id}/licenses HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/users/{user-id}/licenses HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

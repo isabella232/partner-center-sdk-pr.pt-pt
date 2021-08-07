@@ -6,12 +6,12 @@ ms.subservice: partnercenter-sdk
 ms.date: 05/29/2020
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 9a367f912669114969f8792a5afcc7020af1112e
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 395b21dde2790739d35e6047fbeaa7477cad50f4d1af9b12ad0b632742d71583
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760509"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990822"
 ---
 # <a name="get-app-and-user-api-requests"></a>Obtenha pedidos de App e API do utilizador
 
@@ -32,7 +32,7 @@ Este artigo explica como obter uma lista de todos os pedidos de utilizador de um
 
 | Método  | URI do pedido                                                        |
 |---------|--------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/partnerRequests |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/partnerRequests |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

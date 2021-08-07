@@ -4,12 +4,12 @@ description: Um parceiro coloca um pedido num carrinho quando um cliente quer co
 ms.date: 08/26/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: ebe6e628d5bb3b66186d5c4f428f69e46415892b
-ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
+ms.openlocfilehash: c9372bb982528127f8870094e26465d004b1f05c75140f0ac729375f5d5f3302
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2021
-ms.locfileid: "115009156"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992182"
 ---
 # <a name="cart-resources"></a>Recursos de carrinhos
 
@@ -68,7 +68,7 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
 
 Representa um erro que ocorre após a criação de um carrinho.
 
-| Propriedade         | Tipo                                   | Descrição                                                                                   |
+| Propriedade         | Tipo                                   | Description                                                                                   |
 |------------------|----------------------------------------|-----------------------------------------------------------------------------------------------|
 | errorCode        | [CareErrorCode](#carterrorcode) | O tipo de erro do carrinho.                                                                       |
 | erroDescrição | string                                 | A descrição do erro, incluindo quaisquer notas sobre valores suportados, valores predefinidos ou limites. |
@@ -78,7 +78,7 @@ Representa um erro que ocorre após a criação de um carrinho.
 
 Tipos de erros no carrinho.
 
-| Name                             | CódigoDoErro   | Descrição
+| Name                             | CódigoDoErro   | Description
 |----------------------------------|-------------|-----------------------------------------------------------------------------------------------|
 | MoedaSNotSupportada           | 10000   | A moeda não é suportada para um mercado dado  |
 | CatalogItemIdIsNotValid          | 10001   | O id do artigo do catálogo não é válido  |
@@ -98,7 +98,7 @@ Tipos de erros no carrinho.
 
 Representa o resultado de um check-out de carrinho.
 
-| Propriedade    | Tipo                                              | Descrição                     |
+| Propriedade    | Tipo                                              | Description                     |
 |-------------|---------------------------------------------------|---------------------------------|
 | encomendas      | Lista de objetos [da Ordem.](order-resources.md#order)         | A coleção de ordens.       |
 | orderErrors | Lista de objetos [OrderError.](#ordererror) | A recolha de erros de ordem. |
@@ -107,7 +107,7 @@ Representa o resultado de um check-out de carrinho.
 
 Representa um erro que ocorre durante um check-out do carrinho quando uma encomenda é criada.
 
-| Propriedade     | Tipo   | Descrição                                     |
+| Propriedade     | Tipo   | Description                                     |
 |--------------|--------|-------------------------------------------------|
 | orderGroupId | string | O grupo de pedidos identificação da ordem com o erro. |
 | code         | int    | O código de erro.                                 |

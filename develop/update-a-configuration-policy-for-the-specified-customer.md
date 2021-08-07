@@ -4,12 +4,12 @@ description: Como atualizar a política de configuração especificada para o cl
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 5e008f41a44f2b7cf3ddfd705505175c69bbad38
-ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
+ms.openlocfilehash: 957f2835d08e049e8b77271de5383f5ffc45d4ade6d903b2f42757dd4e707a05
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111530243"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115990142"
 ---
 # <a name="update-a-configuration-policy-for-the-specified-customer"></a>Atualizar uma política de configuração para o cliente especificado
 
@@ -74,7 +74,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 O organismo de pedido deve conter um objeto que forneça a informação da apólice.
 
-| Nome            | Tipo             | Necessário | Updatable | Description                                                                                                                                              |
+| Nome            | Tipo             | Necessário | Updatable | Descrição                                                                                                                                              |
 |-----------------|------------------|----------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID              | string           | Yes      | No        | A cadeia formatada pelo GUID que identifica a política.                                                                                                    |
 | name            | string           | Yes      | Yes       | O nome amigável da apólice.                                                                                                                         |

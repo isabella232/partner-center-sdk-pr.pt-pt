@@ -4,12 +4,12 @@ description: Pode utilizar a API de utilização Azure para obter os registos de
 ms.date: 04/19/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 7024bc65976a9b43a62b66c529d271519181ab23
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: e8d02ed047aa8edf574d728180100369dc1072f8cd501c153255e9b9382642e0
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874929"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115992930"
 ---
 # <a name="get-a-customers-utilization-records-for-azure"></a>Obter os registos de utilização de um cliente do Azure
 
@@ -136,7 +136,7 @@ Get-PartnerCustomerSubscriptionUtilization -CustomerId $customerId -Subscription
 
 | Método | URI do pedido |
 |------- | ----------- |
-| **Obter** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscrições/{subscription-id}/utilizações/azure?start \_ time={start-time}&\_ fim do tempo={end time}&granularity={granularity}&mostrar \_ detalhes={True} |
+| **GET** | *{baseURL}*/v1/customers/{customer-tenant-id}/subscrições/{subscription-id}/utilizações/azure?start \_ time={start-time}&\_ fim do tempo={end time}&granularity={granularity}&mostrar \_ detalhes={True} |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

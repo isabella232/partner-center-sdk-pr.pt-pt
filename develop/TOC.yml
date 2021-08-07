@@ -429,13 +429,13 @@
       href: sandbox-scenario.md
     - name: Testar e depurar sandbox
       href: test-and-debug.md
-    - name: Capacidades de fornecedor indireto CSP na Sandbox
+    - name: Capacidades dos fornecedores CSP indiretos no Sandbox
       href: indirect-provider-sandbox-capabilities.md
     - name: Cancelar uma encomenda a partir do sandbox de integração
       href: cancel-an-order-from-the-integration-sandbox.md
     - name: Ativar subscrição do sandbox
       href: activate-sandbox-subscription-azure-marketplace-products.md
-    - name: Criar Revendedor Indireto na Caixa de Areia
+    - name: Criar revendedor indireto no Sandbox
       href: create-indirect-reseller-in-sandbox.md
     - name: Eliminar Revendedor Indireto na Caixa de Areia
       href: delete-indirect-reseller-in-sandbox.md

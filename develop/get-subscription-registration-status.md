@@ -4,12 +4,12 @@ description: Obtenha o estado de uma subscrição que tenha sido registada para 
 ms.date: 03/19/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9e39f94c0eac402a0be3afde84279aa637868f96
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: 0e0a65abba94f1f05a98282fa67ff1d185ba4e082488d2d7887b4e9346c38967
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445957"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989666"
 ---
 # <a name="get-subscription-registration-status"></a>Obter o estado de registo da subscrição
 
@@ -44,7 +44,7 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 
 | Método    | URI do pedido                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subscrições/{subscrição-id}/registrationstatus HTTP/1.1 |
+| **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subscrições/{subscrição-id}/registrationstatus HTTP/1.1 |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

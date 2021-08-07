@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 28af1f568f755ba4c50cfac21529d6c677656c8e
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 77dcab4b26a74cec886e6b654c3abdcb97007ed8e14966873ce43fdcbc1d2809
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874266"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115989411"
 ---
 # <a name="get-a-list-of-devices-for-the-specified-batch-and-customer"></a>Obter uma lista de dispositivos para o lote e cliente especificados
 
@@ -60,7 +60,7 @@ Por exemplo, consulte o seguinte:
 
 | Método  | URI do pedido                                                                                                            |
 |---------|------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/deviceBatches/{devicebatch-id}/dispositivos HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/deviceBatches/{devicebatch-id}/dispositivos HTTP/1.1 |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

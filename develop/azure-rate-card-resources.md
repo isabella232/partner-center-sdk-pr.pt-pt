@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: e0b1bc9d764e2132315205653f46cef73b25e02f
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 52b9a9bea59690a8185a381647498de69a1476b1a4d4e8d632c5d13382776114
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111974340"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115991219"
 ---
 # <a name="azure-rate-card-resources-to-get-real-time-current-azure-prices-on-azure-offers-in-your-region"></a>Recursos de cartão de tarifa Azure para obter em tempo real, preços atuais do Azure em ofertas Azure na sua região
 
@@ -42,7 +42,7 @@ Descreve as propriedades de um recurso de cartão Azure Rate.
 
 ## <a name="azuremeter"></a>AzureMeter
 
-| Propriedade         | Tipo             | Description                                                                                   |
+| Propriedade         | Tipo             | Descrição                                                                                   |
 |------------------|------------------|-----------------------------------------------------------------------------------------------|
 | ID               | string           | O identificador único do Metro.                                                                    |
 | name             | string           | Nome amigável do medidor.                                                                   |
@@ -57,7 +57,7 @@ Descreve as propriedades de um recurso de cartão Azure Rate.
 
 ## <a name="azureofferterm"></a>AzureOfferTerm
 
-| Propriedade         | Tipo             | Description                             |
+| Propriedade         | Tipo             | Descrição                             |
 |------------------|------------------|-----------------------------------------|
 | name             | string           | Nome amigável do termo de oferta.        |
 | desconto         | número           | O desconto aplicado, se houver.           |
