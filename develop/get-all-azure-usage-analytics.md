@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 7fe987c7dc50d55b26cd72d5aead52963eb1cfbe
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 1d671c07185f92a36055af12d9de2e39adeab129bfcb2497da66d35807db270e
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760220"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994086"
 ---
 # <a name="get-all-azure-usage-analytics-information"></a>Obter todas as informações de análise de utilização do Azure
 
@@ -29,7 +29,7 @@ Como obter todas as informações de análise de uso da Azure para os seus clien
 
 | Método  | URI do pedido |
 |---------|-------------|
-| **Obter** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/usage/azure HTTP/1.1 |
+| **GET** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/usage/azure HTTP/1.1 |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

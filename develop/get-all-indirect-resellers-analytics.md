@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 4252f5fcbbcb038f382408074c8fd6ede3fd1f58
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 7a38fbf2c94bad5213a65159759ace54b9dd4595d5532ea97f2449f0ac5b41cd
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760747"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994069"
 ---
 # <a name="get-all-indirect-resellers-analytics-information"></a>Obter todas as informações de análise de revendedores indiretos
 
@@ -29,7 +29,7 @@ Como obter todas as informações de análise de revendedores indiretos para os 
 
 | Método  | URI do pedido |
 |---------|-------------|
-| **Obter** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/indirectresellers HTTP/1.1 |
+| **GET** | [*\{ baseURL \}*](partner-center-rest-urls.md)/partner/v1/analytics/indirectresellers HTTP/1.1 |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

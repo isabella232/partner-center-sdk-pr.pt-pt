@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: aa02a5a5b4a281b96e32ee6d239cc440cf8af4ec
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 61cb6659961cfeb22d3b0fe7ad5dd8533d5f72dda76fe96e64b4c64f39ece397
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760781"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994154"
 ---
 # <a name="get-activation-link-by-order-line-item"></a>Obter ligação de ativação por item de linha da encomenda
 
@@ -47,7 +47,7 @@ var partnerOperations.Customers.ById(customerId).Orders.ById(orderId).OrderLineI
 
 | Método  | URI do pedido                                                                                                                               |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customerId}/orders/{orderId}/lineitems/{lineItemNumber}/activationlinks HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customerId}/orders/{orderId}/lineitems/{lineItemNumber}/activationlinks HTTP/1.1 |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

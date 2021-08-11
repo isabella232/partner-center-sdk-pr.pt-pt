@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 9516a87a438a0a84a6f6069c1f9b2a2e97e90fba
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 3be496b694d9e0e34619807e85ed8fe63879f3561a404ebc7361dcedc4479612
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111873858"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994188"
 ---
 # <a name="get-a-sku-by-id"></a>Obter um SKU por ID
 
@@ -45,7 +45,7 @@ var sku = partnerOperations.Products.ByCountry(countryCode).ById(productId).Skus
 
 | Método  | URI do pedido                                                                                                         |
 |---------|---------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}?country={country-code} HTTP/1.1   |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}?country={country-code} HTTP/1.1   |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

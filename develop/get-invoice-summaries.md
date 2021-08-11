@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: fb6ff839c56c7b0b77a9904abf05d95ca0500b00
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 8bc01ba57571dec2b9e8fb84452e0dd2485efc06483ba2cf6964a42543334fc5
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111549115"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993253"
 ---
 # <a name="get-invoice-summaries"></a>Obter resumos de faturas
 
@@ -56,7 +56,7 @@ Para obter mais informações, consulte o seguinte código de exemplo:
 
 | Método  | URI do pedido                                                                   |
 |---------|-------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/resumos HTTP/1.1     |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/resumos HTTP/1.1     |
 
 #### <a name="uri-parameter"></a>Parâmetro URI
 

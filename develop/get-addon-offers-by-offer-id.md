@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: e3b0ab8007d3affa6912479b960f6dae3bc0bd28
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 5567a04f9b9770022fe1b824d0a473af2ca8e073072cb33014b597cc594d0654
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760339"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994103"
 ---
 # <a name="get-add-ons-for-an-offer-id"></a>Obter suplementos para um ID de oferta
 
@@ -45,7 +45,7 @@ var offerAddOns = partnerOperations.Offers.ByCountry(countryCode).ById(offerId).
 
 | Método  | URI do pedido                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}/addons?country={country-code} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers/{offer-id}/addons?country={country-code} HTTP/1.1 |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

@@ -4,12 +4,12 @@ description: Saiba mais sobre os cabeçalhos de pedido HTTP REST e cabeçalhos d
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 3f09ab5808a9751f02e451da2027f6b35877390b
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 9c9483e761465be1a60003dcd44cef46af3e99634d99d804d43d101d6b8ef700
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548469"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993827"
 ---
 # <a name="partner-center-rest-and-response-headers-supported-by-the-partner-center-rest-api"></a>Parceiro Centro REST e cabeçalhos de resposta apoiados pelo Centro Parceiro REST API 
 

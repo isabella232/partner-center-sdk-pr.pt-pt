@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: sourishdeb
 ms.author: sodeb
-ms.openlocfilehash: 7698d85df3341ae4cbff0377bd0a1bb47cd36740
-ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
+ms.openlocfilehash: 7a423b5061ecfcf6faf191c75a7e665642620cc2add171b27864e11516bec16d
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111906440"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993168"
 ---
 # <a name="get-a-collection-of-invoices"></a>Obter uma coleção de faturas
 
@@ -81,7 +81,7 @@ Para obter um exemplo ligeiramente diferente, consulte **sample**: [Console test
 
 | Método  | URI do pedido                                                                                  |
 |---------|----------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas?size={size}&offset={offset} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas?size={size}&offset={offset} HTTP/1.1  |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

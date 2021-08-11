@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: c31bc12d8d484cc8042f36aa865145600d9e6738
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: fccd566e83dab8994280fdee072c0d6f27b690d5292ed3973427088f46b30d6b
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760203"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993559"
 ---
 # <a name="get-the-availability-by-id"></a>Obtenha a disponibilidade por ID
 
@@ -75,7 +75,7 @@ Get-PartnerProductAvailability -Product $productId -SkuId $skuId -AvailabilityId
 
 | Método  | URI do pedido |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}/availabilities/{availability-id}?country={country-code} HTTP/1.1         |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus/{sku-id}/availabilities/{availability-id}?country={country-code} HTTP/1.1         |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

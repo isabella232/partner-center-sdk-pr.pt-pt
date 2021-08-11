@@ -4,12 +4,12 @@ description: Como obter uma coleção de assinaturas de um cliente.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 01ac9e5169258d0ac263d5bbe8cff567c76f98ed
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: e249628838a0726b4d9d670a7d7f71b745ef66cafaebd79d6aeb14746616bf82
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760628"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993865"
 ---
 # <a name="get-a-customers-subscriptions"></a>Obter as subscrições de um cliente
 
@@ -42,7 +42,7 @@ var customerSubscriptions = partnerOperations.Customers.ById(customerId).Subscri
 
 | Método  | URI do pedido                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

@@ -4,12 +4,12 @@ description: Registe uma subscrição existente de modo a que possa encomendar r
 ms.date: 07/27/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d26a7c77f60e6ef817cde80b9e97c88bd8bdc786
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: 4ea2183ab0c2367c7772bdf40b5988c2b7eff7c539686760332bec4addda8bbe
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111446620"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997197"
 ---
 # <a name="register-a-subscription"></a>Registar uma subscrição
 
@@ -46,7 +46,7 @@ var subscriptionRegistrationDetails = partnerOperations.Customers.ById(selectedC
 
 | Método    | URI do pedido                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
-| **Publicar**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subscrições/{subscrição-id}/registos HTTP/1.1 |
+| **PUBLICAR**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subscrições/{subscrição-id}/registos HTTP/1.1 |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

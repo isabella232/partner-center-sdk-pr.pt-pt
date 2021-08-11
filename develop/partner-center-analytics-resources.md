@@ -4,12 +4,12 @@ description: Partner Center Analytics documentação pública da API.
 ms.date: 06/11/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 03d7d252a415524c6573c1bf62b8b9c1518a1b9f
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 9028d5e2bdeb2637e35133b2c6dda739e0024ccc2838368a5276b1482af78d7f
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548095"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997843"
 ---
 # <a name="partner-center-analytics---resources"></a>Análise do Centro de Parceiros – Recursos
 
@@ -170,7 +170,7 @@ Este cenário devolve a sua informação de análise numa coleção de recursos 
 
 Representa todos os dados analíticos para uma referência.
 
-| Propriedade | Tipo | Description |
+| Propriedade | Tipo | Descrição |
 |----------|------|-------------|
 | ID | string | O identificador do cliente.  |
 | status | string | Indica se a referência levou a um cliente.  |

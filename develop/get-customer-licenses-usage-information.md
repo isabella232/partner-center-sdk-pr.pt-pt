@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: cfec12d37ce4f5f50baad57bfd45770388f8a2dc
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: 54c15d914a5b744768afd68d9afba705328483d67bf940f54123f697fb3f565d
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111446433"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993474"
 ---
 # <a name="get-customer-licenses-usage-information"></a>Obter informações de utilização de licenças do cliente
 
@@ -41,7 +41,7 @@ var customerLicensesDeploymentAnalytics = partnerOperations.Customers.ById(custo
 
 | Método  | URI do pedido                                                                                              |
 |---------|----------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/analytics/licenses/usage HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/analytics/licenses/usage HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

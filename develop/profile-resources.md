@@ -4,12 +4,12 @@ description: Descreve o comportamento dos perfis de um Fornecedor de Soluções 
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 945cfa141d1e6bde1709da882a177daaa32fba1f
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 8d4c091e186b7a3ad13aee7202b3d992af95db8db50acd40a5ade496d7087359
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547789"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997316"
 ---
 # <a name="profile-resources"></a>Recursos de perfil
 
@@ -66,7 +66,7 @@ Descreve o perfil da Microsoft Partner Network de um parceiro.
 
 Descreve o perfil de organização de um parceiro.
 
-| Propriedade       | Tipo                                                           | Description                                                            |
+| Propriedade       | Tipo                                                           | Descrição                                                            |
 |----------------|----------------------------------------------------------------|------------------------------------------------------------------------|
 | ID             | string                                                         | A identificação da organização.                                                 |
 | nome da empresa    | string                                                         | O nome da empresa ou organização.                               |

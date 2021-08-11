@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: ffcbbb9cf14b1b2a5b3becab541d3042c3cad508
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 75e54124c947224ab25f825736ad7d0dec43b44ee8fcb8eb1c01f147ab2cf515
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760679"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993593"
 ---
 # <a name="get-all-service-requests-for-a-customer"></a>Obter todos os pedidos de serviço para um cliente
 
@@ -46,7 +46,7 @@ ResourceCollection<ServiceRequest> serviceRequests = partnerOperations.Customers
 
 | Método  | URI do pedido                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/servicerequests HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/servicerequests HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

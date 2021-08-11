@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: vijvala
 ms.author: vijvala
-ms.openlocfilehash: f18518e88b9bb08d4fd248922f4ce2fefdde004f
-ms.sourcegitcommit: c7dd3f92cade7f127f88cf6d4d6df5e9a05eca41
+ms.openlocfilehash: 4eead16c5bb2b01f0fba85e30ea35fbcdae9d5a6682872eecfeeb9e47f43d324
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112025654"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993763"
 ---
 # <a name="api-throttling-guidance-for-partners-calling-partner-center-apis"></a>API acelera orientação para parceiros que chamam APIs do Partner Center 
 

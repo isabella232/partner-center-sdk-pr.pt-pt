@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 196d653c789c4b4e1327f0c6e5d2531a18681a71
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 8dd812ba1a233254c0cb952da592362e40650ee409d1f0217c85ecf4e4b2aedf
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874997"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993134"
 ---
 # <a name="get-a-customer-by-id"></a>Obter um cliente por ID
 
@@ -67,7 +67,7 @@ Get-PartnerCustomer -CustomerId '2ca7de6c-c05c-46b5-b689-32e53573a97a'
 
 | Método  | URI do pedido                                                                            |
 |---------|----------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

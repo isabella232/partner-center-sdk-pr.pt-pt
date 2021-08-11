@@ -4,12 +4,12 @@ description: Como obter uma coleção de direitos.
 ms.date: 01/28/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 7bb8d3aefb11fae0af4bce790b41598d935de57c
-ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
+ms.openlocfilehash: 9248f2ef97afe7a2cefff5759028da12dc9c3936f2e14cee18063c0428699c81
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111906417"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993678"
 ---
 # <a name="get-a-collection-of-entitlements"></a>Obter uma coleção de elegibilidade
 
@@ -44,7 +44,7 @@ Para preencher as datas de validade para os direitos a serem recuperados, ligue 
 
 | Método | URI do pedido |
 |--------|-------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{clienteId}/direitos HTTP/1.1                            |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{clienteId}/direitos HTTP/1.1                            |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

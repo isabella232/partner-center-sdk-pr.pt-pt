@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: d22be53a5be4efcda76a568578468615495febb6
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 2f5c1cbdf059c4277a8a15d500b54f7fdf2c8e211c4c4f583e71d44b8cfca571
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760594"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993950"
 ---
 # <a name="get-a-customers-billing-profile"></a>Obter o perfil de faturação de um cliente
 
@@ -46,7 +46,7 @@ var billingProfile = partnerOperations.Customers.ById(selectedCustomerId).Profil
 
 | Método  | URI do pedido                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/perfis/faturação HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/perfis/faturação HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

@@ -4,12 +4,12 @@ description: Os recursos de subscrição podem fornecer mais informações sobre
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 35d8c86ab061797109b3c152eff02f354b7ea23a
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: e48927b9d8606f8d78ed8e4b5eb12da61f7a7d27f16316bca124f896a24a6638
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547463"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997979"
 ---
 # <a name="subscription-resources"></a>Recursos de subscrição
 
@@ -24,7 +24,7 @@ Uma subscrição permite que um cliente utilize um serviço por um certo períod
 
 O recurso **de subscrição** representa o ciclo de vida de uma subscrição e inclui propriedades que definem os estados ao longo do ciclo de vida da subscrição.
 
-| Propriedade             | Tipo                                                          | Description                                                                                                                                                                   |
+| Propriedade             | Tipo                                                          | Descrição                                                                                                                                                                   |
 |----------------------|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                   | string                                                        | O identificador de assinatura.                                                                                                                                                  |
 | offerId              | string                                                        | O identificador da oferta.                                                                                                                                                         |
@@ -117,7 +117,7 @@ O recurso **RegisterSubscription** devolve um link que pode ser usado para consu
 
 O recurso **RefundOption** representa uma possível opção de reembolso para a subscrição.
 
-| Propriedade          | Tipo | Description                                                                         |
+| Propriedade          | Tipo | Descrição                                                                         |
 |-------------------|--------|-------------------------------------------------------------------------------------|
 | tipo | string | O tipo de reembolso. Os valores suportados são "Parcial" e "Completo" |
 | expira Depois      | cadeia no formato de hora de data UTC | A hora de tempo quando esta opção expirar. Se nulo, isto significa que não tem expiração. |
@@ -126,7 +126,7 @@ O recurso **RefundOption** representa uma possível opção de reembolso para a 
 
 O recurso **AzureEntitlement** representa os direitos Azure para a subscrição.
 
-| Propriedade          | Tipo | Description                                                                         |
+| Propriedade          | Tipo | Descrição                                                                         |
 |-------------------|--------|-------------------------------------------------------------------------------------|
 | ID | string | O identificador de direitos |
 | nome amigável      | string | O nome amigável do direito. |

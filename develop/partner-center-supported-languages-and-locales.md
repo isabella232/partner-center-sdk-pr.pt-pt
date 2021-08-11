@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: b3a64cc6aa4b19199490dafcf15eedde12b1330a
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 6f2e1d50fa0f2ace2e94f4dbb5681e2164241ee57a85249136a55fce20893fbb
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547806"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997588"
 ---
 # <a name="partner-center-supported-languages-and-locales"></a>Regiões e idiomas suportados pelo Centro de Parceiros
 
@@ -75,7 +75,7 @@ A tabela que se segue lista os códigos de país da Organização das Culturas e
 | Ilha do Natal                         | CX                       | CXR                      | en-PT                                 |
 | Ilhas dos Cocos (Keeling)                  | CC                       | CCK                      | en-PT                                 |
 | Colômbia                                 | CO                       | COL                      | es-CO / en-US                         |
-| Comoros                                  | km                       | COM                      | fr-FR / en-US                         |
+| Comoros                                  | KM                       | COM                      | fr-FR / en-US                         |
 | Congo                                    | CG                       | COG                      | fr-FR / en-US                         |
 | República Democrática do Congo                              | CD                       | COD                      | fr-FR / en-US                         |
 | Ilhas Cook                             | CK                       | RIO COK                      | en-PT                                 |

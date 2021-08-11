@@ -4,12 +4,12 @@ description: Como comprar um suplemento a uma subscrição existente.
 ms.date: 11/29/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d8b700a2ad41a37ca0ad745f3e7767449974b18a
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 5227b917faf663c129b1abed1d10318620667e9b47524eb8c91867fb6b453ee8
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547687"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997367"
 ---
 # <a name="purchase-an-add-on-to-a-subscription"></a>Comprar um suplemento para uma subscrição
 

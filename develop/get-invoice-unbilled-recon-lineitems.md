@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: sourishdeb
 ms.author: sodeb
-ms.openlocfilehash: 5ab7dde0d78e8ff15bb1a960b16c8c925b0478ce
-ms.sourcegitcommit: c5acfb373aa012eb3b6c17182f7ca56883502c6b
+ms.openlocfilehash: 3e461367eb41c180dd1004ab2548ca24c4b891976ef53d852bb7933ff23fae65
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112391296"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993882"
 ---
 # <a name="get-invoices-unbilled-reconciliation-line-items"></a>Obtenha os itens de linha de reconciliação não faturados da fatura
 
@@ -119,9 +119,9 @@ Pode utilizar as seguintes sintaxes para o seu pedido DE REST, dependendo da sua
 
  | Método  | URI do pedido            | Descrição do caso de utilização de sintaxe                                                                                |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Utilize esta sintaxe para devolver uma lista completa de todos os itens de linha para a fatura dada. |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | Para faturas grandes, utilize esta sintaxe com um tamanho especificado e uma compensação baseada em 0 para devolver uma lista de itens de linha paged. |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Utilize esta sintaxe para obter a próxima página de itens da linha de reconciliação utilizando `seekOperation = "Next"` . |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Utilize esta sintaxe para devolver uma lista completa de todos os itens de linha para a fatura dada. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | Para faturas grandes, utilize esta sintaxe com um tamanho especificado e uma compensação baseada em 0 para devolver uma lista de itens de linha paged. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Utilize esta sintaxe para obter a próxima página de itens da linha de reconciliação utilizando `seekOperation = "Next"` . |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

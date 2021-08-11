@@ -4,12 +4,12 @@ description: O Partner Center utiliza o Azure AD para autenticação e para util
 ms.date: 11/13/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 75d60ca983cd5b8fe53134ec7481319b153e128a
-ms.sourcegitcommit: 07b9a11f5c615ed1e716081392032cea2124bd98
+ms.openlocfilehash: 077fe108c6f9278011e5c3a8634fe221705d040708990d7aff6bb671d8bfd000
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115104198"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997758"
 ---
 # <a name="partner-center-authentication"></a>Partner Center authentication (Autenticação do Centro de Parceiros)
 

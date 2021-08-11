@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 715ec7dda252cf096b2ec2bd1745d8afee7c8310
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 56da318398dbd7fadbfa9f4a13cc3a3be1c7ab8072cfe8920192b5d04c2b9583
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547857"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997622"
 ---
 # <a name="different-partner-center-rest-url-end-points-for-use-in-certain-countries-or-regions"></a>Diferentes pontos finais DE URL do Centro Parceiro PARA utilização em determinados países ou regiões
 

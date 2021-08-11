@@ -4,12 +4,12 @@ description: A API do Partner Center REST contém muitos recursos que descrevem 
 ms.date: 03/30/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 095cf36d47b147eb6df28d8747889e218c270659
-ms.sourcegitcommit: 4275f9f67f9479ce27af6a9fda96fe86d0bc0b44
+ms.openlocfilehash: de97feed13a4d0bae9743939a03f8cb8470f5f960bec0507cd9c5adfad287120
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111529669"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115998047"
 ---
 # <a name="utility-resources"></a>Recursos de utilitário
 

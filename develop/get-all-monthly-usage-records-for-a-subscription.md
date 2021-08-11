@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: ee4bd413eec7d5a2dddbe3803df8839589ab7504
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 62cbca9fada5e6935aea647e76097eb73bb3f8f3a5f355f4b43a64e21831070b
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760288"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994001"
 ---
 # <a name="get-all-monthly-usage-records-for-a-subscription"></a>Obter todos os registos de utilização mensal de uma subscrição
 
@@ -58,7 +58,7 @@ Por exemplo, consulte o seguinte:
 
 | Método  | URI do pedido                                                                                                                                       |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{id-for-subscription}/usagerecords/resources HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{id-for-subscription}/usagerecords/resources HTTP/1.1 |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

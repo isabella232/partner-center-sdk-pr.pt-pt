@@ -4,12 +4,12 @@ description: Como obter o contacto de suporte de uma subscrição.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b6c98e5ed96f2ca4787e93504c9e094bd46ae783
-ms.sourcegitcommit: d4b0c80d81f1d5bdf3c4c03344ad639646ae6ab9
+ms.openlocfilehash: 448a60db236ddfbb090cd376bb0dc98e93d4c87342febbcc1958ccd6033fa900
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111760764"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994171"
 ---
 # <a name="get-a-subscriptions-support-contact"></a>Obter o contacto de suporte de uma subscrição
 
@@ -46,7 +46,7 @@ var supportContact = partnerOperations.Customers.ById(customerId).Subscriptions.
 
 | Método  | URI do pedido                                                                                                                    |
 |---------|--------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subscrições/{subscrição-id}/supportcontact HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subscrições/{subscrição-id}/supportcontact HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

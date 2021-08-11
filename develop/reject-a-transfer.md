@@ -4,12 +4,12 @@ description: Como rejeitar uma transferência de subscrições para um cliente.
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d09905979a89c9b2092462512c485524cd681d5f
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: f7862b017a494fcb8a503498c957ebc2cb5f4de9d3ede0aae625db53668e5477
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445379"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997214"
 ---
 # <a name="reject-a-transfer"></a>Rejeitar uma transferência
 
@@ -48,7 +48,7 @@ Esta tabela descreve as propriedades da [Entidade transferina](transfer-entity-r
 
 | Propriedade              | Tipo          | Necessário  | Descrição                                                                                |
 |-----------------------|---------------|-----------|--------------------------------------------------------------------------------------------|
-| ID                    | cadeia (de carateres)        | No    | Um identificador de entidade de transferência que é fornecido após a criação bem sucedida da Entidade de Transferência.                               |
+| ID                    | string        | No    | Um identificador de entidade de transferência que é fornecido após a criação bem sucedida da Entidade de Transferência.                               |
 | status                | cadeia (de carateres)        | No    | O estado da Entidade de Transferência. Para rejeitar uma transferência, o valor deve ser definido como "rejeitar"|
 
 ### <a name="request-example"></a>Exemplo de pedido

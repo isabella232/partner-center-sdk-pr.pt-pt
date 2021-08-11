@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: 18621fdb94f91f066b69a11f7d557410d653787e
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: f55354c09b5741b4b2f8bc26bc4ce3a2f0b801214066c35d8af2ea330b89171c
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548044"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997707"
 ---
 # <a name="partner-center-rest-api-reference-to-rest-urls-rest-headers-rest-resources-and-rest-events"></a>Referência API do Partner Center REST a URLs REST, cabeçalhos REST, recursos REST e eventos REST
 

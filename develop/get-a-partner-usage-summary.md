@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: f003980f1b521ad0ac26dbfd0d4821b9096fdd27
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: e82c2220768b211b37fad4bbc675e347a25a59217aa881f4e4db2e4d586eb354
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111873909"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115993627"
 ---
 # <a name="get-a-usage-summary-for-a-partner"></a>Obtenha um resumo de utilização para um parceiro
 
@@ -51,7 +51,7 @@ Por exemplo, consulte o seguinte:
 
 | Método  | URI do pedido                                                         |
 |---------|---------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/usagesummary HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/usagesummary HTTP/1.1 |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

@@ -4,12 +4,12 @@ description: Descreve um produto listado no catálogo de revendedores que podem 
 ms.date: 03/15/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9a7a0dd2dccc59536797c3ce533d9d8829a04f96
-ms.sourcegitcommit: 59950cf131440786779c8926be518c2dc4bc4030
+ms.openlocfilehash: bcc5b60b7d1e3e13c38bd4014a81c2af254daa1d01ef33351b680463c3fee4a6
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/31/2021
-ms.locfileid: "115009227"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115997911"
 ---
 # <a name="offer-resources"></a>Oferecer recursos
 
@@ -70,7 +70,7 @@ Descreve a categorização de uma oferta. Isto inclui o grau ou prioridade desta
 
 Contém links para aprender mais informações sobre a oferta.
 
-| Propriedade  | Tipo | Descrição                 |
+| Propriedade  | Tipo | Description                 |
 |-----------|------|-----------------------------|
 | aprender Mais | Ligação | A ligação "aprender mais".      |
 | self      | Ligação | O auto-URI                |
@@ -81,7 +81,7 @@ Contém links para aprender mais informações sobre a oferta.
 
 Um produto ou serviço que pode ter mais do que uma oferta associada a ele, cada um com diferentes conjuntos de funcionalidades e direcionados para diferentes necessidades do cliente.
 
-| Propriedade | Tipo   | Descrição              |
+| Propriedade | Tipo   | Description              |
 |----------|--------|--------------------------|
 | Id       | string | O identificador de categoria. |
 | Name     | string | O nome da categoria.       |
@@ -91,7 +91,7 @@ Um produto ou serviço que pode ter mais do que uma oferta associada a ele, cada
 
 Representa um tipo de atestado e se for necessário para compra.
 
-| Propriedade              | Tipo                                        | Descrição                                                                         |
+| Propriedade              | Tipo                                        | Description                                                                         |
 |-----------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | attestationType              | string                                      | Indica o tipo de atestado. Para Windows 365 o valor é o Windows365. Windows texto de atestado 365 é "Entendo que cada pessoa que usa Windows 365 Negócios com Windows Hybrid Benefit também precisa de ter uma cópia válida de Windows 10/11 Pro instalada no seu dispositivo de trabalho primário." |
 | impor Attestation           | boolean                                      | Indica se o atestado é necessário para compra.           |
