@@ -4,12 +4,12 @@ description: Descreve recursos relacionados com serviços adquiridos por um clie
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: dbddc1973dd9a904cedd549c1772cd4c74c69a60
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 8c1e3a05be89eee12d708a3a37e008ec7fa42358eaec7e1f020aaa47e44b452c
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547415"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996143"
 ---
 # <a name="service-costs-resources"></a>Recursos de custos de serviço
 

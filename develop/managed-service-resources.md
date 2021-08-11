@@ -4,12 +4,12 @@ description: Os serviços geridos são serviços aos quais um parceiro delegou p
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 582efe75fd18a9174dd5dc173c290bee25443ee9
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 066c9f2a0d5ca8d03553508c2b471ca49735406a5a0566bf48b0773385c129f7
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548129"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994392"
 ---
 # <a name="managed-service-resources"></a>Recursos de serviço geridos
 

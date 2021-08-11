@@ -4,12 +4,12 @@ description: Vários recursos relacionados com a fatura estão disponíveis atra
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b07b7ad14c136eac988eeb12391c24a6cf996b39
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: d2e801dc3b082411e140b88cd495807b1381ef915e8f5f06803d64ca2cca1c6b
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548434"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996551"
 ---
 # <a name="invoice-resources"></a>Recursos de fatura
 
@@ -19,7 +19,7 @@ Os seguintes recursos relacionados com a fatura estão disponíveis através das
 
 ## <a name="invoice"></a>Fatura
 
-| Propriedade | Tipo | Description |
+| Propriedade | Tipo | Descrição |
 | -------- | ---- | ----------- |
 | ID | string | O identificador de fatura. |
 | faturaDate | cadeia no formato de data-hora UTC | A data em que a fatura foi gerada. |

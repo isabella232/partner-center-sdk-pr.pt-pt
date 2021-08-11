@@ -4,12 +4,12 @@ description: Obtenha o formato de endereço esperado com base no código iso par
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d5233d059ea6e71c28df36b2242659c28c5dd857
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: c1e5c3b0b4a8f57a3731392bfa13d9da22c66699d5dedd4da48aa7f93b5700fd
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111549047"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995888"
 ---
 # <a name="get-address-formatting-rules-by-market"></a>Obter regras de formatação de endereços por mercado
 
@@ -28,7 +28,7 @@ Obtenha o formato de endereço esperado com base no código iso para o mercado.
 
 | Método  | URI do pedido                                                                                 |
 |---------|---------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/countryvalidationrules/{isocode-id} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/countryvalidationrules/{isocode-id} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

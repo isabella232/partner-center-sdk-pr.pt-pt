@@ -4,12 +4,12 @@ description: Como obter o estado de provisão de subscrição para uma subscriç
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f8797fa494cd77f11a1179d6406ca021f0d7788c
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: b36776279171186da7d81f9c1ff3d0828206fc2749ab8108f882ad7460575d60
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548707"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995565"
 ---
 # <a name="get-subscription-provisioning-status"></a>Obter o estado de aprovisionamento da subscrição
 
@@ -46,7 +46,7 @@ var provisioningStatus = partnerOperations.Customers.ById(customerId).Subscripti
 
 | Método  | URI do pedido                                                                                                                        |
 |---------|------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subscrições/{subscrição-id}/provisioningstatus HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/subscrições/{subscrição-id}/provisioningstatus HTTP/1.1 |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 

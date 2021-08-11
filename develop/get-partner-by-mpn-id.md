@@ -4,12 +4,12 @@ description: Saiba como verificar o identificador da Microsoft Partner Network (
 ms.date: 09/29/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6bd51850c7bc5a099a34f9c028a58e247c2600a3
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 223f0da94f5a1c12b4f6de32184296b88ab5f443a69feac89152acc1aa9ccbd6
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548826"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995922"
 ---
 # <a name="verify-a-partner-mpn-id-via-c-or-the-partner-center-rest-api"></a>Verifique um parceiro MPN ID via C \# ou o Partner Center REST API
 
@@ -17,7 +17,7 @@ ms.locfileid: "111548826"
 
 Como verificar o identificador da Microsoft Partner Network (MPN ID) de um parceiro.
 
-A técnica mostrada aqui verifica o identificador da Microsoft Partner Network do parceiro, solicitando o perfil MPN do parceiro do centro parceiro. O identificador é considerado válido se o pedido for bem sucedido.
+A técnica aqui mostrada verifica o identificador da Microsoft Partner Network do parceiro, solicitando o perfil DE MPN do parceiro ao Partner Center. O identificador é considerado válido se o pedido for bem sucedido.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -44,7 +44,7 @@ var partnerProfile = partnerOperations.Profiles.MpnProfile.Get(partnerMpnId);
 
 | Método  | URI do pedido                                                                         |
 |---------|-------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/mpn?mpnId={mpn-id} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/profiles/mpn?mpnId={mpn-id} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

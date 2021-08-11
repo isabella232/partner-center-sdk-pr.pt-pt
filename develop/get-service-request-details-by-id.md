@@ -4,12 +4,12 @@ description: Como recuperar os detalhes de um pedido de atendimento ao cliente e
 ms.date: 02/06/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 66488cf9592d630cb1f0237d379e8df5ead6a3a8
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 1ad22e5940781d514b00a6a25ca772fab338dc5584df09ac5a29fb2559e9538a
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548775"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995701"
 ---
 # <a name="get-service-request-details-by-id"></a>Obter detalhes do pedido de serviço por ID
 
@@ -46,7 +46,7 @@ Console.WriteLine(string.Format("The primary contact for the service request {0}
 
 | Método    | URI do pedido                                                                                 |
 |-----------|---------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{servicerequest-id} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/servicerequests/{servicerequest-id} HTTP/1.1  |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

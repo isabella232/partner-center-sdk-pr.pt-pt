@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: dineshvu
 ms.author: dineshvu
-ms.openlocfilehash: 7d76de33c9a0d28e9d3fb0b0821cbd37ad67e7af
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 10798ae0bfae8c1a4e38777096861427992b8aee3799ee2dd9154c6f0e0c0799
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973150"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995174"
 ---
 # <a name="customer-resources"></a>Recursos do cliente
 
@@ -24,7 +24,7 @@ O recurso **Cliente** representa um cliente ou revendedor. Em geral, um recurso 
 >[!NOTE]
 >O recurso **Cliente** tem um limite de taxa de 500 pedidos por minuto por identificador de inquilino.
 
-| Propriedade              | Tipo                                                             | Description                                                                                                                                  |
+| Propriedade              | Tipo                                                             | Descrição                                                                                                                                  |
 |-----------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                    | string                                                           | A identificação do cliente.                                                                                                                             |
 | commerceId            | string                                                           | A identificação do comércio.                                                                                                                             |
@@ -56,7 +56,7 @@ O **recurso CustomerCompanyProfile** é informação adicional sobre a empresa o
 
 O **recurso CustomerBillingProfile** é informação adicional utilizada para faturar o cliente.
 
-| Propriedade       | Tipo                                                           | Description                                                                                                                                            |
+| Propriedade       | Tipo                                                           | Descrição                                                                                                                                            |
 |----------------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID             | string                                                         | O identificador de perfil.                                                                                                                                |
 | nomePróprio      | string                                                         | O primeiro nome do contacto de faturação na empresa do cliente. Esta é a pessoa a quem as faturas e outras comunicações de faturação serão direcionadas. |

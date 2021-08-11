@@ -4,12 +4,12 @@ description: Recursos para clientes com subscrições baseadas em uso e orçamen
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: eae516e2f759dfc2e8f80e946a835d70760c5c9e
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 066fd84f872365b419796f00125c097c685f4579731aaacd67e826bf671bd789
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973048"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995157"
 ---
 # <a name="customer-usage-resources"></a>Recursos de utilização do cliente
 

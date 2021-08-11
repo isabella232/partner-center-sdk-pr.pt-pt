@@ -4,12 +4,12 @@ description: Como recuperar a política de configuração especificada para o cl
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f9a8cb435c63d8d02c3b4633abc8723353116f37
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 27e01b7c7ec0920d1e6123379fb318827f5389a9c6b297d630ac60dce6933faf
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111547500"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996891"
 ---
 # <a name="retrieve-a-customers-configuration-policy"></a>Obter a política de configuração de um cliente
 
@@ -46,7 +46,7 @@ ConfigurationPolicy retrievedConfigurationPolicy =
 
 | Método  | URI do pedido                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/policies/{policy-id} HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/policies/{policy-id} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

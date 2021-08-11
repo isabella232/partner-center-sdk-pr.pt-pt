@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: khpavan
 ms.author: sakhanda
-ms.openlocfilehash: 34a20611c7d92042b5432c5ffb3ba4702d77e0c2
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: a72a9f2f3909ac4b3b74754b58a8d8d4745fbb2cadd101ad18cf487b1b02267a
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111446263"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996029"
 ---
 # <a name="check-a-customers-eligibility-for-upgrading-to-an-azure-plan"></a>Verifique a elegibilidade de um cliente para a atualização de um plano Azure
 
@@ -62,7 +62,7 @@ if (productUpgradeEligibility.IsEligibile)
 
 | Método   | URI do pedido                                                                                   |
 |----------|-----------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/elegibilidade HTTP/1.1 |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/elegibilidade HTTP/1.1 |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

@@ -4,12 +4,12 @@ description: Recupera o saldo da conta corrente do parceiro. Um resumo do saldo 
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a04ab63482ec9d06e2fe47d2b6ce1bc6a5fd5f27
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: 796523691481152613ba13f5025bdc8cdedacfc839815239b43fcfcb57fdbb3a
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548503"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996500"
 ---
 # <a name="get-the-partners-current-account-balance"></a>Obter o saldo da conta atual do parceiro
 
@@ -41,7 +41,7 @@ Console.Out.WriteLine("Current Account Balance:  {0:C}", invoiceSummary.BalanceA
 
 | Método  | URI do pedido                                                              |
 |---------|--------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/resumo HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/resumo HTTP/1.1  |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

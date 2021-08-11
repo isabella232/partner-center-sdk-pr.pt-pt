@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: aarzh-AaronZhang
 ms.author: v-aarzh
-ms.openlocfilehash: 36a81c7b235c68e49bb425b5bd0d4615882f88ef
-ms.sourcegitcommit: 07b9a11f5c615ed1e716081392032cea2124bd98
+ms.openlocfilehash: 9974237f7d4234b782a5b17a65fd52b9024315f848b721c73f4e1d59b69b2930
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115104215"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994800"
 ---
 # <a name="enabling-the-secure-application-model-framework"></a>Enabling the Secure Application Model framework (Ativar a arquitetura do Modelo de Aplicação Segura)
 

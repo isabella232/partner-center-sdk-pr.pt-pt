@@ -4,12 +4,12 @@ description: Crie um mercado online para vender ofertas de soluções de nuvem (
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 8550492c7a4201a955c7b051b453103628612f3e
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 69fe30b61d7260e4c3365d2486cec5ffadd2a3fbb39bb50158a44d8716ff2d71
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973354"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995225"
 ---
 # <a name="csp-customer-storefront-builder-quick-start-guide"></a>Guia de Início Rápido da Loja Web para Clientes CSP
 

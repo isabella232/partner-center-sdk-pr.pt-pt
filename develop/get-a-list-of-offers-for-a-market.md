@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 6f4fd821879545db4e781fe3202c8ee11f167615
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 4b417c310230e1ca6caa490166aa5dad48f858a71455496359e3b562ad2629a4
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874249"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996075"
 ---
 # <a name="get-a-list-of-offers-for-a-market"></a>Obter uma lista de ofertas para um mercado
 
@@ -41,7 +41,7 @@ ResourceCollection<Offer> offers = partnerOperations.Offers.ByCountry("US").Get(
 
 | Método  | URI do pedido                                                                          |
 |---------|--------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers?country={country-id} HTTP/1.1   |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/offers?country={country-id} HTTP/1.1   |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

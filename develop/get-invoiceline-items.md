@@ -4,12 +4,12 @@ description: Pode obter uma recolha de dados de linha de fatura (item de linha d
 ms.date: 01/27/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 944dddef64ec980d92c292a7f5b9f5eb4e7cecb6
-ms.sourcegitcommit: 15c6cfe72284cf5d4ea3535120e83e473c33f5ec
+ms.openlocfilehash: 10e43127e5f44f76ed9be8b9aa638e982259602ad57709ecee55cb62d8d7d59e
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "112443177"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996040"
 ---
 # <a name="get-invoice-line-items"></a>Obter itens de linha da fatura
 
@@ -112,7 +112,7 @@ Aplica-se a seguinte sintaxe quando o fornecedor de faturação é **Office**.
 
 | Método  | URI do pedido                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=office&invoicelineitemtype=billinglineitems&size={size}&offset={offset} HTTP/1.1                               |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=office&invoicelineitemtype=billinglineitems&size={size}&offset={offset} HTTP/1.1                               |
 
 #### <a name="microsoft-azure-ms-azr-0145p-subscription"></a>Microsoft Azure (subscrição MS-AZR-0145P)
 
@@ -120,8 +120,8 @@ Aplicam-se as seguintes sintaxes quando o fornecedor de faturação tem uma subs
 
 | Método  | URI do pedido                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=azure&faturalineitemtype=billinglineitems&size={size}&offset={offset} HTTP/1.1  |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=azure&invoicelineitemtype=usagelineitems&size={size}&offset={offset} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=azure&faturalineitemtype=billinglineitems&size={size}&offset={offset} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=azure&invoicelineitemtype=usagelineitems&size={size}&offset={offset} HTTP/1.1  |
 
 ##### <a name="onetime"></a>OneTime
 
@@ -129,8 +129,8 @@ Aplicam-se as seguintes sintaxes quando o fornecedor de faturação é **o OneTi
 
 | Método  | URI do pedido                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&size={size} HTTP/1.1  |
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems/onetime/billinglineitems&size={size}?seekOperation=Next                           |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&size={size} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems/onetime/billinglineitems&size={size}?seekOperation=Next                           |
 
 #### <a name="previous-syntaxes"></a>Sintaxes anteriores
 

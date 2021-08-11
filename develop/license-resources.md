@@ -4,12 +4,12 @@ description: Descreve recursos relacionados com licenças.
 ms.date: 12/15/2017
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 27d44f89ac89f365e77e073c425ca45ab3638c68
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: e6d91110dcec8a873e77cb02bdb77f6335e27989201ea68eebf904c5159964c5
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548401"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996585"
 ---
 # <a name="license-resources"></a>Recursos de licença
 
@@ -64,7 +64,7 @@ Contém informações de aviso que ocorreram durante uma operação de atualiza�
 
 Descreve detalhes do produto.
 
-| Propriedade       | Tipo             | Description                                         |
+| Propriedade       | Tipo             | Descrição                                         |
 |----------------|------------------|-----------------------------------------------------|
 | ID             | string           | O identificador de produto.                             |
 | name           | string           | O identificador principal do utilizador.                      |
@@ -76,7 +76,7 @@ Descreve detalhes do produto.
 
 Identifica um serviço implantável dentro de um produto SKU. Um produto pode ter muitos planos de serviço.
 
-| Propriedade         | Tipo   | Description                                                                                                       |
+| Propriedade         | Tipo   | Descrição                                                                                                       |
 |------------------|--------|-------------------------------------------------------------------------------------------------------------------|
 | ID               | string | O identificador do plano de serviço.                                                                                      |
 | displayName      | string | O nome de exibição localizado para o plano de serviço.                                                                  |

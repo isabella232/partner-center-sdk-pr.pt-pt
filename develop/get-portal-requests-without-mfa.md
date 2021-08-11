@@ -4,12 +4,12 @@ description: Obtenha uma lista de pedidos de utilizador sem autenticação multi
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.date: 05/29/2020
-ms.openlocfilehash: 41627751d3402d7712d96c15c4281a25ed9a44a7
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: d7d901bc78f889593612f64d28e465737f764ba711e49419444de6971c56d404
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445583"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995786"
 ---
 # <a name="get-portal-requests-without-mfa"></a>Obter pedidos do portal sem MFA
 
@@ -25,7 +25,7 @@ Este artigo explica como obter uma lista dos pedidos mais recentes dos utilizado
 
 | Método  | URI do pedido                                                  |
 |---------|--------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/nonMfaCompliantPartnerPrincipals |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/nonMfaCompliantPartnerPrincipals |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 

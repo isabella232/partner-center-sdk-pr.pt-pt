@@ -4,12 +4,12 @@ description: Recursos relacionados com a implementação do dispositivo Partner 
 ms.date: 06/11/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: c85f0bd6a633ac18aa8e56e5a89bfc5c8f0398cc
-ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
+ms.openlocfilehash: e8e2429fea88a89873955d9af9253492934e40e5be1a1b7600446485d13f5bd7
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111906514"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994851"
 ---
 # <a name="device-deployment-resources"></a>Recursos de implantação de dispositivos
 
@@ -21,7 +21,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **ConfiguraçãoApolicia** fornece informações sobre uma política de configuração.
 
-| Propriedade             | Tipo                                                           | Description                                                        |
+| Propriedade             | Tipo                                                           | Descrição                                                        |
 |----------------------|----------------------------------------------|--------------------------------------------------------------------------------------|
 | ID                   | string                                       | Uma cadeia formatada por GUID que identifica a política.                                  |
 | name                 | string                                       | O nome amigável para a apólice.                                                    |
@@ -37,7 +37,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **O dispositivo** fornece informações sobre um dispositivo.
 
-| Propriedade            | Tipo                                                           | Description                                                              |
+| Propriedade            | Tipo                                                           | Descrição                                                              |
 |---------------------|----------------------------------------------------------------|--------------------------------------------------------------------------|
 | ID                  | string                                                         | Uma corda formatada pelo GUID que identifica o dispositivo.                      |
 | serialNumber        | string                                                         | O número de série está exclusivamente associado ao dispositivo.                   |
@@ -81,7 +81,7 @@ Os seguintes recursos estão relacionados com a implantação do dispositivo.
 
 **O DeviceBatch** representa uma coleção de dispositivos.
 
-| Propriedade     | Tipo                                                           | Description                                                           |
+| Propriedade     | Tipo                                                           | Descrição                                                           |
 |--------------|----------------------------------------------------------------|-----------------------------------------------------------------------|
 | ID           | string                                                         | Uma cadeia formatada guid que está associada ao lote de dispositivos. |
 | criado Por    | string                                                         | O nome do inquilino que criou a coleção.                   |

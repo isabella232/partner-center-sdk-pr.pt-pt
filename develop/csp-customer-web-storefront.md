@@ -4,12 +4,12 @@ description: Este código do site da amostra mostra uma loja online funcionando 
 ms.date: 05/29/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d68f17d707731f426cb980a566b6478790d3507c
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 07020c365db2ad578e7ff75602519d06eabb2a3bebf0913899fcd8b5345a0365
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973337"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995208"
 ---
 # <a name="csp-customer-web-storefront"></a>Loja Web para clientes CSP
 

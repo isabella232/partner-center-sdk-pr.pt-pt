@@ -4,12 +4,12 @@ description: Pode utilizar o recurso ProductUpgradeRequest para determinar o est
 ms.date: 11/01/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 03d925dd0fae987226ad1f8e71fad380ba144b83
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: e33ac61d77fc4e14ff6f7801e2c15a968cf9f1a667087df612c0f76b216f891a
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445566"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995752"
 ---
 # <a name="get-the-product-upgrade-status-for-a-customer"></a>Obtenha o estado de atualização do produto para um cliente
 
@@ -65,7 +65,7 @@ if (productUpgradeEligibility.IsEligibile)
 
 | Método   | URI do pedido |
 |----------|-----------------------------------------------------------------------------------------------|
-| **Publicar** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/{upgrade-id}/status HTTP/1.1 |
+| **PUBLICAR** | [*{baseURL}*](partner-center-rest-urls.md)/v1/productUpgrades/{upgrade-id}/status HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

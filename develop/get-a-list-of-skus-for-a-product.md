@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 27a2391a22a9439461fb53764b87c1cafa68b875
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: 1f15ecaa7d84f4c68c6221e459d9977a79cffd9fa19d32ccbd7e6bec6444a93c
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111873892"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995446"
 ---
 # <a name="get-a-list-of-skus-for-a-product-by-country"></a>Obter uma lista de SKUs para um produto (por país)
 
@@ -114,7 +114,7 @@ Get-PartnerProductSku -ProductId $productId -Segment $targetSegment
 
 | Método  | URI do pedido                                                                                                                              |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus?country-code}&targetSegment={target-segment} HTTP/1.1  |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/products/{product-id}/skus?country-code}&targetSegment={target-segment} HTTP/1.1  |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

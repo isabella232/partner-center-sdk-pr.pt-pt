@@ -4,12 +4,12 @@ description: Saiba mais sobre o tipo de operações de auditoria do Partner Cent
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 019bebe40c43f6ee1c2ac7da381a86ca190702d4
-ms.sourcegitcommit: d1104d5c27f8fb3908a87532f80c432f0147ef5d
+ms.openlocfilehash: 0e8010bde75bee4c4954034d8f61f19b076d96349e4a05807e272ca88efbc2fa
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "97769992"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994273"
 ---
 # <a name="audit-operations-available-via-partner-center-api-that-show-a-record-of-partner-center-activity"></a>Operações de auditoria disponíveis através da Partner Center API que mostram um registo da atividade do Partner Center
 

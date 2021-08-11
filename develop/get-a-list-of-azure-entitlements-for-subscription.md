@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 280da155122ed9efd99838d7819fb34f8f7ec52c
-ms.sourcegitcommit: b1d6fd0ca93d8a3e30e970844d3164454415f553
+ms.openlocfilehash: d56a66669c32748d8695042582324e4711c9234549b1e6ab3f6b0b7b78294509
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111874368"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115995548"
 ---
 # <a name="get-a-list-of-azure-entitlements-for-a-subscription"></a>Obter uma lista de elegibilidade do Azure para uma subscrição
 
@@ -31,7 +31,7 @@ Você pode usar o [recurso de direito Azure](subscription-resources.md#azureenti
 
 | Método  | URI do pedido                                                                                                                   |
 |---------|---------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscrições/{subscription-id}/azureentitledments HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscrições/{subscription-id}/azureentitledments HTTP/1.1 |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 

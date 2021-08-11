@@ -4,12 +4,12 @@ description: Como obter detalhes de uma transferência de subscrições para um 
 ms.date: 04/10/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 1347f95debec458b8c70c5e803cef6203ad34818
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: 8c5f77594e016968d358f1c3cc6e7c9c2a813f739f8661e563b7eec9fb97cb7a
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445940"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996228"
 ---
 # <a name="get-transfer-details-by-id"></a>Obtenha detalhes de transferência por ID
 
@@ -27,7 +27,7 @@ ms.locfileid: "111445940"
 
 | Método   | URI do pedido                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/transfers/{transfer-id} HTTP/1.1                    |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{customer-id}/transfers/{transfer-id} HTTP/1.1                    |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 

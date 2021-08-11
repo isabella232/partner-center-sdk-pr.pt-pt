@@ -4,12 +4,12 @@ description: Como fazer uma compra única de software e produtos de reserva, tai
 ms.date: 10/09/2018
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 1ca2d5b7ad6ba1196d74a8cdb748ab808192d569
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: baf0b5d4aaa8957874ab019359aca2662a76194387e0cd06999b0bb329076c80
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548384"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994443"
 ---
 # <a name="make-a-one-time-purchase"></a>Fazer uma compra única
 

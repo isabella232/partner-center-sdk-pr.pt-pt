@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: cychua
 ms.author: cychua
-ms.openlocfilehash: fccb9e3d4a837f3e8043f8c7ae1e3911d819afd7
-ms.sourcegitcommit: d20e7d572fee09a83a4b23a92da7ff09cfebe75a
+ms.openlocfilehash: 7757cd6a92c168e4209d2d3ac49746e4a0907021d260a7b49603a3706e8cfa5c
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111906526"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994817"
 ---
 # <a name="get-a-download-link-for-the-microsoft-customer-agreement-template"></a>Obtenha um link de descarregamento para o modelo do Contrato de Cliente da Microsoft
 
@@ -211,7 +211,7 @@ MS-CorrelationId: ab993325-1605-4cf4-bac4-fb584142a31b
 | Ilha do Natal | CX | en-PT |
 | Ilhas dos Cocos (Keeling) | CC | en-PT |
 | Colômbia | CO | en-EUA, es-ES |
-| Comoros | km | en-PT |
+| Comoros | KM | en-PT |
 | República Democrática do Congo | CD | en-PT |
 | Congo | CG | en-PT |
 | Ilhas Cook | CK | en-PT |

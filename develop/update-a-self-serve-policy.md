@@ -4,12 +4,12 @@ description: Como atualizar uma política de autosserviço.
 ms.date: 04/13/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: d94382e73fd2a79751fe5f8f8414df2befde584f
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: 8e1330de6655e7a4dbe2d7432ece208b4600f3659266e20199e729400a917771
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445260"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996636"
 ---
 # <a name="update-a-selfservepolicy"></a>Atualizar uma AutoServePolicy
 
@@ -63,7 +63,7 @@ Esta tabela descreve as propriedades necessárias no corpo de pedido.
 
 Esta tabela descreve os campos mínimos exigidos do recurso [SelfServePolicy](self-serve-policy-resources.md#selfservepolicy) necessário para criar uma nova política de autosserviço.
 
-| Propriedade              | Tipo             | Description                                                                                            |
+| Propriedade              | Tipo             | Descrição                                                                                            |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------|
 | ID                    | string           | Um identificador de política de autosserviço que é fornecido após a criação bem sucedida da política de autosserviço.     |
 | SelfServeEntity       | SelfServeEntity  | A entidade self-serve a quem está a ser concedido acesso.                                                     |

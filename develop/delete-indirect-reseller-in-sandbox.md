@@ -5,12 +5,12 @@ ms.date: 5/24/2021
 ms.author: vijvala
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: ba1fd002ac62aba4e414d263b33ecc8153054602
-ms.sourcegitcommit: ad8082bee01fb1f57da423b417ca1ca9c0df8e45
+ms.openlocfilehash: 708fedd4e34b2242aae6e6e0ac673ce77524d448dcee4a05877d37b5266e44c8
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111973014"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115994936"
 ---
 # <a name="delete-indirect-reseller-in-sandbox"></a>Eliminar Revendedor Indireto na Caixa de Areia
 

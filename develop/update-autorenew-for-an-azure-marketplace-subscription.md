@@ -4,12 +4,12 @@ description: Atualize a nova propriedade de uma subscrição que corresponda ao 
 ms.date: 08/16/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: cc0b4c4bff5e8762ffcc2552b2e9e36bcf93686c
-ms.sourcegitcommit: 0b2a62af1765a447addd9c4340c28bc42fdc2747
+ms.openlocfilehash: b83c225a8b6fa11bdd5db5bcca9dd277fcfc4ed56769f1a7a272a388a1c93ab5
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111446671"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996602"
 ---
 # <a name="update-autorenew-for-a-commercial-marketplace-subscription"></a>Atualizar a renovação automática de uma subscrição de marketplace comercial
 

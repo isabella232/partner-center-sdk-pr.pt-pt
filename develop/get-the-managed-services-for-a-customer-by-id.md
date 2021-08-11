@@ -4,12 +4,12 @@ description: Obtém os serviços geridos para um cliente. Por outras palavras, o
 ms.date: 07/22/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 1cf7e7b62113bd96b00fdc2301e4e7ac4f5d4243
-ms.sourcegitcommit: b307fd75e305e0a88cfd1182cc01d2c9a108ce45
+ms.openlocfilehash: f81036e34caec54963d28af2c41ea74ea38d43a38b9fb1f929bbc6ceddceeaaa
+ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/06/2021
-ms.locfileid: "111548452"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "115996534"
 ---
 # <a name="get-the-managed-services-for-a-customer-by-id"></a>Obter os serviços geridos para um cliente por ID
 
@@ -42,7 +42,7 @@ ResourceCollection<ManagedService> managedServices = partnerOperations.Customers
 
 | Método  | URI do pedido                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------|
-| **Obter** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/serviços geridos HTTP/1.1 |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/serviços geridos HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 
