@@ -4,12 +4,12 @@ description: Saiba como adicionar um domínio verificado à lista de domínios a
 ms.date: 05/21/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 570008c955ce3242b02c1df4c87df52aea3627abb6c86a069cc7c4c0d1d6f799
-ms.sourcegitcommit: ac8f5f8bedaddba5110dd4e562fbd9a2b24837df
+ms.openlocfilehash: b634e7e3276fdabeac8175e09a6ae8d12732f409
+ms.sourcegitcommit: b0534995c36d644cc5f7bdf31b2afd5355cf7149
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/08/2021
-ms.locfileid: "116885582"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "122208097"
 ---
 # <a name="add-a-verified-domain-to-the-list-of-approved-domains-for-an-existing-customer"></a>Adicione um domínio verificado à lista de domínios aprovados para um cliente existente 
 
@@ -71,8 +71,8 @@ Esta tabela descreve as propriedades de **domínio** necessárias e opcionais no
 |--------------------|------------------------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AutenticaçãoType                                    | string           | Yes      | Define se o domínio é um `Managed` domínio ou um `Federated` domínio. Valores suportados: `Managed` `Federated` . . .|
 | Funcionalidade                                            | string           | Yes      | Especifica a capacidade de domínio. Por exemplo, `Email`.                  |
-| IsDefault                                             | booleano nupável | No       | Indica se o domínio é o domínio padrão para o inquilino. Valores suportados: `True` `False` . . . `Null` .        |
-| IsInitial                                             | booleano nupável | No       | Indica se o domínio é um domínio inicial. Valores suportados: `True` `False` . . . `Null` .                       |
+| IsDefault                                             | booleano nupável | Não       | Indica se o domínio é o domínio padrão para o inquilino. Valores suportados: `True` `False` . . . `Null` .        |
+| IsInitial                                             | booleano nupável | Não       | Indica se o domínio é um domínio inicial. Valores suportados: `True` `False` . . . `Null` .                       |
 | Name                                                  | string           | Yes      | O nome de domínio.                                                          |
 | RootDomain                                            | cadeia (de carateres)           | No       | O nome do domínio raiz.                                              |
 | Estado                                                | string           | Yes      | O estado do domínio. Por exemplo, `Verified`. Valores suportados:  `Unverified` `Verified` . . . `PendingDeletion` .                               |
@@ -97,7 +97,7 @@ Esta tabela descreve as propriedades necessárias e opcionais **de DomínioFeder
 | PromptLoginBehavior                    | string           | Yes     | O tipo de comportamento de login rápido.  Por exemplo, `TranslateToFreshPasswordAuth`. Valores suportados: `TranslateToFreshPasswordAuth` `NativeSupport` , `Disabled` |
 | AssinaturaCertificada                     | string           | Yes     | O certificado atualmente utilizado pela ADFS V2 STS para assinar reclamações. Esta propriedade é uma representação codificada base64 do certificado. |
 | AssinaturaCertificateUpdateStatus         | cadeia (de carateres)           | No      | Indica o estado de atualização do certificado de assinatura. |
-| AssinaturaCertificateUpdateStatus         | booleano nupável | No      | Indica se o IDP STS suporta O MFA. Valores suportados: `True` `False` . . . `Null` .|
+| AssinaturaCertificateUpdateStatus         | booleano nupável | Não      | Indica se o IDP STS suporta O MFA. Valores suportados: `True` `False` . . . `Null` .|
 
 ### <a name="request-example"></a>Exemplo de pedido
 

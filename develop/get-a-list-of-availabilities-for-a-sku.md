@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 89ffa4156490bd321055f12a1c8c385800b65d8d9e5a460df0cc41edda5c1a27
-ms.sourcegitcommit: f5e2d3e2ad5447b99d339662e00b2ac3a03d7d04
+ms.openlocfilehash: 8e5fe9bae436d8b7f237b9039c66b369f0e32109
+ms.sourcegitcommit: b0534995c36d644cc5f7bdf31b2afd5355cf7149
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "116998504"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "122208080"
 ---
 # <a name="get-a-list-of-availabilities-for-a-sku-by-country"></a>Obter uma lista de disponibilidade para um SKU (por país)
 
