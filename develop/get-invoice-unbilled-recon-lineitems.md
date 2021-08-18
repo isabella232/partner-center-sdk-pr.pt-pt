@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: sourishdeb
 ms.author: sodeb
-ms.openlocfilehash: 3e461367eb41c180dd1004ab2548ca24c4b891976ef53d852bb7933ff23fae65
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 846d2fb0009dd39ed232569a9c8f41104afece1b
+ms.sourcegitcommit: 00d5b934048fcec95efc70f5063e86426636d244
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115993882"
+ms.lasthandoff: 08/16/2021
+ms.locfileid: "122228449"
 ---
 # <a name="get-invoices-unbilled-reconciliation-line-items"></a>Obtenha os itens de linha de reconciliação não faturados da fatura
 
@@ -119,9 +119,9 @@ Pode utilizar as seguintes sintaxes para o seu pedido DE REST, dependendo da sua
 
  | Método  | URI do pedido            | Descrição do caso de utilização de sintaxe                                                                                |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Utilize esta sintaxe para devolver uma lista completa de todos os itens de linha para a fatura dada. |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | Para faturas grandes, utilize esta sintaxe com um tamanho especificado e uma compensação baseada em 0 para devolver uma lista de itens de linha paged. |
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/{fatura-id}/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Utilize esta sintaxe para obter a próxima página de itens da linha de reconciliação utilizando `seekOperation = "Next"` . |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period} HTTP/1.1                              | Utilize esta sintaxe para devolver uma lista completa de todos os itens de linha para a fatura dada. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size} HTTP/1.1  | Para faturas grandes, utilize esta sintaxe com um tamanho especificado e uma compensação baseada em 0 para devolver uma lista de itens de linha paged. |
+| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/faturas/unbilled/lineitems?provider=onetime&invoicelineitemtype=billinglineitems&currencycode={currencycode}&period={period}&size={size}&seekOperation=Next                               | Utilize esta sintaxe para obter a próxima página de itens da linha de reconciliação utilizando `seekOperation = "Next"` . |
 
 #### <a name="uri-parameters"></a>Parâmetros URI
 
@@ -129,10 +129,9 @@ Utilize os seguintes parâmetros URI e consulta ao criar o pedido.
 
 | Nome                   | Tipo   | Necessário | Descrição                                                                     |
 |------------------------|--------|----------|---------------------------------------------------------------------------------|
-| fatura id             | string | Yes      | Uma corda que identifica a fatura. Use 'sem bico' para obter estimativas não mediadas. |
 | provedor               | string | Yes      | O provedor: "OneTime".                                                |
 | tipo de artigo de linha de fatura | string | Yes      | O tipo de detalhe de fatura: "BillingLineItems".               |
-| hasPartnerEarnedCredit | bool   | No       | O valor indicando se devolver os itens de linha com o parceiro ganhou crédito aplicado. Nota: este parâmetro só será aplicado quando o tipo de fornecedor for OneTime e o InvoiceLineItemType for UsageLineItems.
+| hasPartnerEarnedCredit | bool   | Não       | O valor indicando se devolver os itens de linha com o parceiro ganhou crédito aplicado. Nota: este parâmetro só será aplicado quando o tipo de fornecedor for OneTime e o InvoiceLineItemType for UsageLineItems.
 | currencyCode           | string | Yes      | O código cambial para os itens de linha não bico.                                  |
 | period                 | string | Yes      | O período para reconhecimento não-marcado. exemplo: corrente, anterior.                      |
 | size                   | número | No       | O número máximo de itens para devolver. O tamanho padrão é 2000                     |
