@@ -4,12 +4,12 @@ description: Saiba como usar as APIs do Partner Center para criar uma encomenda 
 ms.date: 07/12/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9330639de3ff88fd2e659e92729de0c1625b6157e2608204577287d30d330d00
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: f8a18ef4a6fbdfcd659e6ec1c11bc6bd61c80472
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115991502"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123456040"
 ---
 # <a name="create-an-order-for-a-customer-using-partner-center-apis"></a>Criar uma encomenda para um cliente que utilize APIs do Partner Center
 

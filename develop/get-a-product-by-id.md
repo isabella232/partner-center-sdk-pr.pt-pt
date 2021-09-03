@@ -1,17 +1,17 @@
 ---
 title: Obter um produto por ID
 description: Obtém o recurso de produto especificado usando um ID do produto.
-ms.date: 09/17/2019
+ms.date: 02/16/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 0e8abc8cf33d12140a084e83580f20bb0b9d295eda7ab8cc7279c89043c81992
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 95821b0f3678d38c75e2f684f7ad629b82f9b43b
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115994545"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123456108"
 ---
 # <a name="get-a-product-by-id"></a>Obter um produto por ID
 
@@ -104,7 +104,7 @@ Este método devolve os seguintes códigos de erro:
 |----------------------|--------------|----------------------------------------------------------------------------|
 | 404                  | 400013       | O produto não foi encontrado.                                                     |
 
-### <a name="response-example"></a>Exemplo de resposta
+### <a name="response-example-for-azure-vm-reservation-azure-plan"></a>Exemplo de resposta para reserva Azure VM (plano Azure)
 
 ```http
 HTTP/1.1 200 OK
@@ -136,6 +136,36 @@ Date: Tue, 23 Jan 2018 23:13:01 GMT
         },
         "self": {
             "uri": "/products/DZH318Z0BQ3Q?country=US",
+            "method": "GET",
+            "headers": []
+        }
+    }
+}
+```
+### <a name="response-example-for-new-commerce-license-based-product"></a>Exemplo de resposta para novo produto baseado em licenças de comércio
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+
+```http
+{
+    "id": "CFQ7TTC0LH18",
+    "title": "Microsoft 365 Business Basic",
+    "description": "Best for businesses that need professional email, cloud file storage, and online meetings & chat. Desktop versions of Office apps like Excel, Word, and PowerPoint not included. For businesses with up to 300 employees.",
+    "productType": {
+        "id": "OnlineServicesNCE",
+        "displayName": "OnlineServicesNCE"
+    },
+    "isMicrosoftProduct": true,
+    "publisherName": "Microsoft Corporation",
+    "links": {
+        "skus": {
+            "uri": "/products/CFQ7TTC0LH18/skus?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+        "uri": "/products/CFQ7TTC0LH18?country=US",
             "method": "GET",
             "headers": []
         }

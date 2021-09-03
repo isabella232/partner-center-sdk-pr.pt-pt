@@ -1,17 +1,17 @@
 ---
 title: Obter uma lista de disponibilidade para um SKU (por país)
 description: Como obter uma coleção de disponibilidades para o produto especificado e SKU por país de cliente.
-ms.date: 11/01/2019
+ms.date: 02/16/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 8e5fe9bae436d8b7f237b9039c66b369f0e32109
-ms.sourcegitcommit: b0534995c36d644cc5f7bdf31b2afd5355cf7149
+ms.openlocfilehash: 763a116cf120aaeeea7fddc1be7b2931f4a513e6
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/16/2021
-ms.locfileid: "122208080"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123456006"
 ---
 # <a name="get-a-list-of-availabilities-for-a-sku-by-country"></a>Obter uma lista de disponibilidade para um SKU (por país)
 
@@ -142,7 +142,7 @@ Este método devolve os seguintes códigos de erro:
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 403                  | 400030       | Não é permitido o acesso ao **objetivo solicitado.**                                                     |
 
-### <a name="response-example"></a>Exemplo de resposta
+### <a name="response-example-for-azure-vm-reservations-azure-plan"></a>Exemplo de resposta para reservas Azure VM (plano Azure)
 
 ```http
 HTTP/1.1 200 OK
@@ -196,6 +196,93 @@ Content-Length: 808
     },
     "attributes": {
         "objectType": "Collection"
+    }
+}
+```
+
+### <a name="response-example-for-new-commerce-license-based-services"></a>Exemplo de resposta para novos serviços baseados em licenças de comércio
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/10.0
+MS-CorrelationId: 83b644b5-e54a-4bdc-b354-f96c525b3c58,83b644b5-e54a-4bdc-b354-f96c525b3c58
+MS-RequestId: 70324727-62d8-4195-8f99-70ea25058d02,70324727-62d8-4195-8f99-70ea25058d02
+X-Locale: en-US,en-US
+X-SourceFiles: =?UTF-8?B?QzpcVXNlcnNcbWFtZW5kZVxkZXZcZHBzLXJwZVxSUEUuUGFydG5lci5TZXJ2aWNlLkNhdGFsb2dcV2ViQXBpc1xDYXRhbG9nU2VydmljZS5WMi5XZWJcdjFccHJvZHVjdHNcRFpIMzE4WjBCUTNRXHNrdXNcMDAwMVxhdmFpbGFiaWxpdGllcw==?=
+X-Powered-By: ASP.NET
+Date: Wed, 14 Mar 2018 22:19:37 GMT
+Content-Length: 808
+
+{
+    "id": "CFQ7TTC0K971",
+    "productId": "CFQ7TTC0LH18",
+    "skuId": "0001",
+    "catalogItemId": "CFQ7TTC0LH18:0001:CFQ7TTC0K971",
+    "defaultCurrency": {
+        "code": "USD",
+        "symbol": "$"
+    },
+    "segment": "commercial",
+    "country": "US",
+    "isPurchasable": true,
+    "isRenewable": true, 
+    "renewalInstructions": [
+        {
+            "applicableTermIds": [
+                "5aeco6mffyxo"
+            ],
+            "renewalOptions": [
+                {
+                    "renewToId": "CFQ7TTC0LH18:0001",
+                    "isAutoRenewable": true
+                }
+            ]
+        },
+     …
+    ],
+    "terms": [
+        {
+            "id": "5aeco6mffyxo",
+            "duration": "P1Y",
+            "description": "One-Year commitment for monthly/yearly billing",
+            "billingCycle": "Annual",
+            "cancellationPolicies": [
+                {
+                    "refundOptions": [
+                        {
+                            "sequenceId": 0,
+                            "type": "Full",
+                            "expiresAfter": "P1D"
+                        }
+                    ]
+                }
+            ]
+        },
+       …
+    ],
+    "links": {
+        "self": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities/CFQ7TTC0K971?country=US",
+            "method": "GET",
+            "headers": []
+        }
+    },
+        "links": {
+            "availabilities": {
+                "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities?country=US",
+                "method": "GET",
+                "headers": []
+            },
+            "self": {
+                "uri": "/products/CFQ7TTC0LH18/skus/0001?country=US",
+                "method": "GET",
+                "headers": []
+            }
+        }
     }
 }
 ```

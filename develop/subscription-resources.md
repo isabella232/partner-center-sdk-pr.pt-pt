@@ -1,15 +1,15 @@
 ---
 title: Recursos de subscrição
 description: Os recursos de subscrição podem fornecer mais informações sobre subscrições ao longo do ciclo de vida, tais como suporte, reembolsos, direitos Azure.
-ms.date: 11/01/2019
+ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: e48927b9d8606f8d78ed8e4b5eb12da61f7a7d27f16316bca124f896a24a6638
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: c898f9673525cf0ba32619b7c7b16f91311a81c7
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115997979"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123456813"
 ---
 # <a name="subscription-resources"></a>Recursos de subscrição
 
@@ -36,8 +36,8 @@ O recurso **de subscrição** representa o ciclo de vida de uma subscrição e i
 | parentSubscriptionId | string                                                        | Recebe ou define o identificador de assinatura dos pais.                                                                                                                              |
 | criaçãoDate         | string                                                        | Obtém ou define a data de criação, em formato de data-hora.                                                                                                                          |
 | effectiveStartDate   | cadeia no formato de hora de data UTC                                | Obtém ou define a data de início efetiva para esta subscrição, em formato de data-hora. É usado para datar uma subscrição migrada ou para alinhá-la com outra.                |
-| compromissoEndDate    | cadeia no formato de hora de data UTC                                | A data limite de compromisso para esta subscrição, em formato de data-hora. Para as subscrições que não são autorrenováveis, esta representa uma data muito distante no futuro.       |
-| status               | string                                                        | O estado de subscrição: "nenhum", "ativo", "pendente", "suspenso", ou "eliminado".                                                                                                         |
+| compromissoEndDate    | cadeia no formato de hora de data UTC                                | A data limite de compromisso para esta subscrição, em formato de data-hora. Para as assinaturas que não são autorrenováveis, esta é uma data muito, muito distante no futuro.       |
+| status               | string                                                        | O estado de subscrição: "nenhum", "ativo", "pendente", "suspenso", "caducado" ou "eliminado".                                                                                                         |
 | autoRenewEnabled     | boolean                                                       | Obtém um valor que indique se a subscrição é renovada automaticamente.                                                                                                    |
 | billingType          | string                                                        | Especifica como a subscrição é faturada: "nenhuma", "utilização" ou "licença".                                                                                                      |
 | billingCycle         | string                                                        | Indica a frequência com que o parceiro é faturado para esta encomenda. Os valores suportados são os nomes dos membros encontrados no [**BillingCycleType**](product-resources.md#billingcycletype). |
@@ -55,6 +55,7 @@ O recurso **de subscrição** representa o ciclo de vida de uma subscrição e i
 | termoDuração         | string                                                        | Uma representação ISO 8601 da duração do termo. Os valores suportados atuais são **P1M** (1 mês), **P1Y** (1 ano) e **P3Y** (3 anos).                                                        |
 | atributos           | [RecursosTributos](utility-resources.md#resourceattributes) | Os metadados atribuem correspondentes à subscrição.                                                                                                                    |
 | renovaçãoTermDuration  | string                                                        | Uma representação ISO 8601 da duração do termo. Os valores suportados atuais são **P1M** (1 mês) e **P1Y** (1 ano).                                                        |
+| ProdutoType  | [ItemType](product-resources.md#itemtype)                             | Só para ler. O tipo de produto para o qual a subscrição é para.     |
 
 ## <a name="subscriptionlinks"></a>Ligações de Subscrição
 

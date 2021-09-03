@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: 1f5c0ae7693a8ac2a2919c385dc1b8837a9171ed8cc422bba79bb892f9fe837a
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: abe7a0842b0ecf52b217b277cf61603d5c86a368
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115991842"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123456094"
 ---
 # <a name="create-a-cart-with-a-customer-order"></a>Criar um carrinho com uma encomenda de cliente
 
@@ -436,4 +436,78 @@ Date: Thu, 15 Mar 2018 17:15:01 GMT
     "objectType": "Cart"
   }
 }
+```
+
+
+## <a name="example-for-new-commerce-license-based-services"></a>Exemplo para novos serviços baseados em licenças de comércio
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+
+### <a name="request-example"></a>Exemplo de pedido
+
+```http
+POST /v1/customers/932c4101-dc08-461b-b4c1-75d80e905775/carts HTTP/1.1
+Host: api.partnercenter.microsoft.com
+Content-Type: application/json
+Content-Length: 165
+
+{
+    "LineItems": [
+        {
+            "CatalogItemId":"CFQ7TTC0LFLZ:0002:CFQ7TTC0K4TS",
+            "Quantity": 1,
+            "TermDuration": "P1M",
+                    "BillingCycle": "Monthly"
+        }
+    ]
+}
+
+```
+
+### <a name="rest-response"></a>Resposta do REST
+
+Se for bem sucedido, este método devolve o recurso [cart](cart-resources.md) povoado no corpo de resposta.
+
+### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
+
+Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [códigos de erro](error-codes.md).
+
+### <a name="response-example"></a>Exemplo de resposta
+
+```http
+
+{
+    "id": "6b6ba6ea-d1ea-4c2c-9e1c-bec4f61e2049",
+    "creationTimestamp": "2021-02-24T19:26:06.947164Z",
+    "lastModifiedTimestamp": "2021-02-24T19:26:06.9471649Z",
+    "expirationTimestamp": "2021-03-03T19:26:09.0035129Z",
+    "lastModifiedUser": "004ec05e-8999-4d02-9315-2b1b667c0deb",
+    "status": "Active",
+    "lineItems": [
+        {
+            "id": 0,
+            "catalogItemId": "CFQ7TTC0LFLZ:0002:CFQ7TTC0K4TS",
+            "quantity": 1,
+            "currencyCode": "USD",
+            "billingCycle": "monthly",
+            "termDuration": "P1M",
+            "provisioningContext": {},
+            "orderGroup": "0"
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/932c4101-dc08-461b-b4c1-75d80e905775/carts/6b6ba6ea-d1ea-4c2c-9e1c-bec4f61e2049",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Cart"
+    }
+}
+
+
+
 ```

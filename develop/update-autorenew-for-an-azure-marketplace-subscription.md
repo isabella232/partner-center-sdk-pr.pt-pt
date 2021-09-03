@@ -1,19 +1,24 @@
 ---
-title: Atualizar a renovação automática de uma subscrição de marketplace comercial
+title: Atualizar a designa de novo para um mercado comercial e novas subscrições de comércio
 description: Atualize a nova propriedade de uma subscrição que corresponda ao ID do cliente e da subscrição.
-ms.date: 08/16/2019
+ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b83c225a8b6fa11bdd5db5bcca9dd277fcfc4ed56769f1a7a272a388a1c93ab5
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 6d533a41c58b05ec449b76394466dd4608abc65a
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115996602"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123455732"
 ---
-# <a name="update-autorenew-for-a-commercial-marketplace-subscription"></a>Atualizar a renovação automática de uma subscrição de marketplace comercial
+# <a name="update-autorenew-for-a-commercial-marketplace-subscription-or-new-commerce-subscriptions"></a>Atualizar a designa de novo para uma subscrição de marketplace comercial ou novas subscrições de comércio
 
-Atualizar a nova propriedade de um mercado comercial O recurso [de subscrição](subscription-resources.md) que corresponda ao ID do cliente e da subscrição.
+**Aplica-se a**: Centro de Parceiros
+
+> [!Note] 
+> As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
+
+Atualizar a nova propriedade para um mercado comercial ou novo recurso [de subscrição](subscription-resources.md) de comércio que corresponda ao ID do cliente e subscrição.
 
 No painel partner center, esta operação é realizada [selecionando](get-a-customer-by-name.md)primeiro um cliente . Em seguida, selecione a subscrição que deseja atualizar. Finalmente, alternar a opção **de renovação automática** e, em seguida, selecione **Enviar por inteiro**.
 
@@ -66,7 +71,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 Um recurso de **subscrição** de mercado comercial completo é necessário no organismo de pedido. Certifique-se de que a propriedade **AutoRenewEnabled** foi atualizada.
 
-### <a name="request-example"></a>Exemplo de pedido
+### <a name="request-example-for-commercial-marketplace-subscription"></a>Exemplo de pedido para subscrição de mercado comercial
 
 ```http
 PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<id-for-subscription> HTTP/1.1
@@ -107,6 +112,86 @@ Connection: Keep-Alive
     "publisherName": "publisher Name",
     "orderId": "ImxjLNL4_fOc-2KoyOxGTZcrlIquzls11",
     "attributes": {"objectType": "Subscription"},
+}
+```
+
+### <a name="request-example-for-new-commerce-subscription"></a>Exemplo de pedido para nova subscrição de comércio
+
+> [!Note] 
+> As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
+
+```http
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<id-for-subscription> HTTP/1.1
+Authorization: Bearer <token>
+Accept: application/json
+MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3831
+MS-CorrelationId: ec8f62e5-1d92-47e9-8d5d-1924af105f2c
+If-Match: <etag>
+Content-Type: application/json
+Content-Length: 1029
+Expect: 100-continue
+Connection: Keep-Alive
+
+ {
+    "id": "a4c1340d-6911-4758-bba3-0c4c6007d161",
+    "offerId": "CFQ7TTC0LH18:0001:CFQ7TTC0K971",
+    "offerName": "Microsoft 365 Business Basic",
+    "friendlyName": "Microsoft 365 Business Basic",
+    "productType": {
+        "id": "OnlineServicesNCE",
+        "displayName": "OnlineServicesNCE"
+    },
+    "quantity": 1, 
+    "unitType": "Licenses",
+    "hasPurchasableAddons": false,
+    "creationDate": "2021-01-14T16:57:15.0966728Z",
+    "effectiveStartDate": "2021-01-14T16:57:14.498252Z",
+    "commitmentEndDate": "2022-01-13T00:00:00Z",
+    "status": "active",
+    "autoRenewEnabled": false, // original value = true
+    "isTrial": false,
+    "billingType": "license",
+    "billingCycle": "monthly",
+    "termDuration": "P1Y",
+    "renewalTermDuration": "",
+    "refundOptions": [
+        {
+            "type": "Full",
+            "expiresAt": "2021-01-15T00:00:00Z"
+        }
+    ],
+    "isMicrosoftProduct": true,
+    "partnerId": "",
+    "attentionNeeded": false,
+    "actionTaken": false,
+    "contractType": "subscription",
+    "links": {
+        "product": {
+            "uri": "/products/CFQ7TTC0LH18?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "sku": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "availability": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities/CFQ7TTC0K971?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+            "uri": "/customers/d8202a51-69f9-4228-b900-d0e081af17d7/subscriptions/a4c1340d-6911-4758-bba3-0c4c6007d161",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "publisherName": "Microsoft Corporation",
+    "orderId": "34b37d7340cc",
+    "attributes": {
+        "objectType": "Subscription"
+    }
 }
 ```
 

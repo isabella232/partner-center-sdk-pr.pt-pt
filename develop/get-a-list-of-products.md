@@ -1,17 +1,17 @@
 ---
 title: Obter uma lista de produtos (por país)
 description: Pode utilizar o recurso Produto para obter uma coleção de produtos por país de clientes.
-ms.date: 11/01/2019
+ms.date: 02/16/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 6ec3a642006a100ef85c0af9eeddd9daf00cc1cd981eabd5dddb77e60e15111f
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 601fc2c8012d92d6964f0aaa29a3a46d732df300
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115989445"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123456057"
 ---
 # <a name="get-a-list-of-products-by-country"></a>Obter uma lista de produtos (por país)
 
@@ -109,7 +109,7 @@ Utilize os seguintes parâmetros de percurso e consulta para obter uma lista de 
 | Nome                   | Tipo     | Necessário | Descrição                                                             |
 |------------------------|----------|----------|-------------------------------------------------------------------------|
 | país                | string   | Yes      | O ID do país/região.                                                  |
-| targetView             | string   | Yes      | Identifica a visão do catálogo. Os valores suportados são: <br/><br/>**Azure,** que inclui todos os itens Azure<br/><br/>**AzureReservations**, que inclui todos os itens de reserva Azure<br/><br/>**AzureReservationsVM,** que inclui todos os itens de reserva de máquina virtual (VM)<br/><br/>**AzureReservationsSQL,** que inclui todos os itens de reserva SQL<br/><br/>**AzureReservationsCosmosDb,** que inclui todos os itens de reserva da base de dados cosmos<br/><br/>**MicrosoftAzure**, que inclui itens para subscrições Microsoft Azure **(MS-AZR-0145P)** e planos Azure<br/><br/>**OnlineServices**, que inclui todos os itens de serviço on-line (incluindo produtos de mercado comercial)<br/><br/>**Software**, que inclui todos os itens de software<br/><br/>**SoftwareSUSELinux,** que inclui todos os itens SUSE Linux de software<br/><br/>**SoftwarePerpetual,** que inclui todos os itens de software perpétuos<br/><br/>**SoftwareSubscriptions**, que inclui todos os itens de subscrição de software    |
+| targetView             | string   | Yes      | Identifica a visão do catálogo. Os valores suportados são: <br/><br/>**Azure,** que inclui todos os itens Azure<br/><br/>**AzureReservations**, que inclui todos os itens de reserva Azure<br/><br/>**AzureReservationsVM,** que inclui todos os itens de reserva de máquina virtual (VM)<br/><br/>**AzureReservationsSQL,** que inclui todos os itens de reserva SQL<br/><br/>**AzureReservationsCosmosDb,** que inclui todos os itens de reserva da base de dados cosmos<br/><br/>**MicrosoftAzure**, que inclui itens para subscrições Microsoft Azure **(MS-AZR-0145P)** e planos Azure<br/><br/>**OnlineServices**, que inclui todos os itens de serviço online. Este targetView inclui mercado comercial, serviços tradicionais baseados em licenças e novos serviços baseados em licenças de comércio<br/><br/>**Software**, que inclui todos os itens de software<br/><br/>**SoftwareSUSELinux,** que inclui todos os itens SUSE Linux de software<br/><br/>**SoftwarePerpetual,** que inclui todos os itens de software perpétuos<br/><br/>**SoftwareSubscriptions**, que inclui todos os itens de subscrição de software    |
 | targetSegment          | cadeia (de carateres)   | No       | Identifica o segmento alvo. A vista para diferentes públicos-alvo. Os valores suportados são: <br/><br/>**comercial**<br/>**educação**<br/>**governo**<br/>**sem fins lucrativos**  |
 | reservationScope | cadeia (de carateres)   | No | Ao consultar uma lista de produtos para Reservas Azure, especifique `reservationScope=AzurePlan` para obter uma lista de produtos que são aplicáveis aos planos Azure. Exclua este parâmetro para obter uma lista de produtos para reservas Azure, que são aplicáveis a Microsoft Azure **(MS-AZR-0145P)** subscrições.  |
 
@@ -159,6 +159,21 @@ MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
 MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
 ```
 
+#### <a name="new-commerce-license-based-services"></a>Novos serviços baseados em licenças de comércio
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+
+Siga este exemplo para obter uma lista de produtos por país para novos serviços baseados em licenças de comércio como parte da nova experiência de comércio experiência técnica pré-visualização. Novos serviços baseados em licenças de comércio serão identificados por ID e exibirão valores de **OnlineServicesNCE**. Veja o exemplo de resposta abaixo.
+
+```http
+GET https://api.partnercenter.microsoft.com/v1/products?country=US&targetView=OnlineServices HTTP/1.1
+Authorization: Bearer
+Accept: application/json
+MS-RequestId: 031160b2-b0b0-4d40-b2b1-aaa9bb84211d
+MS-CorrelationId: 7c1f6619-c176-4040-a88f-2c71f3ba4533
+```
+
 ## <a name="rest-response"></a>Resposta do REST
 
 Se for bem sucedido, o organismo de resposta contém uma coleção de recursos [**do Produto.**](product-resources.md#product)
@@ -174,7 +189,7 @@ Este método devolve os seguintes códigos de erro:
 | 403                  | 400030       | Não é permitido o acesso ao objetivo solicitado.                                                     |
 | 403                  | 400036       | Não é permitido o acesso ao targetView solicitado.                                                        |
 
-### <a name="response-example"></a>Exemplo de resposta
+### <a name="response-example-for-azure-vm-reservations-azure-plan"></a>Exemplo de resposta para reservas Azure VM (plano Azure)
 
 ```http
 {
@@ -221,3 +236,50 @@ Este método devolve os seguintes códigos de erro:
     }
 }
 ```
+
+### <a name="response-example-for-new-commerce-license-based-services"></a>Exemplo de resposta para novos serviços baseados em licenças de comércio
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+
+```http
+{
+  "totalCount": 19,
+  "items": [{
+      "id": "CFQ7TTC0LH18",
+      "title": "Microsoft 365 Business Basic",
+      "description": "Best for businesses that need professional email, cloud file storage, and online meetings & chat. Desktop versions of Office apps like Excel, Word, and PowerPoint not included. For businesses with up to 300 employees.",
+      "productType": {
+        "id": "OnlineServicesNCE",
+        "displayName": "OnlineServicesNCE"
+      },
+      "isMicrosoftProduct": true,
+      "publisherName": "Microsoft Corporation",
+      "links": {
+        "skus": {
+          "uri": "/products/CFQ7TTC0LH18/skus?country=US",
+          "method": "GET",
+          "headers": []
+        },
+        "self": {
+          "uri": "/products/CFQ7TTC0LH18?country=US",
+          "method": "GET",
+          "headers": []
+        }
+      }
+    },
+    ...
+  ],
+  "links": {
+    "self": {
+      "uri": "/products?country=US&targetView=OnlineServices",
+      "method": "GET",
+      "headers": []
+    }
+  },
+  "attributes": {
+    "objectType": "Collection"
+  }
+}
+```
+

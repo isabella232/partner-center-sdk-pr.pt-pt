@@ -1,17 +1,17 @@
 ---
 title: Obter uma subscrição por ID
 description: Obtém um recurso de subscrição que corresponda ao ID do cliente e ao ID de subscrição.
-ms.date: 12/15/2017
+ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: amitravat
 ms.author: amrava
-ms.openlocfilehash: 0dc65c629984c299bfde0b801b0415ffb1ba661462e2473ad051f169d6357d3a
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 26825084d89648affe904b9415d3143b3e65ebae
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115991060"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123455989"
 ---
 # <a name="get-a-subscription-by-id"></a>Obter uma subscrição por ID
 
@@ -86,7 +86,7 @@ Se for bem sucedido, este método devolve um recurso [de Subscrição](subscript
 
 Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte os [códigos de erro do Partner Center REST](error-codes.md).
 
-### <a name="response-example-for-a-standard-subscription"></a>Exemplo de resposta para uma subscrição padrão
+### <a name="response-example-for-a-microsoft-azure-subscription"></a>Exemplo de resposta para uma subscrição Microsoft Azure
 
 ```http
 HTTP/1.1 200 OK
@@ -182,6 +182,83 @@ Date: Fri, 27 Jan 2017 00:12:53 GMT
     "orderId": "CF3B0E37-BE0B-4CDD-B584-D1A97D98A922",
     "attributes": {
         "etag": "eyJpZCI6Ijk2OGJhMWNmLWMxNDYtNGFkZi1hMzAwLTMwOGRjZjcxOGVlZSIsInZlcnNpb24iOjF9",
+        "objectType": "Subscription"
+    }
+}
+```
+### <a name="response-example-for-a-new-commerce-subscription"></a>Exemplo de resposta para uma nova subscrição de comércio
+
+> [!Note] 
+> As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
+
+```http
+HTTP/1.1 200 OK
+Content-Length: 1132
+Content-Type: application/json; charset=utf-8
+MS-CorrelationId: 4ercec93-852d-4167-9d96-c57809bea7ed
+MS-RequestId: 54sfd0fb-d1e6-4a8f-aa1a-124b7c820d80
+MS-CV: cmde2DtbuUWi8JLq.0
+MS-ServerId: 201022015
+Date: Fri, 19 Feb 2021 00:14:53 GMT
+
+{
+    "id": "a4c1340d-6911-4758-bba3-0c4c6007d161",
+    "offerId": "CFQ7TTC0LH18:0001:CFQ7TTC0K971",
+    "offerName": "Microsoft 365 Business Basic",
+    "friendlyName": "Microsoft 365 Business Basic",
+    "productType": {
+        "id": "OnlineServicesNCE",
+        "displayName": "OnlineServicesNCE"
+    },
+    "quantity": 1, 
+    "unitType": "Licenses",
+    "hasPurchasableAddons": false,
+    "creationDate": "2021-01-14T16:57:15.0966728Z",
+    "effectiveStartDate": "2021-01-14T16:57:14.498252Z",
+    "commitmentEndDate": "2022-01-13T00:00:00Z",
+    "status": "expired", 
+    "autoRenewEnabled": false, 
+    "isTrial": false,
+    "billingType": "license",
+    "billingCycle": "monthly",
+    "termDuration": "P1Y",
+    "renewalTermDuration": "",
+    "refundOptions": [
+        {
+            "type": "Full",
+            "expiresAt": "2021-01-15T00:00:00Z"
+        }
+    ],
+    "isMicrosoftProduct": true,
+    "partnerId": "",
+    "attentionNeeded": false,
+    "actionTaken": false,
+    "contractType": "subscription",
+    "links": {
+        "product": {
+            "uri": "/products/CFQ7TTC0LH18?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "sku": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "availability": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities/CFQ7TTC0K971?country=US",
+            "method": "GET",
+            "headers": []
+        },
+        "self": {
+            "uri": "/customers/d8202a51-69f9-4228-b900-d0e081af17d7/subscriptions/a4c1340d-6911-4758-bba3-0c4c6007d161",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "publisherName": "Microsoft Corporation",
+    "orderId": "34b37d7340cc",
+    "attributes": {
         "objectType": "Subscription"
     }
 }

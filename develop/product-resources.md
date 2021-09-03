@@ -1,15 +1,15 @@
 ---
 title: Recursos de produtos
 description: Recursos que representam bens ou serviços puráveis. Inclui recursos para descrever o tipo e forma do produto (SKU), e para verificar a disponibilidade do produto num inventário.
-ms.date: 04/01/2019
+ms.date: 02/16/2016
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b0269b55810a57dc3a4897027a9817baaebc8ed5f4e98dc66e2eadfa210f362f
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 3790d8f5ef154c637dfd3f3d014322d314757f26
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115997452"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123456074"
 ---
 # <a name="products-resources"></a>Recursos de produtos
 
@@ -69,6 +69,21 @@ Representa uma unidade de armazenamento de stock (SKU) em um produto. Estes repr
 | ligações                  | [RecursosLinks](utility-resources.md#resourcelinks) | As ligações de recursos contidas no SKU.                   |
 | AttestationProperties                  | [AttestationProperties](#attestationproperties) | As propriedades do atestado para um SKU.                   |
 
+## <a name="dynamic-sku-attributes"></a>Atributos Dinâmicos SKU
+
+Imóveis notáveis relevantes para novos produtos e serviços baseados em licenças de comércio.
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+
+| Propriedade        | Tipo                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------------------------------|
+|temConstratas|boolean|Descreve se o SKU contém activosContraints|
+|isAddon|boolean|Descreve se o SKU é um add on|
+|pré-requisitoSkus|matriz de cadeias (de carateres)|Descreve produtos e skus o add on pode trabalhar com|
+|upgradeTargetOffers|matriz de cadeias (de carateres)|Uma lista de produtos e skus o item pode atualizar para|
+|conversõesInstruções|lista de conversõesInstruções|Lista de instruções aplicáveis às operações de conversação|
+
 ## <a name="availability"></a>Disponibilidade
 
 Representa uma configuração em que um SKU está disponível para compra (como país, moeda e segmento da indústria).
@@ -84,10 +99,37 @@ Representa uma configuração em que um SKU está disponível para compra (como 
 | país         | string                                              | O país ou região (em formato de código de país ISO) onde esta disponibilidade se aplica. |
 | isComprável   | bool                                                | Indica se esta disponibilidade é purável. |
 | é Reemnovável     | bool                                                | Indica se esta disponibilidade é renovável. |
+| RenovaçãoInstruções     | RenovaçãoInstrução                                              | Representa instruções de renovação para uma dada disponibilidade. |
 | produto      | [Produto](#product)               | O produto a que esta disponibilidade corresponde. |
 | sku          | [Sku](#sku)            | O SKU esta disponibilidade corresponde a. |
 | termos           | matriz de recursos [de prazo](#term)  | A recolha de termos aplicáveis a esta disponibilidade. |
 | ligações           | [RecursosLinks](utility-resources.md#resourcelinks) | As ligações de recursos contidas na disponibilidade. |
+
+## <a name="renewal-instruction"></a>Instrução de renovação
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+> 
+
+Representa instruções de renovação para uma dada disponibilidade.
+
+| Propriedade        | Tipo                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------|
+| aplicaçãoTermIds       | matriz de cadeias (de carateres)                       | IDs de prazo as instruções aplicam-se a |
+| Opções de Renovação       | matriz de RenovaçãoOption                     | Opções que definem renovações |
+
+## <a name="renewaloption"></a>Opção de Renovação    
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+> 
+
+Representa instruções de renovação para uma dada disponibilidade.
+
+| Propriedade        | Tipo                        | Description                                                                         |
+|-----------------|-----------------------------------------------------|-------------------------------------------------------------|
+| renovarToId       | String       | Representa o produto e sku para renovar para |
+| isAutoRenewable       | Booleano       | Se a disponibilidade pode ou não ser renovada automaticamente |
 
 ## <a name="term"></a>Termo
 

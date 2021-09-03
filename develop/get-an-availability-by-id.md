@@ -1,17 +1,17 @@
 ---
 title: Obtenha a disponibilidade por ID
 description: Obtém a disponibilidade para o produto especificado e SKU usando um ID de disponibilidade.
-ms.date: 09/17/2019
+ms.date: 02/16/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: fccd566e83dab8994280fdee072c0d6f27b690d5292ed3973427088f46b30d6b
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 5bbbfdfeb81a915e5399bf2a89f99a70b509476d
+ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115993559"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123456159"
 ---
 # <a name="get-the-availability-by-id"></a>Obtenha a disponibilidade por ID
 
@@ -125,7 +125,7 @@ Este método devolve os seguintes códigos de erro:
 | 404                  | 400018       | O SKU não foi encontrado.                                                                                        |
 | 404                  | 400019       | Disponibilidade não encontrada.                                                                                   |
 
-### <a name="response-example"></a>Exemplo de resposta
+### <a name="response-example-for-azure-vm-reservations-azure-plan"></a>Exemplo de resposta para reservas Azure VM (plano Azure)
 
 ```http
 HTTP/1.1 200 OK
@@ -161,6 +161,82 @@ Content-Length: 440
     "links": {
         "self": {
             "uri": "/products/DZH318Z0BQ3Q/skus/0001/availabilities/DZH318XZXPHL?country=US",
+            "method": "GET",
+            "headers": []
+        }
+    }
+}
+```
+
+### <a name="response-example-for-new-commerce-license-based-services"></a>Exemplo de resposta para novos serviços baseados em licenças de comércio
+
+> [!Note] 
+> As novas alterações ao Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova experiência técnica de experiência de comércio M365/D365
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/10.0
+MS-CorrelationId: 83b644b5-e54a-4bdc-b354-f96c525b3c58,83b644b5-e54a-4bdc-b354-f96c525b3c58
+MS-RequestId: 70324727-62d8-4195-8f99-70ea25058d02,70324727-62d8-4195-8f99-70ea25058d02
+X-Locale: en-US,en-US
+X-SourceFiles: =?UTF-8?B?QzpcVXNlcnNcbWFtZW5kZVxkZXZcZHBzLXJwZVxSUEUuUGFydG5lci5TZXJ2aWNlLkNhdGFsb2dcV2ViQXBpc1xDYXRhbG9nU2VydmljZS5WMi5XZWJcdjFccHJvZHVjdHNcRFpIMzE4WjBCUTNRXHNrdXNcMDAwMVxhdmFpbGFiaWxpdGllcw==?=
+X-Powered-By: ASP.NET
+Date: Wed, 14 Mar 2018 22:19:37 GMT
+Content-Length: 808
+
+{
+    "id": "CFQ7TTC0K971",
+    "productId": "CFQ7TTC0LH18",
+    "skuId": "0001",
+    "catalogItemId": "CFQ7TTC0LH18:0001:CFQ7TTC0K971",
+    "defaultCurrency": {
+        "code": "USD",
+        "symbol": "$"
+    },
+    "segment": "commercial",
+    "country": "US",
+    "isPurchasable": true,
+    "isRenewable": true, 
+    "renewalInstructions": [
+        {
+            "applicableTermIds": [
+                "5aeco6mffyxo"
+            ],
+            "renewalOptions": [
+                {
+                    "renewToId": "CFQ7TTC0LH18:0001",
+                    "isAutoRenewable": true
+                }
+            ]
+        },
+     …
+    ],
+    "terms": [
+        {
+            "id": "5aeco6mffyxo",
+            "duration": "P1Y",
+            "description": "One-Year commitment for monthly/yearly billing",
+            "billingCycle": "Annual",
+            "cancellationPolicies": [
+                {
+                    "refundOptions": [
+                        {
+                            "sequenceId": 0,
+                            "type": "Full",
+                            "expiresAfter": "P1D"
+                        }
+                    ]
+                }
+            ]
+        },
+       …
+    ],
+    "product": { ... },
+    "sku": { ... },
+    "links": {
+        "self": {
+            "uri": "/products/CFQ7TTC0LH18/skus/0001/availabilities/CFQ7TTC0K971?country=US",
             "method": "GET",
             "headers": []
         }
