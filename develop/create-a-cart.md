@@ -1,17 +1,17 @@
 ---
 title: Criar um carrinho
 description: Saiba como usar as APIs do Partner Center para adicionar um pedido para um cliente num carrinho. O tópico inclui informações sobre a criação de um carrinho e quaisquer pré-requisitos.
-ms.date: 09/17/2019
+ms.date: 09/06/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: rbars
 ms.author: rbars
-ms.openlocfilehash: abe7a0842b0ecf52b217b277cf61603d5c86a368
-ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
+ms.openlocfilehash: 2827a2de7dc1c136fe4ea8735e12dc4b88e5e9bf
+ms.sourcegitcommit: 5f27733d7c984c29f71c8b9c8ba5f89753eeabc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "123456094"
+ms.lasthandoff: 09/07/2021
+ms.locfileid: "123557274"
 ---
 # <a name="create-a-cart-with-a-customer-order"></a>Criar um carrinho com uma encomenda de cliente
 
@@ -36,6 +36,114 @@ Para criar uma encomenda para um cliente:
 3. Obtenha uma interface para as operações de carrinhos ligando para o método **IAggregatePartner.Customers.ById** com o ID do cliente para identificar o cliente e, em seguida, recuperar a interface da propriedade **Cart.**
 
 4. Ligue para o método **Criar** ou **Criar** Para criar o carrinho.
+
+5. Para completar o atestado e incluir revendedores adicionais, consulte as seguintes amostras de pedido e resposta:
+
+### <a name="request-sample"></a>Amostra de pedido
+
+```csharp
+
+{
+    "PartnerOnRecordAttestationAccepted":true,     "lineItems": [
+        {
+            "id": 0,
+            "catalogItemId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+            "quantity": 1,
+            "billingCycle": "monthly",
+            "termDuration": "P1M",
+            "renewsTo": null,
+            "provisioningContext": {},
+            "coterminousSubscriptionId": null
+        },
+        {
+            "id": 1,
+            "catalogItemId": "CFQ7TTC0LFLS:0002:CFQ7TTC0KDLJ",
+            "quantity": 2,
+            "billingCycle": "monthly",
+            "termDuration": "P1Y",
+            "participants": [
+                {
+                    "key": "transaction_reseller",
+                    "value": "5357564"
+                },
+                 {
+                    "key": "additional_transaction_reseller",                     
+                    "value": "517285"
+                },
+                 {
+                    "key": "additional_transaction_reseller", 
+                    "value": "5357563"
+                }
+            ]
+        }
+    ]
+}
+
+
+```
+
+### <a name="response-sample"></a>Amostra de resposta
+
+```csharp
+
+{
+    "id": "3e22b548-647d-4223-9675-1fcb6cb57665",
+    "creationTimestamp": "2021-08-18T17:29:52.3517492Z",
+    "lastModifiedTimestamp": "2021-08-18T17:29:52.3517553Z",
+    "expirationTimestamp": "2021-08-25T17:30:11.2406416Z",
+    "lastModifiedUser": "da62a0dc-35e9-4601-b48e-a047bd3ec7c1",
+    "status": "Active",
+    "lineItems": [
+        {
+            "id": 0,
+            "catalogItemId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+            "quantity": 1,
+            "currencyCode": "USD",
+            "billingCycle": "monthly",
+            "termDuration": "P1M",
+            "provisioningContext": {},
+            "orderGroup": "0"
+        },
+        {
+            "id": 1,
+            "catalogItemId": "CFQ7TTC0LFLS:0002:CFQ7TTC0KDLJ",
+            "quantity": 2,
+            "currencyCode": "USD",
+            "billingCycle": "monthly",
+            "termDuration": "P1Y",
+            "participants": [
+                {
+                    "key": "transaction_reseller",
+                    "value": "5357564"
+                },
+                {
+                    "key": "additional_transaction_reseller", 
+                    "value": "517285"
+                },
+                {
+                    "key": "additional_transaction_reseller", 
+                    "value": "5357563"
+                }
+            ],
+            "provisioningContext": {},
+            "orderGroup": "0"
+        }
+    ],
+    "links": {
+        "self": {
+            "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/carts/3e22b548-647d-4223-9675-1fcb6cb57665",
+            "method": "GET",
+            "headers": []
+        }
+    },
+    "attributes": {
+        "objectType": "Cart"
+    }
+}
+
+
+```
+
 
 ### <a name="c-example"></a>Exemplo \# C
 
@@ -229,6 +337,7 @@ Esta tabela descreve as propriedades do [Carrinho](cart-resources.md) no corpo d
 | expiraçãoTimeStamp   | DateTime         | No              | A data em que o carrinho expirará, em formato de data-hora.  Aplicado após a criação bem sucedida do carrinho.            |
 | últimoModifiedUser      | cadeia (de carateres)           | No              | O utilizador que atualizou pela última vez o carrinho. Aplicado após a criação bem sucedida do carrinho.                             |
 | lineitems             | Matriz de objetos | Yes             | Uma matriz de recursos [CartLineItem.](cart-resources.md#cartlineitem)                                     |
+| PartnerOnRecordAttestationAccepted | Booleano | Yes | Confirma a conclusão do Attestation |
 
 Esta tabela descreve as propriedades [do CartLineItem](cart-resources.md#cartlineitem) no corpo de pedido.
 
@@ -246,6 +355,8 @@ Esta tabela descreve as propriedades [do CartLineItem](cart-resources.md#cartlin
 |        erro        |           Objeto            |    No    |                                                                     Aplicado após o carrinho é criado se houver um erro.                                                                      |
 |     renovaTo        | Matriz de objetos            |    No    |                                                    Uma variedade de [recursos Renovados.](cart-resources.md#renewsto)                                                                            |
 |     AttestationAccepted        | Booleano            |    No    |                                                   Indica acordo para oferecer ou sku condições. Requerido apenas para ofertas ou skus onde a SkuAttestationProperties ou OfferAttestationProperties aplicam Attestation é Verdadeira.                                                                             |
+|  transaction_reseller | String | No | Quando um fornecedor indireto estoende uma encomenda em nome de um revendedor indireto, povoe este campo apenas com o ID MPN do **revendedor indireto** (nunca o ID do fornecedor indireto). Isto garante uma contabilização adequada dos incentivos. |
+| additional_transaction_reseller | String | No | Quando um fornecedor indireto estoende uma encomenda em nome de um revendedor indireto, povoe este campo apenas com o ID MPN do **revendedor indireto Adicional** (nunca o ID do fornecedor indireto). Não são aplicáveis incentivos a estes revendedores adicionais. Só podem ser introduzidos um máximo de 5 Revendedores Indiretos. Estes são apenas os parceiros aplicáveis que transacionam nos países da UE/EFTA. |
 
 Esta tabela descreve as propriedades [Renovações](cart-resources.md#renewsto) No corpo de pedido.
 

@@ -1,15 +1,15 @@
 ---
 title: Criar uma encomenda de clientes
 description: Saiba como usar as APIs do Partner Center para criar uma encomenda para um cliente. O artigo inclui pré-requisitos, passos e exemplos.
-ms.date: 07/12/2019
+ms.date: 09/06/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: f8a18ef4a6fbdfcd659e6ec1c11bc6bd61c80472
-ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
+ms.openlocfilehash: 232888ee798b4579246bbfd787e049f9f6e2e8a3
+ms.sourcegitcommit: 5f27733d7c984c29f71c8b9c8ba5f89753eeabc4
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "123456040"
+ms.lasthandoff: 09/07/2021
+ms.locfileid: "123557257"
 ---
 # <a name="create-an-order-for-a-customer-using-partner-center-apis"></a>Criar uma encomenda para um cliente que utilize APIs do Partner Center
 
@@ -40,6 +40,97 @@ Para criar uma encomenda para um cliente:
 3. Obtenha uma interface para encomendar operações. Primeiro, ligue para o método [**IAggregatePartner.Customers.ById**](/dotnet/api/microsoft.store.partnercenter.customers.icustomercollection.byid) com o ID do cliente para identificar o cliente. Em seguida, recupere a interface da propriedade [**Encomendas.**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.orders)
 
 4. Ligue para o método [**Criar**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.create) ou [**Criar Aync**](/dotnet/api/microsoft.store.partnercenter.orders.iordercollection.createasync) e passe no objeto [**Encomenda.**](order-resources.md)
+
+5. Para completar o atestado e incluir revendedores adicionais, consulte as seguintes amostras de pedido e resposta:
+
+### <a name="request-example"></a>Exemplo de pedido
+
+``` csharp
+{
+    "PartnerOnRecordAttestationAccepted":true, 
+    "lineItems": [
+        {
+            "offerId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+            "quantity": 1,
+            "lineItemNumber": 0,
+            "PartnerIdOnRecord": "873452",
+            "AdditionalPartnerIdsOnRecord":["4847383","873452"]
+        }
+    ],
+    "billingCycle": "monthly"
+}
+```
+
+### <a name="response-example"></a>Exemplo de resposta
+
+``` csharp
+{
+    "id": "5cf72f146967",
+    "alternateId": "5cf72f146967",
+    "referenceCustomerId": "f81d98dd-c2f4-499e-a194-5619e260344e",
+    "billingCycle": "monthly",
+    "currencyCode": "USD",
+    "currencySymbol": "$",
+    "lineItems": [
+        {
+            "lineItemNumber": 0,
+            "offerId": "CFQ7TTC0LH0Z:0001:CFQ7TTC0K18P",
+            "subscriptionId": "fcddfa52-1da8-4529-d347-50ea51e1e7be",
+            "termDuration": "P1M",
+            "transactionType": "New",
+            "friendlyName": "AI Builder Capacity add-on",
+            "quantity": 1,
+            "partnerIdOnRecord": "873452",
+            "additionalPartnerIdsOnRecord": [
+                "4847383",
+                "873452"
+            ],
+            "links": {
+                "product": {
+                    "uri": "/products/CFQ7TTC0LH0Z?country=US",
+                    "method": "GET",
+                    "headers": []
+                },
+                "sku": {
+                    "uri": "/products/CFQ7TTC0LH0Z/skus/0001?country=US",
+                    "method": "GET",
+                    "headers": []
+                },
+                "availability": {
+                    "uri": "/products/CFQ7TTC0LH0Z/skus/0001/availabilities/CFQ7TTC0K18P?country=US",
+                    "method": "GET",
+                    "headers": []
+                }
+            }
+        }
+    ],
+    "creationDate": "2021-08-17T18:13:11.3122226Z",
+    "status": "pending",
+    "transactionType": "UserPurchase",
+    "links": {
+        "self": {
+            "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/5cf72f146967",
+            "method": "GET",
+            "headers": []
+        },
+        "provisioningStatus": {
+            "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/5cf72f146967/provisioningstatus",
+            "method": "GET",
+            "headers": []
+        },
+        "patchOperation": {
+            "uri": "/customers/f81d98dd-c2f4-499e-a194-5619e260344e/orders/5cf72f146967",
+            "method": "PATCH",
+            "headers": []
+        }
+    },
+    "client": {},
+    "attributes": {
+        "objectType": "Order"
+    }
+}
+
+```
 
 ``` csharp
 IAggregatePartner partnerOperations;
@@ -108,6 +199,8 @@ Esta tabela descreve as propriedades da [Ordem](order-resources.md) no organismo
 | status               | cadeia (de carateres)                      | No                              | Só para ler. O estado da ordem.  Os valores suportados são os nomes dos membros encontrados no [OrderStatus](order-resources.md#orderstatus).        |
 | ligações                | [Pedidos](utility-resources.md#resourcelinks)              | No                              | Os links de recursos correspondentes à Ordem. |
 | atributos           | [RecursosTributos](utility-resources.md#resourceattributes) | No                              | Os metadados atribuem correspondentes à Ordem. |
+| PartnerOnRecordAttestationAccepted | Booleano | Yes | Confirma a conclusão do Attestation |
+
 
 #### <a name="orderlineitem"></a>OrderLineItem
 
@@ -130,6 +223,7 @@ Esta tabela descreve as propriedades [orderLineItem](order-resources.md#orderlin
 | atributos           | [RecursosTributos](utility-resources.md#resourceattributes) | No       | Os metadados atribuem correspondentes ao OrderLineItem. |
 | renovaTo             | Matriz de objetos                          | No    |Uma variedade de [recursos Renovados.](order-resources.md#renewsto)                                                                            |
 | AttestationAccepted             | bool                 | No   |  Indica acordo para oferecer ou sku condições. Requerido apenas para ofertas ou skus onde a SkuAttestationProperties ou OfferAttestationProperties aplicam Attestation é Verdadeira.          |
+| PartnerIdsOnRecord adicional | String | No | Quando um fornecedor indireto estoende uma encomenda em nome de um revendedor indireto, povoe este campo apenas com o ID MPN do **revendedor indireto Adicional** (nunca o ID do fornecedor indireto). Não são aplicáveis incentivos a estes revendedores adicionais. Só podem ser introduzidos um máximo de 5 Revendedores Indiretos. Estes são apenas os parceiros aplicáveis que transacionam nos países da UE/EFTA. |
 
 ##### <a name="renewsto"></a>RenovarTo
 
