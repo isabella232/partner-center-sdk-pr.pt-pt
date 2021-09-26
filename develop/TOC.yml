@@ -362,6 +362,8 @@
           href: get-a-list-of-products.md
         - name: Obter uma lista de produtos (por cliente)
           href: get-a-list-of-products-by-customer.md
+        - name: Obtenha uma lista de promoções
+          href: get-promotions.md
         - name: Obter uma lista de SKUs para um produto (por país)
           href: get-a-list-of-skus-for-a-product.md
         - name: Obter uma lista de SKUs para um produto (por cliente)
@@ -372,6 +374,8 @@
           href: get-a-list-of-trial-conversion-offers.md
         - name: Obter um produto por ID
           href: get-a-product-by-id.md
+        - name: Obter uma promoção por ID
+          href: get-promotion-by-id.md
         - name: Obter um SKU por ID
           href: get-a-sku-by-id.md
         - name: Obter uma subscrição por ID
@@ -412,6 +416,8 @@
           href: update-a-cart.md
         - name: Atualizar a renovação automática de uma subscrição de marketplace comercial
           href: update-autorenew-for-an-azure-marketplace-subscription.md
+        - name: Verificar elegibilidade para a promoção
+          href: verify-promotion-eligibility.md
     - name: Gerir pagamentos
       href: manage-payouts.md
     - name: Fornecer suporte
@@ -431,7 +437,7 @@
           href: update-a-subscription-s-support-contact.md
 - name: Sandbox de integração
   items:
-    - name: Capacidades de caixa de areia para relacionamento revendedor
+    - name: Capacidades de caixa de areia para relacionamento com revendedor
       href: sandbox-scenario.md
     - name: Testar e depurar sandbox
       href: test-and-debug.md
@@ -533,6 +539,8 @@
           href: profile-resources.md
         - name: Produtos
           href: product-resources.md
+        - name: Promoções
+          href: promotion-resources.md
         - name: Relações
           href: relationships-resources.md
         - name: Política de self-service
