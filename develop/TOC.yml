@@ -390,6 +390,8 @@
           href: get-an-offer-by-id.md
         - name: Obter encomenda por ID
           href: get-an-order-by-id.md
+        - name: Obtenha excesso de assinatura
+          href: get-subscription-overage.md
         - name: Obter o estado de aprovisionamento da subscrição
           href: get-subscription-provisioning-status.md
         - name: Obter o estado de registo da subscrição
@@ -416,6 +418,8 @@
           href: update-a-cart.md
         - name: Atualizar a renovação automática de uma subscrição de marketplace comercial
           href: update-autorenew-for-an-azure-marketplace-subscription.md
+        - name: Atualizar o excesso de subscrição
+          href: update-subscription-overage.md
         - name: Verificar elegibilidade para a promoção
           href: verify-promotion-eligibility.md
     - name: Gerir pagamentos
