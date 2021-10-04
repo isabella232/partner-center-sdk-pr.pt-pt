@@ -1,17 +1,17 @@
 ---
 title: Transição de uma nova subscrição de comércio
-description: Atualiza a nova subscrição de commmerce de um cliente para uma subscrição-alvo especificada.
+description: Atualiza a nova subscrição de comércio de um cliente para uma subscrição-alvo especificada.
 ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: BrentSerbus
 ms.author: brserbus
-ms.openlocfilehash: 2bbf2f63cec416e4d4b4a671d2e2b2914b5f5713
-ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
+ms.openlocfilehash: 97ecb104de68b6da0a0588d3b60671de756af5a2
+ms.sourcegitcommit: 3ee00d9fe9da6b9df0fb7027ae506e2abe722770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "123457322"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129417224"
 ---
 # <a name="transition-a-new-commerce-subscription"></a>Transição de uma nova subscrição de comércio
 
@@ -25,7 +25,7 @@ ms.locfileid: "123457322"
 > [!Note] 
 > As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
 
-Usado para atualizar a nova subscrição de commmerce de um cliente para uma subscrição-alvo. Primeiro obtenha transições elegíveis para obter os SKUs disponíveis para upgrade. Em seguida, após a transição para executar a transição. Estes métodos suportam assinaturas tradicionais e novas fontes de comércio.  
+Usado para atualizar a nova subscrição de comércio de um cliente para uma subscrição-alvo. Para fazer a transição de uma subscrição, é necessário esemear dois pedidos de API. Primeiras **transições elegíveis** get para obter os SKUs disponíveis para upgrade. Em **seguida, a transição POST** para executar a transição. Estes métodos suportam assinaturas tradicionais e novas fontes de comércio.  
 
 ## <a name="get-transition-eligibilities"></a>Obtenha elegibilidades de transição
 
@@ -35,7 +35,7 @@ Devolve uma lista de transições elegíveis para um determinado cliente, subscr
 
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.
 
-- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no painel do Centro [de Parceiros.](https://partner.microsoft.com/dashboard) Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta**. Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
 - Um ID de assinatura para a subscrição inicial.
 
@@ -45,7 +45,7 @@ Devolve uma lista de transições elegíveis para um determinado cliente, subscr
 
 | Método   | URI do pedido                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **GET**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscrições/{subscrição-Id}/transiçãoEligibilities?elegibilidadeType={immediate, scheduled} HTTP/1.1 |
+| **OBTER**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscrições/{subscription-id}/transitionEligibilities?elegibilidadeType={immediate, scheduled} HTTP/1.1 |
 
 #### <a name="uri-parameter"></a>Parâmetro URI
 
@@ -54,8 +54,8 @@ Utilize os seguintes parâmetros de consulta para devolver as transições eleg�
 | Nome                    | Tipo     | Necessário | Descrição                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
 | **cliente-inquilino-id**  | **guid** | Y        | Um GUID correspondente ao inquilino do cliente.             |
-| **subscrituro-Id** | **guid** | Y        | Um GUID correspondente à subscrição inicial. |
-| **elegibilidadeTip**       | **string** | Y        | Descreve quando a transção deve ser executada, pode ser imediata ou agendada.  |
+| **id de subscrição** | **guid** | Y        | Um GUID correspondente à subscrição inicial. |
+| **elegibilidadeTip**       | **string** | N        | Descreve quando a transição deve ser executada; pode ser imediato ou agendado. A predefinição é `Immediate`.  |
 
 #### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -68,7 +68,7 @@ Nenhuma
 #### <a name="request-example"></a>Exemplo de pedido
 
 ```http
-GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-Id}/transitionEligibilities?eligibilityType=immediate HTTP/1.1
+GET https://api.partnercenter.microsoft.com/v1/customers/{customer-tenant-id}/subscriptions/{subscription-id}/transitionEligibilities?eligibilityType=immediate HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: 18752a69-1aa1-4ef7-8f9d-eb3681b2d70a
@@ -78,11 +78,11 @@ X-Locale: en-US
 
 ### <a name="rest-response"></a>Resposta do REST
 
-Se for bem sucedido, este método devolve uma lista de transições elegíveis no organismo de resposta.
+Se for bem sucedido, este método devolve uma lista das transições elegíveis para a subscrição dada no organismo de resposta.
 
 #### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 
-Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [códigos de erro](error-codes.md).
+Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [Códigos de Erro](error-codes.md).
 
 #### <a name="eligibility-errors"></a>Erros de elegibilidade
 
@@ -90,10 +90,10 @@ Descrições de erros e significado.
 
 | Descrição do erro | Significado  |
 |-------------------------|----------|
-|A subscrição não pode ser transitada - a subscrição de fonte não está ativa. | Sub status original não ativo |
+|A subscrição não pode ser transitada - a subscrição de origem não está ativa. | Sub status original não ativo |
 |A subscrição não pode ser transitada - a subscrição de fonte ainda não está prevista. | Original sub FulfillmentState não é sucesso |
 |O tipo de transição não é compatível - é necessário mapear a subscrição AzureAD. | LegacyCannotConvertSubscriptionId ao ligar para GetSubscriptionUpgradeConflicts |
-|O tipo de transição não é compatível - existem assinaturas contraditórias para transferência de licença. | Se qualquer serviço AAD tiver ids de subscrição de uma subscrição diferente, adicione-o à lista de conflitos (inclui compras feitas com fluxo de compra legado ou moderno) |
+|O tipo de transição não é compatível - existem assinaturas contraditórias para transferência de licença. | Se algum serviço AAD tiver ids de subscrição de uma subscrição diferente, adicione-o à lista de conflitos (inclui compras feitas com fluxo de compra legado ou moderno) |
 
 #### <a name="response-example"></a>Exemplo de resposta
 
@@ -165,13 +165,13 @@ Date: Fri, 26 Feb 2021 20:42:26 GMT
 
 ## <a name="post-transition"></a>Pós-Transição
 
-Publica um pedido de transição para um determinado cliente e subscrição. Devolve a transição com estatuto intial.
+Publica um pedido de transição para um determinado cliente e subscrição. Devolve a transição com o seu estatuto inicial.
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.
 
-- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no painel do Centro [de Parceiros.](https://partner.microsoft.com/dashboard) Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta**. Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
 - Um ID de assinatura para a subscrição inicial.
 
@@ -181,7 +181,7 @@ Publica um pedido de transição para um determinado cliente e subscrição. Dev
 
 | Método   | URI do pedido                                                                                                                         |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **PUBLICAR**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/customers/{customer-tenant-id}/subscrições/{subscriptoin-Id}/transições HTTP/1.1 |
+| **PUBLICAR**  | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscrição-id}/transições HTTP/1.1 |
 
 
 #### <a name="uri-parameter"></a>Parâmetro URI
@@ -191,7 +191,7 @@ Utilize os seguintes parâmetros de consulta para executar uma transição.
 | Nome                    | Tipo     | Necessário | Descrição                                       |
 |-------------------------|----------|----------|---------------------------------------------------|
 | **cliente-inquilino-id**  | **guid** | Y        | Um GUID correspondente ao inquilino do cliente.             |
-| **subscrituro-Id** | **guid** | Y        | Um GUID correspondente à subscrição inicial. |
+| **id de subscrição** | **guid** | Y        | Um GUID correspondente à subscrição inicial. |
 
 #### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -221,11 +221,11 @@ X-Locale: en-US
 
 ### <a name="rest-response"></a>Resposta do REST
 
-Se for bem sucedido, este método devolve um recurso de transição com os eventos iniciais.
+Se for bem sucedido, este método devolve um recurso de transição com o seu estado inicial.
 
 #### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 
-Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [códigos de erro](error-codes.md).
+Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [Códigos de Erro](error-codes.md).
 
 #### <a name="response-example"></a>Exemplo de resposta
 

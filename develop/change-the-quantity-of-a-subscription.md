@@ -4,26 +4,26 @@ description: Saiba como utilizar as APIs do Partner Center para alterar a quanti
 ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: b4bf40bf6ec2875b7091c34a2629331dfe240c95
-ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
+ms.openlocfilehash: 85048dbbdc605f46c12c00484961fbb3068c4f16
+ms.sourcegitcommit: 3ee00d9fe9da6b9df0fb7027ae506e2abe722770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "123456847"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129417241"
 ---
 # <a name="change-the-quantity-of-licenses-in-a-customer-subscription"></a>Alterar a quantidade de licenças numa subscrição de cliente
 
-**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Centro de Parceiros para | Microsoft Cloud Germany Centro de Parceiros para Microsoft Cloud for US Government
+**Aplica-se a**: Partner Center | Partner Center operado pela 21Vianet | Partner Center para Microsoft Cloud Germany | Centro de Parceiros para Microsoft Cloud for US Government
 
 Atualiza uma [subscrição](subscription-resources.md) para aumentar ou diminuir a quantidade de licenças.
 
-No painel partner Center, esta operação pode ser realizada selecionando primeiro [um cliente.](get-a-customer-by-name.md) Em seguida, selecione a subscrição em questão que deseja renomear. Para terminar, altere o valor no campo **Quantidade** e, em seguida, selecione **Enviar.**
+No painel partner center, esta operação pode ser realizada selecionando primeiro [um cliente.](get-a-customer-by-name.md) Em seguida, selecione a subscrição em questão que deseja renomear. Para terminar, altere o valor no campo **Quantidade** e, em seguida, selecione **Enviar.**
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.
 
-- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no painel do Centro [de Parceiros.](https://partner.microsoft.com/dashboard) Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta**. Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
 - Um ID de assinatura.
 
@@ -54,7 +54,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 
 | Método    | URI do pedido                                                                                                                |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
-| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{id-for-subscription} HTTP/1.1 |
+| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscription-id} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 
@@ -63,7 +63,7 @@ Esta tabela lista o parâmetro de consulta necessário para alterar a quantidade
 | Nome                    | Tipo     | Necessário | Descrição                               |
 |-------------------------|----------|----------|-------------------------------------------|
 | **cliente-inquilino-id**  | **guid** | Y        | Um GUID correspondente ao cliente.     |
-| **id-para-subscrição** | **guid** | Y        | Um GUID correspondente à subscrição. |
+| **id de subscrição** | **guid** | Y        | Um GUID correspondente à subscrição. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -108,13 +108,15 @@ Connection: Keep-Alive
 }
 ```
 
-### <a name="request-example-for-new-commerce-subscription-to-reduce-quantity"></a>Pedir exemplo para nova subscrição de comércio para reduzir quantidade
+### <a name="request-example-for-new-commerce-subscription-to-reduce-quantity"></a>Pedido de exemplo para nova subscrição de comércio para reduzir quantidade
 
 > [!Note] 
 > As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
 
+A quantidade de licença só pode ser reduzida no prazo de 72 horas após a compra ou renovação de uma subscrição. As licenças adicionadas a meio do semestre também só podem ser reduzidas dentro de 72 horas, apenas através do apoio ao cliente.
+
 ```http
-PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<id-for-subscription> HTTP/1.1
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3831
@@ -193,13 +195,13 @@ Se for bem sucedido, este método devolve um código de estado **HTTP 200** e at
 
 ### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 
-Cada resposta devolve um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler o código de estado, o tipo de erro e os parâmetros adicionais. Para obter a lista completa, consulte [códigos de erro](error-codes.md).
+Cada resposta devolve um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler o código de estado, o tipo de erro e os parâmetros adicionais. Para obter a lista completa, consulte [Códigos de Erro](error-codes.md).
 
 Quando a operação de correção demorar mais do que o tempo esperado, o Partner Center envia um código de estado **HTTP 202** e um cabeçalho de localização que aponta para onde recuperar a subscrição. Pode consultar periodicamente a subscrição para monitorizar o estado e as alterações de quantidade.
 
 ### <a name="response-examples"></a>Exemplos de resposta
 
-#### <a name="response-example-1"></a>Exemplo de resposta 1
+#### <a name="response-example-1"></a>Exemplo de resposta #1
 
 Pedido de sucesso com um código de estado **HTTP 200:**
 
@@ -254,7 +256,7 @@ Connection: Keep-Alive
 }
 ```
 
-#### <a name="response-example-2"></a>Exemplo de resposta 2
+#### <a name="response-example-2"></a>Exemplo de resposta #2
 
 Pedido de sucesso com um código de estado **HTTP 202:**
 
@@ -270,12 +272,12 @@ Connection: Keep-Alive
 Location: /customers/<customer-tenant-id>/subscriptions/<subscriptionID>
 ```
 
-#### <a name="response-example-for-new-commerce-reduce-seat-counts"></a>Exemplo de resposta para novo comércio reduz contagem de lugares
+#### <a name="response-example-for-new-commerce-license-reduction"></a>Exemplo de resposta para nova redução de licenças de comércio
 
 > [!Note] 
 > As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
 
-Resposta ao tentar reduzir quantidades para novas subscrições de comércio.
+Experimente a resposta da API ao tentar reduzir as quantidades de licença para novas subscrições de comércio fora da janela de cancelamento de 72 horas.
 
 ```http
 {

@@ -6,12 +6,12 @@ ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 author: BrentSerbus
 ms.author: brserbus
-ms.openlocfilehash: e1b95165eeb335c5426df876cbade3190dd447ac
-ms.sourcegitcommit: 856c14b6b351697e3b3d33f1fe376adbb80517c5
+ms.openlocfilehash: 461df9cdb909fc44be9069cb7eb4b41fa2a5f170
+ms.sourcegitcommit: 3ee00d9fe9da6b9df0fb7027ae506e2abe722770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/02/2021
-ms.locfileid: "129378749"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129417292"
 ---
 # <a name="subscription-resources"></a>Recursos de subscrição
 
@@ -64,7 +64,7 @@ O recurso **de subscrição** representa o ciclo de vida de uma subscrição e i
 
 O recurso **SubscriptionLinks** descreve a recolha de links anexados a um recurso de subscrição.
 
-| Propriedade           | Tipo                               | Description                           |
+| Propriedade           | Tipo                               | Descrição                           |
 |--------------------|------------------------------------|---------------------------------------|
 | oferta              | [Ligação](utility-resources.md#link) | Recebe ou define a oferta.               |
 | parentalidadeSubscrição | [Ligação](utility-resources.md#link) | Recebe ou define a subscrição dos pais. |
@@ -80,7 +80,7 @@ O recurso **SubscriptionLinks** descreve a recolha de links anexados a um recurs
 
 O recurso **SubscriptionProvisioningStatus** fornece informações sobre o estado de provisionamento de uma subscrição.
 
-| Propriedade   | Tipo                                                           | Description                                                          |
+| Propriedade   | Tipo                                                           | Descrição                                                          |
 |------------|----------------------------------------------------------------|----------------------------------------------------------------------|
 | skuId      | string                                                         | Uma cadeia formatada GUID que identifica o produto SKU.             |
 | status     | string                                                         | Indica o estado de provisionamento: "sucesso", "pendente" ou "falhado". |
@@ -92,7 +92,7 @@ O recurso **SubscriptionProvisioningStatus** fornece informações sobre o estad
 
 O **recurso SubscriptionRegistrationStatus** descreve a recolha de links anexados a um recurso de subscrição.
 
-| Propriedade           | Tipo                               | Description                                                                           |
+| Propriedade           | Tipo                               | Descrição                                                                           |
 |--------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | subscriptionId     | string                             | O identificador de assinatura.                                                          |
 | status             | string                             | Indica o estado de inscrição: "registado", "registo", ou "não registado".    |
@@ -101,7 +101,7 @@ O **recurso SubscriptionRegistrationStatus** descreve a recolha de links anexado
 
 O recurso **SupportContact** representa um contacto de suporte para a subscrição de um cliente.
 
-| Propriedade        | Tipo                                                           | Description                                                                     |
+| Propriedade        | Tipo                                                           | Descrição                                                                     |
 |-----------------|----------------------------------------------------------------|---------------------------------------------------------------------------------|
 | supportTenantId | string                                                         | Uma corda formatada GUID que indica o identificador de inquilino do contacto de suporte. |
 | supportMpnId    | string                                                         | O identificador da Microsoft Partner Network (MPN) do contacto.                       |
@@ -113,13 +113,13 @@ O recurso **SupportContact** representa um contacto de suporte para a subscriç�
 
 O recurso **overage** representa a sobreavade de subscrição de consumo a que pode ser atribuído, quer seja atribuído e o Revendedor atribuído.
 
-| Propriedade        | Tipo               | Description                                                                     |
+| Propriedade        | Tipo               | Descrição                                                                     |
 |-----------------|--------------------|---------------------------------------------------------------------------------|
 | azureEntitlementId | string       | Uma cadeia formatada GUID que indica o identificador de subscrição de consumo. |
 | partnerId    | string            | O identificador da Microsoft Partner Network (MPN) do revendedor associado à subscrição.        |
 | tipo    | string       | O tipo de excesso de tempo, pode ser "PhoneServices"       |
-| excesso            | boolean      | Um valor que indica se se trata de uma subscrição experimental.       |
-| ligações           | [RecursosLinks](utility-resources.md#resourcelinks)            | Os links relacionados com o contacto de suporte.                          |
+| excesso            | boolean      | Um valor que indique se a sobrecarga está ativada.       |
+| ligações           | [RecursosLinks](utility-resources.md#resourcelinks)            | As ligações relacionadas com o excesso.                          |
 | atributos      | [RecursosTributos](utility-resources.md#resourceattributes)  | Os atributos dos metadados. Contém "objectType": "Overage".  |
 
 
@@ -128,7 +128,7 @@ O recurso **overage** representa a sobreavade de subscrição de consumo a que p
 
 O recurso **RegisterSubscription** devolve um link que pode ser usado para consultar o estado de registo de uma subscrição. O estado de registo é devolvido no organismo de resposta de um pedido aceite com sucesso para registar uma assinatura Azure.
 
-| Propriedade                | Tipo                               | Description                                                                           |
+| Propriedade                | Tipo                               | Descrição                                                                           |
 |-------------------------|------------------------------------|---------------------------------------------------------------------------------------|
 | httpResponseMessage     | objeto                             | Devolução HTTP Status Code 202 "Aceito", com um cabeçalho de localização contendo um link para consultar o estado de registo. Por exemplo, `"/customers/{customer-id}/subscriptions/{subscription-id}/registrationstatus"` |
 

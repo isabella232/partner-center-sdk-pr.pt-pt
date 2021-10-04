@@ -4,18 +4,18 @@ description: Saiba como usar as APIs do Partner Center para cancelar um mercado 
 ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: cbfe17ba4880c303c3f3ba01db5955a557eb04e2
-ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
+ms.openlocfilehash: ed01a26e22fd814b269b6c8d1769da97e8160619
+ms.sourcegitcommit: 3ee00d9fe9da6b9df0fb7027ae506e2abe722770
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "123456142"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129417258"
 ---
 # <a name="cancel-a-commercial-marketplace-or-new-commerce-subscription-using-partner-center-apis"></a>Cancelar um mercado comercial ou uma nova subscrição de comércio usando APIs do Partner Center
 
 **Aplica-se a**: Centro de Parceiros
 
-Este artigo descreve como pode usar a API do Partner Center para cancelar um mercado comercial ou um novo recurso [de subscrição](subscription-resources.md) de comércio que corresponda ao ID do cliente e da subscrição.
+Este artigo descreve como pode usar a API do Partner Center para cancelar um marketplace comercial ou um novo recurso [de subscrição](subscription-resources.md) de comércio que corresponda ao ID do cliente e da subscrição.
 
 > [!Note] 
 > As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
@@ -24,7 +24,7 @@ Este artigo descreve como pode usar a API do Partner Center para cancelar um mer
 
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.
 
-- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no painel do Centro [de Parceiros.](https://partner.microsoft.com/dashboard) Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta**. Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
 - Um ID de assinatura.
 
@@ -44,9 +44,9 @@ Para cancelar a subscrição de um cliente:
 
 1. [Obtenha a subscrição por ID](get-a-subscription-by-id.md).
 
-2. Alterar a propriedade [**status**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) da subscrição. Para obter informações sobre códigos **de estado,** consulte [a enumeração SubscriptionStatus](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus).
+2. Alterar a propriedade [**Status**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscription.status) da subscrição. Para obter informações sobre os códigos **de estado,** consulte [a enumeração SubscriptionStatus](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.subscriptionstatus).
 
-3. Depois de escorção da alteração, utilize a sua **`IAggregatePartner.Customers`** coleção e ligue para o método **ById().**
+3. Depois de esco feita a alteração, utilize a sua **`IAggregatePartner.Customers`** coleção e ligue para o método **ById().**
 
 4. Ligue para a propriedade [**Subscrições,**](/dotnet/api/microsoft.store.partnercenter.customers.icustomer.subscriptions) seguida do método [**ById().**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptioncollection.byid)
 
@@ -71,7 +71,7 @@ var updatedSubscription = partnerOperations.Customers.ById(selectedCustomerId).S
 
 | Método    | URI do pedido                                                                                                                |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
-| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{id-for-subscription} HTTP/1.1 |
+| **PATCH** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{cliente-inquilino-id}/subscrições/{subscription-id} HTTP/1.1 |
 
 ### <a name="uri-parameter"></a>Parâmetro URI
 
@@ -80,7 +80,7 @@ Esta tabela lista o parâmetro de consulta necessário para suspender a subscri�
 | Nome                    | Tipo     | Necessário | Descrição                               |
 |-------------------------|----------|----------|-------------------------------------------|
 | **cliente-inquilino-id**  | **guid** | Y        | Um GUID correspondente ao cliente.     |
-| **id-para-subscrição** | **guid** | Y        | Um GUID correspondente à subscrição. |
+| **id de subscrição** | **guid** | Y        | Um GUID correspondente à subscrição. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
 
@@ -93,7 +93,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 ### <a name="request-example-for-a-commercial-marketplace-subscription"></a>Exemplo de pedido para uma subscrição de mercado comercial
 
 ```http
-PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<id-for-subscription> HTTP/1.1
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3831
@@ -136,11 +136,14 @@ Connection: Keep-Alive
 
 ### <a name="request-example-for-a-new-commerce-subscription"></a>Exemplo de pedido para uma nova subscrição de comércio
 
+As novas subscrições de comércio podem ser canceladas dentro de 72 horas após a compra ou renovação. Após 72 horas, as subscrições já não podem ser canceladas e a API lançará um erro.
+
+
 > [!Note] 
 > As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
 
 ```http
-PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<id-for-subscription> HTTP/1.1
+PATCH https://api.partnercenter.microsoft.com/v1/customers/<customer-tenant-id>/subscriptions/<subscription-id> HTTP/1.1
 Authorization: Bearer <token>
 Accept: application/json
 MS-RequestId: ca7c39f7-1a80-43bc-90d8-ee7d1cad3831
@@ -216,11 +219,11 @@ Connection: Keep-Alive
 
 ## <a name="rest-response"></a>Resposta do REST
 
-Se for bem sucedido, este método devolve as propriedades de recursos [de subscrição](subscription-resources.md) eliminadas no organismo de resposta.
+Se o pedido for bem sucedido, este método devolve as propriedades de recursos [de subscrição](subscription-resources.md) eliminadas no organismo de resposta.
 
 ### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 
-Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [códigos de erro](error-codes.md).
+Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [Códigos de Erro](error-codes.md).
 
 ### <a name="response-example"></a>Exemplo de resposta
 
