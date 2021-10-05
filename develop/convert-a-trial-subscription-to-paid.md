@@ -4,22 +4,25 @@ description: Saiba como usar as APIs do Partner Center para converter uma subscr
 ms.date: 05/23/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: a805264315e35c7576248630396da1e34a66cc55ac87dd07452f1615edbc0af4
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 7cee9b9afddb12137bb66b57250a9487bd4902f5
+ms.sourcegitcommit: f112efee7344d739bdbf385adba0c554ea2a63e3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115991859"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129439332"
 ---
 # <a name="convert-a-trial-subscription-to-paid-using-partner-center-apis"></a>Converter uma subscrição experimental para pago usando APIs do Partner Center
+
+> [!NOTE]
+> Estes passos não são aplicáveis aos Novos Produtos de Comércio. Consulte para a Transição uma nova documentação **de subscrição de comércio** para converter ensaios de New Commerce para subscrições pagas
 
 Pode converter uma subscrição experimental a pagar.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação apenas com credenciais app+User.
+- Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação apenas com credenciais app+Utilizador.
 
-- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no painel do Centro [de Parceiros.](https://partner.microsoft.com/dashboard) Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta**. Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
 - Um ID de assinatura para uma subscrição de teste ativo.
 
@@ -27,12 +30,12 @@ Pode converter uma subscrição experimental a pagar.
 
 ## <a name="convert-a-trial-subscription-to-a-paid-subscription-through-code"></a>Converter uma subscrição experimental para uma subscrição paga através de código
 
-Para converter uma subscrição experimental para uma paga, você deve primeiro obter uma coleção das conversões de ensaio disponíveis. Em seguida, deve escolher a oferta de conversão que pretende comprar.
+Para converter uma subscrição experimental para uma paga, você deve primeiro obter uma coleção das conversões experimentais disponíveis. Em seguida, deve escolher a oferta de conversão que pretende comprar.
 
 As ofertas de conversão especificarão uma quantidade que predefinirá ao mesmo número de licenças que a subscrição do ensaio. Pode alterar esta quantidade definindo a propriedade [**Quantity**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion.quantity) para o número de licenças que pretende adquirir.
 
 > [!NOTE]
-> Independentemente do número de licenças adquiridas, o ID de assinatura do ensaio é reutilizado para as licenças adquiridas. Como resultado, o julgamento em vigor desaparece e é substituído pela compra.
+> Independentemente do número de licenças adquiridas, o ID de subscrição do ensaio é reutilizado para as licenças adquiridas. Como resultado, o julgamento em vigor desaparece e é substituído pela compra.
 
 Utilize os seguintes passos para converter uma subscrição experimental através de código:
 
@@ -54,13 +57,13 @@ Utilize os seguintes passos para converter uma subscrição experimental atravé
     var selectedConversion = conversions.Items.ToList()[0];
     ```
 
-4. Opcionalmente, especifique o número de licenças para comprar. O padrão é o número de licenças na subscrição de ensaio.
+4. Opcionalmente, especifique o número de licenças para comprar. O padrão é o número de licenças na subscrição de teste.
 
     ``` csharp
     selectedConversion.Quantity = 10;
     ```
 
-5. Ligue para o método [**Criar**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.create) ou [**CriarAync**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.createasync) para converter a subscrição experimental a ser paga.
+5. Ligue para o método [**Criar**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.create) ou [**CriarAsync**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionupgradecollection.createasync) para converter a subscrição experimental a pagar.
 
     ``` csharp
     var convertResult = subscriptionOperations.Conversions.Create(selectedConversion);
@@ -74,7 +77,7 @@ Para converter uma subscrição experimental para uma paga:
 
 2. Obtenha uma interface para as operações de subscrição ligando para o método [**Subscrições.ById**](/dotnet/api/microsoft.store.partnercenter.customerusers.icustomerusercollection.byid) com o ID de subscrição de teste. Guarde uma referência à interface de operações de subscrição numa variável local.
 
-3. Utilize a propriedade [**Conversões**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) para obter uma interface para as operações disponíveis nas conversões e, em seguida, ligue para o método [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.get) ou [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.getasync) para recuperar uma coleção de ofertas de [**Conversão**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion) disponíveis. Tem de escolher um. O exemplo a seguir é o desresponsa da primeira conversão disponível.
+3. Utilize a propriedade [**Conversões**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) para obter uma interface para as operações disponíveis nas conversões e, em seguida, ligue para o método [**Get**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.get) ou [**GetAsync**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscriptionconversioncollection.getasync) para recuperar uma coleção de ofertas de [**Conversão**](/dotnet/api/microsoft.store.partnercenter.models.subscriptions.conversion) disponíveis. Tem de escolher um. O exemplo a seguir é o de incumprimento da primeira conversão disponível.
 
 4. Utilize a referência à interface de operações de subscrição que guardou numa variável local e na propriedade [**Conversões**](/dotnet/api/microsoft.store.partnercenter.subscriptions.isubscription.conversions) para obter uma interface para as operações disponíveis nas conversões.
 
