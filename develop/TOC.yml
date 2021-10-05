@@ -414,6 +414,12 @@
           href: transition-a-subscription.md
         - name: Transição de uma nova subscrição de comércio
           href: transition-a-new-commerce-subscription.md
+        - name: Validar uma subscrição para migração
+          href: validate-subscription-for-migration.md
+        - name: Criar uma nova migração de comércio
+          href: create-migration.md
+        - name: Obter uma nova migração de comércio
+          href: get-new-commerce-migration.md
         - name: Atualizar um carrinho
           href: update-a-cart.md
         - name: Atualizar a renovação automática de uma subscrição de marketplace comercial
