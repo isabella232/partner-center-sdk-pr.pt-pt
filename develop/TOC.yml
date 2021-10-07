@@ -445,6 +445,15 @@
           href: update-a-service-request.md
         - name: Atualizar o contacto de suporte de uma subscrição
           href: update-a-subscription-s-support-contact.md
+    - name: Ver margens
+      href: view-margins.md
+      items:
+        - name: Obter margens
+          href: get-margins.md
+        - name: Baixar margens
+          href: download-margins.md
+        - name: Recursos de margem
+          href: margin-resources.md
 - name: Sandbox de integração
   items:
     - name: Capacidades de caixa de areia para relacionamento com revendedor

@@ -4,12 +4,12 @@ description: Como obter uma coleção de direitos.
 ms.date: 01/28/2019
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 9248f2ef97afe7a2cefff5759028da12dc9c3936f2e14cee18063c0428699c81
-ms.sourcegitcommit: 63ef5995314ef22f29768132dff2acf45914ea84
+ms.openlocfilehash: 5247346fef4a5c49e04918efb9098d7a93cc413d
+ms.sourcegitcommit: deb3207935fb5a74df515ed0fd4ffec90e6a143c
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "115993678"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129646266"
 ---
 # <a name="get-a-collection-of-entitlements"></a>Obter uma coleção de elegibilidade
 
@@ -19,7 +19,7 @@ Como obter uma coleção de direitos.
 
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com credenciais app+utilizador.
 
-- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no painel do Centro [de Parceiros.](https://partner.microsoft.com/dashboard) Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta**. Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
 ## <a name="c"></a>C\#
 
@@ -33,7 +33,7 @@ string customerId;
 var entitlements = partnerOperations.Customers.ById(customerId).Entitlements.Get();
 ```
 
-Para preencher as datas de validade para os direitos a serem recuperados, ligue para os mesmos métodos acima e desconte o parâmetro boolean opcional **mostrarExpiry** a verdadeiro **Get (verdadeiro)** ou **GetAsync (verdade)**. Isto indica que são necessárias datas de validade do direito (quando aplicável).
+Para preencher as datas de validade para os direitos a serem recuperados, ligue para os mesmos métodos acima e desconte o parâmetro boolean opcional **mostrarExpiry** a verdadeiro **Get(verdadeiro)** ou **GetAsync (verdade)**. Isto indica que são necessárias datas de validade do direito (quando aplicável).
 
 > [!IMPORTANT]
 > Os tipos de direito no local não têm datas de validade.
@@ -44,7 +44,7 @@ Para preencher as datas de validade para os direitos a serem recuperados, ligue 
 
 | Método | URI do pedido |
 |--------|-------------|
-| **GET** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{clienteId}/direitos HTTP/1.1                            |
+| **OBTER** | [*{baseURL}*](partner-center-rest-urls.md)/v1/clientes/{clienteId}/direitos HTTP/1.1                            |
 
 ### <a name="uri-parameters"></a>Parâmetros URI
 
@@ -53,7 +53,7 @@ Utilize os seguintes parâmetros de percurso e consulta ao criar o pedido.
 | Nome | Tipo | Necessário | Descrição |
 |------|------|----------|-------------|
 | customerId | string | Yes | Um cliente formatado GUIDId que identifica o cliente. |
-| DireitoTipo | cadeia (de carateres) | No | Pode ser usado para especificar o tipo de direitos a recuperar **(software** ou **reservaInstance).** Se não estiver definido, todos os tipos serão recuperados |
+| DireitoTipo | cadeia (de carateres) | No | Pode ser usado para especificar o tipo de direitos a recuperar **(software** ou **reservaInstance** ). Se não estiver definido, todos os tipos serão recuperados |
 | showExpiry | boolean | No | Bandeira opcional que indica se são necessárias datas de validade dos direitos. |
 
 ### <a name="request-headers"></a>Cabeçalhos do pedido
@@ -82,7 +82,7 @@ Se for bem sucedido, o organismo de resposta contém uma coleção de recursos d
 
 ### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 
-Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [códigos de erro](error-codes.md).
+Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [Códigos de Erro](error-codes.md).
 
 ### <a name="response-example"></a>Exemplo de resposta
 
@@ -405,4 +405,4 @@ Date: Mon, 19 Mar 2018 07:45:14 GMT
 
 ### <a name="api-consumers"></a>Consumidores API
 
-Parceiros que estão a usar a API para consultar direitos de instância reservados à máquina virtual - Atualize o pedido URI de **/clientes/{customerId}/direitos a /cliente/{clienteD}/direitos?entitlementType=virtualmachinereservinstance** para manter a compatibilidade para trás. Para consumir máquina virtual ou Azure SQL com contrato melhorado, atualize o pedido URI a **/clientes/{clienteId}/direitos?entitlementType=reservedinstance**.
+Parceiros que estão a usar a API para consultar direitos de instância reservados à máquina virtual - Atualize o pedido URI de **/clientes/{customerId}/direitos a /cliente/{clienteD}/direitos?entitlementType=virtualmachinereservinstance** para manter a compatibilidade para trás. Para consumir máquina virtual ou Azure SQL com contrato melhorado, atualize o pedido URI a **/clientes/{customerId}/direitos?entitlementType=reservedinstance**.
