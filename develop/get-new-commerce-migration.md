@@ -4,12 +4,12 @@ description: Como obter uma nova migração de subscrição de comércio
 ms.date: 10/04/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 69c34f015d418437f080eb9d2f22a02c1f373b4f
-ms.sourcegitcommit: 856b0baa4824960e13ee9672817a2d2e713fdf43
+ms.openlocfilehash: fc793e6a3ab43a50a07c955b69ba77c9deedf879
+ms.sourcegitcommit: 53980dc43fb2277878bf61a15a86013b8b1c2574
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "129528714"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "129609967"
 ---
 #  <a name="get-a-new-commerce-subscription-migration"></a>Obtenha uma nova migração de assinaturas de comércio
 
@@ -66,7 +66,6 @@ Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e in
     "currentSubscriptionId": "9beb6319-6889-4d28-a155-68ca9c783842",
     "status": "Processing",
     "customerTenantId": "a836f6d8-1b17-44af-aaf1-1e5511c5d4e1",
-    "partnerTenantId": "7828d7ba-f17b-45c3-a1ce-8b6c3e3a26c0",
     "catalogItemId": "CFQ7TTC0LF8S:0002:CFQ7TTC0KSVV",
     "subscriptionEndDate": "2022-09-06T00:00:00Z",
     "quantity": 1,
