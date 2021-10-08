@@ -424,6 +424,8 @@
           href: update-a-cart.md
         - name: Atualizar a renovação automática de uma subscrição de marketplace comercial
           href: update-autorenew-for-an-azure-marketplace-subscription.md
+        - name: Atualizar a frequência de faturação para uma subscrição de software
+          href: manage-billing-frequency-software-subs.md
         - name: Atualizar o excesso de subscrição
           href: update-subscription-overage.md
         - name: Verificar elegibilidade para a promoção

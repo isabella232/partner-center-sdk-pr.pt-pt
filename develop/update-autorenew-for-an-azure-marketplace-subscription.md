@@ -1,32 +1,32 @@
 ---
-title: Atualizar a designa de novo para um mercado comercial e novas subscrições de comércio
-description: Atualize a nova propriedade de uma subscrição que corresponda ao ID do cliente e da subscrição.
+title: Atualizar as autoenew para subscrições de marketplace comercial e software
+description: Atualize a nova propriedade para um recurso de Subscrição que corresponda ao ID do cliente e da subscrição.
 ms.date: 02/23/2021
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
-ms.openlocfilehash: 6d533a41c58b05ec449b76394466dd4608abc65a
-ms.sourcegitcommit: e1db965e8c7b4fe3aaa0ecd6cefea61973ca2232
+ms.openlocfilehash: 89ccedaec2e19e32046225938a6b847c5f8787f3
+ms.sourcegitcommit: 36e88224d0957b7ea6298789c75cdd18fc0f3685
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/03/2021
-ms.locfileid: "123455732"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129663330"
 ---
-# <a name="update-autorenew-for-a-commercial-marketplace-subscription-or-new-commerce-subscriptions"></a>Atualizar a designa de novo para uma subscrição de marketplace comercial ou novas subscrições de comércio
+# <a name="update-autorenew-for-a-commercial-marketplace-subscription-or-new-commerce-subscriptions-and-software-subscriptions"></a>Atualizar a designa de novo para uma subscrição de marketplace comercial ou novas subscrições de comércio e subscrições de software
 
 **Aplica-se a**: Centro de Parceiros
 
 > [!Note] 
 > As novas alterações de Comércio estão atualmente disponíveis apenas para parceiros que fazem parte da nova pré-visualização técnica da experiência de comércio M365/D365.
 
-Atualizar a nova propriedade para um mercado comercial ou novo recurso [de subscrição](subscription-resources.md) de comércio que corresponda ao ID do cliente e subscrição.
+Atualize a nova propriedade para um mercado comercial, novo comércio ou recurso [de subscrição](subscription-resources.md) de software que corresponda ao ID do cliente e subscrição.
 
-No painel partner center, esta operação é realizada [selecionando](get-a-customer-by-name.md)primeiro um cliente . Em seguida, selecione a subscrição que deseja atualizar. Finalmente, alternar a opção **de renovação automática** e, em seguida, selecione **Enviar por inteiro**.
+No painel partner Center, esta operação é realizada selecionando primeiro [um cliente.](get-a-customer-by-name.md) Em seguida, selecione a subscrição que deseja atualizar. Finalmente, alternar a opção **de renovação automática** e, em seguida, selecione **Enviar por inteiro**.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Credenciais descritas na [autenticação do Partner Center](partner-center-authentication.md). Este cenário suporta a autenticação com as credenciais de App autónoma e App+User.
 
-- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no [painel](https://partner.microsoft.com/dashboard)do Partner Center. Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta.** Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
+- Um ID do cliente ( `customer-tenant-id` ). Se não souber a identificação do cliente, pode procurar no painel do Centro [de Parceiros.](https://partner.microsoft.com/dashboard) Selecione **CSP** no menu Partner Center, seguido de **Clientes**. Selecione o cliente da lista de clientes e, em seguida, selecione **Conta**. Na página conta do cliente, procure o **ID** da Microsoft na secção Informação da **Conta do Cliente.** O ID da Microsoft é o mesmo que o ID do cliente ( `customer-tenant-id` ).
 
 - Um ID de assinatura.
 
@@ -69,7 +69,7 @@ Para obter mais informações, consulte [os cabeçalhos Partner Center REST](hea
 
 ### <a name="request-body"></a>Corpo do pedido
 
-Um recurso de **subscrição** de mercado comercial completo é necessário no organismo de pedido. Certifique-se de que a propriedade **AutoRenewEnabled** foi atualizada.
+É necessário um recurso **de subscrição** completo no organismo de pedido. Certifique-se de que a propriedade **AutoRenewEnabled** foi atualizada.
 
 ### <a name="request-example-for-commercial-marketplace-subscription"></a>Exemplo de pedido para subscrição de mercado comercial
 
@@ -201,7 +201,7 @@ Se for bem sucedido, este método devolve as propriedades atualizadas dos recurs
 
 ### <a name="response-success-and-error-codes"></a>Códigos de sucesso e erro de resposta
 
-Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [códigos de erro](error-codes.md).
+Cada resposta vem com um código de estado HTTP que indica sucesso ou falha e informações adicionais de depuragem. Utilize uma ferramenta de rastreio de rede para ler este código, tipo de erro e parâmetros adicionais. Para obter a lista completa, consulte [Códigos de Erro](error-codes.md).
 
 ### <a name="response-example"></a>Exemplo de resposta
 
